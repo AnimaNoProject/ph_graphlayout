@@ -71,7 +71,7 @@
     const data = [{"salesperson": "Bob", "sales": 33}, {"salesperson": "Robin", "sales": 12}, {
         "salesperson": "Anne",
         "sales": 41
-    }, {"salesperson": "Mark", "sales": 16}, {"salesperson": "Joe", "sales": 59}, {
+    }, {"salesperson": "Mark", "sales": 16}, {"salesperson": "Joe", "sales": 3}, {
         "salesperson": "Eve",
         "sales": 38
     }, {"salesperson": "Karen", "sales": 21}, {"salesperson": "Kirsty", "sales": 25}, {
@@ -80,12 +80,13 @@
     }, {"salesperson": "Lisa", "sales": 47}, {"salesperson": "Tom", "sales": 5}, {
         "salesperson": "Stacy",
         "sales": 20
-    }, {"salesperson": "Charles", "sales": 13}, {"salesperson": "Mary", "sales": 29}];
+    }, {"salesperson": "Charles", "sales": 5}, {"salesperson": "Mary", "sales": 10}];
 
+    
     // set the dimensions and margins of the graph
     const margin = {top: 20, right: 20, bottom: 30, left: 40},
-        bar_width = 960 - margin.left - margin.right,
-        bar_height = 500 - margin.top - margin.bottom;
+        bar_width = 200 - margin.left - margin.right,
+        bar_height = 900 - margin.top - margin.bottom;
 
     // set the ranges
     const y = d3.scaleBand()
@@ -95,9 +96,6 @@
     const x = d3.scaleLinear()
         .range([0, bar_width]);
 
-    // append the svg object to the body of the page
-    // append a 'group' element to 'svg'
-    // moves the 'group' element to the top left margin
     const svg = d3.select("#barcode");
     svg.append("g").attr("transform",
         "translate(" + margin.left + "," + margin.top + ")");
@@ -107,10 +105,13 @@
         d.sales = +d.sales;
     });
 
+    data.sort(function(a, b) {
+        return b.sales - a.sales;
+    });
+
     // Scale the range of the data in the domains
     x.domain([0, d3.max(data, function(d){ return d.sales; })])
     y.domain(data.map(function(d) { return d.salesperson; }));
-    //y.domain([0, d3.max(data, function(d) { return d.sales; })]);
 
     // append the rectangles for the bar chart
     svg.selectAll(".bar")
@@ -122,14 +123,6 @@
         .attr("y", function(d) { return y(d.salesperson); })
         .attr("height", y.bandwidth())
 
-    // add the x Axis
-    svg.append("g")
-        .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(x));
-
-    // add the y Axis
-    svg.append("g")
-        .call(d3.axisLeft(y));
-
+    svg.select(".bar").order();
 </script>
 
