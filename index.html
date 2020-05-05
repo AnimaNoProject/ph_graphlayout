@@ -29,7 +29,8 @@
             return d.id;
         }))
         .force("charge", d3.forceManyBody())
-        .force("center", d3.forceCenter(width / 2, height / 2));
+        .force("center", d3.forceCenter(width / 2, height / 2))
+        .force("test", testForce);
 
     d3.json("miserables.json", function(error, graph) {
         if (error) throw error;
@@ -55,7 +56,21 @@
             context.strokeStyle = "#fff";
             context.stroke();
         }
+
+
     });
+
+    // custom force test
+    function testForce(alpha)
+    {
+        var i = 0;
+        simulation.nodes().forEach(function(d) {
+            // probably here we need to update it according to the paper
+            d.x = 250 + i;
+            d.y = 250;
+            i = i + 15;
+        });
+    }
 
     function drawLink(d) {
         context.moveTo(d.source.x, d.source.y);
@@ -82,7 +97,7 @@
         "sales": 20
     }, {"salesperson": "Charles", "sales": 5}, {"salesperson": "Mary", "sales": 10}];
 
-    
+
     // set the dimensions and margins of the graph
     const margin = {top: 20, right: 20, bottom: 30, left: 40},
         bar_width = 200 - margin.left - margin.right,
@@ -118,7 +133,6 @@
         .data(data)
         .enter().append("rect")
         .attr("class", "bar")
-        //.attr("x", function(d) { return x(d.sales); })
         .attr("width", function(d) {return x(d.sales); } )
         .attr("y", function(d) { return y(d.salesperson); })
         .attr("height", y.bandwidth())
