@@ -1,0 +1,22 @@
+.graph
+{
+    float: left;
+    width:70%
+}
+
+.barcode
+{
+    width: 30%;
+}
+
+.barcode .slider
+{
+    position: absolute;
+    width: 200px
+}
+
+.barcode .barchart
+{
+    position: absolute;
+    top: 50px;
+}

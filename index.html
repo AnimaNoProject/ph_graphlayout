@@ -1,15 +1,33 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<canvas width="960" height="600"></canvas>
-<script src="https://d3js.org/d3.v4.min.js"></script>
+<header>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3-queue/3.0.4/d3-queue.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</header>
+
+<body>
+    <div>
+        <div class="graph">
+            <canvas id="graph" width="1200" height="900"></canvas>
+        </div>
+        <div class="barcode">
+            <input class="slider" type="range" min="1" max="100" value="50" id="slider">
+            <svg class="barchart" id="barcode" width="200" height="500"></svg>
+        </div>
+    </div>
+</body>
+
 <script>
-    var canvas = document.querySelector("canvas"),
+    const canvas = document.querySelector("#graph"),
         context = canvas.getContext("2d"),
         width = canvas.width,
         height = canvas.height;
 
-    var simulation = d3.forceSimulation()
-        .force("link", d3.forceLink().id(function(d) { return d.id; }))
+    const simulation = d3.forceSimulation()
+        .force("link", d3.forceLink().id(function (d) {
+            return d.id;
+        }))
         .force("charge", d3.forceManyBody())
         .force("center", d3.forceCenter(width / 2, height / 2));
 
@@ -22,14 +40,6 @@
 
         simulation.force("link")
             .links(graph.links);
-
-        d3.select(canvas)
-            .call(d3.drag()
-                .container(canvas)
-                .subject(dragsubject)
-                .on("start", dragstarted)
-                .on("drag", dragged)
-                .on("end", dragended));
 
         function ticked() {
             context.clearRect(0, 0, width, height);
@@ -45,28 +55,7 @@
             context.strokeStyle = "#fff";
             context.stroke();
         }
-
-        function dragsubject() {
-            return simulation.find(d3.event.x, d3.event.y);
-        }
     });
-
-    function dragstarted() {
-        if (!d3.event.active) simulation.alphaTarget(0.3).restart();
-        d3.event.subject.fx = d3.event.subject.x;
-        d3.event.subject.fy = d3.event.subject.y;
-    }
-
-    function dragged() {
-        d3.event.subject.fx = d3.event.x;
-        d3.event.subject.fy = d3.event.y;
-    }
-
-    function dragended() {
-        if (!d3.event.active) simulation.alphaTarget(0);
-        d3.event.subject.fx = null;
-        d3.event.subject.fy = null;
-    }
 
     function drawLink(d) {
         context.moveTo(d.source.x, d.source.y);
@@ -78,4 +67,69 @@
         context.arc(d.x, d.y, 3, 0, 2 * Math.PI);
     }
 
+    // barchart
+    const data = [{"salesperson": "Bob", "sales": 33}, {"salesperson": "Robin", "sales": 12}, {
+        "salesperson": "Anne",
+        "sales": 41
+    }, {"salesperson": "Mark", "sales": 16}, {"salesperson": "Joe", "sales": 59}, {
+        "salesperson": "Eve",
+        "sales": 38
+    }, {"salesperson": "Karen", "sales": 21}, {"salesperson": "Kirsty", "sales": 25}, {
+        "salesperson": "Chris",
+        "sales": 30
+    }, {"salesperson": "Lisa", "sales": 47}, {"salesperson": "Tom", "sales": 5}, {
+        "salesperson": "Stacy",
+        "sales": 20
+    }, {"salesperson": "Charles", "sales": 13}, {"salesperson": "Mary", "sales": 29}];
+
+    // set the dimensions and margins of the graph
+    const margin = {top: 20, right: 20, bottom: 30, left: 40},
+        bar_width = 960 - margin.left - margin.right,
+        bar_height = 500 - margin.top - margin.bottom;
+
+    // set the ranges
+    const y = d3.scaleBand()
+        .range([bar_height, 0])
+        .padding(0.1);
+
+    const x = d3.scaleLinear()
+        .range([0, bar_width]);
+
+    // append the svg object to the body of the page
+    // append a 'group' element to 'svg'
+    // moves the 'group' element to the top left margin
+    const svg = d3.select("#barcode");
+    svg.append("g").attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")");
+
+    // format the data
+    data.forEach(function(d) {
+        d.sales = +d.sales;
+    });
+
+    // Scale the range of the data in the domains
+    x.domain([0, d3.max(data, function(d){ return d.sales; })])
+    y.domain(data.map(function(d) { return d.salesperson; }));
+    //y.domain([0, d3.max(data, function(d) { return d.sales; })]);
+
+    // append the rectangles for the bar chart
+    svg.selectAll(".bar")
+        .data(data)
+        .enter().append("rect")
+        .attr("class", "bar")
+        //.attr("x", function(d) { return x(d.sales); })
+        .attr("width", function(d) {return x(d.sales); } )
+        .attr("y", function(d) { return y(d.salesperson); })
+        .attr("height", y.bandwidth())
+
+    // add the x Axis
+    svg.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x));
+
+    // add the y Axis
+    svg.append("g")
+        .call(d3.axisLeft(y));
+
 </script>
+
