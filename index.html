@@ -376,16 +376,18 @@
 
     class Bar
     {
-        constructor(birth, death)
+        constructor(birth, death, id)
         {
             this.birth = birth;
             this.death = death;
+            this.id = id;
         }
     }
 
     let data = JSON.parse(rawdata);
 
     let mstAndBarcode = getMSTFromPersistence(data.nodes, data.links);
+    console.log(mstAndBarcode);
 
     const canvas = document.querySelector("#graph"),
         context = canvas.getContext("2d"),
@@ -448,20 +450,7 @@
     }
 
     // barchart
-    const chart_data = [{"salesperson": "Bob", "sales": 33}, {"salesperson": "Robin", "sales": 12}, {
-        "salesperson": "Anne",
-        "sales": 41
-    }, {"salesperson": "Mark", "sales": 16}, {"salesperson": "Joe", "sales": 3}, {
-        "salesperson": "Eve",
-        "sales": 38
-    }, {"salesperson": "Karen", "sales": 21}, {"salesperson": "Kirsty", "sales": 25}, {
-        "salesperson": "Chris",
-        "sales": 30
-    }, {"salesperson": "Lisa", "sales": 47}, {"salesperson": "Tom", "sales": 5}, {
-        "salesperson": "Stacy",
-        "sales": 20
-    }, {"salesperson": "Charles", "sales": 5}, {"salesperson": "Mary", "sales": 10}];
-
+    const chart_data = mstAndBarcode[1];
 
     // set the dimensions and margins of the graph
     const margin = {top: 20, right: 20, bottom: 30, left: 40},
@@ -482,24 +471,24 @@
 
     // format the data
     chart_data.forEach(function(d) {
-        d.sales = +d.sales;
+        d.death = +d.death;
     });
 
     chart_data.sort(function(a, b) {
-        return b.sales - a.sales;
+        return b.death - a.death;
     });
 
     // Scale the range of the data in the domains
-    x.domain([0, d3.max(chart_data, function(d){ return d.sales; })])
-    y.domain(chart_data.map(function(d) { return d.salesperson; }));
+    x.domain([0, d3.max(chart_data, function(d){ return d.death; })])
+    y.domain(chart_data.map(function(d) { return d.id; }));
 
     // append the rectangles for the bar chart
     svg.selectAll(".bar")
         .data(chart_data)
         .enter().append("rect")
         .attr("class", "bar")
-        .attr("width", function(d) {return x(d.sales); } )
-        .attr("y", function(d) { return y(d.salesperson); })
+        .attr("width", function(d) {return x(d.death);} )
+        .attr("y", function(d) { return y(d.id); })
         .attr("height", y.bandwidth())
 
     svg.select(".bar").order();
@@ -514,10 +503,11 @@
         // for all nodes
         for(i = 0; i < nodes.length; i++)
         {
-            bars[i] = new Bar(0, Number.POSITIVE_INFINITY);      // initialise bar with 0 and infinity
+            //bars[i] = new Bar(0, Number.POSITIVE_INFINITY, i); // initialise bar with 0 and infinity
+            bars[i] = new Bar(0, 1, i); // initialise bar with 0 and 1
             let c = new Component();
             c.nodes[0] = nodes[i];
-            c.id = i;
+            c.id = i;           // component id = node index
             components[i] = c ; // initialise component with the node
         }
 
@@ -530,11 +520,13 @@
         // loop through all edges
         for(i = 0; i < links.length; i++)
         {
+            // find the component of the source node u
             let source_component = components.find(function(component)
             {
                 return component.contains(links[i].source);
             });
 
+            // find the component of the target node v
             let target_component = components.find(function(component)
             {
                 return component.contains(links[i].target);
@@ -548,7 +540,8 @@
                 source_component.nodes.push(target_component.nodes);
             }
         }
-        console.log(bars);
+
+        return [mst, bars, components];
     }
 </script>
 
