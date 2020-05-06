@@ -381,6 +381,7 @@
             this.id = id;           // bar ID
             this.edge = null;       // cause of death
             this.ratio = 0.2;       // ratio
+            this.selected = false;  // selected
         }
     }
 
@@ -406,8 +407,8 @@
         .on("tick", ticked);
 
     simulation.force("link")
-        //.links(data.links);
-        .links(mstAndBarcode[0]);
+        .links(data.links);
+        //.links(mstAndBarcode[0]);
 
     function ticked() {
         context.clearRect(0, 0, width, height);
@@ -475,7 +476,8 @@
         .attr("width", function(d) {return x(d.death * d.ratio);} )
         .attr("y", function(d) { return y(d.id); })
         .attr("fill", "#aeff79")
-        .attr("height", y.bandwidth());
+        .attr("height", y.bandwidth())
+        .on("click", select_deselct);
 
     svg.selectAll(".bar")
         .data(chart_data)
@@ -486,7 +488,22 @@
         .attr("width", function(d) {return x(d.death * (1 - d.ratio));} )
         .attr("y", function(d) { return y(d.id); })
         .attr("fill", "#bf5f5f")
-        .attr("height", y.bandwidth());
+        .attr("height", y.bandwidth())
+        .on("click", select_deselct);
+
+
+    function select_deselct(d)
+    {
+        if(d.selected)
+        {
+            d3.select(this).attr("stroke", null).attr("stroke-width", null);
+        }
+        else
+        {
+            d3.select(this).attr("stroke", "blue").attr("stroke-width", 1.5);
+        }
+        d.selected = !d.selected;
+    }
 
     function getMSTFromPersistence(nodes, links)
     {
@@ -584,8 +601,6 @@
             // an arbitrary one
 
             let n = (components[0].nodes.length >= components[1].nodes.length) ? components[1].nodes.length : components[0].nodes.length;
-
-            console.log(n);
 
             // ratio is component size divided by all nodes
             bars[i].ratio = n / (nodes.length);
