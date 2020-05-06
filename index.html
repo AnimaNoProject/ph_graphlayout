@@ -12,8 +12,8 @@
             <canvas id="graph" width="1200" height="900"></canvas>
         </div>
         <div class="barcode">
-            <input class="slider" type="range" width="200" min="0" max="25" step="1" value="0" id="slider" onchange="update_attraction(this.value)">
-            <svg class="barchart" id="barcode" style="padding-left: 7px" width="200" height="500"></svg>
+            <input class="slider" type="range" width="205" min="0" max="25" step="1" value="0" id="slider" oninput="update_attraction(this.value)">
+            <svg class="barchart" id="barcode" style="padding-left: 8px" width="200" height="500"></svg>
         </div>
     </div>
 </body>
@@ -377,7 +377,7 @@
     class Bar {
         constructor(id)
         {
-            this.death = Number.POSITIVE_INFINITY;     // 1/w
+            this.death = Number.POSITIVE_INFINITY; // 1/w
             this.id = id;           // bar ID
             this.edge = null;       // cause of death
             this.ratio = 0.2;       // ratio
@@ -459,22 +459,18 @@
     chart_data.forEach(function(d) {
         d.death = +d.death;
     });
-
     chart_data.sort(function(a, b) {
         return b.death - a.death;
     });
 
     // Scale the range of the data in the domains
     x.domain([0, d3.max(chart_data, function(d){ return d.death; })])
+    y.domain(chart_data.map(function(d) { return d.id; }));
 
-    console.log(chart_data);
-    console.log(d3.max(chart_data, function(d){ return d.death;}));
-
+    // set the slider accordingly
     document.querySelector("#slider").max = d3.max(chart_data, function(d){ return d.death;});
     document.querySelector("#slider").value = 0;
-    document.querySelector("#slider").step = 31 / 200;
-
-    y.domain(chart_data.map(function(d) { return d.id; }));
+    document.querySelector("#slider").step = document.querySelector("#slider").max / x(document.querySelector("#slider").max);
 
     // append the rectangles for the bar chart
     svg.selectAll(".bar")
@@ -485,8 +481,9 @@
         .attr("y", function(d) { return y(d.id); })
         .attr("fill", "#aeff79")
         .attr("height", y.bandwidth())
-        .on("click", select_deselct);
+        .on("click", select_deselect);
 
+    // adding the first bar
     svg.selectAll(".bar")
         .data(chart_data)
         .exit().data(chart_data)
@@ -497,8 +494,9 @@
         .attr("y", function(d) { return y(d.id); })
         .attr("fill", "#bf5f5f")
         .attr("height", y.bandwidth())
-        .on("click", select_deselct);
+        .on("click", select_deselect);
 
+    // adding the second bar (stacked)
     svg.selectAll(".bar")
         .data(chart_data)
         .exit().data(chart_data)
@@ -510,16 +508,26 @@
         .attr("stroke", "blue")
         .attr("stroke-width", 2.0);
 
+    /**
+     * Function that updates which bars
+     * are considered for additional attraction.
+     * @param value Value of the slider
+     */
     function update_attraction(value)
     {
         svg.selectAll("line")
-            .attr("x1", x(value))
+            .attr("x1", x(value)) // we map the slider value to the x axis
             .attr("y1", 0)
             .attr("x2", x(value))
             .attr("y2", 900);
     }
 
-    function select_deselct(d) {
+    /**
+     * Function is used to select and deselect bars
+     * to add / remove repulsion for these components.
+     * @param d Bar
+     */
+    function select_deselect(d) {
         if(d.selected)
         {
             d3.select(this).attr("stroke", null).attr("stroke-width", null);
@@ -531,6 +539,15 @@
         d.selected = !d.selected;
     }
 
+    /**
+     * Computes the 0D Barcode and all necessary parameters
+     * for the bars.
+     * Furthermore computes the Minimum Spanning Tree
+     * using disjointed sets (algorithm).
+     * @param nodes nodes of the graph
+     * @param links edges of the graph
+     * @returns MST and Bars
+     */
     function getMSTFromPersistence(nodes, links) {
         let mst = [];  // contains the MST
         let bars = []; // contains bars with their live and death
