@@ -483,7 +483,7 @@
         .attr("height", y.bandwidth())
         .on("click", select_deselect);
 
-    // adding the first bar
+    // adding the second (stacked) bar
     svg.selectAll(".bar")
         .data(chart_data)
         .exit().data(chart_data)
@@ -496,16 +496,16 @@
         .attr("height", y.bandwidth())
         .on("click", select_deselect);
 
-    // adding the second bar (stacked)
+    // adding the line associated with the slider => shows repulsion threshold
     svg.selectAll(".bar")
         .data(chart_data)
         .exit().data(chart_data)
-        .enter().append("line")
+        .enter().append("line") 
         .attr("x1", 0)
         .attr("y1", 0)
         .attr("x2", 0)
         .attr("y2", 900)
-        .attr("stroke", "blue")
+        .attr("stroke", "#4281fc")
         .attr("stroke-width", 2.0);
 
     /**
