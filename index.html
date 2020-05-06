@@ -467,8 +467,12 @@
     // Scale the range of the data in the domains
     x.domain([0, d3.max(chart_data, function(d){ return d.death; })])
 
+    console.log(chart_data);
+    console.log(d3.max(chart_data, function(d){ return d.death;}));
+
     document.querySelector("#slider").max = d3.max(chart_data, function(d){ return d.death;});
     document.querySelector("#slider").value = 0;
+    document.querySelector("#slider").step = 31 / 200;
 
     y.domain(chart_data.map(function(d) { return d.id; }));
 
@@ -508,11 +512,10 @@
 
     function update_attraction(value)
     {
-        console.log(value);
         svg.selectAll("line")
-            .attr("x1", value)
+            .attr("x1", x(value))
             .attr("y1", 0)
-            .attr("x2", value)
+            .attr("x2", x(value))
             .attr("y2", 900);
     }
 
