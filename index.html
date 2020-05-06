@@ -357,10 +357,35 @@
         '{"source": "Mme.Hucheloup", "target": "Enjolras", "value": 1}]\n' +
         '}';
 
+    class Component
+    {
+        constructor()
+        {
+            this.id = -1;
+            this.nodes = [];
+        }
+
+         contains(id)
+         {
+             return this.nodes.find(function(node)
+             {
+                 return node.id === id;
+             });
+         }
+    }
+
+    class Bar
+    {
+        constructor(birth, death)
+        {
+            this.birth = birth;
+            this.death = death;
+        }
+    }
+
     let data = JSON.parse(rawdata);
 
-    console.log(data.links);
-    console.log(data.nodes);
+    let mstAndBarcode = getMSTFromPersistence(data.nodes, data.links);
 
     const canvas = document.querySelector("#graph"),
         context = canvas.getContext("2d"),
@@ -397,8 +422,7 @@
     }
 
     // custom force test
-    function testForce(alpha)
-    {
+    function testForce(alpha) {
         console.log(alpha);
         var i = 0;
         simulation.nodes().forEach(function(d) {
@@ -419,8 +443,7 @@
         context.arc(d.x, d.y, 3, 0, 2 * Math.PI);
     }
 
-    function update(stepsize)
-    {
+    function update(stepsize) {
         simulation.force("test", testForce(stepsize));
     }
 
@@ -480,5 +503,52 @@
         .attr("height", y.bandwidth())
 
     svg.select(".bar").order();
+
+    function getMSTFromPersistence(nodes, links)
+    {
+        let i;
+        let mst = [];
+        let bars = [];
+        let components = [];
+
+        // for all nodes
+        for(i = 0; i < nodes.length; i++)
+        {
+            bars[i] = new Bar(0, Number.POSITIVE_INFINITY);      // initialise bar with 0 and infinity
+            let c = new Component();
+            c.nodes[0] = nodes[i];
+            c.id = i;
+            components[i] = c ; // initialise component with the node
+        }
+
+        // sort the links
+        links.sort(function(a, b)
+        {// persistence = 1/w -> increasing = b - a
+           return 1/b.value - 1/a.value;
+        });
+
+        // loop through all edges
+        for(i = 0; i < links.length; i++)
+        {
+            let source_component = components.find(function(component)
+            {
+                return component.contains(links[i].source);
+            });
+
+            let target_component = components.find(function(component)
+            {
+                return component.contains(links[i].target);
+            });
+
+            if(target_component.id !== source_component.id) // if C_u and C_v not in
+            {
+                bars[source_component.id].death = 1/links[i].value; // update death time
+                mst.push(links[i]); // add edge to MST
+                target_component.nodes.push(source_component.nodes); // merge C_u and C_v
+                source_component.nodes.push(target_component.nodes);
+            }
+        }
+        console.log(bars);
+    }
 </script>
 
