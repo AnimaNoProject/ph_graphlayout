@@ -12,8 +12,8 @@
             <canvas id="graph" width="1200" height="900"></canvas>
         </div>
         <div class="barcode">
-            <input class="slider" type="range" min="1" max="10" value="2" id="slider" onchange="update(this.value)">
-            <svg class="barchart" id="barcode" width="200" height="500"></svg>
+            <input class="slider" type="range" width="200" min="0.0" max="1.0" step="0.01" value="0.0" id="slider">
+            <svg class="barchart" id="barcode" style="padding-left: 7px" width="200" height="500"></svg>
         </div>
     </div>
 </body>
@@ -357,12 +357,12 @@
         '{"source": "Mme.Hucheloup", "target": "Enjolras", "value": 1}]\n' +
         '}';
 
-    class Component
-    {
-        constructor()
+    class Component {
+        constructor(node, id)
         {
-            this.id = -1;
+            this.id = id;
             this.nodes = [];
+            this.nodes.push(node);
         }
 
          contains(id)
@@ -374,11 +374,9 @@
          }
     }
 
-    class Bar
-    {
-        constructor(birth, death, id)
+    class Bar {
+        constructor(death, id)
         {
-            this.birth = birth;
             this.death = death;
             this.id = id;
         }
@@ -423,18 +421,6 @@
         context.stroke();
     }
 
-    // custom force test
-    function testForce(alpha) {
-        console.log(alpha);
-        var i = 0;
-        simulation.nodes().forEach(function(d) {
-            // probably here we need to update it according to the paper
-            d.x = 250 + i;
-            d.y = 250;
-            i = i + alpha;
-        });
-    }
-
     function drawLink(d) {
         context.moveTo(d.source.x, d.source.y);
         context.lineTo(d.target.x, d.target.y);
@@ -443,10 +429,6 @@
     function drawNode(d) {
         context.moveTo(d.x + 3, d.y);
         context.arc(d.x, d.y, 3, 0, 2 * Math.PI);
-    }
-
-    function update(stepsize) {
-        simulation.force("test", testForce(stepsize));
     }
 
     // barchart
@@ -491,57 +473,53 @@
         .attr("y", function(d) { return y(d.id); })
         .attr("height", y.bandwidth())
 
-    svg.select(".bar").order();
-
     function getMSTFromPersistence(nodes, links)
     {
-        let i;
-        let mst = [];
-        let bars = [];
-        let components = [];
+        let mst = [];  // contains the MST
+        let bars = []; // contains bars with their live and death
+        let components = []; // contains all "living" components
 
         // for all nodes
-        for(i = 0; i < nodes.length; i++)
+        for(let i = 0; i < nodes.length; i++)
         {
-            //bars[i] = new Bar(0, Number.POSITIVE_INFINITY, i); // initialise bar with 0 and infinity
-            bars[i] = new Bar(0, 1, i); // initialise bar with 0 and 1
-            let c = new Component();
-            c.nodes[0] = nodes[i];
-            c.id = i;           // component id = node index
-            components[i] = c ; // initialise component with the node
+            bars[i] = new Bar(2, i); // initialise bar with death of 1
+            components[i] = new Component(nodes[i], i);         // initialise component with the node
         }
 
         // sort the links
         links.sort(function(a, b)
-        {// persistence = 1/w -> increasing = b - a
-           return 1/b.value - 1/a.value;
+        {// persistence = 1/w -> increasing = a - b
+           return 1/a.value - 1/b.value;
         });
 
         // loop through all edges
-        for(i = 0; i < links.length; i++)
+        for(let i = 0; i < links.length; i++)
         {
-            // find the component of the source node u
-            let source_component = components.find(function(component)
+            // find the component of the source node u that is not in a "dead" component
+            let c_u = components.find(function(component)
             {
                 return component.contains(links[i].source);
             });
 
             // find the component of the target node v
-            let target_component = components.find(function(component)
+            let c_v = components.find(function(component)
             {
                 return component.contains(links[i].target);
             });
 
-            if(target_component.id !== source_component.id) // if C_u and C_v not in
+            if(c_v.id !== c_u.id) // if C_u and C_v not in
             {
-                bars[source_component.id].death = 1/links[i].value; // update death time
+                bars[c_u.id].death = 1/links[i].value; // update death time
+                for(let j = 0; j < c_u.nodes.length; j++) // merge C_u and C_v into C_v
+                {
+                    c_v.nodes.push(c_u.nodes[j]);
+                }
+                // remove c_u from the list so we don't think it exists separately
+                components = components.filter(function(current_val) { return current_val.id !== c_u.id; });
                 mst.push(links[i]); // add edge to MST
-                target_component.nodes.push(source_component.nodes); // merge C_u and C_v
-                source_component.nodes.push(target_component.nodes);
             }
         }
-
-        return [mst, bars, components];
+        return [mst, bars];
     }
 </script>
 
