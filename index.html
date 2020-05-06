@@ -12,7 +12,7 @@
             <canvas id="graph" width="1200" height="900"></canvas>
         </div>
         <div class="barcode">
-            <input class="slider" type="range" width="200" min="0.0" max="1.0" step="0.01" value="0.0" id="slider">
+            <input class="slider" type="range" width="200" min="0" max="25" step="1" value="0" id="slider" onchange="update_attraction(this.value)">
             <svg class="barchart" id="barcode" style="padding-left: 7px" width="200" height="500"></svg>
         </div>
     </div>
@@ -466,6 +466,10 @@
 
     // Scale the range of the data in the domains
     x.domain([0, d3.max(chart_data, function(d){ return d.death; })])
+
+    document.querySelector("#slider").max = d3.max(chart_data, function(d){ return d.death;});
+    document.querySelector("#slider").value = 0;
+
     y.domain(chart_data.map(function(d) { return d.id; }));
 
     // append the rectangles for the bar chart
@@ -491,9 +495,28 @@
         .attr("height", y.bandwidth())
         .on("click", select_deselct);
 
+    svg.selectAll(".bar")
+        .data(chart_data)
+        .exit().data(chart_data)
+        .enter().append("line")
+        .attr("x1", 0)
+        .attr("y1", 0)
+        .attr("x2", 0)
+        .attr("y2", 900)
+        .attr("stroke", "blue")
+        .attr("stroke-width", 2.0);
 
-    function select_deselct(d)
+    function update_attraction(value)
     {
+        console.log(value);
+        svg.selectAll("line")
+            .attr("x1", value)
+            .attr("y1", 0)
+            .attr("x2", value)
+            .attr("y2", 900);
+    }
+
+    function select_deselct(d) {
         if(d.selected)
         {
             d3.select(this).attr("stroke", null).attr("stroke-width", null);
@@ -505,8 +528,7 @@
         d.selected = !d.selected;
     }
 
-    function getMSTFromPersistence(nodes, links)
-    {
+    function getMSTFromPersistence(nodes, links) {
         let mst = [];  // contains the MST
         let bars = []; // contains bars with their live and death
         let components = []; // contains all "living" components
