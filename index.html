@@ -12,7 +12,7 @@
             <canvas id="graph" width="1200" height="900"></canvas>
         </div>
         <div class="barcode">
-            <input class="slider" type="range" width="205" min="0" max="25" step="1" value="0" id="slider" oninput="update_attraction(this.value)">
+            <input class="slider" type="range" width="260" min="0" max="25" step="1" value="0" id="slider" oninput="update_attraction(this.value)">
             <svg class="barchart" id="barcode" style="padding-left: 8px" width="200" height="500"></svg>
         </div>
     </div>
@@ -382,6 +382,8 @@
             this.edge = null;       // cause of death
             this.ratio = 0.2;       // ratio
             this.selected = false;  // selected
+            this.componentA = [];   // if the bar is selected these two components
+            this.componentB = [];   // will repulse each other
         }
     }
 
@@ -484,7 +486,7 @@
         .attr("class", "bar")
         .attr("width", function(d) {return x(d.death * d.ratio);} )
         .attr("y", function(d) { return y(d.id); })
-        .attr("fill", "#aeff79")
+        .attr("fill", "#820087")
         .attr("height", y.bandwidth())
 
     // adding the second (stacked) bar
@@ -496,7 +498,7 @@
         .attr("x", function(d) {return x(d.death * d.ratio);} )
         .attr("width", function(d) {return x(d.death * (1-d.ratio));} )
         .attr("y", function(d) { return y(d.id); })
-        .attr("fill", "#bf5f5f")
+        .attr("fill", "#fa9b9b")
         .attr("height", y.bandwidth())
 
     // this bar is just used for the selection and to attach a bordr
@@ -509,7 +511,7 @@
         .attr("width", function(d) {return x(d.death);} )
         .attr("y", function(d) { return y(d.id); })
         .attr("height", y.bandwidth())
-        .attr("fill", "rgba(1,1,1,0)")
+        .attr("fill", "#00000000")
         .attr("opacity", 1)
     .on("click", select_deselect);
 
@@ -521,7 +523,7 @@
         .attr("x1", 0)
         .attr("y1", 0)
         .attr("x2", 0)
-        .attr("y2", 900)
+        .attr("y2", 850)
         .attr("stroke", "#4281fc")
         .attr("stroke-width", 2.0);
 
@@ -536,7 +538,7 @@
             .attr("x1", x(value)) // we map the slider value to the x axis
             .attr("y1", 0)
             .attr("x2", x(value))
-            .attr("y2", 900);
+            .attr("y2", 850);
     }
 
     /**
@@ -658,11 +660,12 @@
 
             // now we should have 2 components and we can take
             // an arbitrary one
-
             let n = (components[0].nodes.length >= components[1].nodes.length) ? components[1].nodes.length : components[0].nodes.length;
-
             // ratio is component size divided by all nodes
             bars[i].ratio = n / nodes.length;
+            // we also keep the components in mind
+            bars[i].componentA = components[0].nodes;
+            bars[i].componentB = components[1].nodes;
         }
 
         return [mst, bars];
