@@ -415,13 +415,18 @@
 
         context.beginPath();
         data.links.forEach(drawLink);
-        context.strokeStyle = "#aaa";
+        context.strokeStyle = "#aaaaaa";
+        context.stroke();
+
+        context.beginPath();
+        mstAndBarcode[0].forEach(drawLink);
+        context.strokeStyle = "#000000";
         context.stroke();
 
         context.beginPath();
         data.nodes.forEach(drawNode);
         context.fill();
-        context.strokeStyle = "#fff";
+        context.strokeStyle = "#ffffff";
         context.stroke();
     }
 
@@ -481,7 +486,6 @@
         .attr("y", function(d) { return y(d.id); })
         .attr("fill", "#aeff79")
         .attr("height", y.bandwidth())
-        .on("click", select_deselect);
 
     // adding the second (stacked) bar
     svg.selectAll(".bar")
@@ -490,11 +494,24 @@
         .enter().append("rect")
         .attr("class", "bar")
         .attr("x", function(d) {return x(d.death * d.ratio);} )
-        .attr("width", function(d) {return x(d.death * (1 - d.ratio));} )
+        .attr("width", function(d) {return x(d.death * (1-d.ratio));} )
         .attr("y", function(d) { return y(d.id); })
         .attr("fill", "#bf5f5f")
         .attr("height", y.bandwidth())
-        .on("click", select_deselect);
+
+    // this bar is just used for the selection and to attach a bordr
+    svg.selectAll(".bar")
+        .data(chart_data)
+        .exit().data(chart_data)
+        .enter().append("rect")
+        .attr("class", "bar")
+        .attr("x", function(d) {return 0;} )
+        .attr("width", function(d) {return x(d.death);} )
+        .attr("y", function(d) { return y(d.id); })
+        .attr("height", y.bandwidth())
+        .attr("fill", "rgba(1,1,1,0)")
+        .attr("opacity", 1)
+    .on("click", select_deselect);
 
     // adding the line associated with the slider => shows repulsion threshold
     svg.selectAll(".bar")
@@ -534,7 +551,7 @@
         }
         else
         {
-            d3.select(this).attr("stroke", "blue").attr("stroke-width", 1.5);
+            d3.select(this).attr("stroke", "blue").attr("stroke-width", 2.0);
         }
         d.selected = !d.selected;
     }
@@ -645,7 +662,7 @@
             let n = (components[0].nodes.length >= components[1].nodes.length) ? components[1].nodes.length : components[0].nodes.length;
 
             // ratio is component size divided by all nodes
-            bars[i].ratio = n / (nodes.length);
+            bars[i].ratio = n / nodes.length;
         }
 
         return [mst, bars];
