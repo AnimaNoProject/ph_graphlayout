@@ -12,7 +12,7 @@
             <canvas id="graph" width="1200" height="900"></canvas>
         </div>
         <div class="barcode">
-            <input class="slider" type="range" width="260" min="0" max="25" step="1" value="0" id="slider" oninput="update_attraction(this.value)">
+            <input class="slider" type="range" min="0" max="25" step="1" value="0" id="slider" oninput="update_attraction(this.value)">
             <svg class="barchart" id="barcode" style="padding-left: 8px" width="200" height="500"></svg>
         </div>
     </div>
@@ -467,7 +467,12 @@
         d.death = +d.death;
     });
     chart_data.sort(function(a, b) {
-        return b.death - a.death;
+        if(a.death !== b.death) {
+            return b.death - a.death;
+        }
+        else {
+            return b.ratio - a.ratio;
+        }
     });
 
     // Scale the range of the data in the domains
@@ -532,8 +537,7 @@
      * are considered for additional attraction.
      * @param value Value of the slider
      */
-    function update_attraction(value)
-    {
+    function update_attraction(value) {
         svg.selectAll("line")
             .attr("x1", x(value)) // we map the slider value to the x axis
             .attr("y1", 0)
