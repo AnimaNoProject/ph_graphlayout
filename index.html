@@ -392,17 +392,16 @@
     let data = JSON.parse(rawdata);
 
     let mstAndBarcode = getMSTFromPersistence(data.nodes, data.links);
-    console.log(mstAndBarcode);
 
     let svg_graph = d3.select("#graph"),
         width = +svg_graph.attr("width"),
         height = +svg_graph.attr("height");
 
-    var g = svg_graph.append("g")
+    let g = svg_graph.append("g")
         .attr("class", "everything");
 
     //add zoom capabilities
-    var zoom_handler = d3.zoom()
+    let zoom_handler = d3.zoom()
         .on("zoom", zoom_actions);
 
     zoom_handler(svg_graph);
@@ -411,8 +410,7 @@
         g.attr("transform", d3.event.transform)
     }
 
-
-    let link = g.append("g")
+    let links = g.append("g")
         .attr("class", "links")
         .selectAll("line")
         .data(data.links)
@@ -437,7 +435,7 @@
         })
         .attr('x', 6)
         .attr('y', 3)
-        .style("font-size", "10px");
+        .style("font-size", "5px");
 
     node.append("title")
         .text(function(d) { return d.id; });
@@ -449,6 +447,8 @@
         .force("charge", d3.forceManyBody())
         .force("center", d3.forceCenter(width / 2, height / 2));
 
+    simulation.force("link").distance(function(d) { return d.value;}).strength(0.1);
+
     simulation
         .nodes(data.nodes)
         .on("tick", ticked);
@@ -457,7 +457,7 @@
         .links(data.links);
 
     function ticked() {
-        link
+        links
             .attr("x1", function(d) { return d.source.x; })
             .attr("y1", function(d) { return d.source.y; })
             .attr("x2", function(d) { return d.target.x; })
@@ -503,11 +503,11 @@
     });
 
     // Scale the range of the data in the domains
-    x.domain([0, d3.max(chart_data, function(d){ return d.death; })])
+    x.domain([0, d3.max(chart_data, function(d){ return d.death; }) + 1])
     y.domain(chart_data.map(function(d) { return d.id; }));
 
     // set the slider accordingly
-    document.querySelector("#slider").max = d3.max(chart_data, function(d){ return d.death;});
+    document.querySelector("#slider").max = d3.max(chart_data, function(d){ return d.death;}) + 1;
     document.querySelector("#slider").value = 0;
     document.querySelector("#slider").step = document.querySelector("#slider").max / x(document.querySelector("#slider").max);
 
@@ -566,7 +566,7 @@
      */
     function update_attraction(value) {
 
-        simulation.force("attr", d3.forceLink().links(data.links).id(function(d) { return d.id; }).strength(function(link) {
+        simulation.force("link").strength(function(link) {
             for(let i = 0; i < chart_data.length; i++)
             {
                 if(chart_data[i].death > value)
@@ -576,15 +576,17 @@
 
                 if (link === chart_data[i].edge)
                 {
-                    return chart_data[i].edge.value / 10 + 1;
+                    //return chart_data[i].edge.value / 10 + 1;
+                    //return chart_data[i].edge.value * 10;
+                    return 1.0;
                 }
             }
 
-            return 0;
-        }) );
+            return 0.1;
+        });
 
-        simulation.force("attr")
-           .links(data.links);
+        //simulation.force("attr")
+        //   .links(data.links);
 
         simulation.alpha(1).restart();
     }
