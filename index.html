@@ -12,7 +12,8 @@
             <canvas id="graph" width="1200" height="900"></canvas>
         </div>
         <div class="barcode">
-            <input class="slider" type="range" min="0" max="25" step="1" value="0" id="slider" oninput="update_attraction(this.value)">
+            <input class="slider" type="range" min="0" max="25" step="1" value="0" id="slider" onchange="update_attraction(this.value)"
+                oninput="update_slider(this.value)">
             <svg class="barchart" id="barcode" style="padding-left: 8px" width="200" height="500"></svg>
         </div>
     </div>
@@ -410,7 +411,6 @@
 
     simulation.force("link")
         .links(data.links);
-        //.links(mstAndBarcode[0]);
 
     function ticked() {
         context.clearRect(0, 0, width, height);
@@ -538,6 +538,48 @@
      * @param value Value of the slider
      */
     function update_attraction(value) {
+        simulation.restart();
+        simulation.force("attr", d3.forceLink().links(data.links).id(function(d) { return d.id; }).strength(function(link) {
+            for(let i = 0; i < chart_data.length; i++)
+            {
+                if(chart_data[i].death > value)
+                {
+                    continue;
+                }
+
+                if (link === chart_data[i].edge)
+                {
+                    return 3;
+                }
+            }
+
+            return 0.2;
+        }) )
+
+        simulation.force("link", d3.forceLink().id(function (d) {
+            return d.id;
+        }).strength(0.2));
+
+        simulation.force("charge", d3.forceManyBody().strength(-2))
+            .force("center", d3.forceCenter(width / 2, height / 2));
+
+        simulation
+            .nodes(data.nodes)
+            .on("tick", ticked);
+
+        simulation.force("link")
+            .links(data.links);
+
+        simulation.force("attr")
+           .links(data.links);
+    }
+
+    /***
+     *  Function updates the blue bar following the slider.
+     *  @param value of the slider position
+     * */
+    function update_slider(value)
+    {
         svg.selectAll("line")
             .attr("x1", x(value)) // we map the slider value to the x axis
             .attr("y1", 0)
