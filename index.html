@@ -401,8 +401,8 @@
     const simulation = d3.forceSimulation()
         .force("link", d3.forceLink().id(function (d) {
             return d.id;
-        }))
-        .force("charge", d3.forceManyBody())
+        }).strength(0.1))
+        .force("charge", d3.forceManyBody().strength(-20))
         .force("center", d3.forceCenter(width / 2, height / 2));
 
     simulation
@@ -538,7 +538,7 @@
      * @param value Value of the slider
      */
     function update_attraction(value) {
-        simulation.restart();
+
         simulation.force("attr", d3.forceLink().links(data.links).id(function(d) { return d.id; }).strength(function(link) {
             for(let i = 0; i < chart_data.length; i++)
             {
@@ -549,29 +549,21 @@
 
                 if (link === chart_data[i].edge)
                 {
-                    return 3;
+                    return 1;
                 }
             }
 
-            return 0.2;
-        }) )
-
-        simulation.force("link", d3.forceLink().id(function (d) {
-            return d.id;
-        }).strength(0.2));
-
-        simulation.force("charge", d3.forceManyBody().strength(-2))
-            .force("center", d3.forceCenter(width / 2, height / 2));
+            return 0;
+        }) );
 
         simulation
             .nodes(data.nodes)
             .on("tick", ticked);
 
-        simulation.force("link")
-            .links(data.links);
-
         simulation.force("attr")
            .links(data.links);
+
+        simulation.alpha(1).restart();
     }
 
     /***
