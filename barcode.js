@@ -103,7 +103,35 @@ function create_barcode(bars)
         .attr("height", y.bandwidth())
         .attr("fill", "#00000000")
         .attr("opacity", 1)
-        .on("click", select_deselect);
+        .on("click", select_deselect)
+        .on("mouseover", function(d)
+        {
+            nodes
+                .append("circle")
+                .attr("r", 5)
+                .attr("fill", function (n) {
+                    if(!d.componentA.find(function(element)
+                    {
+                        return element.id === n.id;
+                    }))
+                    {
+                        return "#FF0000";
+                    }
+                    else
+                    {
+                        return "#0000FF";
+                    }
+                });
+        })
+        .on("mouseout", function(bar)
+        {
+            nodes
+                .append("circle")
+                .attr("r", 5)
+                .attr("fill", function (d) {
+                    return color(d.group);
+                });
+        });
 
     // adding the line associated with the slider => shows repulsion threshold
     svg.selectAll(".bar")

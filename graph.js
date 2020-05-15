@@ -1,5 +1,8 @@
 const simulation = d3.forceSimulation();
 
+let links;
+let nodes;
+
 function resize_graph()
 {
     let svg_graph = d3.select("#graph");
@@ -29,7 +32,7 @@ function create_graph() {
 
     zoom_handler(svg_graph);
 
-    let links = g.append("g")
+    links = g.append("g")
         .attr("class", "links")
         .selectAll("line")
         .data(data.links)
@@ -40,7 +43,7 @@ function create_graph() {
         .attr("stroke", "#222222")
         .style("opacity", 0.2);
 
-    let nodes = g.append("g")
+    nodes = g.append("g")
         .attr("class", "nodes")
         .selectAll("g")
         .data(data.nodes)
