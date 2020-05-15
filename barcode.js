@@ -29,9 +29,9 @@ class Bar {
 }
 
 // set the dimensions and margins of the graph
-const margin = {top: 5, right: 40, bottom: 0, left: 5};
-const bar_width = 260 - margin.left - margin.right;
-const bar_height = 900 - margin.top - margin.bottom;
+const margin = {top: 20, right: 20, bottom: 30, left: 40},
+    bar_width = 260 - margin.left - margin.right,
+    bar_height = 900 - margin.top - margin.bottom;
 
 // set the ranges for the barcode
 const y = d3.scaleBand()
@@ -65,16 +65,9 @@ function create_barcode(bars)
     y.domain(bars.map(function(d) { return d.id; }));
 
     // set the slider accordingly
-    let slider = document.getElementById("slider");
-
-    slider.max = d3.max(bars, function(d){ return d.death;}) + 1;
-    slider.value = 0;
-    slider.step = slider.max / x(slider.max);
-
-    console.log(slider.max);
-    console.log(slider.min);
-    console.log(slider.value);
-    console.log(slider.step);
+    document.getElementById("slider").max = d3.max(bars, function(d){ return d.death;}) + 1;
+    document.getElementById("slider").value = 0;
+    document.getElementById("slider").step = document.getElementById("slider").max / x(document.getElementById("slider").max);
 
     // append the rectangles for the bar chart
     svg.selectAll(".bar")
@@ -120,7 +113,7 @@ function create_barcode(bars)
         .attr("x1", 0)
         .attr("y1", 0)
         .attr("x2", 0)
-        .attr("y2", 950)
+        .attr("y2", 850)
         .attr("stroke", "#4281fc")
         .attr("stroke-width", 2.0);
 }
@@ -151,7 +144,7 @@ function select_deselect(d) {
  * using disjointed sets (algorithm).
  * @param nodes nodes of the graph
  * @param links edges of the graph
- * @returns *[bars]
+ * @returns Bars
  */
 function get_ph_features(nodes, links) {
     let mst = [];  // contains the MST
