@@ -1,737 +1,82 @@
 <!DOCTYPE html>
-<header>
-    <meta charset="utf-8">
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/d3-queue/3.0.4/d3-queue.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</header>
+<html>
+    <header>
+        <meta charset="utf-8">
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/d3-queue/3.0.4/d3-queue.min.js"></script>
+        <script src="miserables.js"></script>
+        <script src="barcode.js"></script>
+        <script src="graph.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </header>
 
-<body>
-    <div>
-        <div id="graphzoom" class="graph">
-            <svg id="graph" width="1200" height="900"></svg>
+    <body onresize="resize_graph();">
+        <div class="graph-container h-100 w-100">
+            <svg id="graph"></svg>
         </div>
-        <div class="barcode">
-            <input class="slider" type="range" min="0" max="25" step="1" value="0" id="slider" onchange="update_attraction(this.value)"
-                oninput="update_slider(this.value)">
-            <svg class="barchart" id="barcode" style="padding-left: 8px" width="200" height="500"></svg>
+        <div class="barcode-container position-absolute p-5">
+            <input class="slider" type="range" min="0" max="25" step="1" value="0" id="slider" onchange="update_attraction(this.value)" oninput="update_slider(this.value)">
+            <svg class="bars" id="barcode" width="200" height="1080"></svg>
         </div>
-    </div>
-</body>
+    </body>
 
-<script>
-    "use strict";
+    <script>
+        "use strict";
+        let color = d3.scaleOrdinal(d3.schemeCategory20);
+        let data = JSON.parse(rawdata);
 
-    var rawdata = '{"nodes": [\n' +
-        '{"id": "Myriel", "group": 1},\n' +
-        '{"id": "Napoleon", "group": 1},\n' +
-        '{"id": "Mlle.Baptistine", "group": 1},\n' +
-        '{"id": "Mme.Magloire", "group": 1},\n' +
-        '{"id": "CountessdeLo", "group": 1},\n' +
-        '{"id": "Geborand", "group": 1},\n' +
-        '{"id": "Champtercier", "group": 1},\n' +
-        '{"id": "Cravatte", "group": 1},\n' +
-        '{"id": "Count", "group": 1},\n' +
-        '{"id": "OldMan", "group": 1},\n' +
-        '{"id": "Labarre", "group": 2},\n' +
-        '{"id": "Valjean", "group": 2},\n' +
-        '{"id": "Marguerite", "group": 3},\n' +
-        '{"id": "Mme.deR", "group": 2},\n' +
-        '{"id": "Isabeau", "group": 2},\n' +
-        '{"id": "Gervais", "group": 2},\n' +
-        '{"id": "Tholomyes", "group": 3},\n' +
-        '{"id": "Listolier", "group": 3},\n' +
-        '{"id": "Fameuil", "group": 3},\n' +
-        '{"id": "Blacheville", "group": 3},\n' +
-        '{"id": "Favourite", "group": 3},\n' +
-        '{"id": "Dahlia", "group": 3},\n' +
-        '{"id": "Zephine", "group": 3},\n' +
-        '{"id": "Fantine", "group": 3},\n' +
-        '{"id": "Mme.Thenardier", "group": 4},\n' +
-        '{"id": "Thenardier", "group": 4},\n' +
-        '{"id": "Cosette", "group": 5},\n' +
-        '{"id": "Javert", "group": 4},\n' +
-        '{"id": "Fauchelevent", "group": 0},\n' +
-        '{"id": "Bamatabois", "group": 2},\n' +
-        '{"id": "Perpetue", "group": 3},\n' +
-        '{"id": "Simplice", "group": 2},\n' +
-        '{"id": "Scaufflaire", "group": 2},\n' +
-        '{"id": "Woman1", "group": 2},\n' +
-        '{"id": "Judge", "group": 2},\n' +
-        '{"id": "Champmathieu", "group": 2},\n' +
-        '{"id": "Brevet", "group": 2},\n' +
-        '{"id": "Chenildieu", "group": 2},\n' +
-        '{"id": "Cochepaille", "group": 2},\n' +
-        '{"id": "Pontmercy", "group": 4},\n' +
-        '{"id": "Boulatruelle", "group": 6},\n' +
-        '{"id": "Eponine", "group": 4},\n' +
-        '{"id": "Anzelma", "group": 4},\n' +
-        '{"id": "Woman2", "group": 5},\n' +
-        '{"id": "MotherInnocent", "group": 0},\n' +
-        '{"id": "Gribier", "group": 0},\n' +
-        '{"id": "Jondrette", "group": 7},\n' +
-        '{"id": "Mme.Burgon", "group": 7},\n' +
-        '{"id": "Gavroche", "group": 8},\n' +
-        '{"id": "Gillenormand", "group": 5},\n' +
-        '{"id": "Magnon", "group": 5},\n' +
-        '{"id": "Mlle.Gillenormand", "group": 5},\n' +
-        '{"id": "Mme.Pontmercy", "group": 5},\n' +
-        '{"id": "Mlle.Vaubois", "group": 5},\n' +
-        '{"id": "Lt.Gillenormand", "group": 5},\n' +
-        '{"id": "Marius", "group": 8},\n' +
-        '{"id": "BaronessT", "group": 5},\n' +
-        '{"id": "Mabeuf", "group": 8},\n' +
-        '{"id": "Enjolras", "group": 8},\n' +
-        '{"id": "Combeferre", "group": 8},\n' +
-        '{"id": "Prouvaire", "group": 8},\n' +
-        '{"id": "Feuilly", "group": 8},\n' +
-        '{"id": "Courfeyrac", "group": 8},\n' +
-        '{"id": "Bahorel", "group": 8},\n' +
-        '{"id": "Bossuet", "group": 8},\n' +
-        '{"id": "Joly", "group": 8},\n' +
-        '{"id": "Grantaire", "group": 8},\n' +
-        '{"id": "MotherPlutarch", "group": 9},\n' +
-        '{"id": "Gueulemer", "group": 4},\n' +
-        '{"id": "Babet", "group": 4},\n' +
-        '{"id": "Claquesous", "group": 4},\n' +
-        '{"id": "Montparnasse", "group": 4},\n' +
-        '{"id": "Toussaint", "group": 5},\n' +
-        '{"id": "Child1", "group": 10},\n' +
-        '{"id": "Child2", "group": 10},\n' +
-        '{"id": "Brujon", "group": 4},\n' +
-        '{"id": "Mme.Hucheloup", "group": 8}\n' +
-        '],\n' +
-        '  "links": [\n' +
-        '{"source": "Napoleon", "target": "Myriel", "value": 1},\n' +
-        '{"source": "Mlle.Baptistine", "target": "Myriel", "value": 8},\n' +
-        '{"source": "Mme.Magloire", "target": "Myriel", "value": 10},\n' +
-        '{"source": "Mme.Magloire", "target": "Mlle.Baptistine", "value": 6},\n' +
-        '{"source": "CountessdeLo", "target": "Myriel", "value": 1},\n' +
-        '{"source": "Geborand", "target": "Myriel", "value": 1},\n' +
-        '{"source": "Champtercier", "target": "Myriel", "value": 1},\n' +
-        '{"source": "Cravatte", "target": "Myriel", "value": 1},\n' +
-        '{"source": "Count", "target": "Myriel", "value": 2},\n' +
-        '{"source": "OldMan", "target": "Myriel", "value": 1},\n' +
-        '{"source": "Valjean", "target": "Labarre", "value": 1},\n' +
-        '{"source": "Valjean", "target": "Mme.Magloire", "value": 3},\n' +
-        '{"source": "Valjean", "target": "Mlle.Baptistine", "value": 3},\n' +
-        '{"source": "Valjean", "target": "Myriel", "value": 5},\n' +
-        '{"source": "Marguerite", "target": "Valjean", "value": 1},\n' +
-        '{"source": "Mme.deR", "target": "Valjean", "value": 1},\n' +
-        '{"source": "Isabeau", "target": "Valjean", "value": 1},\n' +
-        '{"source": "Gervais", "target": "Valjean", "value": 1},\n' +
-        '{"source": "Listolier", "target": "Tholomyes", "value": 4},\n' +
-        '{"source": "Fameuil", "target": "Tholomyes", "value": 4},\n' +
-        '{"source": "Fameuil", "target": "Listolier", "value": 4},\n' +
-        '{"source": "Blacheville", "target": "Tholomyes", "value": 4},\n' +
-        '{"source": "Blacheville", "target": "Listolier", "value": 4},\n' +
-        '{"source": "Blacheville", "target": "Fameuil", "value": 4},\n' +
-        '{"source": "Favourite", "target": "Tholomyes", "value": 3},\n' +
-        '{"source": "Favourite", "target": "Listolier", "value": 3},\n' +
-        '{"source": "Favourite", "target": "Fameuil", "value": 3},\n' +
-        '{"source": "Favourite", "target": "Blacheville", "value": 4},\n' +
-        '{"source": "Dahlia", "target": "Tholomyes", "value": 3},\n' +
-        '{"source": "Dahlia", "target": "Listolier", "value": 3},\n' +
-        '{"source": "Dahlia", "target": "Fameuil", "value": 3},\n' +
-        '{"source": "Dahlia", "target": "Blacheville", "value": 3},\n' +
-        '{"source": "Dahlia", "target": "Favourite", "value": 5},\n' +
-        '{"source": "Zephine", "target": "Tholomyes", "value": 3},\n' +
-        '{"source": "Zephine", "target": "Listolier", "value": 3},\n' +
-        '{"source": "Zephine", "target": "Fameuil", "value": 3},\n' +
-        '{"source": "Zephine", "target": "Blacheville", "value": 3},\n' +
-        '{"source": "Zephine", "target": "Favourite", "value": 4},\n' +
-        '{"source": "Zephine", "target": "Dahlia", "value": 4},\n' +
-        '{"source": "Fantine", "target": "Tholomyes", "value": 3},\n' +
-        '{"source": "Fantine", "target": "Listolier", "value": 3},\n' +
-        '{"source": "Fantine", "target": "Fameuil", "value": 3},\n' +
-        '{"source": "Fantine", "target": "Blacheville", "value": 3},\n' +
-        '{"source": "Fantine", "target": "Favourite", "value": 4},\n' +
-        '{"source": "Fantine", "target": "Dahlia", "value": 4},\n' +
-        '{"source": "Fantine", "target": "Zephine", "value": 4},\n' +
-        '{"source": "Fantine", "target": "Marguerite", "value": 2},\n' +
-        '{"source": "Fantine", "target": "Valjean", "value": 9},\n' +
-        '{"source": "Mme.Thenardier", "target": "Fantine", "value": 2},\n' +
-        '{"source": "Mme.Thenardier", "target": "Valjean", "value": 7},\n' +
-        '{"source": "Thenardier", "target": "Mme.Thenardier", "value": 13},\n' +
-        '{"source": "Thenardier", "target": "Fantine", "value": 1},\n' +
-        '{"source": "Thenardier", "target": "Valjean", "value": 12},\n' +
-        '{"source": "Cosette", "target": "Mme.Thenardier", "value": 4},\n' +
-        '{"source": "Cosette", "target": "Valjean", "value": 31},\n' +
-        '{"source": "Cosette", "target": "Tholomyes", "value": 1},\n' +
-        '{"source": "Cosette", "target": "Thenardier", "value": 1},\n' +
-        '{"source": "Javert", "target": "Valjean", "value": 17},\n' +
-        '{"source": "Javert", "target": "Fantine", "value": 5},\n' +
-        '{"source": "Javert", "target": "Thenardier", "value": 5},\n' +
-        '{"source": "Javert", "target": "Mme.Thenardier", "value": 1},\n' +
-        '{"source": "Javert", "target": "Cosette", "value": 1},\n' +
-        '{"source": "Fauchelevent", "target": "Valjean", "value": 8},\n' +
-        '{"source": "Fauchelevent", "target": "Javert", "value": 1},\n' +
-        '{"source": "Bamatabois", "target": "Fantine", "value": 1},\n' +
-        '{"source": "Bamatabois", "target": "Javert", "value": 1},\n' +
-        '{"source": "Bamatabois", "target": "Valjean", "value": 2},\n' +
-        '{"source": "Perpetue", "target": "Fantine", "value": 1},\n' +
-        '{"source": "Simplice", "target": "Perpetue", "value": 2},\n' +
-        '{"source": "Simplice", "target": "Valjean", "value": 3},\n' +
-        '{"source": "Simplice", "target": "Fantine", "value": 2},\n' +
-        '{"source": "Simplice", "target": "Javert", "value": 1},\n' +
-        '{"source": "Scaufflaire", "target": "Valjean", "value": 1},\n' +
-        '{"source": "Woman1", "target": "Valjean", "value": 2},\n' +
-        '{"source": "Woman1", "target": "Javert", "value": 1},\n' +
-        '{"source": "Judge", "target": "Valjean", "value": 3},\n' +
-        '{"source": "Judge", "target": "Bamatabois", "value": 2},\n' +
-        '{"source": "Champmathieu", "target": "Valjean", "value": 3},\n' +
-        '{"source": "Champmathieu", "target": "Judge", "value": 3},\n' +
-        '{"source": "Champmathieu", "target": "Bamatabois", "value": 2},\n' +
-        '{"source": "Brevet", "target": "Judge", "value": 2},\n' +
-        '{"source": "Brevet", "target": "Champmathieu", "value": 2},\n' +
-        '{"source": "Brevet", "target": "Valjean", "value": 2},\n' +
-        '{"source": "Brevet", "target": "Bamatabois", "value": 1},\n' +
-        '{"source": "Chenildieu", "target": "Judge", "value": 2},\n' +
-        '{"source": "Chenildieu", "target": "Champmathieu", "value": 2},\n' +
-        '{"source": "Chenildieu", "target": "Brevet", "value": 2},\n' +
-        '{"source": "Chenildieu", "target": "Valjean", "value": 2},\n' +
-        '{"source": "Chenildieu", "target": "Bamatabois", "value": 1},\n' +
-        '{"source": "Cochepaille", "target": "Judge", "value": 2},\n' +
-        '{"source": "Cochepaille", "target": "Champmathieu", "value": 2},\n' +
-        '{"source": "Cochepaille", "target": "Brevet", "value": 2},\n' +
-        '{"source": "Cochepaille", "target": "Chenildieu", "value": 2},\n' +
-        '{"source": "Cochepaille", "target": "Valjean", "value": 2},\n' +
-        '{"source": "Cochepaille", "target": "Bamatabois", "value": 1},\n' +
-        '{"source": "Pontmercy", "target": "Thenardier", "value": 1},\n' +
-        '{"source": "Boulatruelle", "target": "Thenardier", "value": 1},\n' +
-        '{"source": "Eponine", "target": "Mme.Thenardier", "value": 2},\n' +
-        '{"source": "Eponine", "target": "Thenardier", "value": 3},\n' +
-        '{"source": "Anzelma", "target": "Eponine", "value": 2},\n' +
-        '{"source": "Anzelma", "target": "Thenardier", "value": 2},\n' +
-        '{"source": "Anzelma", "target": "Mme.Thenardier", "value": 1},\n' +
-        '{"source": "Woman2", "target": "Valjean", "value": 3},\n' +
-        '{"source": "Woman2", "target": "Cosette", "value": 1},\n' +
-        '{"source": "Woman2", "target": "Javert", "value": 1},\n' +
-        '{"source": "MotherInnocent", "target": "Fauchelevent", "value": 3},\n' +
-        '{"source": "MotherInnocent", "target": "Valjean", "value": 1},\n' +
-        '{"source": "Gribier", "target": "Fauchelevent", "value": 2},\n' +
-        '{"source": "Mme.Burgon", "target": "Jondrette", "value": 1},\n' +
-        '{"source": "Gavroche", "target": "Mme.Burgon", "value": 2},\n' +
-        '{"source": "Gavroche", "target": "Thenardier", "value": 1},\n' +
-        '{"source": "Gavroche", "target": "Javert", "value": 1},\n' +
-        '{"source": "Gavroche", "target": "Valjean", "value": 1},\n' +
-        '{"source": "Gillenormand", "target": "Cosette", "value": 3},\n' +
-        '{"source": "Gillenormand", "target": "Valjean", "value": 2},\n' +
-        '{"source": "Magnon", "target": "Gillenormand", "value": 1},\n' +
-        '{"source": "Magnon", "target": "Mme.Thenardier", "value": 1},\n' +
-        '{"source": "Mlle.Gillenormand", "target": "Gillenormand", "value": 9},\n' +
-        '{"source": "Mlle.Gillenormand", "target": "Cosette", "value": 2},\n' +
-        '{"source": "Mlle.Gillenormand", "target": "Valjean", "value": 2},\n' +
-        '{"source": "Mme.Pontmercy", "target": "Mlle.Gillenormand", "value": 1},\n' +
-        '{"source": "Mme.Pontmercy", "target": "Pontmercy", "value": 1},\n' +
-        '{"source": "Mlle.Vaubois", "target": "Mlle.Gillenormand", "value": 1},\n' +
-        '{"source": "Lt.Gillenormand", "target": "Mlle.Gillenormand", "value": 2},\n' +
-        '{"source": "Lt.Gillenormand", "target": "Gillenormand", "value": 1},\n' +
-        '{"source": "Lt.Gillenormand", "target": "Cosette", "value": 1},\n' +
-        '{"source": "Marius", "target": "Mlle.Gillenormand", "value": 6},\n' +
-        '{"source": "Marius", "target": "Gillenormand", "value": 12},\n' +
-        '{"source": "Marius", "target": "Pontmercy", "value": 1},\n' +
-        '{"source": "Marius", "target": "Lt.Gillenormand", "value": 1},\n' +
-        '{"source": "Marius", "target": "Cosette", "value": 21},\n' +
-        '{"source": "Marius", "target": "Valjean", "value": 19},\n' +
-        '{"source": "Marius", "target": "Tholomyes", "value": 1},\n' +
-        '{"source": "Marius", "target": "Thenardier", "value": 2},\n' +
-        '{"source": "Marius", "target": "Eponine", "value": 5},\n' +
-        '{"source": "Marius", "target": "Gavroche", "value": 4},\n' +
-        '{"source": "BaronessT", "target": "Gillenormand", "value": 1},\n' +
-        '{"source": "BaronessT", "target": "Marius", "value": 1},\n' +
-        '{"source": "Mabeuf", "target": "Marius", "value": 1},\n' +
-        '{"source": "Mabeuf", "target": "Eponine", "value": 1},\n' +
-        '{"source": "Mabeuf", "target": "Gavroche", "value": 1},\n' +
-        '{"source": "Enjolras", "target": "Marius", "value": 7},\n' +
-        '{"source": "Enjolras", "target": "Gavroche", "value": 7},\n' +
-        '{"source": "Enjolras", "target": "Javert", "value": 6},\n' +
-        '{"source": "Enjolras", "target": "Mabeuf", "value": 1},\n' +
-        '{"source": "Enjolras", "target": "Valjean", "value": 4},\n' +
-        '{"source": "Combeferre", "target": "Enjolras", "value": 15},\n' +
-        '{"source": "Combeferre", "target": "Marius", "value": 5},\n' +
-        '{"source": "Combeferre", "target": "Gavroche", "value": 6},\n' +
-        '{"source": "Combeferre", "target": "Mabeuf", "value": 2},\n' +
-        '{"source": "Prouvaire", "target": "Gavroche", "value": 1},\n' +
-        '{"source": "Prouvaire", "target": "Enjolras", "value": 4},\n' +
-        '{"source": "Prouvaire", "target": "Combeferre", "value": 2},\n' +
-        '{"source": "Feuilly", "target": "Gavroche", "value": 2},\n' +
-        '{"source": "Feuilly", "target": "Enjolras", "value": 6},\n' +
-        '{"source": "Feuilly", "target": "Prouvaire", "value": 2},\n' +
-        '{"source": "Feuilly", "target": "Combeferre", "value": 5},\n' +
-        '{"source": "Feuilly", "target": "Mabeuf", "value": 1},\n' +
-        '{"source": "Feuilly", "target": "Marius", "value": 1},\n' +
-        '{"source": "Courfeyrac", "target": "Marius", "value": 9},\n' +
-        '{"source": "Courfeyrac", "target": "Enjolras", "value": 17},\n' +
-        '{"source": "Courfeyrac", "target": "Combeferre", "value": 13},\n' +
-        '{"source": "Courfeyrac", "target": "Gavroche", "value": 7},\n' +
-        '{"source": "Courfeyrac", "target": "Mabeuf", "value": 2},\n' +
-        '{"source": "Courfeyrac", "target": "Eponine", "value": 1},\n' +
-        '{"source": "Courfeyrac", "target": "Feuilly", "value": 6},\n' +
-        '{"source": "Courfeyrac", "target": "Prouvaire", "value": 3},\n' +
-        '{"source": "Bahorel", "target": "Combeferre", "value": 5},\n' +
-        '{"source": "Bahorel", "target": "Gavroche", "value": 5},\n' +
-        '{"source": "Bahorel", "target": "Courfeyrac", "value": 6},\n' +
-        '{"source": "Bahorel", "target": "Mabeuf", "value": 2},\n' +
-        '{"source": "Bahorel", "target": "Enjolras", "value": 4},\n' +
-        '{"source": "Bahorel", "target": "Feuilly", "value": 3},\n' +
-        '{"source": "Bahorel", "target": "Prouvaire", "value": 2},\n' +
-        '{"source": "Bahorel", "target": "Marius", "value": 1},\n' +
-        '{"source": "Bossuet", "target": "Marius", "value": 5},\n' +
-        '{"source": "Bossuet", "target": "Courfeyrac", "value": 12},\n' +
-        '{"source": "Bossuet", "target": "Gavroche", "value": 5},\n' +
-        '{"source": "Bossuet", "target": "Bahorel", "value": 4},\n' +
-        '{"source": "Bossuet", "target": "Enjolras", "value": 10},\n' +
-        '{"source": "Bossuet", "target": "Feuilly", "value": 6},\n' +
-        '{"source": "Bossuet", "target": "Prouvaire", "value": 2},\n' +
-        '{"source": "Bossuet", "target": "Combeferre", "value": 9},\n' +
-        '{"source": "Bossuet", "target": "Mabeuf", "value": 1},\n' +
-        '{"source": "Bossuet", "target": "Valjean", "value": 1},\n' +
-        '{"source": "Joly", "target": "Bahorel", "value": 5},\n' +
-        '{"source": "Joly", "target": "Bossuet", "value": 7},\n' +
-        '{"source": "Joly", "target": "Gavroche", "value": 3},\n' +
-        '{"source": "Joly", "target": "Courfeyrac", "value": 5},\n' +
-        '{"source": "Joly", "target": "Enjolras", "value": 5},\n' +
-        '{"source": "Joly", "target": "Feuilly", "value": 5},\n' +
-        '{"source": "Joly", "target": "Prouvaire", "value": 2},\n' +
-        '{"source": "Joly", "target": "Combeferre", "value": 5},\n' +
-        '{"source": "Joly", "target": "Mabeuf", "value": 1},\n' +
-        '{"source": "Joly", "target": "Marius", "value": 2},\n' +
-        '{"source": "Grantaire", "target": "Bossuet", "value": 3},\n' +
-        '{"source": "Grantaire", "target": "Enjolras", "value": 3},\n' +
-        '{"source": "Grantaire", "target": "Combeferre", "value": 1},\n' +
-        '{"source": "Grantaire", "target": "Courfeyrac", "value": 2},\n' +
-        '{"source": "Grantaire", "target": "Joly", "value": 2},\n' +
-        '{"source": "Grantaire", "target": "Gavroche", "value": 1},\n' +
-        '{"source": "Grantaire", "target": "Bahorel", "value": 1},\n' +
-        '{"source": "Grantaire", "target": "Feuilly", "value": 1},\n' +
-        '{"source": "Grantaire", "target": "Prouvaire", "value": 1},\n' +
-        '{"source": "MotherPlutarch", "target": "Mabeuf", "value": 3},\n' +
-        '{"source": "Gueulemer", "target": "Thenardier", "value": 5},\n' +
-        '{"source": "Gueulemer", "target": "Valjean", "value": 1},\n' +
-        '{"source": "Gueulemer", "target": "Mme.Thenardier", "value": 1},\n' +
-        '{"source": "Gueulemer", "target": "Javert", "value": 1},\n' +
-        '{"source": "Gueulemer", "target": "Gavroche", "value": 1},\n' +
-        '{"source": "Gueulemer", "target": "Eponine", "value": 1},\n' +
-        '{"source": "Babet", "target": "Thenardier", "value": 6},\n' +
-        '{"source": "Babet", "target": "Gueulemer", "value": 6},\n' +
-        '{"source": "Babet", "target": "Valjean", "value": 1},\n' +
-        '{"source": "Babet", "target": "Mme.Thenardier", "value": 1},\n' +
-        '{"source": "Babet", "target": "Javert", "value": 2},\n' +
-        '{"source": "Babet", "target": "Gavroche", "value": 1},\n' +
-        '{"source": "Babet", "target": "Eponine", "value": 1},\n' +
-        '{"source": "Claquesous", "target": "Thenardier", "value": 4},\n' +
-        '{"source": "Claquesous", "target": "Babet", "value": 4},\n' +
-        '{"source": "Claquesous", "target": "Gueulemer", "value": 4},\n' +
-        '{"source": "Claquesous", "target": "Valjean", "value": 1},\n' +
-        '{"source": "Claquesous", "target": "Mme.Thenardier", "value": 1},\n' +
-        '{"source": "Claquesous", "target": "Javert", "value": 1},\n' +
-        '{"source": "Claquesous", "target": "Eponine", "value": 1},\n' +
-        '{"source": "Claquesous", "target": "Enjolras", "value": 1},\n' +
-        '{"source": "Montparnasse", "target": "Javert", "value": 1},\n' +
-        '{"source": "Montparnasse", "target": "Babet", "value": 2},\n' +
-        '{"source": "Montparnasse", "target": "Gueulemer", "value": 2},\n' +
-        '{"source": "Montparnasse", "target": "Claquesous", "value": 2},\n' +
-        '{"source": "Montparnasse", "target": "Valjean", "value": 1},\n' +
-        '{"source": "Montparnasse", "target": "Gavroche", "value": 1},\n' +
-        '{"source": "Montparnasse", "target": "Eponine", "value": 1},\n' +
-        '{"source": "Montparnasse", "target": "Thenardier", "value": 1},\n' +
-        '{"source": "Toussaint", "target": "Cosette", "value": 2},\n' +
-        '{"source": "Toussaint", "target": "Javert", "value": 1},\n' +
-        '{"source": "Toussaint", "target": "Valjean", "value": 1},\n' +
-        '{"source": "Child1", "target": "Gavroche", "value": 2},\n' +
-        '{"source": "Child2", "target": "Gavroche", "value": 2},\n' +
-        '{"source": "Child2", "target": "Child1", "value": 3},\n' +
-        '{"source": "Brujon", "target": "Babet", "value": 3},\n' +
-        '{"source": "Brujon", "target": "Gueulemer", "value": 3},\n' +
-        '{"source": "Brujon", "target": "Thenardier", "value": 3},\n' +
-        '{"source": "Brujon", "target": "Gavroche", "value": 1},\n' +
-        '{"source": "Brujon", "target": "Eponine", "value": 1},\n' +
-        '{"source": "Brujon", "target": "Claquesous", "value": 1},\n' +
-        '{"source": "Brujon", "target": "Montparnasse", "value": 1},\n' +
-        '{"source": "Mme.Hucheloup", "target": "Bossuet", "value": 1},\n' +
-        '{"source": "Mme.Hucheloup", "target": "Joly", "value": 1},\n' +
-        '{"source": "Mme.Hucheloup", "target": "Grantaire", "value": 1},\n' +
-        '{"source": "Mme.Hucheloup", "target": "Bahorel", "value": 1},\n' +
-        '{"source": "Mme.Hucheloup", "target": "Courfeyrac", "value": 1},\n' +
-        '{"source": "Mme.Hucheloup", "target": "Gavroche", "value": 1},\n' +
-        '{"source": "Mme.Hucheloup", "target": "Enjolras", "value": 1}]\n' +
-        '}';
+        const bars = get_ph_features(data.nodes, data.links);
+        create_graph();
+        create_barcode(bars);
 
-    class Component {
-        constructor(node, id)
-        {
-            this.id = id;
-            this.nodes = [];
-            this.nodes.push(node);
-        }
+        /**
+         * Function that updates which bars
+         * are considered for additional attraction.
+         * @param value Value of the slider
+         */
+        function update_attraction(value) {
 
-         contains(id)
-         {
-             return this.nodes.find(function(node)
-             {
-                 return node.id === id;
-             });
-         }
-    }
-
-    class Bar {
-        constructor(id)
-        {
-            this.death = Number.POSITIVE_INFINITY; // 1/w
-            this.id = id;           // bar ID
-            this.edge = null;       // cause of death
-            this.ratio = 0.2;       // ratio
-            this.selected = false;  // selected
-            this.componentA = [];   // if the bar is selected these two components
-            this.componentB = [];   // will repulse each other
-        }
-    }
-
-    let color = d3.scaleOrdinal(d3.schemeCategory20);
-    let data = JSON.parse(rawdata);
-
-    let mstAndBarcode = getMSTFromPersistence(data.nodes, data.links);
-
-    let svg_graph = d3.select("#graph"),
-        width = +svg_graph.attr("width"),
-        height = +svg_graph.attr("height");
-
-    let g = svg_graph.append("g")
-        .attr("class", "everything");
-
-    //add zoom capabilities
-    let zoom_handler = d3.zoom()
-        .on("zoom", zoom_actions);
-
-    zoom_handler(svg_graph);
-
-    function zoom_actions(){
-        g.attr("transform", d3.event.transform)
-    }
-
-    let links = g.append("g")
-        .attr("class", "links")
-        .selectAll("line")
-        .data(data.links)
-        .enter().append("line")
-        .attr("stroke-width", function(d) { return Math.sqrt(d.value); })
-        .attr("stroke", "#222222")
-        .style("opacity", 0.2);
-
-    let node = g.append("g")
-        .attr("class", "nodes")
-        .selectAll("g")
-        .data(data.nodes)
-        .enter().append("g");
-
-    node.append("circle")
-        .attr("r", 5)
-        .attr("fill", function(d) { return color(d.group); });
-
-    node.append("text")
-        .text(function(d) {
-            return d.id;
-        })
-        .attr('x', 6)
-        .attr('y', 3)
-        .style("font-size", "5px");
-
-    node.append("title")
-        .text(function(d) { return d.id; });
-
-    const simulation = d3.forceSimulation();
-
-    simulation
-        .force("link", d3.forceLink().id(function(d) { return d.id; }))
-        .force("charge", d3.forceManyBody())
-        .force("center", d3.forceCenter(width / 2, height / 2));
-
-    simulation.force("link").distance(function(d) { return d.value;}).strength(0.1);
-
-    simulation
-        .nodes(data.nodes)
-        .on("tick", ticked);
-
-    simulation.force("link")
-        .links(data.links);
-
-    function ticked() {
-        links
-            .attr("x1", function(d) { return d.source.x; })
-            .attr("y1", function(d) { return d.source.y; })
-            .attr("x2", function(d) { return d.target.x; })
-            .attr("y2", function(d) { return d.target.y; });
-
-        node
-            .attr("transform", function(d) {
-                return "translate(" + d.x + "," + d.y + ")";
-            });
-    }
-
-    // barchart
-    const chart_data = mstAndBarcode[1];
-
-    // set the dimensions and margins of the graph
-    const margin = {top: 20, right: 20, bottom: 30, left: 40},
-        bar_width = 260 - margin.left - margin.right,
-        bar_height = 900 - margin.top - margin.bottom;
-
-    // set the ranges
-    const y = d3.scaleBand()
-        .range([bar_height, 0])
-        .padding(0.1);
-
-    const x = d3.scaleLinear()
-        .range([0, bar_width]);
-
-    const svg = d3.select("#barcode");
-    svg.append("g").attr("transform",
-        "translate(" + margin.left + "," + margin.top + ")");
-
-    // format the data
-    chart_data.forEach(function(d) {
-        d.death = +d.death;
-    });
-    chart_data.sort(function(a, b) {
-        if(a.death !== b.death) {
-            return b.death - a.death;
-        }
-        else {
-            return b.ratio - a.ratio;
-        }
-    });
-
-    // Scale the range of the data in the domains
-    x.domain([0, d3.max(chart_data, function(d){ return d.death; }) + 1])
-    y.domain(chart_data.map(function(d) { return d.id; }));
-
-    // set the slider accordingly
-    document.querySelector("#slider").max = d3.max(chart_data, function(d){ return d.death;}) + 1;
-    document.querySelector("#slider").value = 0;
-    document.querySelector("#slider").step = document.querySelector("#slider").max / x(document.querySelector("#slider").max);
-
-    // append the rectangles for the bar chart
-    svg.selectAll(".bar")
-        .data(chart_data)
-        .enter().append("rect")
-        .attr("class", "bar")
-        .attr("width", function(d) {return x(d.death * d.ratio);} )
-        .attr("y", function(d) { return y(d.id); })
-        .attr("fill", "#820087")
-        .attr("height", y.bandwidth())
-
-    // adding the second (stacked) bar
-    svg.selectAll(".bar")
-        .data(chart_data)
-        .exit().data(chart_data)
-        .enter().append("rect")
-        .attr("class", "bar")
-        .attr("x", function(d) {return x(d.death * d.ratio);} )
-        .attr("width", function(d) {return x(d.death * (1-d.ratio));} )
-        .attr("y", function(d) { return y(d.id); })
-        .attr("fill", "#fa9b9b")
-        .attr("height", y.bandwidth())
-
-    // this bar is just used for the selection and to attach a bordr
-    svg.selectAll(".bar")
-        .data(chart_data)
-        .exit().data(chart_data)
-        .enter().append("rect")
-        .attr("class", "bar")
-        .attr("x", function(d) {return 0;} )
-        .attr("width", function(d) {return x(d.death);} )
-        .attr("y", function(d) { return y(d.id); })
-        .attr("height", y.bandwidth())
-        .attr("fill", "#00000000")
-        .attr("opacity", 1)
-    .on("click", select_deselect);
-
-    // adding the line associated with the slider => shows repulsion threshold
-    svg.selectAll(".bar")
-        .data(chart_data)
-        .exit().data(chart_data)
-        .enter().append("line") 
-        .attr("x1", 0)
-        .attr("y1", 0)
-        .attr("x2", 0)
-        .attr("y2", 850)
-        .attr("stroke", "#4281fc")
-        .attr("stroke-width", 2.0);
-
-    /**
-     * Function that updates which bars
-     * are considered for additional attraction.
-     * @param value Value of the slider
-     */
-    function update_attraction(value) {
-
-        simulation.force("link").strength(function(link) {
-            for(let i = 0; i < chart_data.length; i++)
-            {
-                if(chart_data[i].death > value)
+            simulation.force("link").strength(function(link) {
+                for(let i = 0; i < bars.length; i++)
                 {
-                    continue;
-                }
-
-                if (link === chart_data[i].edge)
-                {
-                    //return chart_data[i].edge.value / 10 + 1;
-                    //return chart_data[i].edge.value * 10;
-                    return 1.0;
-                }
-            }
-
-            return 0.1;
-        });
-
-        //simulation.force("attr")
-        //   .links(data.links);
-
-        simulation.alpha(1).restart();
-    }
-
-    /***
-     *  Function updates the blue bar following the slider.
-     *  @param value of the slider position
-     * */
-    function update_slider(value)
-    {
-        svg.selectAll("line")
-            .attr("x1", x(value)) // we map the slider value to the x axis
-            .attr("y1", 0)
-            .attr("x2", x(value))
-            .attr("y2", 850);
-    }
-
-    /**
-     * Function is used to select and deselect bars
-     * to add / remove repulsion for these components.
-     * @param d Bar
-     */
-    function select_deselect(d) {
-        if(d.selected)
-        {
-            d3.select(this).attr("stroke", null).attr("stroke-width", null);
-        }
-        else
-        {
-            d3.select(this).attr("stroke", "blue").attr("stroke-width", 2.0);
-        }
-        d.selected = !d.selected;
-    }
-
-    /**
-     * Computes the 0D Barcode and all necessary parameters
-     * for the bars.
-     * Furthermore computes the Minimum Spanning Tree
-     * using disjointed sets (algorithm).
-     * @param nodes nodes of the graph
-     * @param links edges of the graph
-     * @returns MST and Bars
-     */
-    function getMSTFromPersistence(nodes, links) {
-        let mst = [];  // contains the MST
-        let bars = []; // contains bars with their live and death
-        let components = []; // contains all "living" components
-
-        // for all nodes
-        for(let i = 0; i < nodes.length; i++)
-        {
-            bars[i] = new Bar(i); // initialise bar with death of 1
-            components[i] = new Component(nodes[i], i);         // initialise component with the node
-        }
-
-        // sort the links
-        links.sort(function(a, b)
-        {// persistence = 1/w -> increasing = a - b
-           return 1/a.value - 1/b.value;
-        });
-
-        // loop through all edges
-        for(let i = 0; i < links.length; i++)
-        {
-            // find the component of the source node u that is not in a "dead" component
-            let c_u = components.find(function(component)
-            {
-                return component.contains(links[i].source);
-            });
-
-            // find the component of the target node v
-            let c_v = components.find(function(component)
-            {
-                return component.contains(links[i].target);
-            });
-
-            if(c_v.id !== c_u.id) // if C_u and C_v not in
-            {
-                bars[c_u.id].death = links[i].value; // update death time (w instead of 1/w see paper)
-                bars[c_u.id].edge = links[i];
-                for(let j = 0; j < c_u.nodes.length; j++) // merge C_u and C_v into C_v
-                {
-                    c_v.nodes.push(c_u.nodes[j]);
-                }
-                // remove c_u from the list so we don't think it exists separately
-                components = components.filter(function(current_val) { return current_val.id !== c_u.id; });
-                mst.push(links[i]); // add edge to MST
-            }
-        }
-        // remove last component
-        bars = bars.filter(function(element) { return element.death !== Number.POSITIVE_INFINITY });
-
-
-        // for each bar now the ratio needs to be computed (see paper) i.e. for the edge e(u,v) that caused
-        // the death of the bar
-        // count nodes on left sie u = n
-        // count nodes on right side v = m
-        // ratio = n:m or ratio = n / (n + m) => count n then divide by all nodes
-        for(let i = 0; i < bars.length; i++)
-        {
-            // for all nodes
-            for(let i = 0; i < nodes.length; i++)
-            {
-                components[i] = new Component(nodes[i], i);  // initialise component with the node
-            }
-
-            // remove the edge that caused the death of this bar
-            let mst_removed = mst.filter(function(element){ return element !== bars[i].edge; });
-
-            // loop through the remaining edges
-            for(let i = 0; i < mst_removed.length; i++)
-            {
-                // find the component of the source node u that is not in a "dead" component
-                let c_u = components.find(function(component)
-                {
-                    return component.contains(mst_removed[i].source);
-                });
-
-                // find the component of the target node v
-                let c_v = components.find(function(component)
-                {
-                    return component.contains(mst_removed[i].target);
-                });
-
-                if(c_v.id !== c_u.id) // if C_u and C_v not in
-                {
-                    for(let j = 0; j < c_u.nodes.length; j++) // merge C_u and C_v into C_v
+                    if(bars[i].death > value)
                     {
-                        c_v.nodes.push(c_u.nodes[j]);
+                        continue;
                     }
-                    components = components.filter(function(current_val) { return current_val.id !== c_u.id; });
-                }
-            }
 
-            // now we should have 2 components and we can take
-            // an arbitrary one
-            let n = (components[0].nodes.length >= components[1].nodes.length) ? components[1].nodes.length : components[0].nodes.length;
-            // ratio is component size divided by all nodes
-            bars[i].ratio = n / nodes.length;
-            // we also keep the components in mind
-            bars[i].componentA = components[0].nodes;
-            bars[i].componentB = components[1].nodes;
+                    if (link === bars[i].edge)
+                    {
+                        //return chart_data[i].edge.value / 10 + 1;
+                        //return chart_data[i].edge.value * 10;
+                        return 1.0;
+                    }
+                }
+
+                return 0.1;
+            });
+
+            simulation.alpha(1).restart();
         }
 
-        return [mst, bars];
-    }
-</script>
+        /**
+         * Function that updates the repulsion based on the selected bars.
+         **/
+        function update_repulsion() {
 
+        }
+
+        /***
+         *  Function updates the blue bar following the slider.
+         *  @param value of the slider position
+         * */
+        function update_slider(value) {
+            d3.select("#barcode").selectAll("line")
+                .attr("x1", x(value)) // we map the slider value to the x axis
+                .attr("y1", 0)
+                .attr("x2", x(value))
+                .attr("y2", 850);
+        }
+
+    </script>
+</html>

@@ -1,27 +1,44 @@
-.graph
+html, body
 {
-    float: left;
-    width: 70%;
+    width: 100%;
     height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
-.barcode
+.graph-container
 {
-    width: 30%;
+    width: 100%;
     height: 100%;
+    z-index: 0;
 }
 
-.barcode .slider
+.barcode-container
 {
-    position: absolute;
-    width: 210px
+    min-width: 200px;
+    right: 0;
+    top: 0;
+    height: 100%;
+    z-index: 1;
+    overflow-y: scroll;
+    opacity: 0.8;
+    background-color: gray;
 }
 
-.barcode .barchart
+.barcode-container .slider
 {
-    position: absolute;
-    top: 50px;
-    height: 100%;
+    display: flex;
+    position: relative;
+    right: 12px;
+    width: 213px;
+    z-index: 2;
+}
+
+.barcode-container .bars
+{
+    position: relative;
+    right: 5px;
+    top: 0;
 }
 
 .links path {
