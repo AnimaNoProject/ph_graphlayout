@@ -76,6 +76,34 @@ function create_graph() {
         return d.value;
     }).strength(0.1);
 
+    /* Force-Bundling but it does not work
+    let d3line = d3.line()
+        .x(function(d){return d.x;})
+        .y(function(d){return d.y;});
+    function ticked() {
+            nodes
+                .attr("transform", function(d) {
+                    return "translate(" + d.x + "," + d.y + ")";
+                });
+
+            //Run FDEB on all the links
+            let fbundling = d3.ForceEdgeBundling()
+                .nodes(simulation.nodes())
+                .edges(simulation.force("link").links().map(function(edge) {
+                    return {
+                        source: simulation.nodes().indexOf(edge.source),
+                        target: simulation.nodes().indexOf(edge.target)
+                    }
+                }));
+
+            var link = links.selectAll('path')
+                .data(fbundling());
+
+            link.exit().remove();
+            link.merge(link.enter().append('path'))
+                .attr('d', d3line);
+    }*/
+
     function ticked() {
         links
             .attr("x1", function(d) { return d.source.x; })

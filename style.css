@@ -20,12 +20,13 @@ html, body
     right: 0;
     top: 0;
     z-index: 1;
+    height: 920px;
 }
 
 .barcode-container .slider
 {
-    right: 0;
-    width: 210px;
+    margin-left: -5px;
+    width: 215px;
     z-index: 2;
 }
 

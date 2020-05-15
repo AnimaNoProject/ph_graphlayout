@@ -3,6 +3,7 @@
     <header>
         <meta charset="utf-8">
         <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="https://cdn.rawgit.com/upphiminn/d3.ForceBundle/2b406b8567fcad0a6c2922c84cd4bceb0c374bc5/d3-ForceEdgeBundling.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/d3-queue/3.0.4/d3-queue.min.js"></script>
         <script src="miserables.js"></script>
         <script src="barcode.js"></script>
@@ -27,6 +28,7 @@
         let data = JSON.parse(rawdata);
 
         const bars = get_ph_features(data.nodes, data.links);
+
         create_graph();
         create_barcode(bars);
 
@@ -36,7 +38,6 @@
          * @param value Value of the slider
          */
         function update_attraction(value) {
-
             simulation.force("link").strength(function(link) {
                 for(let i = 0; i < bars.length; i++)
                 {
@@ -47,7 +48,7 @@
 
                     if (link === bars[i].edge)
                     {
-                        return 1.0;
+                        return 0.5;
                     }
                 }
 
@@ -61,6 +62,52 @@
          * Function that updates the repulsion based on the selected bars.
          **/
         function update_repulsion() {
+            simulation
+                .force("repulsion", d3.forceLink().id(function (d) {
+                    return d.id;
+                }));
+            simulation.force("repulsion").strength(-0.0015);
+
+            let listofrepulsions = [];
+
+            for(let k = 0; k < bars.length; k++)
+            {
+                if(!bars[k].selected)
+                {
+                    continue;
+                }
+
+                let index = 0;
+                for(let i = 0; i < bars[k].componentA.length; i++) {
+                    for(let j = 0; j < bars[k].componentB.length; j++) {
+
+                        // if the two nodes already repulse each other don't repulse them further
+                        if(listofrepulsions.find(
+                            function (element)
+                            {
+                                return (element.target === bars[k].componentB[j] && element.source ===  bars[k].componentA[i])
+                                || (element.source === bars[k].componentB[j] && element.target ===  bars[k].componentA[i]);
+                            }
+                        ))
+                        {
+                            continue;
+                        }
+
+                        let link = {};
+                        link.target = bars[k].componentB[j];
+                        link.source = bars[k].componentA[i];
+                        link.id = index;
+                        link.value = 20;
+                        index = index + 1;
+                        listofrepulsions.push(link);
+                    }
+                }
+            }
+
+            simulation.force("repulsion")
+                .links(listofrepulsions);
+
+            simulation.alpha(1).restart();
         }
 
         /***
@@ -68,8 +115,6 @@
          *  @param value of the slider position
          * */
         function update_slider(value) {
-            console.log(value);
-
             d3.select("#barcode").selectAll("line")
                 .attr("x1", x(value)) // we map the slider value to the x axis
                 .attr("y1", 0)
