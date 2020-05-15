@@ -15,30 +15,24 @@ html, body
 
 .barcode-container
 {
+    background-color: rgba(175, 175, 175, 0.77);
     min-width: 200px;
     right: 0;
     top: 0;
-    height: 100%;
     z-index: 1;
-    overflow-y: scroll;
-    opacity: 0.8;
-    background-color: gray;
 }
 
 .barcode-container .slider
 {
-    display: flex;
-    position: relative;
-    right: 12px;
-    width: 213px;
+    right: 0;
+    width: 210px;
     z-index: 2;
 }
 
 .barcode-container .bars
 {
-    position: relative;
     right: 5px;
-    top: 0;
+    top: 25px;
 }
 
 .links path {

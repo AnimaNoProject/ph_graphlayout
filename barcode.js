@@ -29,7 +29,7 @@ class Bar {
 }
 
 // set the dimensions and margins of the graph
-const margin = {top: 20, right: 20, bottom: 30, left: 40};
+const margin = {top: 5, right: 40, bottom: 0, left: 5};
 const bar_width = 260 - margin.left - margin.right;
 const bar_height = 900 - margin.top - margin.bottom;
 
@@ -69,7 +69,12 @@ function create_barcode(bars)
 
     slider.max = d3.max(bars, function(d){ return d.death;}) + 1;
     slider.value = 0;
-    slider.step = document.getElementById("slider").max / x(slider.max);
+    slider.step = slider.max / x(slider.max);
+
+    console.log(slider.max);
+    console.log(slider.min);
+    console.log(slider.value);
+    console.log(slider.step);
 
     // append the rectangles for the bar chart
     svg.selectAll(".bar")
@@ -115,7 +120,7 @@ function create_barcode(bars)
         .attr("x1", 0)
         .attr("y1", 0)
         .attr("x2", 0)
-        .attr("y2", 850)
+        .attr("y2", 950)
         .attr("stroke", "#4281fc")
         .attr("stroke-width", 2.0);
 }
