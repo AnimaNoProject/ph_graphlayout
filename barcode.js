@@ -91,7 +91,7 @@ function create_barcode(bars)
         .attr("fill", "#fa9b9b")
         .attr("height", y.bandwidth())
 
-    // this bar is just used for the selection and to attach a bordr
+    // this bar is just used for the selection and to attach a border
     svg.selectAll(".bar")
         .data(bars)
         .exit().data(bars)
@@ -103,12 +103,22 @@ function create_barcode(bars)
         .attr("height", y.bandwidth())
         .attr("fill", "#00000000")
         .attr("opacity", 1)
-        .on("click", select_deselect)
+        .on("click", function select_deselect(d) {
+            if(d.selected)
+            {
+                d3.select(this).attr("stroke", null).attr("stroke-width", null);
+            }
+            else
+            {
+                d3.select(this).attr("stroke", "blue").attr("stroke-width", 2.0);
+            }
+            d.selected = !d.selected;
+            update_repulsion(d);
+        })
         .on("mouseover", function(d)
         {
             nodes
-                .append("circle")
-                .attr("r", 5)
+                .selectAll("circle")
                 .attr("fill", function (n) {
                     if(!d.componentA.find(function(element)
                     {
@@ -123,11 +133,10 @@ function create_barcode(bars)
                     }
                 });
         })
-        .on("mouseout", function(bar)
+        .on("mouseout", function()
         {
             nodes
-                .append("circle")
-                .attr("r", 5)
+                .selectAll("circle")
                 .attr("fill", function (d) {
                     return color(d.group);
                 });
@@ -144,25 +153,6 @@ function create_barcode(bars)
         .attr("y2", 850)
         .attr("stroke", "#4281fc")
         .attr("stroke-width", 2.0);
-}
-
-/**
- * Function is used to select and deselect bars
- * to add / remove repulsion for these components.
- * @param d Bar
- */
-function select_deselect(d) {
-    if(d.selected)
-    {
-        d3.select(this).attr("stroke", null).attr("stroke-width", null);
-    }
-    else
-    {
-        d3.select(this).attr("stroke", "blue").attr("stroke-width", 2.0);
-    }
-    d.selected = !d.selected;
-
-    update_repulsion();
 }
 
 /**

@@ -28,7 +28,7 @@ function create_graph() {
 
     //add zoom capabilities
     let zoom_handler = d3.zoom()
-        .on("zoom", function() {g.attr("transform", d3.event.transform);}).wheelDelta(function() {return -d3.event.deltaY * 0.04;});
+        .on("zoom", function() {g.attr("transform", d3.event.transform);}).wheelDelta(function() {return (d3.event.deltaMode !== 1) ? -d3.event.deltaY * 0.0004 : -d3.event.deltaY * 0.02;});
 
     zoom_handler(svg_graph);
 
@@ -75,37 +75,32 @@ function create_graph() {
         .force("charge", d3.forceManyBody())
         .force("center", d3.forceCenter(width / 2, height / 2));
 
-    simulation.force("link").distance(function (d) {
-        return d.value;
-    }).strength(0.1);
 
-    /* Force-Bundling but it does not work
-    let d3line = d3.line()
-        .x(function(d){return d.x;})
-        .y(function(d){return d.y;});
-    function ticked() {
-            nodes
-                .attr("transform", function(d) {
-                    return "translate(" + d.x + "," + d.y + ")";
-                });
+    simulation.force("link").strength(0.05).distance(function(d) {
+            return d.value;}
+    );
 
-            //Run FDEB on all the links
-            let fbundling = d3.ForceEdgeBundling()
-                .nodes(simulation.nodes())
-                .edges(simulation.force("link").links().map(function(edge) {
-                    return {
-                        source: simulation.nodes().indexOf(edge.source),
-                        target: simulation.nodes().indexOf(edge.target)
-                    }
-                }));
 
-            var link = links.selectAll('path')
-                .data(fbundling());
+    let max_links = [];
 
-            link.exit().remove();
-            link.merge(link.enter().append('path'))
-                .attr('d', d3line);
-    }*/
+    let index = 0;
+    for(let i = 0; i < data.nodes.length; i++) {
+        for(let j = i+1; j < data.nodes.length; j++) {
+
+            // building a temporary link between the two nodes
+            let link = {};
+            link.target = data.nodes[i];
+            link.source = data.nodes[j];
+            link.id = index;
+            index = index+1;
+            max_links.push(link);
+        }
+    }
+
+    simulation.force("repulsion", d3.forceLink().id(function (d) {
+            return d.id;
+        }));
+    simulation.force("repulsion").strength(0);
 
     function ticked() {
         links
@@ -126,5 +121,8 @@ function create_graph() {
 
     simulation.force("link")
         .links(data.links);
+
+    simulation.force("repulsion")
+        .links(max_links);
 }
 
