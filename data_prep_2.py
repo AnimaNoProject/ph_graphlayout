@@ -2,8 +2,9 @@ import csv
 import os
 import json
 
-#creates a 13 MB csv file that contains only entries from customers with >= 500 occurences in electronics.smartphone
+#creates a 13 MB csv file that contains only entries from customers with >= min_occurences in electronics.smartphone
 
+min_occurences = 1000
 counts = dict()
 customer_list = []
 dir = os.path.dirname(__file__)
@@ -18,9 +19,9 @@ with open(os.path.join(dir, '..','2019-Oct','2019-Oct-electronics-smartphone.csv
             counts[row[7]] = 1
     print("finished part 1")
 
-    # sort by number of entries and only add ones with >= 500 occurences
+    # sort by number of entries and only add ones with >= min_occurences
     for w in sorted(counts, key=counts.get, reverse=True):
-        if(counts[w] < 500):
+        if(counts[w] < min_occurences):
             break
         customer_list.append(w)
     print("finished part 2")
@@ -34,4 +35,6 @@ with open(os.path.join(dir, '..','2019-Oct','2019-Oct-electronics-smartphone.csv
     print("finished part 3")
 print("finished")    
 
-# results in 93129 rows
+# results in 93129 rows with 500
+# results in 68471 rows with 600
+# results in 23828 rows with 1000
