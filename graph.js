@@ -72,8 +72,22 @@ function create_graph(data) {
         .force("link", d3.forceLink().id(function (d) {
             return d.id;
         }))
-        .force("charge", d3.forceManyBody())
+        //.force("charge", d3.forceManyBody())
         .force("center", d3.forceCenter(width / 2, height / 2));
+
+    function isolate(force, nodeA, nodeB) {
+        let initialize = force.initialize;
+        force.initialize = function() { initialize.call(force, [nodeA, nodeB]); };
+        return force;
+    }
+
+    for(let i = 0; i < data.nodes.length - 1; i++)
+    {
+        for(let j = i + 1; j < data.nodes.length; j++)
+        {
+            simulation.force(data.nodes[i].id.concat(data.nodes[j].id), isolate(d3.forceManyBody().strength(-30), data.nodes[i], data.nodes[j]));
+        }
+    }
 
 
     simulation.force("link").strength(0.05).distance(function(d) {

@@ -28,8 +28,11 @@
         // loading the json data
         let bars;
 
+        let loaded_data;
+
         d3.json('miserables.json', function(data)
             {
+                loaded_data = data;
                 bars = get_ph_features(data.nodes, data.links);
                 // creating the graph with an initial FD layout
                 create_graph(data);
@@ -77,41 +80,30 @@
          * Function that updates the repulsion based on the selected bars.
          **/
         function update_repulsion(d) {
-
             console.log(d);
 
-            simulation.force("repulsion").strength(function(link)
+            for(let i = 0; i < loaded_data.nodes.length - 1; i++)
             {
-                let c = 0;
-                let strength = 0.005;
-
-                for(let i = 0; i < d.componentB.length; i++) {
-                    for(let j = 0; j < d.componentA.length; j++) {
-                        if ((d.componentB[i] === link.source && d.componentA[j] === link.target)
-                                    || (d.componentB[i] === link.target && d.componentA[j] === link.source))
+                for(let j = i + 1; j < loaded_data.nodes.length; j++)
+                {
+                    if(d.componentA.contains(loaded_data.nodes[i].id) && d.componentB.contains(loaded_data.nodes[j].id))
+                    {
+                        if(d.selected)
                         {
-                            c = c + 1
-                            break;
+                            simulation.force(loaded_data.nodes[i].id.concat(loaded_data.nodes[j].id)).strength(-1000);
+                        }
+                        else
+                        {
+                            simulation.force(loaded_data.nodes[i].id.concat(loaded_data.nodes[j].id)).strength(-30);
                         }
                     }
                 }
+            }
 
-                if (c === 0 && d.selected)
-                {
-                    return -0.001;
-                }
-                else if (!d.selected)
-                {
-                    return 0;
-                }
-                else
-                {
-                    return -(strength / c);
-                }
-            });
-
-            simulation.alpha(1).alphaDecay(0.2).restart();
+            simulation.alpha(1).restart();
         }
+
+
 
         /***
          *  Function updates the blue bar following the slider.

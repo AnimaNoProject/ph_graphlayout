@@ -120,10 +120,7 @@ function create_barcode(bars)
             nodes
                 .selectAll("circle")
                 .attr("fill", function (n) {
-                    if(!d.componentA.find(function(element)
-                    {
-                        return element.id === n.id;
-                    }))
+                    if(!d.componentA.contains(n.id))
                     {
                         return "#FF0000";
                     }
@@ -162,7 +159,7 @@ function create_barcode(bars)
  * using disjointed sets (algorithm).
  * @param nodes nodes of the graph
  * @param links edges of the graph
- * @returns Bars
+ * @returns *[] of bars
  */
 function get_ph_features(nodes, links) {
     let mst = [];  // contains the MST
@@ -260,8 +257,8 @@ function get_ph_features(nodes, links) {
         // ratio is component size divided by all nodes
         bars[i].ratio = n / nodes.length;
         // we also keep the components in mind
-        bars[i].componentA = components[0].nodes;
-        bars[i].componentB = components[1].nodes;
+        bars[i].componentA = components[0];
+        bars[i].componentB = components[1];
     }
 
     return bars;
