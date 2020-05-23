@@ -27,7 +27,6 @@
         let color = d3.scaleOrdinal(d3.schemeCategory20);
         // loading the json data
         let bars;
-
         let loaded_data;
 
         d3.json('miserables.json', function(data)
@@ -40,9 +39,6 @@
                 create_barcode(bars);
             }
         );
-
-        //let data = JSON.parse(rawdata);
-        // extraction of the PH features
 
         /**
          * Function that updates which bars
@@ -80,26 +76,32 @@
          * Function that updates the repulsion based on the selected bars.
          **/
         function update_repulsion(d) {
-            console.log(d);
+            // maybe it is necessary to set all forces again. this could definitely
+            // be optimised so that two nested for loops are not necessary, but it works for now
+            for(let i = 0; i < loaded_data.nodes.length - 1; i++) {
+                for (let j = i + 1; j < loaded_data.nodes.length; j++) {
+                    simulation.force(loaded_data.nodes[i].id.concat(loaded_data.nodes[j].id)).strength(-30);
+                }
+            }
 
             for(let i = 0; i < loaded_data.nodes.length - 1; i++)
             {
                 for(let j = i + 1; j < loaded_data.nodes.length; j++)
                 {
-                    if(d.componentA.contains(loaded_data.nodes[i].id) && d.componentB.contains(loaded_data.nodes[j].id))
+                    for(let k = 0; k < bars.length; k++)
                     {
-                        if(d.selected)
+                        if(!bars[k].selected)
                         {
-                            simulation.force(loaded_data.nodes[i].id.concat(loaded_data.nodes[j].id)).strength(-1000);
+                            continue;
                         }
-                        else
+
+                        if(bars[k].componentA.contains(loaded_data.nodes[i].id) && bars[k].componentB.contains(loaded_data.nodes[j].id))
                         {
-                            simulation.force(loaded_data.nodes[i].id.concat(loaded_data.nodes[j].id)).strength(-30);
+                            simulation.force(loaded_data.nodes[i].id.concat(loaded_data.nodes[j].id)).strength(-450);
                         }
                     }
                 }
             }
-
             simulation.alpha(1).restart();
         }
 
