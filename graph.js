@@ -13,7 +13,7 @@ function resize_graph()
     svg_graph.attr("height", height);
 }
 
-function create_graph() {
+function create_graph(data) {
 
     let width = window.innerWidth;
     let height = window.innerHeight;
