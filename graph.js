@@ -51,13 +51,7 @@ function create_graph(data) {
         .enter().append("g");
 
     nodes.append("circle")
-        .attr("r", function(d)
-        {
-            return Math.sqrt(links.filter(function (l)
-            {
-                return l.source === d.id || l.target === d.id;
-            }).size());
-        })
+        .attr("r", 5)
         .attr("fill", function (d) {
             return color(d.group);
         });
@@ -105,6 +99,8 @@ function create_graph(data) {
     simulation.force("repulsion").strength(0);
 
     function ticked() {
+        //simulation.tick(1000);
+
         links
             .attr("x1", function(d) { return d.source.x; })
             .attr("y1", function(d) { return d.source.y; })

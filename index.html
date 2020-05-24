@@ -7,24 +7,38 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/d3-queue/3.0.4/d3-queue.min.js"></script>
         <script src="barcode.js"></script>
         <script src="graph.js"></script>
-        <script src="d3-force-reuse.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="style.css">
     </header>
 
     <body onresize="resize_graph();">
-        <div class="graph-container h-100 w-100">
-            <svg id="graph"></svg>
-        </div>
-        <div class="barcode-container position-absolute p-3 m-3 d-flex flex-column">
-            <select class="m-1" onchange="init(this.value)">
-                <option>miserables</option>
-                <option>airport</option>
-                <option>train</option>
-                <option>map.science</option>
-            </select>
-            <input class="slider" type="range" min="0" max="25" step="1" value="0" id="slider" onchange="update_attraction(this.value)" oninput="update_slider(this.value)">
-            <svg class="bars" id="barcode" width="200" height="1080"></svg>
+        <div id="loader"></div>
+        <p id="loadingText"></p>
+        <div id="content" class="animate-bottom">
+            <div class="graph-container h-100 w-100">
+                <svg id="graph"></svg>
+            </div>
+            <div class="barcode-container position-absolute p-3 m-3 d-flex flex-column">
+                <label>
+                    Dataset:
+                    <select class="m-1" onchange="init(this.value)">
+                        <option>miserables</option>
+                        <option>airport</option>
+                        <option>train</option>
+                        <option>map.science</option>
+                        <option>us.senate.2008.covote</option>
+                    </select>
+                </label>
+                <label>
+                    Node-size:
+                    <select class="m-1" onchange="updateNodeSize(this.value)">
+                        <option>fixed</option>
+                        <option>dynamic</option>
+                    </select>
+                </label>
+                <input class="slider" type="range" min="0" max="25" step="1" value="0" id="slider" onchange="update_attraction(this.value)" oninput="update_slider(this.value)">
+                <svg class="bars" id="barcode" width="200" height="1080"></svg>
+            </div>
         </div>
     </body>
 
@@ -36,9 +50,18 @@
         let bars;
         let loaded_data;
 
+        let content = document.getElementById("content");
+        let loader = document.getElementById("loader");
+        let loadingText = document.getElementById("loadingText");
+
         init("miserables");
-        function init(filename)
-        {
+        function init(filename) {
+            content.style.display = "none";
+            loader.style.display = "block";
+
+            loadingText.style.display = "block";
+            loadingText.innerHTML = "Loading Data";
+
             d3.selectAll("svg > *").remove();
             bars = null;
             loaded_data = null;
@@ -46,13 +69,55 @@
             d3.json(filename.concat(".json"), function(data)
                 {
                     loaded_data = data;
+                    updateText("Extracting PH Features");
                     bars = get_ph_features(data.nodes, data.links);
+                    updateText("Creating the Graph");
                     // creating the graph with an initial FD layout
                     create_graph(data);
+                    updateText("Creating the interactive Barcode");
                     // creating the barcode and all interactions with the barcode
                     create_barcode(bars);
                 }
             );
+
+            setTimeout(show, 1000);
+        }
+
+        function updateText(string) {
+            loadingText.innerHTML = string;
+            return true;
+        }
+
+        function show() {
+            loadingText.style.display = "none";
+            loader.style.display = "none";
+            content.style.display = "block";
+        }
+
+        function updateNodeSize(value)
+        {
+            if(value === "fixed")
+            {
+                nodes.selectAll("circle")
+                        .attr("r", 5)
+                        .attr("fill", function (d) {
+                            return color(d.group);
+                        });
+            }
+            else
+            {
+                nodes.selectAll("circle")
+                    .attr("r", function(d)
+                    {
+                        return Math.sqrt(loaded_data.links.filter(function (l)
+                        {
+                            return l.source.id === d.id || l.target.id === d.id;
+                        }).length);
+                    })
+                    .attr("fill", function (d) {
+                        return color(d.group);
+                    });
+            }
         }
 
         /**
@@ -119,8 +184,6 @@
             }
             simulation.alpha(1).alphaDecay(0.01).restart();
         }
-
-
 
         /***
          *  Function updates the blue bar following the slider.
