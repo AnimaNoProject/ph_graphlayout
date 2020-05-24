@@ -7,6 +7,7 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/d3-queue/3.0.4/d3-queue.min.js"></script>
         <script src="barcode.js"></script>
         <script src="graph.js"></script>
+        <script src="d3-force-reuse.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="style.css">
     </header>
@@ -16,6 +17,12 @@
             <svg id="graph"></svg>
         </div>
         <div class="barcode-container position-absolute p-3 m-3 d-flex flex-column">
+            <select class="m-1" onchange="init(this.value)">
+                <option>miserables</option>
+                <option>airport</option>
+                <option>train</option>
+                <option>map.science</option>
+            </select>
             <input class="slider" type="range" min="0" max="25" step="1" value="0" id="slider" onchange="update_attraction(this.value)" oninput="update_slider(this.value)">
             <svg class="bars" id="barcode" width="200" height="1080"></svg>
         </div>
@@ -29,16 +36,24 @@
         let bars;
         let loaded_data;
 
-        d3.json('miserables.json', function(data)
-            {
-                loaded_data = data;
-                bars = get_ph_features(data.nodes, data.links);
-                // creating the graph with an initial FD layout
-                create_graph(data);
-                // creating the barcode and all interactions with the barcode
-                create_barcode(bars);
-            }
-        );
+        init("miserables");
+        function init(filename)
+        {
+            d3.selectAll("svg > *").remove();
+            bars = null;
+            loaded_data = null;
+
+            d3.json(filename.concat(".json"), function(data)
+                {
+                    loaded_data = data;
+                    bars = get_ph_features(data.nodes, data.links);
+                    // creating the graph with an initial FD layout
+                    create_graph(data);
+                    // creating the barcode and all interactions with the barcode
+                    create_barcode(bars);
+                }
+            );
+        }
 
         /**
          * Function that updates which bars
@@ -60,7 +75,7 @@
                     // if the link(edge) is that of the bar we give it a strong attraction
                     if (link === bars[i].edge)
                     {
-                        return 1.0;
+                        return 0.8;
                     }
                 }
 
@@ -69,7 +84,7 @@
             });
 
             // simulation needs to be restarted for anything to work
-            simulation.alpha(1).restart();
+            simulation.alpha(1).alphaDecay(0.01).restart();
         }
 
         /**
@@ -97,12 +112,12 @@
 
                         if(bars[k].componentA.contains(loaded_data.nodes[i].id) && bars[k].componentB.contains(loaded_data.nodes[j].id))
                         {
-                            simulation.force(loaded_data.nodes[i].id.concat(loaded_data.nodes[j].id)).strength(-450);
+                            simulation.force(loaded_data.nodes[i].id.concat(loaded_data.nodes[j].id)).strength(-300);
                         }
                     }
                 }
             }
-            simulation.alpha(1).restart();
+            simulation.alpha(1).alphaDecay(0.01).restart();
         }
 
 

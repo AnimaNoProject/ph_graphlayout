@@ -129,6 +129,16 @@ function create_barcode(bars)
                         return "#0000FF";
                     }
                 });
+            links
+                .style("opacity", function(n)
+                {
+                    if(d.edge.index === n.index)
+                    {
+                        return 1.0;
+                    }
+
+                    return 0.2;
+                });
         })
         .on("mouseout", function()
         {
@@ -136,6 +146,12 @@ function create_barcode(bars)
                 .selectAll("circle")
                 .attr("fill", function (d) {
                     return color(d.group);
+                });
+
+            links
+                .style("opacity", function(d)
+                {
+                    return 0.2;
                 });
         });
 

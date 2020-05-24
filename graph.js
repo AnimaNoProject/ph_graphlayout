@@ -1,4 +1,4 @@
-const simulation = d3.forceSimulation();
+let simulation;
 
 let links;
 let nodes;
@@ -15,6 +15,7 @@ function resize_graph()
 
 function create_graph(data) {
 
+    simulation = d3.forceSimulation();
     let width = window.innerWidth;
     let height = window.innerHeight;
 
@@ -34,7 +35,7 @@ function create_graph(data) {
 
     links = g.append("g")
         .attr("class", "links")
-        .selectAll("line")
+        .selectAll("links")
         .data(data.links)
         .enter().append("line")
         .attr("stroke-width", function (d) {
@@ -50,7 +51,13 @@ function create_graph(data) {
         .enter().append("g");
 
     nodes.append("circle")
-        .attr("r", 5)
+        .attr("r", function(d)
+        {
+            return Math.sqrt(links.filter(function (l)
+            {
+                return l.source === d.id || l.target === d.id;
+            }).size());
+        })
         .attr("fill", function (d) {
             return color(d.group);
         });
@@ -72,7 +79,6 @@ function create_graph(data) {
         .force("link", d3.forceLink().id(function (d) {
             return d.id;
         }))
-        //.force("charge", d3.forceManyBody())
         .force("center", d3.forceCenter(width / 2, height / 2));
 
     function isolate(force, nodeA, nodeB) {
@@ -85,31 +91,13 @@ function create_graph(data) {
     {
         for(let j = i + 1; j < data.nodes.length; j++)
         {
-            simulation.force(data.nodes[i].id.concat(data.nodes[j].id), isolate(d3.forceManyBody().strength(-30), data.nodes[i], data.nodes[j]));
+            simulation.force(data.nodes[i].id.concat(data.nodes[j].id), isolate(d3.forceManyBodyReuse().strength(-30), data.nodes[i], data.nodes[j]));
         }
     }
-
 
     simulation.force("link").strength(0.05).distance(function(d) {
             return d.value;}
     );
-
-
-    let max_links = [];
-
-    let index = 0;
-    for(let i = 0; i < data.nodes.length; i++) {
-        for(let j = i+1; j < data.nodes.length; j++) {
-
-            // building a temporary link between the two nodes
-            let link = {};
-            link.target = data.nodes[i];
-            link.source = data.nodes[j];
-            link.id = index;
-            index = index+1;
-            max_links.push(link);
-        }
-    }
 
     simulation.force("repulsion", d3.forceLink().id(function (d) {
             return d.id;
@@ -131,12 +119,10 @@ function create_graph(data) {
 
     simulation
         .nodes(data.nodes)
-        .on("tick", ticked);
+        .on("tick", ticked)
+        .alphaDecay(0.1);
 
     simulation.force("link")
         .links(data.links);
-
-    simulation.force("repulsion")
-        .links(max_links);
 }
 

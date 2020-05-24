@@ -20,7 +20,7 @@ html, body
     right: 0;
     top: 0;
     z-index: 1;
-    height: 920px;
+    height: 950px;
 }
 
 .barcode-container .slider
@@ -34,15 +34,4 @@ html, body
 {
     right: 5px;
     top: 25px;
-}
-
-.links path {
-    stroke: #999;
-    stroke-opacity: 0.3;
-    fill: none;
-}
-
-.nodes circle {
-    stroke: #fff;
-    stroke-width: 1px;
 }
