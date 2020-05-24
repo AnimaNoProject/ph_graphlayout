@@ -91,7 +91,7 @@ function create_graph(data) {
     {
         for(let j = i + 1; j < data.nodes.length; j++)
         {
-            simulation.force(data.nodes[i].id.concat(data.nodes[j].id), isolate(d3.forceManyBodyReuse().strength(-30), data.nodes[i], data.nodes[j]));
+            simulation.force(data.nodes[i].id.concat(data.nodes[j].id), isolate(d3.forceManyBody().strength(-30), data.nodes[i], data.nodes[j]));
         }
     }
 
