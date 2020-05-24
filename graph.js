@@ -98,27 +98,46 @@ function create_graph(data) {
         }));
     simulation.force("repulsion").strength(0);
 
-    function ticked() {
-        //simulation.tick(1000);
-
-        links
-            .attr("x1", function(d) { return d.source.x; })
-            .attr("y1", function(d) { return d.source.y; })
-            .attr("x2", function(d) { return d.target.x; })
-            .attr("y2", function(d) { return d.target.y; });
-
-        nodes
-            .attr("transform", function(d) {
-                return "translate(" + d.x + "," + d.y + ")";
-            });
-    }
 
     simulation
         .nodes(data.nodes)
-        .on("tick", ticked)
-        .alphaDecay(0.1);
+        .on("tick", animation);
 
     simulation.force("link")
         .links(data.links);
+}
+
+function animation() {
+    links
+        .attr("x1", function(d) { return d.source.x; })
+        .attr("y1", function(d) { return d.source.y; })
+        .attr("x2", function(d) { return d.target.x; })
+        .attr("y2", function(d) { return d.target.y; });
+
+    nodes
+        .attr("transform", function(d) {
+            return "translate(" + d.x + "," + d.y + ")";
+        });
+}
+
+function noAnimation() {
+    for(let i = 0; i < 500; i++)
+    {
+        simulation.tick();
+    }
+    //simulation.tick(10000);
+
+    links
+        .attr("x1", function(d) { return d.source.x; })
+        .attr("y1", function(d) { return d.source.y; })
+        .attr("x2", function(d) { return d.target.x; })
+        .attr("y2", function(d) { return d.target.y; });
+
+    nodes
+        .attr("transform", function(d) {
+            return "translate(" + d.x + "," + d.y + ")";
+        });
+
+    simulation.stop();
 }
 

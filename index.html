@@ -21,7 +21,7 @@
             <div class="barcode-container position-absolute p-3 m-3 d-flex flex-column">
                 <label>
                     Dataset:
-                    <select class="m-1" onchange="init(this.value)">
+                    <select class="m-0  w-100" onchange="init(this.value)">
                         <option>miserables</option>
                         <option>airport</option>
                         <option>train</option>
@@ -31,10 +31,13 @@
                 </label>
                 <label>
                     Node-size:
-                    <select class="m-1" onchange="updateNodeSize(this.value)">
+                    <select class="m-0 w-100" onchange="updateNodeSize(this.value)">
                         <option>fixed</option>
                         <option>dynamic</option>
                     </select>
+                </label>
+                <label>
+                    Animate? <input checked onchange="changeAnimate(this);" type="checkbox">
                 </label>
                 <input class="slider" type="range" min="0" max="25" step="1" value="0" id="slider" onchange="update_attraction(this.value)" oninput="update_slider(this.value)">
                 <svg class="bars" id="barcode" width="200" height="1080"></svg>
@@ -94,8 +97,20 @@
             content.style.display = "block";
         }
 
-        function updateNodeSize(value)
-        {
+        function changeAnimate(value) {
+            if(value.checked)
+            {
+                simulation
+                    .on("tick", animation);
+            }
+            else
+            {
+                simulation
+                    .on("tick", noAnimation);
+            }
+        }
+
+        function updateNodeSize(value) {
             if(value === "fixed")
             {
                 nodes.selectAll("circle")
