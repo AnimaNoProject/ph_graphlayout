@@ -53,7 +53,7 @@ html, body
 #loadingText {
     position: absolute;
     left: calc(50% + 100px);
-    top: 50%;
+    top: calc(50% - 0.7vw);
     font-family: "Arial Black", monospace;
     font-size: 1vw;
 }

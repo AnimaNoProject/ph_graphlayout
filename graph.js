@@ -89,15 +89,9 @@ function create_graph(data) {
         }
     }
 
-    simulation.force("link").strength(0.05).distance(function(d) {
-            return d.value;}
-    );
-
-    simulation.force("repulsion", d3.forceLink().id(function (d) {
-            return d.id;
-        }));
-    simulation.force("repulsion").strength(0);
-
+    simulation.force("link").strength(0.1).distance(function(d) {
+            return d.value;
+        });
 
     simulation
         .nodes(data.nodes)
@@ -125,7 +119,6 @@ function noAnimation() {
     {
         simulation.tick();
     }
-    //simulation.tick(10000);
 
     links
         .attr("x1", function(d) { return d.source.x; })
