@@ -4,11 +4,19 @@ import json
 
 #creates a 13 MB csv file that contains only entries from customers with >= min_occurences in electronics.smartphone
 
-min_occurences = 1000
+#adjust following 3 parameters
+min_occurences = 1
+max_occurences = 100
+category = 'furniture.living_room.sofa' #keep consistent with other files
+
 counts = dict()
 customer_list = []
 dir = os.path.dirname(__file__)
-with open(os.path.join(dir, '..','2019-Oct','2019-Oct-electronics-smartphone.csv'), 'r') as inputfile, open(os.path.join(dir, '..','2019-Oct','2019-Oct-final.csv'), 'w', newline='') as outputfile:
+replaced_category = category.replace('.', '-')
+input_file_name = '2019-Oct-' + replaced_category + '.csv'
+output_file_name = '2019-Oct-' + replaced_category + '-final.csv'
+
+with open(os.path.join(dir, '..','2019-Oct', input_file_name), 'r') as inputfile, open(os.path.join(dir, '..','2019-Oct', output_file_name), 'w', newline='') as outputfile:
     #can't convert inputfile to list, since it causes a memory error
 
     # count the number of occurences for every customer
@@ -21,9 +29,10 @@ with open(os.path.join(dir, '..','2019-Oct','2019-Oct-electronics-smartphone.csv
 
     # sort by number of entries and only add ones with >= min_occurences
     for w in sorted(counts, key=counts.get, reverse=True):
-        if(counts[w] < min_occurences):
+        if(min_occurences <= counts[w] and counts[w] <= max_occurences):
             break
         customer_list.append(w)
+    print(len(customer_list))
     print("finished part 2")
 
     # only write rows into new csv that contain one of the customers in customer_list
@@ -35,6 +44,7 @@ with open(os.path.join(dir, '..','2019-Oct','2019-Oct-electronics-smartphone.csv
     print("finished part 3")
 print("finished")    
 
-# results in 93129 rows with 500
-# results in 68471 rows with 600
-# results in 23828 rows with 1000
+# for smartphone category:
+# results in 93129 rows with 500 min_occurences and infinite max_occurences
+# results in 68471 rows with 600 min_occurences and infinite max_occurences
+# results in 23828 rows with 1000 min_occurences and infinite max_occurences

@@ -15,6 +15,8 @@ from itertools import permutations
 # "source": "Mme.Magloire", "target": "Mlle.Baptistine", "value": 6
 # source: smaller_product_id, target: larger_product_id, value: link_count
 
+category = 'furniture.living_room.sofa' #keep consistent with other files
+
 tmpstring = ''
 data = dict()
 data['nodes'] = []
@@ -24,8 +26,15 @@ product_brand = dict()
 link_count = dict() #contains links in the format 'smaller_product_id-larger_product_id' i.e. 123-456
 user_to_product = defaultdict(set)
 dir = os.path.dirname(__file__)
-with open(os.path.join(dir, '..','2019-Oct','2019-Oct-final.csv'), 'r') as inputfile, open(os.path.join(dir, '..','2019-Oct','data.json'), 'w') as outputfile:
+
+replaced_category = category.replace('.', '-')
+input_file_name = '2019-Oct-' + replaced_category + '-final.csv'
+output_file_name = replaced_category + '.json'
+
+with open(os.path.join(dir, '..','2019-Oct', input_file_name), 'r') as inputfile, open(os.path.join(dir, '..','2019-Oct', output_file_name), 'w') as outputfile:
     for row in csv.reader(inputfile):
+        if(row[5] == ''):
+            continue
         user_to_product[row[7]].add(row[2])
 
         #associate product_id with its number of occurence (for node size)
@@ -36,12 +45,17 @@ with open(os.path.join(dir, '..','2019-Oct','2019-Oct-final.csv'), 'r') as input
 
         #associate product_id with brand name (for node group)
         if (row[2] not in product_brand):
+            #if (row[5] == ''):
+            #    product_brand[row[2]] = 'no brand'
+            #else:
             product_brand[row[2]] = row[5]
+        
 
     print('finished csv read')
 
     for product in product_count: #can also be 'in product_brand' since both have the same keys 
-        data['nodes'].append({'id': product, 'group': product_brand[product], 'size': product_count[product]})
+        data['nodes'].append({'id': product, 'group': product_brand[product]})
+        #'size': product_count[product]
 
     print('finished data[node] creation')
 
@@ -69,7 +83,7 @@ with open(os.path.join(dir, '..','2019-Oct','2019-Oct-final.csv'), 'r') as input
     #print(len(link_count))
 
     for link in link_count:
-        data['links'].append({'source': link.split('-')[0], 'target': link.split('-')[1], 'size': link_count[link]})
+        data['links'].append({'source': link.split('-')[0], 'target': link.split('-')[1], 'value': link_count[link]})
     
     print('finished data[links] creation')
 
@@ -85,10 +99,6 @@ for user in user_to_product:
     for product in user_to_product[user]:
         print(product)
 '''
-'''
+
 for product in product_count:
     print(product, ": ", product_count[product])
-'''
-#for each row
-    #add product_id to user if not alrady in it
-    #increase product_id count by 1

@@ -1,0 +1,23 @@
+{
+  "nodes": [
+    {
+      "x": 444.02252,
+      "y": 227.2911,
+      "id": "Mohamed Almallah",
+      "group": 1
+    },
+    {
+      "x": 423.73422,
+      "y": 231.63657,
+      "id": "Moutaz Almallah",
+      "group": 1
+    }
+  ],
+  "links": [
+    {
+      "source": "Mohamed Almallah",
+      "value": 1,
+      "target": "Moutaz Almallah"
+    }
+  ]
+}
