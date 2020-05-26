@@ -3,6 +3,15 @@ let simulation;
 let links;
 let nodes;
 
+let attraction_strength = 0.7;
+let attraction_strength_weak = 0.01;
+
+let repulsion_strength = -800;
+let repulsion_strength_weak = -100;
+
+let link_opacity = 0.1;
+
+
 function resize_graph()
 {
     let svg_graph = d3.select("#graph");
@@ -42,7 +51,7 @@ function create_graph(data) {
             return Math.sqrt(d.value);
         })
         .attr("stroke", "#222222")
-        .style("opacity", 0.2);
+        .style("opacity", link_opacity);
 
     nodes = g.append("g")
         .attr("class", "nodes")
@@ -89,7 +98,7 @@ function create_graph(data) {
         }
     }
 
-    simulation.force("link").strength(0.1).distance(function(d) {
+    simulation.force("link").strength(attraction_strength_weak).distance(function(d) {
             return d.value;
         });
 

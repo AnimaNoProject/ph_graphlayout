@@ -157,12 +157,12 @@
                     // if the link(edge) is that of the bar we give it a strong attraction
                     if (link === bars[i].edge)
                     {
-                        return 0.8;
+                        return attraction_strength;
                     }
                 }
 
                 // otherwise a weak force is applied to this link
-                return 0.2;
+                return attraction_strength_weak;
             });
 
             // simulation needs to be restarted for anything to work
@@ -177,7 +177,7 @@
             // be optimised so that two nested for loops are not necessary, but it works for now
             for(let i = 0; i < loaded_data.nodes.length - 1; i++) {
                 for (let j = i + 1; j < loaded_data.nodes.length; j++) {
-                    simulation.force(loaded_data.nodes[i].id.concat(loaded_data.nodes[j].id)).strength(-30);
+                    simulation.force(loaded_data.nodes[i].id.concat(loaded_data.nodes[j].id)).strength(repulsion_strength_weak);
                 }
             }
 
@@ -194,7 +194,7 @@
 
                         if(bars[k].componentA.contains(loaded_data.nodes[i].id) && bars[k].componentB.contains(loaded_data.nodes[j].id))
                         {
-                            simulation.force(loaded_data.nodes[i].id.concat(loaded_data.nodes[j].id)).strength(-300);
+                            simulation.force(loaded_data.nodes[i].id.concat(loaded_data.nodes[j].id)).strength(repulsion_strength);
                         }
                     }
                 }
