@@ -3,13 +3,13 @@ let simulation;
 let links;
 let nodes;
 
-let attraction_strength = 0.7;
-let attraction_strength_weak = 0.01;
+let attraction_strength = 0.8;
+let attraction_strength_weak = 0.1;
 
-let repulsion_strength = -800;
-let repulsion_strength_weak = -100;
+let repulsion_strength = -300;
+let repulsion_strength_weak = -30;
 
-let link_opacity = 0.1;
+let link_opacity = 0.4;
 
 
 function resize_graph()
@@ -48,7 +48,7 @@ function create_graph(data) {
         .data(data.links)
         .enter().append("line")
         .attr("stroke-width", function (d) {
-            return Math.sqrt(d.value);
+            return 1;//return Math.sqrt(d.value); // use fixed size
         })
         .attr("stroke", "#222222")
         .style("opacity", link_opacity);
