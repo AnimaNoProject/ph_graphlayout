@@ -22,6 +22,16 @@ function resize_graph()
     svg_graph.attr("height", height);
 }
 
+function configure_graph(settings) {
+    attraction_strength = settings.attraction_strength;
+    attraction_strength_weak = settings.attraction_strength_weak;
+
+    repulsion_strength = settings.repulsion_strength;
+    repulsion_strength_weak = settings.repulsion_strength_weak;
+
+    link_opacity = settings.link_opacity;
+}
+
 function create_graph(data) {
 
     simulation = d3.forceSimulation();

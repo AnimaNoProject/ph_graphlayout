@@ -73,7 +73,10 @@
 
             d3.json(filename.concat(".json"), function(data)
                 {
+                    simulation = null;
+
                     loaded_data = data;
+                    configure_graph(data.settings);
                     updateText("Extracting PH Features");
                     bars = get_ph_features(data.nodes, data.links);
                     updateText("Creating the Graph");

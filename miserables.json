@@ -1780,5 +1780,13 @@
       "value": 1,
       "target": "Enjolras"
     }
-  ]
+  ],
+  "settings" :
+  {
+    "attraction_strength"  : 0.8,
+    "attraction_strength_weak" : 0.1,
+    "repulsion_strength" : -300,
+    "repulsion_strength_weak" : -30,
+    "link_opacity" : 0.4
+  }
 }

@@ -137,7 +137,7 @@ function create_barcode(bars)
                         return 1.0;
                     }
 
-                    return 0.2;
+                    return link_opacity;
                 });
         })
         .on("mouseout", function()
@@ -151,7 +151,7 @@ function create_barcode(bars)
             links
                 .style("opacity", function(d)
                 {
-                    return 0.2;
+                    return link_opacity;
                 });
         });
 
