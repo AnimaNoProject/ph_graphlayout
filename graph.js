@@ -9,6 +9,8 @@ let attraction_strength_weak = 0.1;
 let repulsion_strength = -300;
 let repulsion_strength_weak = -30;
 
+let node_radius = 5;
+
 let link_opacity = 0.4;
 
 let active_clicked = null;
@@ -29,6 +31,21 @@ function configure_graph(settings) {
     repulsion_strength = settings.repulsion_strength;
     repulsion_strength_weak = settings.repulsion_strength_weak;
     link_opacity = settings.link_opacity;
+    node_radius = settings.node_radius;
+}
+
+function deselect_nodes()
+{
+    //deselect_button.style.visibility = "hidden";
+    $('#deselect_button').removeClass('fadeInDown').addClass('fadeOutUp');
+    active_clicked = null;
+
+    d3.selectAll("text")
+        .remove();
+    d3.selectAll("circle")
+        .style("opacity", 1.0);
+    links
+        .style("opacity", link_opacity);
 }
 
 function create_graph(data) {
@@ -75,25 +92,30 @@ function create_graph(data) {
 
             if(active_clicked === d.id)
             {
+                //deselect_button.style.visibility = "hidden";
+                $('#deselect_button').removeClass('fadeInDown').addClass('fadeOutUp');
+
+                active_clicked = null;
+
                 d3.selectAll("text")
                     .remove();
                 d3.selectAll("circle")
                     .style("opacity", 1.0);
-
-                d3.selectAll("line")
+                links
                     .style("opacity", link_opacity);
                 return;
             }
-            else
-            {
-                d3.selectAll("text")
-                    .remove();
-                d3.selectAll("circle")
-                    .style("opacity", 1.0);
 
-                d3.selectAll("line")
-                    .style("opacity", link_opacity);
-            }
+            d3.selectAll("text")
+                .remove();
+            d3.selectAll("circle")
+                .style("opacity", 1.0);
+
+            links
+                .style("opacity", link_opacity);
+
+            $('#deselect_button').removeClass('fadeOutUp').addClass('fadeInDown');
+            deselect_button.style.visibility = "visible";
 
             d3.selectAll("circle")
                 .style("opacity", 0.7);
@@ -111,7 +133,7 @@ function create_graph(data) {
                     if (l.target.id === d.id || l.source.id === d.id) {
                         adj_nodes.push(l.target.id);
                         adj_nodes.push(l.source.id);
-                        return 0.5;
+                        return link_opacity;
                     }
                     return link_opacity * 0.1;
                 });

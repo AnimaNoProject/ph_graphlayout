@@ -6,6 +6,26 @@ html, body
     overflow-y: hidden;
 }
 
+#deselect_button
+{
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    left: calc(50% - 50px);
+    z-index: 99;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    background-color: #4281fc;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#deselect_button:hover {
+    background-color: #555;
+}
+
 .graph-container
 {
     width: 100%;
@@ -15,7 +35,6 @@ html, body
 
 .barcode-container
 {
-    background-color: rgba(175, 175, 175, 0.77);
     min-width: 200px;
     right: 0;
     top: 0;
@@ -25,9 +44,14 @@ html, body
 
 .barcode-container .slider
 {
-    margin-left: -5px;
-    width: 215px;
     z-index: 2;
+}
+
+#bcont
+{
+    margin-top: -5px;
+    margin-left: 7px;
+    margin-right: 7px;
 }
 
 .barcode-container .bars {
@@ -73,7 +97,7 @@ html, body
     -webkit-animation-name: animatebottom;
     -webkit-animation-duration: 1s;
     animation-name: animatebottom;
-    animation-duration: 1s
+    animation-duration: 1s;
 }
 
 @-webkit-keyframes animatebottom {

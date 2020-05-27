@@ -3,11 +3,25 @@
     <header>
         <meta charset="utf-8">
         <script src="https://d3js.org/d3.v4.min.js"></script>
-        <script src="https://cdn.rawgit.com/upphiminn/d3.ForceBundle/2b406b8567fcad0a6c2922c84cd4bceb0c374bc5/d3-ForceEdgeBundling.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/d3-queue/3.0.4/d3-queue.min.js"></script>
+
         <script src="barcode.js"></script>
         <script src="graph.js"></script>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet">
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/js/mdb.min.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
     </header>
 
@@ -15,34 +29,40 @@
         <div id="loader"></div>
         <p id="loadingText"></p>
         <div id="content" class="animate-bottom">
+            <button type="button" class="btn btn-primary m-3 p-1 fadeIn animated" id="deselect_button" onclick="deselect_nodes()">Deselect Nodes</button>
             <div class="graph-container h-100 w-100">
                 <svg id="graph"></svg>
             </div>
-            <div class="barcode-container position-absolute p-3 m-3 d-flex flex-column">
-                <label>
-                    Dataset:
-                    <select class="m-0  w-100" onchange="init(this.value)">
-                        <option>miserables</option>
-                        <option>airport</option>
-                        <option>train</option>
-                        <option>map.science</option>
-                        <option>us.senate.2008.covote</option>
-                        <option>small</option>
-                        <option>furniture-living_room-sofa</option>
-                    </select>
-                </label>
-                <label>
-                    Node-size:
-                    <select class="m-0 w-100" onchange="updateNodeSize(this.value)">
-                        <option>fixed</option>
-                        <option>dynamic</option>
-                    </select>
-                </label>
-                <label>
-                    Animate? <input checked onchange="changeAnimate(this);" type="checkbox">
-                </label>
-                <input class="slider" type="range" min="0" max="25" step="1" value="0" id="slider" onchange="update_attraction(this.value)" oninput="update_slider(this.value)">
-                <svg class="bars" id="barcode" width="200" height="1080"></svg>
+            <div class="barcode-container position-absolute p-3 h-100">
+                <div class="d-flex flex-column p-3 h-100 rounded" style="background-color: rgba(224,224,224,0.83)">
+                    <label>
+                        Dataset:
+                        <select class="custom-select m-0 w-100 " onchange="init(this.value)">
+                            <option>miserables</option>
+                            <option>airport</option>
+                            <option>train</option>
+                            <option>map.science</option>
+                            <option>us.senate.2008.covote</option>
+                            <option>small</option>
+                            <option>furniture-living_room-sofa</option>
+                        </select>
+                    </label>
+                    <label>
+                        Node-size:
+                        <select class="custom-select m-0 w-100" onchange="updateNodeSize(this.value)">
+                            <option>fixed</option>
+                            <option>dynamic</option>
+                        </select>
+                    </label>
+                    <div class="custom-control custom-checkbox">
+                        <input checked  onchange="changeAnimate(this);"  type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                        <label class="custom-control-label" for="defaultUnchecked">Animate?</label>
+                    </div>
+                    <input class="slider mb-1 w-100" type="range" min="0" max="25" step="1" value="0" id="slider" onchange="update_attraction(this.value)" oninput="update_slider(this.value)">
+                    <div id="bcont" class="h-100">
+                        <svg class="bars" id="barcode"></svg>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
@@ -59,7 +79,15 @@
         let loader = document.getElementById("loader");
         let loadingText = document.getElementById("loadingText");
 
-        init("miserables");
+        let deselect_button = document.getElementById("deselect_button");
+
+        document.body.onload = function ()
+        {
+
+
+            init("miserables");
+        }
+
         function init(filename) {
             content.style.display = "none";
             loader.style.display = "block";
@@ -74,7 +102,6 @@
             d3.json(filename.concat(".json"), function(data)
                 {
                     simulation = null;
-
                     loaded_data = data;
                     configure_graph(data.settings);
                     updateText("Extracting PH Features");
@@ -83,12 +110,22 @@
                     // creating the graph with an initial FD layout
                     create_graph(data);
                     updateText("Creating the interactive Barcode");
+
+                    show();
+
+                    let bar_cont = $('#bcont');
+                    let bar_sv = $("#bcont > svg");
+
+                    bar_width = bar_cont.width();
+                    bar_height = bar_cont.height();
+
+                    bar_sv.width(bar_width);
+                    bar_sv.height(bar_height);
+
                     // creating the barcode and all interactions with the barcode
                     create_barcode(bars);
                 }
             );
-
-            setTimeout(show, 1000);
         }
 
         function updateText(string) {
@@ -119,7 +156,7 @@
             if(value === "fixed")
             {
                 nodes.selectAll("circle")
-                        .attr("r", 5)
+                        .attr("r", node_radius)
                         .attr("fill", function (d) {
                             return color(d.group);
                         });
@@ -210,11 +247,9 @@
          *  @param value of the slider position
          * */
         function update_slider(value) {
-            d3.select("#barcode").selectAll("line")
+            d3.select("#barcode").select("line")
                 .attr("x1", x(value)) // we map the slider value to the x axis
-                .attr("y1", 0)
                 .attr("x2", x(value))
-                .attr("y2", 950);
         }
     </script>
 </html>

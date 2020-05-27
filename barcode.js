@@ -29,23 +29,24 @@ class Bar {
 }
 
 // set the dimensions and margins of the graph
-const margin = {top: 20, right: 20, bottom: 30, left: 40},
-    bar_width = 260 - margin.left - margin.right,
-    bar_height = 900 - margin.top - margin.bottom;
+let bar_width;
+let bar_height;
 
 // set the ranges for the barcode
-const y = d3.scaleBand()
-    .range([bar_height, 0])
-    .padding(0.1);
-
-const x = d3.scaleLinear()
-    .range([0, bar_width]);
+let y;
+let x;
 
 function create_barcode(bars)
 {
+    y = d3.scaleBand()
+        .range([bar_height, 0])
+        .padding(0.1);
+
+    x = d3.scaleLinear()
+        .range([0, bar_width]);
+
     let svg = d3.select("#barcode");
-    svg.append("g").attr("transform",
-        "translate(" + margin.left + "," + margin.top + ")");
+    svg.append("g");
 
     // format the data
     bars.forEach(function(d) {
@@ -76,7 +77,7 @@ function create_barcode(bars)
         .attr("class", "bar")
         .attr("width", function(d) {return x(d.death * d.ratio);} )
         .attr("y", function(d) { return y(d.id); })
-        .attr("fill", "#820087")
+        .attr("fill", "#5aaa4f")
         .attr("height", y.bandwidth())
 
     // adding the second (stacked) bar
@@ -88,7 +89,7 @@ function create_barcode(bars)
         .attr("x", function(d) {return x(d.death * d.ratio);} )
         .attr("width", function(d) {return x(d.death * (1-d.ratio));} )
         .attr("y", function(d) { return y(d.id); })
-        .attr("fill", "#fa9b9b")
+        .attr("fill", "#8293c1")
         .attr("height", y.bandwidth())
 
     // this bar is just used for the selection and to attach a border
@@ -117,16 +118,30 @@ function create_barcode(bars)
         })
         .on("mouseover", function(d)
         {
+            let colorA;
+            let colorB;
+
+            if(d.componentA.nodes.length < d.componentB.nodes.length)
+            {
+                colorA = "#5aaa4f";
+                colorB = "#8293c1";
+            }
+            else
+            {
+                colorB = "#5aaa4f";
+                colorA = "#8293c1";
+            }
+
             nodes
                 .selectAll("circle")
                 .attr("fill", function (n) {
                     if(!d.componentA.contains(n.id))
                     {
-                        return "#FF0000";
+                        return colorB;
                     }
                     else
                     {
-                        return "#0000FF";
+                        return colorA;
                     }
                 });
             links
@@ -156,16 +171,16 @@ function create_barcode(bars)
         });
 
     // adding the line associated with the slider => shows repulsion threshold
-    svg.selectAll(".bar")
-        .data(bars)
-        .exit().data(bars)
-        .enter().append("line")
+    svg
+        .append("line")
         .attr("x1", 0)
         .attr("y1", 0)
         .attr("x2", 0)
-        .attr("y2", 850)
+        .attr("y2", bar_height)
+        .attr("fill", "#FF0000")
         .attr("stroke", "#4281fc")
-        .attr("stroke-width", 2.0);
+        .attr("stroke-width", 2.0)
+        .style("opacity", 1.0);
 }
 
 /**
