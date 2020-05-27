@@ -11,6 +11,7 @@ let repulsion_strength_weak = -30;
 
 let link_opacity = 0.4;
 
+let active_clicked = null;
 
 function resize_graph()
 {
@@ -25,10 +26,8 @@ function resize_graph()
 function configure_graph(settings) {
     attraction_strength = settings.attraction_strength;
     attraction_strength_weak = settings.attraction_strength_weak;
-
     repulsion_strength = settings.repulsion_strength;
     repulsion_strength_weak = settings.repulsion_strength_weak;
-
     link_opacity = settings.link_opacity;
 }
 
@@ -57,9 +56,7 @@ function create_graph(data) {
         .selectAll("links")
         .data(data.links)
         .enter().append("line")
-        .attr("stroke-width", function (d) {
-            return 1;//return Math.sqrt(d.value); // use fixed size
-        })
+        .attr("stroke-width", 1)
         .attr("stroke", "#222222")
         .style("opacity", link_opacity);
 
@@ -73,19 +70,90 @@ function create_graph(data) {
         .attr("r", 5)
         .attr("fill", function (d) {
             return color(d.group);
-        });
-
-    nodes.append("text")
-        .text(function (d) {
-            return d.id;
         })
-        .attr('x', 6)
-        .attr('y', 3)
-        .style("font-size", "5px");
+        .on("click", function(d) {
 
-    nodes.append("title")
-        .text(function (d) {
-            return d.id;
+            if(active_clicked === d.id)
+            {
+                d3.selectAll("text")
+                    .remove();
+                d3.selectAll("circle")
+                    .style("opacity", 1.0);
+
+                d3.selectAll("line")
+                    .style("opacity", link_opacity);
+                return;
+            }
+            else
+            {
+                d3.selectAll("text")
+                    .remove();
+                d3.selectAll("circle")
+                    .style("opacity", 1.0);
+
+                d3.selectAll("line")
+                    .style("opacity", link_opacity);
+            }
+
+            d3.selectAll("circle")
+                .style("opacity", 0.7);
+
+            d3.select(this).select("circle")
+                .style("opacity", 1.0);
+
+            let adj_nodes = [];
+            adj_nodes.push(d.id);
+
+            active_clicked = d.id;
+
+            links
+                .style("opacity", function (l) {
+                    if (l.target.id === d.id || l.source.id === d.id) {
+                        adj_nodes.push(l.target.id);
+                        adj_nodes.push(l.source.id);
+                        return 0.5;
+                    }
+                    return link_opacity * 0.1;
+                });
+
+            d3.selectAll("circle")
+                .style("opacity", function (n) {
+                    if (adj_nodes.find(function (element) {
+                        return element === n.id;
+                    })) {
+                        return 1.0;
+                    }
+                    return 0.4;
+                });
+
+            nodes.filter(
+                function(t) {
+                    return adj_nodes.find(function (element)
+                    {
+                        return t.id === element;
+                    });
+                 })
+                .append("text")
+                .text(function (d) {
+                    return d.id;
+                })
+                .attr("x", 6)
+                .attr("y", 3)
+                .style("font-size", "8px")
+                .style("font-weight", "bold")
+                .style("opacity", function(t) {
+                    if(adj_nodes.find(function(element)
+                    {
+                        return element === t.id;
+                    }))
+                    {
+                        return 1.0;
+                    }
+                    else
+                    {
+                        return 0.0;
+                    }
+                });
         });
 
     simulation
