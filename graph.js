@@ -133,7 +133,7 @@ function create_graph(data) {
                         adj_nodes.push(l.source.id);
                         return link_opacity;
                     }
-                    return link_opacity * 0.1;
+                    return link_opacity * 0.05;
                 });
 
             d3.selectAll("circle")
@@ -143,7 +143,7 @@ function create_graph(data) {
                     })) {
                         return 1.0;
                     }
-                    return 0.4;
+                    return 0.3;
                 });
 
             nodes.filter(
@@ -159,20 +159,22 @@ function create_graph(data) {
                 })
                 .attr("x", 6)
                 .attr("y", 3)
+                .style("background-color", "#FFFFFF")
                 .style("font-size", "8px")
                 .style("font-weight", "bold")
-                .style("opacity", function(t) {
-                    if(adj_nodes.find(function(element)
-                    {
-                        return element === t.id;
-                    }))
-                    {
-                        return 1.0;
-                    }
-                    else
-                    {
-                        return 0.0;
-                    }
+                .style("position", "absolute")
+                .style("z-index", 2)
+                .style("opacity", 0.4)
+                .on("mouseover", function()
+                {
+                    d3.select(this.parentNode).each(function() {
+                        this.parentNode.appendChild(this);
+                    });
+                    d3.select(this).style("opacity", 1.0);
+                })
+                .on("mouseout", function()
+                {
+                    d3.select(this).style("opacity", 0.4);
                 });
         });
 
@@ -207,6 +209,10 @@ function create_graph(data) {
         }
     }
 
+    group_map[Symbol.iterator] = function* () {
+        yield* [...this.entries()].sort((a, b) => a[1] - b[1]);
+    }
+
     for(let [key, value] of group_map)
     {
         addGroupLabel(key, value);
@@ -228,34 +234,25 @@ function addGroupLabel (name, number)
 {
     let btn = $("<button></button>").text(name)
         .addClass("btn")
-        //.addClass("btn-primary")
-        //.addClass("p-1")
         .addClass("btn-sm")
         .addClass("disabled")
         .addClass("float-right")
         .addClass("font-weight-bold")
-        //.css("font-size", "x-small")
         .css("color", "#FFFFFF")
         .css("opacity", 1.0)
         .css("background-color", color(name));
 
-    console.log(color(name));
-
     let span = $("<span></span>").text(number)
         .addClass("badge")
-        //.addClass("badge-light")
         .attr("style", "color: #220 !important")
         .css("background-color", "#FFFFFF")
         .addClass("font-weight-bold")
         .addClass("ml-2")
         .addClass("float-right")
         .css("font-size", "x-small");
-        //.addClass("m-2");
 
     btn.append(span);
-
     group_div.append(btn);
-    //group_div.append($("<br>"));
 }
 
 function animation() {
