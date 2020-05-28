@@ -4,3325 +4,3325 @@
       "x": 512.6789,
       "y": 287.92252,
       "id": "Clinical Cancer Research",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 562.9259,
       "y": 158.42746,
       "id": "Circulation",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 114.36097,
       "y": 276.9297,
       "id": "Data Mining",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 497.20087,
       "y": 358.968,
       "id": "Protein Science",
-      "group": 1
+      "group": "Biotechnology"
     },
     {
       "x": 142.21658,
       "y": 294.26416,
       "id": "Signal Processing",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 616.2448,
       "y": 279.85553,
       "id": "Neuroscience; Molecular & Cellular",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 541.74615,
       "y": 153.70088,
       "id": "Anesthetics & Analgesics",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 470.2359,
       "y": 182.72256,
       "id": "Urology",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 503.36862,
       "y": 299.87427,
       "id": "Immunology",
-      "group": 9
+      "group": "Infectious Diseases"
     },
     {
       "x": 352.3808,
       "y": 519.958,
       "id": "Macromolecules & Polymers",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 718.06635,
       "y": 263.97937,
       "id": "Affective Disorders",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 486.35846,
       "y": 194.61064,
       "id": "Oncology",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 223.09622,
       "y": 439.56833,
       "id": "Surface Science",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 236.19258,
       "y": 290.58127,
       "id": "Nonlinear Analysis",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 690.7128,
       "y": 92.96582,
       "id": "Hospital Financial Management",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 501.45605,
       "y": 208.61795,
       "id": "Rheumatology",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 613.98315,
       "y": 334.83057,
       "id": "Occupational Health",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 371.82104,
       "y": 438.95746,
       "id": "Organic Chemistry",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 503.31345,
       "y": 252.84218,
       "id": "Leukemia",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 504.45874,
       "y": 317.41327,
       "id": "Virology",
-      "group": 9
+      "group": "Infectious Diseases"
     },
     {
       "x": 496.94562,
       "y": 459.91675,
       "id": "Plant Physiology",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 494.108,
       "y": 230.8899,
       "id": "Allergy & Clinical Immunology",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 182.3873,
       "y": 484.59946,
       "id": "Material Science",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 441.93124,
       "y": 173.94113,
       "id": "Dermatology",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 506.0551,
       "y": 145.07951,
       "id": "Kidney",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 587.63,
       "y": 308.36896,
       "id": "Pharmacology Science",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 786.3377,
       "y": 523.1084,
       "id": "Law",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 516.4758,
       "y": 132.44115,
       "id": "Medical Imaging",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 501.8102,
       "y": 375.83002,
       "id": "Bacteriology",
-      "group": 9
+      "group": "Infectious Diseases"
     },
     {
       "x": 522.31805,
       "y": 639.4222,
       "id": "Marine Biology",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 548.9659,
       "y": 300.62854,
       "id": "Developmental Biology",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 384.30383,
       "y": 121.871,
       "id": "Digestion",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 564.41986,
       "y": 342.8952,
       "id": "Toxicology Applied Pharmacology",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 236.59665,
       "y": 622.4727,
       "id": "Transportation Research",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 362.14203,
       "y": 459.14163,
       "id": "Inorganic Chemistry",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 276.76825,
       "y": 539.7482,
       "id": "Chemical Engineering",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 437.67078,
       "y": 355.0462,
       "id": "Pharmaceutical Research",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 211.57753,
       "y": 445.79416,
       "id": "Semiconducting Materials",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 605.0976,
       "y": 200.04393,
       "id": "Diabetes Care",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 676.3123,
       "y": 278.51443,
       "id": "Clinical Neurophysiology",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 437.52167,
       "y": 197.04607,
       "id": "Ophthalmology",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 555.8843,
       "y": 290.04175,
       "id": "Nutrition",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 231.57124,
       "y": 141.95586,
       "id": "Finance",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 576.5847,
       "y": 178.08575,
       "id": "Neurosurgery",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 552.3053,
       "y": 248.42752,
       "id": "Fertility",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 167.2343,
       "y": 402.38776,
       "id": "Applied Optics",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 241.66864,
       "y": 554.7782,
       "id": "Nuclear Engineering",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 493.93777,
       "y": 325.69955,
       "id": "Molecular Cell Biology",
-      "group": 9
+      "group": "Infectious Diseases"
     },
     {
       "x": 517.9963,
       "y": 401.41898,
       "id": "Food Chemistry",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 541.2225,
       "y": 230.76077,
       "id": "Obstetrics",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 508.50635,
       "y": 191.6036,
       "id": "Chest & Respiratory",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 234.1248,
       "y": 688.5668,
       "id": "Earthquake Engineering",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 572.0588,
       "y": 618.9287,
       "id": "Zoology",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 450.90472,
       "y": 367.4982,
       "id": "Pharmaceutical Design",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 495.2905,
       "y": 308.5846,
       "id": "AntiMicrobial Agents",
-      "group": 9
+      "group": "Infectious Diseases"
     },
     {
       "x": 88.91386,
       "y": 254.22491,
       "id": "Systems Software",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 120.47436,
       "y": 202.69936,
       "id": "Decision Support Systems",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 865.1709,
       "y": 454.38547,
       "id": "Business Ethics",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 516.2605,
       "y": 139.77989,
       "id": "Vascular Surgery",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 210.19685,
       "y": 628.25085,
       "id": "Pulp & Paper",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 471.457,
       "y": 733.30035,
       "id": "Seismology",
-      "group": 5
+      "group": "Earth Sciences"
     },
     {
       "x": 531.6895,
       "y": 78.28058,
       "id": "Bone Joint Surgery",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 656.94403,
       "y": 253.4431,
       "id": "Neurology",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 224.97966,
       "y": 291.55093,
       "id": "Algebra",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 150.28159,
       "y": 378.9064,
       "id": "Antenna",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 141.71489,
       "y": 343.28223,
       "id": "Circuit Systems",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 723.54956,
       "y": 109.54626,
       "id": "Nursing Specialists",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 460.88544,
       "y": 204.0761,
       "id": "Retinal Surgery",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 663.327,
       "y": 282.17593,
       "id": "Psychopharmacology",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 210.72256,
       "y": 506.9992,
       "id": "Aeronautics & Astronautics",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 779.7224,
       "y": 280.71744,
       "id": "Psychoanalysis",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 468.81082,
       "y": 671.5306,
       "id": "Oceanography",
-      "group": 5
+      "group": "Earth Sciences"
     },
     {
       "x": 605.75946,
       "y": 89.07102,
       "id": "Sports Medicine",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 163.03802,
       "y": 225.13657,
       "id": "Operations Research",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 411.8374,
       "y": 405.30966,
       "id": "Chromatography; Electrophoresis",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 527.20856,
       "y": 225.33484,
       "id": "Pediatrics",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 549.4297,
       "y": 142.09267,
       "id": "Cardiovascular",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 510.23996,
       "y": 712.83856,
       "id": "Paleobiology",
-      "group": 5
+      "group": "Earth Sciences"
     },
     {
       "x": 827.7007,
       "y": 556.88245,
       "id": "Economics",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 575.92834,
       "y": 136.034,
       "id": "Hypertension",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 571.3722,
       "y": 294.11295,
       "id": "Human Molecular Genetics",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 586.20856,
       "y": 214.22942,
       "id": "Clinical Endocrinology",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 590.62177,
       "y": 257.9582,
       "id": "Dietetics",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 472.12247,
       "y": 330.82928,
       "id": "Clinical Microbiology",
-      "group": 9
+      "group": "Infectious Diseases"
     },
     {
       "x": 622.29395,
       "y": 132.99965,
       "id": "Hospital Pharmacy",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 226.89665,
       "y": 546.09644,
       "id": "Gas Turbines",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 484.14453,
       "y": 695.0222,
       "id": "Remote Sensing",
-      "group": 5
+      "group": "Earth Sciences"
     },
     {
       "x": 306.33597,
       "y": 442.02295,
       "id": "Computational Chemistry",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 489.6034,
       "y": 139.68091,
       "id": "Surgery",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 202.70183,
       "y": 494.63727,
       "id": "Ceramics",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 476.50128,
       "y": 288.28897,
       "id": "AIDS Research",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 155.83401,
       "y": 537.5334,
       "id": "Military Aviation",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 708.76514,
       "y": 99.21238,
       "id": "Medical Records",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 221.35896,
       "y": 201.33904,
       "id": "Statistics",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 846.83997,
       "y": 558.4428,
       "id": "Applied Economics",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 112.86441,
       "y": 367.94244,
       "id": "Automatic Control",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 454.40674,
       "y": 691.9763,
       "id": "Atmospheric Science",
-      "group": 5
+      "group": "Earth Sciences"
     },
     {
       "x": 193.6622,
       "y": 560.83563,
       "id": "Automotive Engineering",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 889.1402,
       "y": 320.80127,
       "id": "BioStatistics",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 704.68976,
       "y": 81.801704,
       "id": "Employee Health Benefit Plans",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 498.41113,
       "y": 165.67441,
       "id": "Transplantation",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 190.60632,
       "y": 485.20056,
       "id": "Alloys",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 197.57977,
       "y": 436.79343,
       "id": "Astronomy & Astrophysics",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 722.6518,
       "y": 255.16203,
       "id": "Substance-abuse Treatment",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 886.4742,
       "y": 439.25314,
       "id": "Research Policy; Technology Management",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 626.05817,
       "y": 163.91258,
       "id": "Drug Discovery",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 563.9212,
       "y": 455.7567,
       "id": "Animal Science",
-      "group": 9
+      "group": "Infectious Diseases"
     },
     {
       "x": 235.70663,
       "y": 361.08304,
       "id": "Chaos Fractals & Complexity",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 521.6865,
       "y": 555.4851,
       "id": "Environmental Contamination",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 528.54065,
       "y": 177.26915,
       "id": "Otolaryngology; Laryngoscope",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 144.91858,
       "y": 499.87225,
       "id": "Mechanical Design Engineering",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 750.65936,
       "y": 684.70917,
       "id": "Classics",
-      "group": 8
+      "group": "Humanities"
     },
     {
       "x": 524.887,
       "y": 622.69806,
       "id": "Biological Conservation",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 522.3952,
       "y": 124.83392,
       "id": "Thoracic Surgery",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 452.65335,
       "y": 385.61426,
       "id": "Phytochemistry",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 512.33185,
       "y": 368.3027,
       "id": "Tropical Medicine",
-      "group": 9
+      "group": "Infectious Diseases"
     },
     {
       "x": 508.54477,
       "y": 397.9152,
       "id": "Food Protection",
-      "group": 1
+      "group": "Biotechnology"
     },
     {
       "x": 145.49374,
       "y": 282.03842,
       "id": "Broadband Communication",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 275.57117,
       "y": 586.8058,
       "id": "Energy Fuel",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 452.40103,
       "y": 609.12305,
       "id": "Soil Quality",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 135.12404,
       "y": 306.66953,
       "id": "Integrated Circuit Design",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 659.40497,
       "y": 752.13245,
       "id": "Philosophy Psychology",
-      "group": 8
+      "group": "Humanities"
     },
     {
       "x": 881.1811,
       "y": 426.96503,
       "id": "Construction & Project Management",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 800.7657,
       "y": 340.1689,
       "id": "Social Psychology",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 224.07294,
       "y": 405.20905,
       "id": "High Energy Physics",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 862.1548,
       "y": 443.29926,
       "id": "Strategic Management",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 518.58606,
       "y": 379.26578,
       "id": "Genomics & Nucleic Acids",
-      "group": 1
+      "group": "Biotechnology"
     },
     {
       "x": 240.49022,
       "y": 531.3566,
       "id": "Heat Transfer",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 240.51068,
       "y": 705.7444,
       "id": "Cement & Concrete",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 483.5349,
       "y": 221.75146,
       "id": "Pathology",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 539.76135,
       "y": 512.57654,
       "id": "Pest Management Science",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 279.21408,
       "y": 505.0487,
       "id": "Corrosion",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 560.5665,
       "y": 410.4006,
       "id": "Veterinary Science",
-      "group": 9
+      "group": "Infectious Diseases"
     },
     {
       "x": 833.5671,
       "y": 400.05685,
       "id": "Teacher Education; Evaluation",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 570.569,
       "y": 270.38177,
       "id": "Stem Cells",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 83.63833,
       "y": 302.88348,
       "id": "Image Processing",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 89.07625,
       "y": 291.06787,
       "id": "Neural Networks",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 736.8422,
       "y": 123.95618,
       "id": "Nursing Education",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 523.36914,
       "y": 151.45647,
       "id": "Intensive Care",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 593.3358,
       "y": 146.02081,
       "id": "Alternative Complementary Medicine",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 307.97745,
       "y": 644.30994,
       "id": "Petroleum Engineering",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 713.7825,
       "y": 762.6136,
       "id": "Music & Theatre",
-      "group": 8
+      "group": "Humanities"
     },
     {
       "x": 704.66077,
       "y": 301.6578,
       "id": "Memory & Cognition",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 645.4254,
       "y": 284.342,
       "id": "Vision",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 844.13684,
       "y": 454.72302,
       "id": "Communication Research",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 485.58084,
       "y": 404.543,
       "id": "BioInformatics",
-      "group": 1
+      "group": "Biotechnology"
     },
     {
       "x": 178.95695,
       "y": 543.44885,
       "id": "Mechanics of Solids & Structures",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 575.0539,
       "y": 192.71901,
       "id": "Pharmacy",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 469.67712,
       "y": 720.6131,
       "id": "Geomorphology",
-      "group": 5
+      "group": "Earth Sciences"
     },
     {
       "x": 697.13446,
       "y": 264.91934,
       "id": "Psychosis; Schizophrenia",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 692.90826,
       "y": 71.98184,
       "id": "BioEthics",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 152.50232,
       "y": 247.34421,
       "id": "Parallel Computing",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 166.28398,
       "y": 327.89307,
       "id": "Power Distribution",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 759.8389,
       "y": 261.52637,
       "id": "Gerontology",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 225.96777,
       "y": 647.4692,
       "id": "Wood",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 221.78629,
       "y": 272.8968,
       "id": "Discrete Applied Mathematics",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 483.05847,
       "y": 741.0121,
       "id": "Geology & Tectonics",
-      "group": 5
+      "group": "Earth Sciences"
     },
     {
       "x": 474.61563,
       "y": 757.99677,
       "id": "GeoChemistry",
-      "group": 5
+      "group": "Earth Sciences"
     },
     {
       "x": 143.88074,
       "y": 263.9238,
       "id": "Mobile Networks",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 108.24034,
       "y": 270.53375,
       "id": "Artificial Intelligence",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 367.4811,
       "y": 426.61807,
       "id": "Electro Analytical Chemistry",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 528.7418,
       "y": 45.89732,
       "id": "Dental Education",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 496.39816,
       "y": 425.8906,
       "id": "Enzyme Microbiological Techniques",
-      "group": 1
+      "group": "Biotechnology"
     },
     {
       "x": 101.97028,
       "y": 211.48402,
       "id": "Library Science; Information Retrieval",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 512.36053,
       "y": 64.74601,
       "id": "Biomaterials",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 493.009,
       "y": 737.3001,
       "id": "Quaternary Research",
-      "group": 5
+      "group": "Earth Sciences"
     },
     {
       "x": 433.27585,
       "y": 121.051636,
       "id": "Endoscopic Surgery",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 193.62549,
       "y": 584.231,
       "id": "Composites",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 797.3676,
       "y": 436.56674,
       "id": "Language Learning",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 740.75543,
       "y": 636.8587,
       "id": "American History",
-      "group": 8
+      "group": "Humanities"
     },
     {
       "x": 878.824,
       "y": 454.3528,
       "id": "Leadership & Organizational Behavior",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 434.50537,
       "y": 593.10474,
       "id": "Agricultural Engineering",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 133.72916,
       "y": 223.23155,
       "id": "Computer-Aided Process Planning",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 714.72296,
       "y": 270.53882,
       "id": "Geriatrics",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 176.08798,
       "y": 404.7851,
       "id": "Solid State Electronics",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 204.42784,
       "y": 405.1112,
       "id": "Optics & Lasers",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 211.54178,
       "y": 653.68774,
       "id": "Wool",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 557.0982,
       "y": 75.41858,
       "id": "Biomechanics",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 282.49478,
       "y": 431.0108,
       "id": "Molecular Physics",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 559.8286,
       "y": 585.56934,
       "id": "Comparative Animal Physiology",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 803.0143,
       "y": 483.00507,
       "id": "Political Science",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 714.39825,
       "y": 675.0304,
       "id": "Science History",
-      "group": 8
+      "group": "Humanities"
     },
     {
       "x": 725.1506,
       "y": 693.1021,
       "id": "Poetry",
-      "group": 8
+      "group": "Humanities"
     },
     {
       "x": 476.81238,
       "y": 138.15115,
       "id": "Nuclear Medicine",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 254.58432,
       "y": 469.9222,
       "id": "Nanotechnology",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 105.60733,
       "y": 304.94656,
       "id": "Speech Recognition",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 228.10889,
       "y": 517.0806,
       "id": "Fluid Mechanics",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 67.090805,
       "y": 307.7684,
       "id": "Computer Graphics",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 308.5887,
       "y": 531.0928,
       "id": "Filtration Membrane",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 476.96762,
       "y": 268.59537,
       "id": "Clinical Infectious Disease",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 494.34705,
       "y": 39.78206,
       "id": "Prosthetic Dentistry",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 498.48007,
       "y": 71.66553,
       "id": "Orthodontics",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 100.703354,
       "y": 346.45428,
       "id": "Robotic Systems",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 480.7053,
       "y": 55.00729,
       "id": "Dental Research",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 396.38318,
       "y": 400.68948,
       "id": "Atomic Spectrometry",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 496.7154,
       "y": 539.35535,
       "id": "Botany",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 677.60114,
       "y": 223.22693,
       "id": "Public Health Service",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 835.70935,
       "y": 496.18753,
       "id": "Political Geography",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 319.30023,
       "y": 484.5453,
       "id": "Catalysis",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 447.33655,
       "y": 103.89142,
       "id": "Radiation Protection",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 157.10066,
       "y": 484.38977,
       "id": "Machine Tools",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 584.86743,
       "y": 424.612,
       "id": "Veterinary Medicine",
-      "group": 9
+      "group": "Infectious Diseases"
     },
     {
       "x": 480.714,
       "y": 64.90692,
       "id": "Periodontology",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 550.89,
       "y": 232.50282,
       "id": "Birth Defects",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 542.5604,
       "y": 182.63464,
       "id": "Thrombosis",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 528.0896,
       "y": 646.4516,
       "id": "Freshwater Biology",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 741.70715,
       "y": 145.11522,
       "id": "Mental Health Nursing",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 112.34868,
       "y": 250.85344,
       "id": "Artificial Evolution",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 752.5941,
       "y": 693.7722,
       "id": "English Literature",
-      "group": 8
+      "group": "Humanities"
     },
     {
       "x": 498.04718,
       "y": 113.9575,
       "id": "Plastic Surgery",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 732.76465,
       "y": 100.49177,
       "id": "Nursing Administration",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 854.8471,
       "y": 387.6352,
       "id": "Higher Education",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 534.4372,
       "y": 597.097,
       "id": "Ecology",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 744.64453,
       "y": 699.45795,
       "id": "Modern Language",
-      "group": 8
+      "group": "Humanities"
     },
     {
       "x": 639.09393,
       "y": 261.88336,
       "id": "Neurophysiology & Neuroscience",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 280.21823,
       "y": 615.87286,
       "id": "Mining",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 576.19214,
       "y": 584.8228,
       "id": "Aquaculture",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 540.3191,
       "y": 535.56256,
       "id": "Molecular Biological Evolution",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 179.93759,
       "y": 395.93604,
       "id": "Photonics",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 842.8373,
       "y": 487.8857,
       "id": "Urban Studies",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 238.1608,
       "y": 281.45462,
       "id": "Functional Analysis",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 770.0699,
       "y": 641.7475,
       "id": "Linguistics",
-      "group": 8
+      "group": "Humanities"
     },
     {
       "x": 144.6476,
       "y": 410.11667,
       "id": "Photo-Optics",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 557.42413,
       "y": 113.15154,
       "id": "Spine",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 107.41887,
       "y": 406.9282,
       "id": "Robotics",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 618.8065,
       "y": 228.58853,
       "id": "Audiology",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 462.12384,
       "y": 625.8542,
       "id": "Soil Science",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 240.92299,
       "y": 348.2006,
       "id": "Simulation",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 195.9022,
       "y": 414.01376,
       "id": "Nuclear Instrumentation",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 741.7887,
       "y": 688.6485,
       "id": "Hispanic Studies",
-      "group": 8
+      "group": "Humanities"
     },
     {
       "x": 498.95346,
       "y": 599.4312,
       "id": "Forest Science",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 185.82745,
       "y": 415.73575,
       "id": "Plasma Physics",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 476.1367,
       "y": 378.57898,
       "id": "Proteomics",
-      "group": 1
+      "group": "Biotechnology"
     },
     {
       "x": 829.5227,
       "y": 420.67026,
       "id": "Symbolic Interaction",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 759.3995,
       "y": 295.3355,
       "id": "Child & Adolescent Psychiatry",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 688.24365,
       "y": 138.10358,
       "id": "General Practice",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 865.2552,
       "y": 533.8426,
       "id": "Environmental Management",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 597.01984,
       "y": 186.50046,
       "id": "Diabetes Metabolism",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 286.96603,
       "y": 649.98035,
       "id": "Geotechnical Engineering",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 130.15666,
       "y": 402.62628,
       "id": "Instrumentation",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 530.8743,
       "y": 192.61519,
       "id": "Clinical Chemistry",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 245.5812,
       "y": 546.7471,
       "id": "Fluid Engineering",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 540.7705,
       "y": 80.341095,
       "id": "Arthroscopy",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 826.7607,
       "y": 325.434,
       "id": "Eating Disorders; Sex Roles",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 370.01874,
       "y": 631.538,
       "id": "Water Quality & Resource Management",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 832.27484,
       "y": 505.52917,
       "id": "Ethnic Migration",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 704.7098,
       "y": 256.61038,
       "id": "Geriatric Psychiatry",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 169.41878,
       "y": 551.0522,
       "id": "Sound & Vibration",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 251.16444,
       "y": 583.94073,
       "id": "Ore Processing",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 805.5592,
       "y": 532.62726,
       "id": "Ethnology",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 530.9011,
       "y": 208.03328,
       "id": "Prenatal Diagnostics",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 472.0432,
       "y": 152.51337,
       "id": "Cancer (translated)",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 170.44518,
       "y": 366.66574,
       "id": "Dielectrics",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 467.41498,
       "y": 699.58167,
       "id": "Atmospheric GeoPhysics",
-      "group": 5
+      "group": "Earth Sciences"
     },
     {
       "x": 446.31055,
       "y": 416.16324,
       "id": "Flavors & Fragrance",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 198.23369,
       "y": 524.0853,
       "id": "Numerical Methods in Engineering",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 479.19714,
       "y": 388.86133,
       "id": "EthnoPharmacology",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 554.70776,
       "y": 131.53134,
       "id": "Electrocardiography",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 833.15125,
       "y": 545.40436,
       "id": "International Development",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 273.9585,
       "y": 487.10782,
       "id": "Electrochemistry",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 810.12726,
       "y": 476.78577,
       "id": "Political Studies",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 566.8607,
       "y": 252.011,
       "id": "Molecular Endocrinology",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 203.83105,
       "y": 467.05435,
       "id": "Surface Coating Technology",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 538.9538,
       "y": 429.9638,
       "id": "Molecular Biochemical Parasitology",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 823.555,
       "y": 367.11298,
       "id": "Vocational Counseling",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 300.45987,
       "y": 651.8938,
       "id": "Oil & Natural Gas",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 789.9728,
       "y": 500.95264,
       "id": "International Conflict",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 762.21545,
       "y": 676.5276,
       "id": "Art History",
-      "group": 8
+      "group": "Humanities"
     },
     {
       "x": 330.7356,
       "y": 480.45618,
       "id": "Applied Catalysis",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 236.9552,
       "y": 91.329315,
       "id": "Agricultural Economics",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 788.1467,
       "y": 333.9069,
       "id": "Social Work",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 680.768,
       "y": 118.6356,
       "id": "Medical Insurance",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 299.999,
       "y": 487.14874,
       "id": "Fluid Phase Equilibrium",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 498.35803,
       "y": 391.1563,
       "id": "Biotechnology Trends",
-      "group": 1
+      "group": "Biotechnology"
     },
     {
       "x": 434.84332,
       "y": 735.0733,
       "id": "Air Quality",
-      "group": 5
+      "group": "Earth Sciences"
     },
     {
       "x": 107.057335,
       "y": 228.51344,
       "id": "Search Engines; Web Crawling",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 282.55008,
       "y": 515.57367,
       "id": "Colloid",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 584.0069,
       "y": 105.900734,
       "id": "Applied Physiology; Muscle",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 771.3944,
       "y": 691.527,
       "id": "Biblical Literature",
-      "group": 8
+      "group": "Humanities"
     },
     {
       "x": 126.61642,
       "y": 295.25604,
       "id": "Fault Tolerant Computing",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 811.9794,
       "y": 487.788,
       "id": "Third World Political Economics",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 704.7602,
       "y": 91.85142,
       "id": "Public Hospitals",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 825.13605,
       "y": 448.7634,
       "id": "Sociology",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 477.37036,
       "y": 550.77765,
       "id": "Horticulture",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 557.19086,
       "y": 152.75002,
       "id": "Bone & Osteoporosis",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 487.6649,
       "y": 158.06071,
       "id": "Radiation Therapy",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 364.20126,
       "y": 606.0023,
       "id": "Water Treatment",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 154.61673,
       "y": 263.19412,
       "id": "Spyware; Malware",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 768.56384,
       "y": 298.37103,
       "id": "Behavioral Research Therapy",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 824.5419,
       "y": 409.0156,
       "id": "Science Education",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 169.77904,
       "y": 236.0106,
       "id": "Design & Analysis of Algorithms",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 630.6577,
       "y": 120.345276,
       "id": "Hospice Care",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 454.8212,
       "y": 681.4881,
       "id": "Climatology",
-      "group": 5
+      "group": "Earth Sciences"
     },
     {
       "x": 493.4589,
       "y": 521.3584,
       "id": "Crop Science",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 89.06366,
       "y": 309.87286,
       "id": "Fuzzy Sets",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 206.03264,
       "y": 591.26624,
       "id": "Vehicle System Design",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 510.8303,
       "y": 266.8816,
       "id": "Transfusion",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 719.4613,
       "y": 76.6063,
       "id": "AIDS Treatment",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 144.23279,
       "y": 304.78995,
       "id": "Wireless Communication",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 551.7286,
       "y": 179.11412,
       "id": "Atherosclerosis",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 694.9641,
       "y": 83.49036,
       "id": "Region & Medical Ethics",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 721.1354,
       "y": 304.56042,
       "id": "Speech Language & Hearing",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 479.05518,
       "y": 242.11157,
       "id": "Thoracic & Respiratory",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 553.13367,
       "y": 401.9321,
       "id": "Veterinary Microbiology",
-      "group": 9
+      "group": "Infectious Diseases"
     },
     {
       "x": 448.45883,
       "y": 583.187,
       "id": "Environmental Protection",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 69.23331,
       "y": 257.8574,
       "id": "Computer Systems Design",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 460.3978,
       "y": 601.1604,
       "id": "Environmental Pollution",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 155.7545,
       "y": 332.52887,
       "id": "Electrical Networks",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 375.62683,
       "y": 115.73559,
       "id": "Endoscopy",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 294.73895,
       "y": 465.8708,
       "id": "Chemistry & Material Science",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 610.17285,
       "y": 264.67972,
       "id": "Medical Screening & Epidemiology",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 770.8949,
       "y": 316.14587,
       "id": "Child Development",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 605.71594,
       "y": 166.90971,
       "id": "Pain",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 837.3968,
       "y": 467.77545,
       "id": "Public Administration",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 480.82446,
       "y": 571.8446,
       "id": "Soil Analysis",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 314.96457,
       "y": 606.6991,
       "id": "Safety Management",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 82.13368,
       "y": 325.57007,
       "id": "Pattern Recognition",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 745.91705,
       "y": 261.73575,
       "id": "Mental Health Assessment",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 458.06668,
       "y": 141.9157,
       "id": "Clinical Medicine (translated)",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 530.22705,
       "y": 332.55377,
       "id": "Mutation; DNA Repair",
-      "group": 9
+      "group": "Infectious Diseases"
     },
     {
       "x": 562.4066,
       "y": 617.34766,
       "id": "Human Evolution",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 157.11723,
       "y": 422.15326,
       "id": "Space Research",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 566.7453,
       "y": 558.8154,
       "id": "Entomology",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 664.26776,
       "y": 242.14348,
       "id": "Epilepsy",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 520.80597,
       "y": 608.8414,
       "id": "Plant Ecology",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 385.18442,
       "y": 409.76044,
       "id": "Computer Aided Molecular Design",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 779.8477,
       "y": 354.2438,
       "id": "Criminology",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 771.45685,
       "y": 257.52478,
       "id": "Forensic Psychiatry",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 803.81555,
       "y": 320.15228,
       "id": "Personality",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 129.34172,
       "y": 351.20514,
       "id": "Test Equipment",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 170.8909,
       "y": 253.17982,
       "id": "Logic",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 238.92741,
       "y": 611.4666,
       "id": "Pulp Paper Science",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 202.91405,
       "y": 650.5727,
       "id": "Textiles",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 686.1729,
       "y": 726.2007,
       "id": "Contemporary Philosophy",
-      "group": 8
+      "group": "Humanities"
     },
     {
       "x": 360.05353,
       "y": 653.44446,
       "id": "Hydrology Soil Contamination",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 783.81744,
       "y": 302.4998,
       "id": "Child Abuse",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 248.58313,
       "y": 295.80267,
       "id": "Mathematics Research",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 476.15805,
       "y": 746.2147,
       "id": "Geology (International)",
-      "group": 5
+      "group": "Earth Sciences"
     },
     {
       "x": 373.91006,
       "y": 407.29276,
       "id": "Environmental Chemistry",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 546.62244,
       "y": 457.7673,
       "id": "Parasitology",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 557.1578,
       "y": 444.13098,
       "id": "Dairy Science",
-      "group": 9
+      "group": "Infectious Diseases"
     },
     {
       "x": 373.07037,
       "y": 647.9597,
       "id": "Water Policy",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 533.6868,
       "y": 639.1595,
       "id": "Fish Research",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 207.82468,
       "y": 617.69684,
       "id": "Printing",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 518.86945,
       "y": 526.4139,
       "id": "Genetics",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 222.79779,
       "y": 594.1706,
       "id": "Industrial Chemistry",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 589.91943,
       "y": 195.98868,
       "id": "Obesity",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 733.1948,
       "y": 702.7046,
       "id": "Literary Criticism",
-      "group": 8
+      "group": "Humanities"
     },
     {
       "x": 403.48886,
       "y": 187.74162,
       "id": "Hepatology",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 674.5155,
       "y": 163.59592,
       "id": "Physical Therapy; Brain Injury",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 238.58002,
       "y": 328.21402,
       "id": "Computational Math",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 453.39838,
       "y": 329.10217,
       "id": "World Health Organization",
-      "group": 9
+      "group": "Infectious Diseases"
     },
     {
       "x": 179.67302,
       "y": 436.23654,
       "id": "Geophysical Science",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 770.80945,
       "y": 200.4818,
       "id": "Forensic Medicine",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 756.33185,
       "y": 271.1604,
       "id": "Psychiatric Services",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 84.73834,
       "y": 244.78763,
       "id": "Software Design and Development",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 545.0135,
       "y": 615.5104,
       "id": "Wildlife Management",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 385.98892,
       "y": 699.0269,
       "id": "Ocean Coastal Management",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 122.43584,
       "y": 235.69972,
       "id": "Database Design & Management",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 824.29785,
       "y": 533.92126,
       "id": "Financial Accounting",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 495.8515,
       "y": 439.6302,
       "id": "Microbiology Biotechnology",
-      "group": 1
+      "group": "Biotechnology"
     },
     {
       "x": 335.09265,
       "y": 637.3568,
       "id": "Water Utilities",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 486.55426,
       "y": 748.914,
       "id": "Sedimentary Geology",
-      "group": 5
+      "group": "Earth Sciences"
     },
     {
       "x": 482.51053,
       "y": 720.11255,
       "id": "Geodesy",
-      "group": 5
+      "group": "Earth Sciences"
     },
     {
       "x": 297.0885,
       "y": 454.7748,
       "id": "Surfactants",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 426.53757,
       "y": 226.45477,
       "id": "Eye",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 736.2457,
       "y": 282.6319,
       "id": "Addictive Behavior",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 126.97217,
       "y": 577.8917,
       "id": "Naval Architecture",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 491.71948,
       "y": 632.26807,
       "id": "Environmental Microbiology",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 62.57538,
       "y": 321.66806,
       "id": "Electronic Imaging",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 84.214745,
       "y": 234.65996,
       "id": "Functional Programing",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 509.86655,
       "y": 483.8138,
       "id": "Applied Genetics",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 508.89563,
       "y": 515.02966,
       "id": "Plant Disease",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 408.55133,
       "y": 648.8714,
       "id": "Water Resource",
-      "group": 5
+      "group": "Earth Sciences"
     },
     {
       "x": 226.67871,
       "y": 100.59802,
       "id": "Developmental Economics",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 233.59685,
       "y": 433.72827,
       "id": "Nuclear Physics",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 241.07114,
       "y": 104.00804,
       "id": "International Economics",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 476.0771,
       "y": 126.658066,
       "id": "Radiology",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 726.1984,
       "y": 665.2952,
       "id": "German Studies",
-      "group": 8
+      "group": "Humanities"
     },
     {
       "x": 769.1583,
       "y": 681.4829,
       "id": "Medieval History",
-      "group": 8
+      "group": "Humanities"
     },
     {
       "x": 669.20856,
       "y": 761.0343,
       "id": "Philosophy of Education",
-      "group": 8
+      "group": "Humanities"
     },
     {
       "x": 167.53555,
       "y": 567.1715,
       "id": "Oceanographic Instrumentation",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 805.1569,
       "y": 513.3762,
       "id": "Foreign Policy",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 373.34622,
       "y": 129.1584,
       "id": "Gut",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 142.12862,
       "y": 388.7838,
       "id": "Microwaves; Radio Frequencies",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 787.2938,
       "y": 320.77576,
       "id": "School Psychology",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 493.2843,
       "y": 295.59457,
       "id": "Vaccines",
-      "group": 9
+      "group": "Infectious Diseases"
     },
     {
       "x": 834.37195,
       "y": 522.90717,
       "id": "Environmental Law",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 425.13895,
       "y": 405.98868,
       "id": "Mass Spectrometry",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 750.1298,
       "y": 219.8652,
       "id": "Psychiatric Nursing",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 759.4158,
       "y": 634.979,
       "id": "Asian Studies",
-      "group": 8
+      "group": "Humanities"
     },
     {
       "x": 251.4049,
       "y": 284.60574,
       "id": "Optimization Theory",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 233.27895,
       "y": 303.7736,
       "id": "Mathematical Science (Russia)",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 493.17523,
       "y": 266.7598,
       "id": "Gene Therapy",
-      "group": 9
+      "group": "Infectious Diseases"
     },
     {
       "x": 138.91519,
       "y": 247.70802,
       "id": "Security; Cryptography",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 169.17743,
       "y": 508.29843,
       "id": "Materials Processing",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 694.8364,
       "y": 121.567726,
       "id": "Rural Health Care",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 136.7422,
       "y": 333.82843,
       "id": "Power Systems",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 484.0091,
       "y": 180.46492,
       "id": "Surgical Oncology",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 163.27867,
       "y": 286.85522,
       "id": "Chip Design & Manufacturing",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 566.40295,
       "y": 578.8186,
       "id": "Sociobiology",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 524.66583,
       "y": 321.85336,
       "id": "Molecular Medicine",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 832.8242,
       "y": 450.68463,
       "id": "Human Resource Management",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 488.64728,
       "y": 594.0803,
       "id": "Ecological Modeling",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 507.61777,
       "y": 169.2104,
       "id": "Clinical Rehabilitation",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 197.7981,
       "y": 506.26425,
       "id": "Metallurgy",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 743.6709,
       "y": 675.44446,
       "id": "Ethics",
-      "group": 8
+      "group": "Humanities"
     },
     {
       "x": 788.3691,
       "y": 310.34198,
       "id": "Marital & Family Therapy",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 145.04016,
       "y": 451.83032,
       "id": "Aerospace",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 738.79877,
       "y": 668.47424,
       "id": "Critical Studies",
-      "group": 8
+      "group": "Humanities"
     },
     {
       "x": 848.7177,
       "y": 524.5837,
       "id": "Econometrics",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 686.4047,
       "y": 264.81982,
       "id": "Neuroscience Methods",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 457.95078,
       "y": 733.8499,
       "id": "Mineralogy",
-      "group": 5
+      "group": "Earth Sciences"
     },
     {
       "x": 557.95337,
       "y": 95.18983,
       "id": "Trauma",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 389.12817,
       "y": 449.39813,
       "id": "Thermal Analysis",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 229.04684,
       "y": 527.2198,
       "id": "Solar & Wind Power",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 306.03757,
       "y": 625.4366,
       "id": "Ocean Engineering",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 803.0856,
       "y": 367.44354,
       "id": "Educational Psychology",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 509.6564,
       "y": 568.8159,
       "id": "Mycology",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 749.2682,
       "y": 664.46674,
       "id": "Semiotics",
-      "group": 8
+      "group": "Humanities"
     },
     {
       "x": 256.67023,
       "y": 646.6823,
       "id": "Dyes & Pigments",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 558.3772,
       "y": 193.05421,
       "id": "Drug Safety",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 543.9139,
       "y": 601.84827,
       "id": "Molecular Ecology",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 519.46893,
       "y": 279.1102,
       "id": "Cytogenetics & Genome Mapping",
-      "group": 9
+      "group": "Infectious Diseases"
     },
     {
       "x": 765.1578,
       "y": 284.2944,
       "id": "Clinical Psychiatry",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 484.75424,
       "y": 709.08215,
       "id": "Paleogeography",
-      "group": 5
+      "group": "Earth Sciences"
     },
     {
       "x": 387.6667,
       "y": 630.5755,
       "id": "Water Waste",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 128.65053,
       "y": 261.76187,
       "id": "Computer Networks",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 443.44366,
       "y": 614.8025,
       "id": "Weed Management",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 112.81041,
       "y": 292.33572,
       "id": "User Interface Design",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 814.2603,
       "y": 502.50208,
       "id": "Public Policy",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 377.8346,
       "y": 525.7065,
       "id": "Liquid Crystals",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 59.271122,
       "y": 352.03033,
       "id": "Control Systems",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 858.57477,
       "y": 497.8045,
       "id": "Environmental Policy",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 240.44034,
       "y": 304.42352,
       "id": "Topology",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 241.89471,
       "y": 636.05414,
       "id": "Construction",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 294.84683,
       "y": 624.4718,
       "id": "Dams & Tunnels",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 854.8489,
       "y": 507.81766,
       "id": "Regional Studies",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 219.66687,
       "y": 475.19724,
       "id": "Electrochemical Development",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 217.76027,
       "y": 626.04333,
       "id": "Digital Printing",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 481.5822,
       "y": 361.58447,
       "id": "Peptides",
-      "group": 9
+      "group": "Infectious Diseases"
     },
     {
       "x": 334.56863,
       "y": 663.91125,
       "id": "Applied Geophysics",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 455.98685,
       "y": 298.29312,
       "id": "Sexually Transmitted Diseases",
-      "group": 9
+      "group": "Infectious Diseases"
     },
     {
       "x": 822.03613,
       "y": 399.7445,
       "id": "Engineering Education",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 632.9956,
       "y": 246.60352,
       "id": "NeuroImmunology",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 99.110855,
       "y": 254.76738,
       "id": "Machine Learning",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 705.84753,
       "y": 107.26793,
       "id": "Geriatric Nursing",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 238.86041,
       "y": 507.1949,
       "id": "Sensors & Actuators",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 504.44058,
       "y": 424.39056,
       "id": "Systematics & Evolutionary Microbiology",
-      "group": 1
+      "group": "Biotechnology"
     },
     {
       "x": 92.58719,
       "y": 332.83768,
       "id": "Medical Image Processing",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 644.08453,
       "y": 121.91682,
       "id": "Medical Education",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 550.6716,
       "y": 156.17725,
       "id": "Magnetic Resonance Imagery",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 677.80145,
       "y": 89.306465,
       "id": "Hospital Management",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 550.93,
       "y": 516.85223,
       "id": "Insect Physiology",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 137.51631,
       "y": 357.46033,
       "id": "Power Transmission",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 516.39,
       "y": 441.59222,
       "id": "Food Engineering",
-      "group": 1
+      "group": "Biotechnology"
     },
     {
       "x": 510.1893,
       "y": 81.02119,
       "id": "Oral Surgery",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 68.15017,
       "y": 247.29814,
       "id": "Computer Systems Theory",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 246.33733,
       "y": 569.9641,
       "id": "Combustion",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 465.70938,
       "y": 229.55327,
       "id": "Dermatological Surgery",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 547.2497,
       "y": 607.0389,
       "id": "Wildlife Research",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 741.7288,
       "y": 105.471214,
       "id": "Midwifery",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 215.43474,
       "y": 415.81848,
       "id": "Physics; Current Developments",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 763.99677,
       "y": 320.1557,
       "id": "Pyschiatric & Behavioral Genetics",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 185.08447,
       "y": 526.78894,
       "id": "Fractures & Fatigue",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 603.0254,
       "y": 127.42304,
       "id": "Emergency Medicine",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 730.58887,
       "y": 686.1149,
       "id": "Cross Disciplinary Studies",
-      "group": 8
+      "group": "Humanities"
     },
     {
       "x": 532.8691,
       "y": 705.5586,
       "id": "Archeological Science",
-      "group": 5
+      "group": "Earth Sciences"
     },
     {
       "x": 670.41504,
       "y": 203.06602,
       "id": "Preventive Medicine",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 316.4926,
       "y": 497.20685,
       "id": "Carbon",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 506.39423,
       "y": 215.34349,
       "id": "Gynecology Oncology",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 792.5849,
       "y": 293.80435,
       "id": "Psychosomatic Medicine",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 625.73016,
       "y": 150.09265,
       "id": "Pharmaco Economics",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 58.902836,
       "y": 293.54593,
       "id": "Computer Modeling and Animation",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 680.7772,
       "y": 100.79758,
       "id": "Medical Practice",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 227.52464,
       "y": 243.2226,
       "id": "Cancer Statistics",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 703.8817,
       "y": 315.58728,
       "id": "Consciousness",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 535.3223,
       "y": 165.77345,
       "id": "Otolyngology; Head Neck",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 541.47504,
       "y": 130.05934,
       "id": "Heart Failure; Catheters",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 254.57048,
       "y": 602.56384,
       "id": "Wood Components",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 114.13128,
       "y": 318.71436,
       "id": "Circuits",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 176.06558,
       "y": 499.99612,
       "id": "Friction Lubrication & Wear",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 189.66563,
       "y": 430.32828,
       "id": "Superconductor Science",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 150.61516,
       "y": 346.15182,
       "id": "Antennae; Mobile Radio",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 630.9868,
       "y": 213.90237,
       "id": "Headache",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 876.72845,
       "y": 444.30154,
       "id": "Operations Management",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 569.9272,
       "y": 638.4032,
       "id": "Fish Biology",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 718.83685,
       "y": 654.5841,
       "id": "Social History",
-      "group": 8
+      "group": "Humanities"
     },
     {
       "x": 135.93428,
       "y": 284.75064,
       "id": "Consumer Electronics",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 559.262,
       "y": 233.63142,
       "id": "Menopause",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 377.90875,
       "y": 474.34494,
       "id": "Chemistry (Russia)",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 805.01263,
       "y": 493.22113,
       "id": "GeoPolitics",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 439.09283,
       "y": 713.04785,
       "id": "Glaciology",
-      "group": 5
+      "group": "Earth Sciences"
     },
     {
       "x": 683.0967,
       "y": 76.5059,
       "id": "Medical Libraries",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 731.20276,
       "y": 728.8177,
       "id": "Opera",
-      "group": 8
+      "group": "Humanities"
     },
     {
       "x": 812.2612,
       "y": 412.198,
       "id": "Education",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 203.48807,
       "y": 543.5147,
       "id": "Acoustics",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 775.8671,
       "y": 575.09265,
       "id": "Pragmatics & Discourse",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 577.58887,
       "y": 371.64163,
       "id": "Reproduction Veterinary",
-      "group": 9
+      "group": "Infectious Diseases"
     },
     {
       "x": 367.84082,
       "y": 474.9365,
       "id": "Crystallography",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 221.33018,
       "y": 330.83237,
       "id": "Applied Math",
-      "group": 10
+      "group": "Math & Physics"
     },
     {
       "x": 732.5044,
       "y": 650.8968,
       "id": "Socio-Cultural Anthropology",
-      "group": 8
+      "group": "Humanities"
     },
     {
       "x": 579.8257,
       "y": 450.04788,
       "id": "Poultry Science",
-      "group": 9
+      "group": "Infectious Diseases"
     },
     {
       "x": 507.863,
       "y": 108.18574,
       "id": "Artificial Organs",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 573.5235,
       "y": 83.679306,
       "id": "Physical Therapy; Orthopedic",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 507.62964,
       "y": 224.38332,
       "id": "Pulmonary",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 202.5985,
       "y": 604.4423,
       "id": "Waste Management",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 496.16342,
       "y": 646.2909,
       "id": "Marine Pollution",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 460.9405,
       "y": 395.53232,
       "id": "Toxins",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 596.57745,
       "y": 224.8216,
       "id": "Hearing Research",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 792.7212,
       "y": 489.83887,
       "id": "Human Rights",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 495.9497,
       "y": 184.38937,
       "id": "Lung Cancer",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 856.1275,
       "y": 551.69836,
       "id": "Social Economics",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 466.14377,
       "y": 453.36395,
       "id": "Carbohydrate Research",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 501.08496,
       "y": 409.48126,
       "id": "Biotechnology Bioengineering",
-      "group": 1
+      "group": "Biotechnology"
     },
     {
       "x": 844.8602,
       "y": 514.88794,
       "id": "Rural Studies",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 167.98212,
       "y": 386.46985,
       "id": "Electronics",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 196.09485,
       "y": 472.92368,
       "id": "Defects & Diffusion in Materials",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 697.7756,
       "y": 181.28812,
       "id": "Forensic Science",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 509.2186,
       "y": 619.0733,
       "id": "Rangeland Ecology",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 163.70178,
       "y": 498.93823,
       "id": "Welding",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 165.60994,
       "y": 203.55904,
       "id": "Reliability Engineering",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 512.6002,
       "y": 345.8014,
       "id": "Molecular Biology Methods",
-      "group": 9
+      "group": "Infectious Diseases"
     },
     {
       "x": 556.8379,
       "y": 603.5444,
       "id": "Mammals",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 390.02115,
       "y": 141.84749,
       "id": "Impotence",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 65.765526,
       "y": 361.65485,
       "id": "Fuzzy Logic",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 856.18835,
       "y": 468.95523,
       "id": "Tourism",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 607.7302,
       "y": 632.38477,
       "id": "Aquatic Disease",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 509.1665,
       "y": 752.68475,
       "id": "Geographic Information Science",
-      "group": 5
+      "group": "Earth Sciences"
     },
     {
       "x": 574.0722,
       "y": 224.25456,
       "id": "Hormone Research",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 642.4112,
       "y": 212.49084,
       "id": "Public Health",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 665.4274,
       "y": 260.53702,
       "id": "Sleep",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 660.65814,
       "y": 289.85992,
       "id": "Neurotoxicology",
-      "group": 7
+      "group": "Brain Research"
     },
     {
       "x": 546.05023,
       "y": 214.74661,
       "id": "Pediatric Research",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 847.8903,
       "y": 341.48608,
       "id": "Education Psychological Measures",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 849.8639,
       "y": 440.44843,
       "id": "Marketing",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 483.49362,
       "y": 117.12775,
       "id": "Clinical Medicine (Romania)",
-      "group": 2
+      "group": "Medical Specialists"
     },
     {
       "x": 375.54364,
       "y": 488.36234,
       "id": "Green Chemistry",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 425.08862,
       "y": 171.63759,
       "id": "Optometry",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 214.8111,
       "y": 681.25934,
       "id": "Textile Art",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 764.81726,
       "y": 701.24994,
       "id": "Italian Studies",
-      "group": 8
+      "group": "Humanities"
     },
     {
       "x": 607.47784,
       "y": 15.582752,
       "id": "Perception Motor Skills",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 794.9793,
       "y": 519.0491,
       "id": "World Trade; Law",
-      "group": 12
+      "group": "Social Sciences"
     },
     {
       "x": 580.54565,
       "y": 598.90326,
       "id": "Insects",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 537.7347,
       "y": 623.39386,
       "id": "Australian Ecology",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 328.58673,
       "y": 536.37683,
       "id": "Paints & Coatings",
-      "group": 4
+      "group": "Chemistry"
     },
     {
       "x": 752.2533,
       "y": 111.10232,
       "id": "Nursing Theory",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 556.0831,
       "y": 640.4116,
       "id": "Crustaceans",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 434.10574,
       "y": 146.90605,
       "id": "Laser Surgery",
-      "group": 11
+      "group": "Health Professionals"
     },
     {
       "x": 298.21198,
       "y": 640.4659,
       "id": "Bulk Solid Handling",
-      "group": 3
+      "group": "Chem, Mech, & Civil"
     },
     {
       "x": 541.8163,
       "y": 646.5256,
       "id": "Wetlands",
-      "group": 0
+      "group": "Biology"
     },
     {
       "x": 507.3118,
       "y": 731.20105,
       "id": "GIS (non English)",
-      "group": 5
+      "group": "Earth Sciences"
     },
     {
       "x": 112.90333,
       "y": 458.20798,
       "id": "Hydraulics",
-      "group": 6
+      "group": "EE & CS"
     },
     {
       "x": 443.7687,
       "y": 299.65698,
       "id": "Agricultural Environmental Medicine",
-      "group": 9
+      "group": "Infectious Diseases"
     }
   ],
   "links": [
