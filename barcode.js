@@ -41,6 +41,8 @@ const smallBar = "#167EE6";
 const selectedBar = "#1A9693";
 const deselectedBar = "#00000000";
 
+let prev_opacity;
+
 function create_barcode(bars)
 {
     y = d3.scaleBand()
@@ -121,18 +123,14 @@ function create_barcode(bars)
             d.selected = !d.selected;
             update_repulsion(d);
         })
-        .on("mouseover", function(d)
-        {
+        .on("mouseover", function(d) {
             let colorA;
             let colorB;
 
-            if(d.componentA.nodes.length < d.componentB.nodes.length)
-            {
+            if (d.componentA.nodes.length < d.componentB.nodes.length) {
                 colorA = smallBar;
                 colorB = largeBar;
-            }
-            else
-            {
+            } else {
                 colorB = smallBar;
                 colorA = largeBar;
             }
@@ -140,39 +138,38 @@ function create_barcode(bars)
             nodes
                 .selectAll("circle")
                 .attr("fill", function (n) {
-                    if(!d.componentA.contains(n.id))
-                    {
+                    if (!d.componentA.contains(n.id)) {
                         return colorB;
-                    }
-                    else
-                    {
+                    } else {
                         return colorA;
                     }
                 });
-            links
-                .style("opacity", function(n)
-                {
-                    if(d.edge.index === n.index)
-                    {
-                        return 1.0;
-                    }
 
-                    return link_opacity;
-                });
+            prev_opacity = links.filter(function (n) {
+                return d.edge.index === n.index;
+            }).style("opacity");
+
+            links
+                .filter(function (n) {
+                    return d.edge.index === n.index;
+                })
+                .style("opacity", 1.0)
+                .style("stroke-width", 4);
         })
-        .on("mouseout", function()
+        .on("mouseout", function(d)
         {
             nodes
                 .selectAll("circle")
-                .attr("fill", function (d) {
-                    return color(d.group);
+                .attr("fill", function (g) {
+                    return color(g.group);
                 });
 
             links
-                .style("opacity", function(d)
+                .filter(function(n)
                 {
-                    return link_opacity;
-                });
+                     return d.edge.index === n.index;
+                })
+                .style("opacity", prev_opacity);
         });
 
     // adding the line associated with the slider => shows repulsion threshold
