@@ -26,6 +26,13 @@ html, body
     background-color: #555;
 }
 
+.group-label {
+    z-index: 99;
+    right: 350px;
+    top: 0;
+    position: absolute;
+}
+
 .graph-container
 {
     width: 100%;

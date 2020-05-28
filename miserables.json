@@ -4,463 +4,463 @@
       "x": 540.01276,
       "y": 459.8591,
       "id": "Myriel",
-      "group": 1
+      "group": "Circle with Myriel"
     },
     {
       "x": 543.83545,
       "y": 476.08945,
       "id": "Napoleon",
-      "group": 1
+      "group": "Circle with Myriel"
     },
     {
       "x": 524.3993,
       "y": 440.57452,
       "id": "Mlle.Baptistine",
-      "group": 1
+      "group": "Circle with Myriel"
     },
     {
       "x": 518.3824,
       "y": 446.42108,
       "id": "Mme.Magloire",
-      "group": 1
+      "group": "Circle with Myriel"
     },
     {
       "x": 527.5223,
       "y": 485.74515,
       "id": "CountessdeLo",
-      "group": 1
+      "group": "Circle with Myriel"
     },
     {
       "x": 557.0839,
       "y": 459.65115,
       "id": "Geborand",
-      "group": 1
+      "group": "Circle with Myriel"
     },
     {
       "x": 567.63196,
       "y": 447.0557,
       "id": "Champtercier",
-      "group": 1
+      "group": "Circle with Myriel"
     },
     {
       "x": 559.23645,
       "y": 478.537,
       "id": "Cravatte",
-      "group": 1
+      "group": "Circle with Myriel"
     },
     {
       "x": 542.5306,
       "y": 489.82788,
       "id": "Count",
-      "group": 1
+      "group": "Circle with Myriel"
     },
     {
       "x": 570.098,
       "y": 464.19046,
       "id": "OldMan",
-      "group": 1
+      "group": "Circle with Myriel"
     },
     {
       "x": 472.9216,
       "y": 444.85242,
       "id": "Labarre",
-      "group": 2
+      "group": "Circle with Valjean"
     },
     {
       "x": 482.6315,
       "y": 403.32455,
       "id": "Valjean",
-      "group": 2
+      "group": "Circle with Valjean"
     },
     {
       "x": 522.5607,
       "y": 377.96237,
       "id": "Marguerite",
-      "group": 3
+      "group": "Factory Workers"
     },
     {
       "x": 485.18488,
       "y": 437.40692,
       "id": "Mme.deR",
-      "group": 2
+      "group": "Circle with Valjean"
     },
     {
       "x": 469.8579,
       "y": 458.3918,
       "id": "Isabeau",
-      "group": 2
+      "group": "Circle with Valjean"
     },
     {
       "x": 499.10922,
       "y": 437.2099,
       "id": "Gervais",
-      "group": 2
+      "group": "Circle with Valjean"
     },
     {
       "x": 509.5147,
       "y": 345.0753,
       "id": "Tholomyes",
-      "group": 3
+      "group": "Factory Workers"
     },
     {
       "x": 527.6872,
       "y": 329.66483,
       "id": "Listolier",
-      "group": 3
+      "group": "Factory Workers"
     },
     {
       "x": 521.6699,
       "y": 331.14325,
       "id": "Fameuil",
-      "group": 3
+      "group": "Factory Workers"
     },
     {
       "x": 523.04205,
       "y": 336.99667,
       "id": "Blacheville",
-      "group": 3
+      "group": "Factory Workers"
     },
     {
       "x": 527.21265,
       "y": 341.21143,
       "id": "Favourite",
-      "group": 3
+      "group": "Factory Workers"
     },
     {
       "x": 533.0101,
       "y": 339.3957,
       "id": "Dahlia",
-      "group": 3
+      "group": "Factory Workers"
     },
     {
       "x": 532.2341,
       "y": 333.43002,
       "id": "Zephine",
-      "group": 3
+      "group": "Factory Workers"
     },
     {
       "x": 512.0799,
       "y": 358.84406,
       "id": "Fantine",
-      "group": 3
+      "group": "Factory Workers"
     },
     {
       "x": 476.16418,
       "y": 376.3055,
       "id": "Mme.Thenardier",
-      "group": 4
+      "group": "Antagonists"
     },
     {
       "x": 469.62396,
       "y": 361.78513,
       "id": "Thenardier",
-      "group": 4
+      "group": "Antagonists"
     },
     {
       "x": 464.49695,
       "y": 389.32657,
       "id": "Cosette",
-      "group": 5
+      "group": "Circle with Gillenormand"
     },
     {
       "x": 474.96896,
       "y": 385.2915,
       "id": "Javert",
-      "group": 4
+      "group": "Antagonists"
     },
     {
       "x": 457.4525,
       "y": 433.92126,
       "id": "Fauchelevent",
-      "group": 0
+      "group": "The Convent"
     },
     {
       "x": 509.14478,
       "y": 396.03467,
       "id": "Bamatabois",
-      "group": 2
+      "group": "Circle with Valjean"
     },
     {
       "x": 537.44305,
       "y": 364.42657,
       "id": "Perpetue",
-      "group": 3
+      "group": "Factory Workers"
     },
     {
       "x": 508.89383,
       "y": 375.08105,
       "id": "Simplice",
-      "group": 2
+      "group": "Circle with Valjean"
     },
     {
       "x": 488.18948,
       "y": 453.82538,
       "id": "Scaufflaire",
-      "group": 2
+      "group": "Circle with Valjean"
     },
     {
       "x": 486.00113,
       "y": 414.1474,
       "id": "Woman1",
-      "group": 2
+      "group": "Circle with Valjean"
     },
     {
       "x": 510.34424,
       "y": 409.92303,
       "id": "Judge",
-      "group": 2
+      "group": "Circle with Valjean"
     },
     {
       "x": 516.35376,
       "y": 413.0179,
       "id": "Champmathieu",
-      "group": 2
+      "group": "Circle with Valjean"
     },
     {
       "x": 514.35614,
       "y": 404.515,
       "id": "Brevet",
-      "group": 2
+      "group": "Circle with Valjean"
     },
     {
       "x": 521.9888,
       "y": 409.0067,
       "id": "Chenildieu",
-      "group": 2
+      "group": "Circle with Valjean"
     },
     {
       "x": 520.8416,
       "y": 402.3643,
       "id": "Cochepaille",
-      "group": 2
+      "group": "Circle with Valjean"
     },
     {
       "x": 454.55347,
       "y": 336.95273,
       "id": "Pontmercy",
-      "group": 4
+      "group": "Antagonists"
     },
     {
       "x": 479.47324,
       "y": 314.31506,
       "id": "Boulatruelle",
-      "group": 6
+      "group": "Seeking Buried Treasure"
     },
     {
       "x": 454.6714,
       "y": 364.18802,
       "id": "Eponine",
-      "group": 4
+      "group": "Antagonists"
     },
     {
       "x": 476.34732,
       "y": 347.85733,
       "id": "Anzelma",
-      "group": 4
+      "group": "Antagonists"
     },
     {
       "x": 476.1686,
       "y": 399.12082,
       "id": "Woman2",
-      "group": 5
+      "group": "Circle with Gillenormand"
     },
     {
       "x": 455.36322,
       "y": 444.23627,
       "id": "MotherInnocent",
-      "group": 0
+      "group": "The Convent"
     },
     {
       "x": 437.74304,
       "y": 468.61127,
       "id": "Gribier",
-      "group": 0
+      "group": "The Convent"
     },
     {
       "x": 372.2682,
       "y": 315.45267,
       "id": "Jondrette",
-      "group": 7
+      "group": "Jondrette Family"
     },
     {
       "x": 390.28653,
       "y": 327.02417,
       "id": "Mme.Burgon",
-      "group": 7
+      "group": "Jondrette Family"
     },
     {
       "x": 435.89374,
       "y": 358.9262,
       "id": "Gavroche",
-      "group": 8
+      "group": "Friends of the ABC"
     },
     {
       "x": 444.38324,
       "y": 404.52402,
       "id": "Gillenormand",
-      "group": 5
+      "group": "Circle with Gillenormand"
     },
     {
       "x": 447.25427,
       "y": 416.30048,
       "id": "Magnon",
-      "group": 5
+      "group": "Circle with Gillenormand"
     },
     {
       "x": 441.34485,
       "y": 393.65927,
       "id": "Mlle.Gillenormand",
-      "group": 5
+      "group": "Circle with Gillenormand"
     },
     {
       "x": 442.87482,
       "y": 335.4579,
       "id": "Mme.Pontmercy",
-      "group": 5
+      "group": "Circle with Gillenormand"
     },
     {
       "x": 404.8347,
       "y": 426.64374,
       "id": "Mlle.Vaubois",
-      "group": 5
+      "group": "Circle with Gillenormand"
     },
     {
       "x": 435.07693,
       "y": 400.90704,
       "id": "Lt.Gillenormand",
-      "group": 5
+      "group": "Circle with Gillenormand"
     },
     {
       "x": 440.923,
       "y": 374.5219,
       "id": "Marius",
-      "group": 8
+      "group": "Friends of the ABC"
     },
     {
       "x": 418.67685,
       "y": 409.01022,
       "id": "BaronessT",
-      "group": 5
+      "group": "Circle with Gillenormand"
     },
     {
       "x": 418.53854,
       "y": 374.07034,
       "id": "Mabeuf",
-      "group": 8
+      "group": "Friends of the ABC"
     },
     {
       "x": 432.38647,
       "y": 369.40457,
       "id": "Enjolras",
-      "group": 8
+      "group": "Friends of the ABC"
     },
     {
       "x": 413.55206,
       "y": 368.19275,
       "id": "Combeferre",
-      "group": 8
+      "group": "Friends of the ABC"
     },
     {
       "x": 412.92172,
       "y": 356.01834,
       "id": "Prouvaire",
-      "group": 8
+      "group": "Friends of the ABC"
     },
     {
       "x": 418.97348,
       "y": 367.56427,
       "id": "Feuilly",
-      "group": 8
+      "group": "Friends of the ABC"
     },
     {
       "x": 425.30453,
       "y": 360.93884,
       "id": "Courfeyrac",
-      "group": 8
+      "group": "Friends of the ABC"
     },
     {
       "x": 420.28,
       "y": 358.75348,
       "id": "Bahorel",
-      "group": 8
+      "group": "Friends of the ABC"
     },
     {
       "x": 425.87674,
       "y": 368.72733,
       "id": "Bossuet",
-      "group": 8
+      "group": "Friends of the ABC"
     },
     {
       "x": 417.1817,
       "y": 362.53708,
       "id": "Joly",
-      "group": 8
+      "group": "Friends of the ABC"
     },
     {
       "x": 410.29282,
       "y": 360.59058,
       "id": "Grantaire",
-      "group": 8
+      "group": "Friends of the ABC"
     },
     {
       "x": 377.94705,
       "y": 387.19434,
       "id": "MotherPlutarch",
-      "group": 9
+      "group": "Servent of Mabeuf"
     },
     {
       "x": 467.4298,
       "y": 373.15656,
       "id": "Gueulemer",
-      "group": 4
+      "group": "Antagonists"
     },
     {
       "x": 469.32568,
       "y": 368.62552,
       "id": "Babet",
-      "group": 4
+      "group": "Antagonists"
     },
     {
       "x": 462.58508,
       "y": 376.02206,
       "id": "Claquesous",
-      "group": 4
+      "group": "Antagonists"
     },
     {
       "x": 461.95978,
       "y": 369.1733,
       "id": "Montparnasse",
-      "group": 4
+      "group": "Antagonists"
     },
     {
       "x": 469.74927,
       "y": 407.734,
       "id": "Toussaint",
-      "group": 5
+      "group": "Circle with Gillenormand"
     },
     {
       "x": 419.3161,
       "y": 316.17413,
       "id": "Child1",
-      "group": 10
+      "group": "Children"
     },
     {
       "x": 427.92908,
       "y": 312.54822,
       "id": "Child2",
-      "group": 10
+      "group": "Children"
     },
     {
       "x": 460.385,
       "y": 357.40036,
       "id": "Brujon",
-      "group": 4
+      "group": "Antagonists"
     },
     {
       "x": 418.8806,
       "y": 350.23816,
       "id": "Mme.Hucheloup",
-      "group": 8
+      "group": "Friends of the ABC"
     }
   ],
   "groups": [

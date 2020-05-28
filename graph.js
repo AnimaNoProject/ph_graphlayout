@@ -36,8 +36,7 @@ function configure_graph(settings) {
 
 function deselect_nodes()
 {
-    //deselect_button.style.visibility = "hidden";
-    $('#deselect_button').removeClass('fadeInDown').addClass('fadeOutUp');
+    $('#deselect_button').removeClass("fadeInDown").addClass("fadeOutUp");
     active_clicked = null;
 
     d3.selectAll("text")
@@ -92,8 +91,7 @@ function create_graph(data) {
 
             if(active_clicked === d.id)
             {
-                //deselect_button.style.visibility = "hidden";
-                $('#deselect_button').removeClass('fadeInDown').addClass('fadeOutUp');
+                deselect_button.removeClass('fadeInDown').addClass('fadeOutUp');
 
                 active_clicked = null;
 
@@ -114,8 +112,8 @@ function create_graph(data) {
             links
                 .style("opacity", link_opacity);
 
-            $('#deselect_button').removeClass('fadeOutUp').addClass('fadeInDown');
-            deselect_button.style.visibility = "visible";
+            deselect_button.removeClass('fadeOutUp').addClass('fadeInDown');
+            deselect_button.css("visibility","visible");
 
             d3.selectAll("circle")
                 .style("opacity", 0.7);
@@ -190,12 +188,28 @@ function create_graph(data) {
         return force;
     }
 
+    let group_map = new Map();
+
     for(let i = 0; i < data.nodes.length - 1; i++)
     {
+        if(group_map.get(data.nodes[i].group) === undefined)
+        {
+            group_map.set(data.nodes[i].group, 1);
+        }
+        else
+        {
+            group_map.set(data.nodes[i].group, group_map.get(data.nodes[i].group)+1);
+        }
+
         for(let j = i + 1; j < data.nodes.length; j++)
         {
             simulation.force(data.nodes[i].id.concat(data.nodes[j].id), isolate(d3.forceManyBody().strength(-30), data.nodes[i], data.nodes[j]));
         }
+    }
+
+    for(let [key, value] of group_map)
+    {
+        addGroupLabel(key, value);
     }
 
     simulation.force("link").strength(attraction_strength_weak).distance(function(d) {
@@ -210,17 +224,42 @@ function create_graph(data) {
         .links(data.links);
 }
 
-function animation() {
-    links
-        .attr("x1", function(d) { return d.source.x; })
-        .attr("y1", function(d) { return d.source.y; })
-        .attr("x2", function(d) { return d.target.x; })
-        .attr("y2", function(d) { return d.target.y; });
+function addGroupLabel (name, number)
+{
+    let btn = $("<button></button>").text(name)
+        .addClass("btn")
+        //.addClass("btn-primary")
+        //.addClass("p-1")
+        .addClass("btn-sm")
+        .addClass("disabled")
+        .addClass("float-right")
+        .addClass("font-weight-bold")
+        //.css("font-size", "x-small")
+        .css("color", "#FFFFFF")
+        .css("opacity", 1.0)
+        .css("background-color", color(name));
 
-    nodes
-        .attr("transform", function(d) {
-            return "translate(" + d.x + "," + d.y + ")";
-        });
+    console.log(color(name));
+
+    let span = $("<span></span>").text(number)
+        .addClass("badge")
+        //.addClass("badge-light")
+        .attr("style", "color: #220 !important")
+        .css("background-color", "#FFFFFF")
+        .addClass("font-weight-bold")
+        .addClass("ml-2")
+        .addClass("float-right")
+        .css("font-size", "x-small");
+        //.addClass("m-2");
+
+    btn.append(span);
+
+    group_div.append(btn);
+    //group_div.append($("<br>"));
+}
+
+function animation() {
+    updateNodesAndLinks()
 }
 
 function noAnimation() {
@@ -228,7 +267,11 @@ function noAnimation() {
     {
         simulation.tick();
     }
+    updateNodesAndLinks();
+    simulation.stop();
+}
 
+function updateNodesAndLinks() {
     links
         .attr("x1", function(d) { return d.source.x; })
         .attr("y1", function(d) { return d.source.y; })
@@ -239,7 +282,5 @@ function noAnimation() {
         .attr("transform", function(d) {
             return "translate(" + d.x + "," + d.y + ")";
         });
-
-    simulation.stop();
 }
 
