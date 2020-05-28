@@ -36,6 +36,9 @@ let bar_height;
 let y;
 let x;
 
+const largeBar = "#E39410";
+const smallBar = "#167EE6";
+
 function create_barcode(bars)
 {
     y = d3.scaleBand()
@@ -77,7 +80,7 @@ function create_barcode(bars)
         .attr("class", "bar")
         .attr("width", function(d) {return x(d.death * d.ratio);} )
         .attr("y", function(d) { return y(d.id); })
-        .attr("fill", "#5aaa4f")
+        .attr("fill", smallBar)
         .attr("height", y.bandwidth())
 
     // adding the second (stacked) bar
@@ -89,7 +92,7 @@ function create_barcode(bars)
         .attr("x", function(d) {return x(d.death * d.ratio);} )
         .attr("width", function(d) {return x(d.death * (1-d.ratio));} )
         .attr("y", function(d) { return y(d.id); })
-        .attr("fill", "#8293c1")
+        .attr("fill", largeBar)
         .attr("height", y.bandwidth())
 
     // this bar is just used for the selection and to attach a border
@@ -123,13 +126,13 @@ function create_barcode(bars)
 
             if(d.componentA.nodes.length < d.componentB.nodes.length)
             {
-                colorA = "#5aaa4f";
-                colorB = "#8293c1";
+                colorA = smallBar;
+                colorB = largeBar;
             }
             else
             {
-                colorB = "#5aaa4f";
-                colorA = "#8293c1";
+                colorB = smallBar;
+                colorA = largeBar;
             }
 
             nodes
