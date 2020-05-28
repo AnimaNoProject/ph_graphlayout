@@ -38,6 +38,8 @@ let x;
 
 const largeBar = "#E39410";
 const smallBar = "#167EE6";
+const selectedBar = "#1A9693";
+const deselectedBar = "#00000000";
 
 function create_barcode(bars)
 {
@@ -105,7 +107,7 @@ function create_barcode(bars)
         .attr("width", function(d) {return x(d.death);} )
         .attr("y", function(d) { return y(d.id); })
         .attr("height", y.bandwidth())
-        .attr("fill", "#00000000")
+        .attr("fill", deselectedBar)
         .attr("opacity", 1)
         .on("click", function select_deselect(d) {
             if(d.selected)
@@ -114,7 +116,7 @@ function create_barcode(bars)
             }
             else
             {
-                d3.select(this).attr("stroke", "blue").attr("stroke-width", 2.0);
+                d3.select(this).attr("stroke", selectedBar).attr("stroke-width", 2.0);
             }
             d.selected = !d.selected;
             update_repulsion(d);
