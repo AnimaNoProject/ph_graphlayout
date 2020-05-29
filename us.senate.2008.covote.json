@@ -25861,11 +25861,11 @@
   ],
   "settings" :
   {
-    "attraction_strength"  : 0.5,
+    "attraction_strength"  : 0.9,
     "attraction_strength_weak" : 0.002,
     "repulsion_strength" : -4000,
     "repulsion_strength_weak" : -1000,
     "link_opacity" : 0.05,
-    "node_radius" : 3
+    "node_radius" : 10
   }
 }

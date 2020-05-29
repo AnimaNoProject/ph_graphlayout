@@ -6,6 +6,18 @@ html, body
     overflow-y: hidden;
 }
 
+#info
+{
+    height: fit-content;
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-width: 10%;
+    width: 300px;
+    background: cadetblue;
+    visibility: hidden;
+}
+
 #deselect_button
 {
     position: absolute;

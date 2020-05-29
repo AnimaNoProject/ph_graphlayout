@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <header>
+    <title></title>
     <meta charset="utf-8">
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="barcode.js"></script>
@@ -25,10 +26,60 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript"
             src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/js/mdb.min.js"></script>
+    <link rel="stylesheet" href="font-awesome-animation.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 </header>
 
 <body onresize="resize_graph();">
+
+<div class="btn-group dropright m-3" style="position: absolute; z-index: 101;">
+    <button type="button" class="btn shadow-none"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i id="help_icon" class="fa fa-info-circle fa-2x faa-vertical animated faa-slow" onmouseover="$('#help_icon').removeClass('animated');"></i>
+    </button>
+    <div class="dropdown-menu m-0 p-3 border-0" style="width: 300px; background-color: rgba(255, 255, 255, 0.8)">
+        <p>
+           Implementation of Persistent Homology Guided Force-Directed Graph Layouts (<a href="https://ieeexplore.ieee.org/document/8807379">Suh et al.</a>)
+        </p>
+
+        <h3>Graph</h3>
+        <p>
+            <b>Drag & Drop</b> to move the graph.
+        </p>
+        <p>
+            <b>Zoom</b> with the mouse wheel.
+        </p>
+        <p>
+            <b>Click</b> on nodes for more info.
+        </p>
+        <h3>Bars</h3>
+        <p>
+            <b>Hover</b> over bars to see which node belongs to which distinct set
+            (The edge associated with this bar is highlighted too).
+        </p>
+        <p>
+            <b>Click</b> on the bar to add repulsion between those two sets.
+        </p>
+        <p>
+            <b>Move</b> the slider to add attraction for all edges, if their associated
+            bar is left of the slider.
+        </p>
+        <h3>Other Settings</h3>
+        <p>
+            <b>Select</b> a different dataset using the dropdown.
+        </p>
+        <p>
+            <b>Select</b> the node sizes (dynamic depends on the number of incident edges).
+        </p>
+        <p>
+            <b>Check</b> the box to disable animations (should improve performance for large graphs).
+        </p>
+        <p>
+            <b>Press</b> the "Bundle Edges" button to enable force directed edge bundling (only enabled when the simulation for the graph finished).
+        </p>
+    </div>
+</div>
+
 <div id="loader"></div>
 <p id="loadingText"></p>
 <div id="content" class="animate-bottom">
@@ -45,7 +96,6 @@
                 Dataset:
                 <select class="custom-select m-0 w-100" onchange="init(this.value)">
                     <option>miserables</option>
-                    <option>airport</option>
                     <option>train</option>
                     <option>map.science</option>
                     <option>us.senate.2008.covote</option>
@@ -90,6 +140,14 @@
     const deselect_button = $("#deselect_button");
     const group_div = $("#group-labels");
     const btn_bundle_edges = $("#btn_bundle_edges");
+    const info_div = $("#info");
+
+    $(document).ready(function(){
+        $(".dropright, .btn-group").hover(function(){
+            let dropdownMenu = $(this).children(".dropdown-menu");
+            dropdownMenu.toggleClass("show");
+        });
+    });
 
     document.body.onload = function () {
         init("miserables");
@@ -115,7 +173,6 @@
         d3.json(filename.concat(".json"), function (data) {
                 simulation = null;
                 loaded_data = data;
-                configure_graph(data.settings);
                 loadingText.text("Extracting PH Features");
                 bars = get_ph_features(data.nodes, data.links);
                 loadingText.text("Creating the Graph");
@@ -147,6 +204,18 @@
         loadingText.css("display", "none");
         loader.css("display", "none");
         content.css("display", "block");
+    }
+
+    function showHelp() {
+        info_div.addClass("animated");
+        info_div.removeClass("fadeOut");
+        info_div.addClass("fadeIn");
+        info_div.css("visibility", "visible");
+    }
+
+    function hideHelp() {
+        info_div.removeClass("fadeIn");
+        info_div.addClass("fadeOut");
     }
 </script>
 </html>

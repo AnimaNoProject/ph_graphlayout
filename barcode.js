@@ -134,7 +134,6 @@ function create_barcode(bars) {
         .attr("opacity", 0.5)
         .on("click", function(d) {
             d.selected = !d.selected;
-            console.log(d.selected);
             if (d.selected) {
                 d3.select(this).style("opacity", 0.0);
             } else {

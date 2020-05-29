@@ -9,7 +9,7 @@ let attraction_strength = 0.8;
 let attraction_strength_weak = 0.1;
 let repulsion_strength = -300;
 let repulsion_strength_weak = -30;
-let node_radius = 5;
+let node_radius = 8;
 let link_opacity = 0.4;
 let active_clicked = null;
 let paths_loaded = false;
@@ -64,6 +64,8 @@ function create_graph(data) {
     let width = window.innerWidth;
     let height = window.innerHeight;
 
+    configure_graph(data.settings);
+
     let svg_graph = d3.select("#graph");
 
     svg_graph.attr("width", width);
@@ -101,7 +103,7 @@ function create_graph(data) {
         .enter().append("g");
 
     nodes.append("circle")
-        .attr("r", 5)
+        .attr("r", node_radius)
         .attr("fill", function (d) {
             return color(d.group);
         })
@@ -180,11 +182,16 @@ function brushLinks(d) {
     links
         .style("opacity", (paths_loaded) ? 0.0 : link_opacity);
 
-    deselect_button.removeClass('fadeOutUp').addClass('fadeInDown');
-    deselect_button.css("visibility", "visible");
-
     let adj_nodes = [];
     adj_nodes.push(d);
+
+    if(d === null)
+    {
+        return;
+    }
+
+    deselect_button.removeClass('fadeOutUp').addClass('fadeInDown');
+    deselect_button.css("visibility", "visible");
 
     active_clicked = d;
 
@@ -273,7 +280,10 @@ function bundle_Edges() {
     paths_loaded = true;
     links.style("opacity", 0.0);
 
-    brushLinks(active_clicked);
+    if(active_clicked != null)
+    {
+        brushLinks(active_clicked);
+    }
 }
 
 /**
@@ -413,10 +423,7 @@ function updateNodeSize(value) {
  * */
 function update_attraction(value) {
     disablePaths();
-    if(active_clicked != null)
-    {
-        brushLinks(active_clicked);
-    }
+    brushLinks(active_clicked);
 
     // we update all links
     simulation.force("link").strength(function (link) {
@@ -445,10 +452,7 @@ function update_attraction(value) {
  * */
 function update_repulsion() {
     disablePaths();
-    if(active_clicked != null)
-    {
-        brushLinks(active_clicked);
-    }
+    brushLinks(active_clicked);
 
     // maybe it is necessary to set all forces again. this could definitely
     // be optimised so that two nested for loops are not necessary, but it works for now
