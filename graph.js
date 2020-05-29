@@ -50,8 +50,15 @@ function deselect_nodes() {
         .remove();
     d3.selectAll("circle")
         .style("opacity", 1.0);
-    links
-        .style("opacity", (paths_loaded) ? 0.0 : link_opacity);
+
+
+    if (paths_loaded) {
+        paths.selectAll("path").style("stroke-opacity", link_opacity * 0.4);
+    }
+    else
+    {
+        links.style("opacity", link_opacity);
+    }
 }
 
 /**
@@ -182,11 +189,14 @@ function brushLinks(d) {
     links
         .style("opacity", (paths_loaded) ? 0.0 : link_opacity);
 
+    if (paths_loaded) {
+        paths.selectAll("path").style("stroke-opacity", link_opacity * 0.4);
+    }
+
     let adj_nodes = [];
     adj_nodes.push(d);
 
-    if(d === null)
-    {
+    if (d === null) {
         return;
     }
 
@@ -195,15 +205,26 @@ function brushLinks(d) {
 
     active_clicked = d;
 
-    links
-        .style("opacity", function (l) {
-            if (l.target.id === d || l.source.id === d) {
-                adj_nodes.push(l.target.id);
-                adj_nodes.push(l.source.id);
-                return 0.8;
+    if (paths_loaded) {
+        paths.selectAll("path").style("stroke-opacity", function () {
+            if (d3.select(this).attr("source") === d || d3.select(this).attr("target") === d) {
+                adj_nodes.push(d3.select(this).attr("source"));
+                adj_nodes.push(d3.select(this).attr("target"));
+                return 1.0;
             }
-            return (paths_loaded) ? 0.0 :  link_opacity * 0.5;
+            return link_opacity * 0.4;
         });
+    } else {
+        links
+            .style("opacity", function (l) {
+                if (l.target.id === d || l.source.id === d) {
+                    adj_nodes.push(l.target.id);
+                    adj_nodes.push(l.source.id);
+                    return 0.8;
+                }
+                return (paths_loaded) ? 0.0 : link_opacity * 0.5;
+            });
+    }
 
     d3.selectAll("circle")
         .style("opacity", function (n) {
@@ -242,7 +263,6 @@ function brushLinks(d) {
         .on("mouseout", function () {
             d3.select(this).style("opacity", 0.4);
         });
-
 }
 
 function bundle_Edges() {
@@ -270,7 +290,7 @@ function bundle_Edges() {
             .append("path")
             .attr("d", d3line(sub_points))
             .attr("source", sub_points[0].id)
-            .attr("target", sub_points[sub_points.length-1].id)
+            .attr("target", sub_points[sub_points.length - 1].id)
             .style("stroke-width", 1)
             .style("stroke", "#222222")
             .style("fill", "none")
@@ -280,8 +300,7 @@ function bundle_Edges() {
     paths_loaded = true;
     links.style("opacity", 0.0);
 
-    if(active_clicked != null)
-    {
+    if (active_clicked != null) {
         brushLinks(active_clicked);
     }
 }
@@ -351,8 +370,7 @@ function noAnimation() {
  * Updates the position of nodes and links.
  */
 function updateNodesAndLinks() {
-    if(paths_loaded)
-    {
+    if (paths_loaded) {
         paths_loaded = false;
         d3.selectAll("path").remove();
     }
@@ -480,8 +498,7 @@ function update_repulsion() {
     simulation.alpha(1).alphaDecay(0.01).restart();
 }
 
-function disablePaths()
-{
+function disablePaths() {
     d3.selectAll("path").remove();
     paths_loaded = false;
     btn_bundle_edges.addClass("disabled");
