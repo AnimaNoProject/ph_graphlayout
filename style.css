@@ -27,7 +27,7 @@ html, body
 }
 
 .group-label {
-    z-index: 99;
+    z-index: 98;
     right: 350px;
     top: 0;
     position: absolute;

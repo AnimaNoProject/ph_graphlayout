@@ -1,251 +1,146 @@
 <!DOCTYPE html>
 <html>
-    <header>
-        <meta charset="utf-8">
-        <script src="https://d3js.org/d3.v4.min.js"></script>
-        <script src="barcode.js"></script>
-        <script src="graph.js"></script>
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-        <!-- Google Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-        <!-- Bootstrap core CSS -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Material Design Bootstrap -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet">
-        <!-- JQuery -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <!-- Bootstrap tooltips -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-        <!-- Bootstrap core JavaScript -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <!-- MDB core JavaScript -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/js/mdb.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </header>
+<header>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="barcode.js"></script>
+    <script src="graph.js"></script>
+    <script src="d3-ForceEdgeBundling.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet">
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/js/mdb.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</header>
 
-    <body onresize="resize_graph();">
-        <div id="loader"></div>
-        <p id="loadingText"></p>
-        <div id="content" class="animate-bottom">
-            <button type="button" class="btn btn-primary m-3 p-1 fadeIn animated" id="deselect_button" onclick="deselect_nodes()">Deselect Nodes</button>
-            <div class="graph-container h-100 w-100">
-                <svg id="graph"></svg>
+<body onresize="resize_graph();">
+<div id="loader"></div>
+<p id="loadingText"></p>
+<div id="content" class="animate-bottom">
+    <button type="button" class="btn btn-primary m-3 p-1 fadeIn animated" id="deselect_button"
+            onclick="deselect_nodes()">Deselect Nodes
+    </button>
+    <div class="graph-container h-100 w-100">
+        <svg id="graph"></svg>
+    </div>
+    <div id="group-labels" class="group-label d-flex flex-column m-3"></div>
+    <div class="barcode-container position-absolute p-3 h-100 overflow-auto">
+        <div class="d-flex flex-column p-3 h-100 rounded" style="background-color: rgba(224,224,224,0.83)">
+            <label>
+                Dataset:
+                <select class="custom-select m-0 w-100 " onchange="init(this.value)">
+                    <option>miserables</option>
+                    <option>airport</option>
+                    <option>train</option>
+                    <option>map.science</option>
+                    <option>us.senate.2008.covote</option>
+                    <option>small</option>
+                    <option>furniture-living_room-sofa</option>
+                </select>
+            </label>
+            <label>
+                Node-size:
+                <select class="custom-select m-0 w-100" onchange="updateNodeSize(this.value)">
+                    <option>fixed</option>
+                    <option>dynamic</option>
+                </select>
+            </label>
+            <div class="custom-control custom-checkbox">
+                <input checked onchange="changeAnimate(this.checked);" type="checkbox" class="custom-control-input"
+                       id="defaultUnchecked">
+                <label class="custom-control-label" for="defaultUnchecked">Animate?</label>
             </div>
-            <div id="group-labels" class="group-label d-flex flex-column m-3"></div>
-            <div class="barcode-container position-absolute p-3 h-100">
-                <div class="d-flex flex-column p-3 h-100 rounded" style="background-color: rgba(224,224,224,0.83)">
-                    <label>
-                        Dataset:
-                        <select class="custom-select m-0 w-100 " onchange="init(this.value)">
-                            <option>miserables</option>
-                            <option>airport</option>
-                            <option>train</option>
-                            <option>map.science</option>
-                            <option>us.senate.2008.covote</option>
-                            <option>small</option>
-                            <option>furniture-living_room-sofa</option>
-                        </select>
-                    </label>
-                    <label>
-                        Node-size:
-                        <select class="custom-select m-0 w-100" onchange="updateNodeSize(this.value)">
-                            <option>fixed</option>
-                            <option>dynamic</option>
-                        </select>
-                    </label>
-                    <div class="custom-control custom-checkbox">
-                        <input checked  onchange="changeAnimate(this);"  type="checkbox" class="custom-control-input" id="defaultUnchecked">
-                        <label class="custom-control-label" for="defaultUnchecked">Animate?</label>
-                    </div>
-                    <input class="slider mb-1 w-100" type="range" min="0" max="25" step="1" value="0" id="slider" onchange="update_attraction(this.value)" oninput="update_slider(this.value)">
-                    <div id="bcont" class="h-100">
-                        <svg class="bars" id="barcode"></svg>
-                    </div>
-                </div>
+            <input class="slider mb-1 w-100" type="range" min="0" max="25" step="1" value="0" id="slider"
+                   onchange="update_attraction(this.value)" oninput="update_slider(this.value)">
+            <div id="bcont" class="h-100">
+                <svg class="bars" id="barcode"></svg>
             </div>
         </div>
-    </body>
+    </div>
+</div>
+</body>
 
-    <script>
-        "use strict";
-        // colors used for the d3 groups
-        let color = d3.scaleOrdinal(d3.schemeCategory20);
-        // loading the json data
-        let bars;
-        let loaded_data;
+<script>
+    "use strict";
+    // colors used for the d3 groups
+    let color = d3.scaleOrdinal(d3.schemeCategory20);
+    const content = $("#content");
+    const loader = $("#loader");
+    const loadingText = $("#loadingText");
+    const deselect_button = $("#deselect_button");
+    const group_div = $("#group-labels");
 
-        const content = $("#content");
-        const loader =$("#loader");
-        const loadingText = $("#loadingText");
-        const deselect_button = $("#deselect_button");
+    document.body.onload = function () {
+        init("miserables");
+    }
 
-        const group_div = $("#group-labels");
+    /**
+     * Initialise the graph and barcode with the given dataset.
+     * @param filename json file containing the dataset
+     * */
+    function init(filename) {
+        content.css("display", "none");
+        loader.css("display", "block");
 
-        document.body.onload = function ()
-        {
-            init("miserables");
-        }
+        loadingText.css("display", "block");
+        loadingText.text("Loading Data");
 
-        function init(filename) {
-            content.css("display","none");
-            loader.css("display","block");
+        d3.selectAll("svg > *").remove();
+        group_div.empty();
 
-            loadingText.css("display","block");
-            loadingText.text("Loading Data");
+        bars = null;
+        loaded_data = null;
 
-            d3.selectAll("svg > *").remove();
-            group_div.empty();
+        d3.json(filename.concat(".json"), function (data) {
+                simulation = null;
+                loaded_data = data;
+                configure_graph(data.settings);
+                loadingText.text("Extracting PH Features");
+                bars = get_ph_features(data.nodes, data.links);
+                loadingText.text("Creating the Graph");
+                // creating the graph with an initial FD layout
+                create_graph(data);
+                loadingText.text("Creating the interactive Barcode");
 
-            bars = null;
-            loaded_data = null;
+                show();
 
-            d3.json(filename.concat(".json"), function(data)
-                {
-                    simulation = null;
-                    loaded_data = data;
-                    configure_graph(data.settings);
-                    loadingText.text("Extracting PH Features");
-                    bars = get_ph_features(data.nodes, data.links);
-                    loadingText.text("Creating the Graph");
-                    // creating the graph with an initial FD layout
-                    create_graph(data);
-                    loadingText.text("Creating the interactive Barcode");
+                let bar_cont = $('#bcont');
+                let bar_sv = $("#bcont > svg");
 
-                    show();
+                bar_width = bar_cont.width();
+                bar_height = bar_cont.height();
 
-                    let bar_cont = $('#bcont');
-                    let bar_sv = $("#bcont > svg");
+                bar_sv.width(bar_width);
+                bar_sv.height(bar_height);
 
-                    bar_width = bar_cont.width();
-                    bar_height = bar_cont.height();
-
-                    bar_sv.width(bar_width);
-                    bar_sv.height(bar_height);
-
-                    // creating the barcode and all interactions with the barcode
-                    create_barcode(bars);
-                }
-            );
-        }
-
-        function show() {
-            loadingText.css("display","none");
-            loader.css("display","none");
-            content.css("display","block");
-        }
-
-        function changeAnimate(value) {
-            if(value.checked)
-            {
-                simulation
-                    .on("tick", animation);
+                // creating the barcode and all interactions with the barcode
+                create_barcode(bars);
             }
-            else
-            {
-                simulation
-                    .on("tick", noAnimation);
-            }
-        }
+        );
+    }
 
-        function updateNodeSize(value) {
-            if(value === "fixed")
-            {
-                nodes.selectAll("circle")
-                        .attr("r", node_radius)
-                        .attr("fill", function (d) {
-                            return color(d.group);
-                        });
-            }
-            else
-            {
-                nodes.selectAll("circle")
-                    .attr("r", function(d)
-                    {
-                        return Math.sqrt(loaded_data.links.filter(function (l)
-                        {
-                            return l.source.id === d.id || l.target.id === d.id;
-                        }).length);
-                    })
-                    .attr("fill", function (d) {
-                        return color(d.group);
-                    });
-            }
-        }
-
-        /**
-         * Function that updates which bars
-         * are considered for additional attraction.
-         * @param value Value of the slider
-         */
-        function update_attraction(value) {
-
-            // we update all links
-            simulation.force("link").strength(function(link) {
-                for(let i = 0; i < bars.length; i++)
-                {
-                    // if the bar is longer than the slider value it should not be considered
-                    if(bars[i].death > value)
-                    {
-                        continue;
-                    }
-
-                    // if the link(edge) is that of the bar we give it a strong attraction
-                    if (link === bars[i].edge)
-                    {
-                        return attraction_strength;
-                    }
-                }
-
-                // otherwise a weak force is applied to this link
-                return attraction_strength_weak;
-            });
-
-            // simulation needs to be restarted for anything to work
-            simulation.alpha(1).alphaDecay(0.01).restart();
-        }
-
-        /**
-         * Function that updates the repulsion based on the selected bars.
-         **/
-        function update_repulsion(d) {
-            // maybe it is necessary to set all forces again. this could definitely
-            // be optimised so that two nested for loops are not necessary, but it works for now
-            for(let i = 0; i < loaded_data.nodes.length - 1; i++) {
-                for (let j = i + 1; j < loaded_data.nodes.length; j++) {
-                    simulation.force(loaded_data.nodes[i].id.concat(loaded_data.nodes[j].id)).strength(repulsion_strength_weak);
-                }
-            }
-
-            for(let i = 0; i < loaded_data.nodes.length - 1; i++)
-            {
-                for(let j = i + 1; j < loaded_data.nodes.length; j++)
-                {
-                    for(let k = 0; k < bars.length; k++)
-                    {
-                        if(!bars[k].selected)
-                        {
-                            continue;
-                        }
-
-                        if(bars[k].componentA.contains(loaded_data.nodes[i].id) && bars[k].componentB.contains(loaded_data.nodes[j].id))
-                        {
-                            simulation.force(loaded_data.nodes[i].id.concat(loaded_data.nodes[j].id)).strength(repulsion_strength);
-                        }
-                    }
-                }
-            }
-            simulation.alpha(1).alphaDecay(0.01).restart();
-        }
-
-        /***
-         *  Function updates the blue bar following the slider.
-         *  @param value of the slider position
-         * */
-        function update_slider(value) {
-            d3.select("#barcode").select("line")
-                .attr("x1", x(value)) // we map the slider value to the x axis
-                .attr("x2", x(value))
-        }
-    </script>
+    /**
+     * Hides the loading "screen" and shows the graph.
+     * */
+    function show() {
+        loadingText.css("display", "none");
+        loader.css("display", "none");
+        content.css("display", "block");
+    }
+</script>
 </html>

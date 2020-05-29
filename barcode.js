@@ -1,23 +1,19 @@
 class Component {
-    constructor(node, id)
-    {
+    constructor(node, id) {
         this.id = id;
         this.nodes = [];
         this.nodes.push(node);
     }
 
-    contains(id)
-    {
-        return this.nodes.find(function(node)
-        {
+    contains(id) {
+        return this.nodes.find(function (node) {
             return node.id === id;
         });
     }
 }
 
 class Bar {
-    constructor(id)
-    {
+    constructor(id) {
         this.death = Number.POSITIVE_INFINITY;  // 1/w
         this.id = id;                           // bar ID
         this.edge = null;                       // cause of death
@@ -27,6 +23,8 @@ class Bar {
         this.componentB = [];                   // will repulse each other
     }
 }
+
+let bars;
 
 // set the dimensions and margins of the graph
 let bar_width;
@@ -43,8 +41,11 @@ const deselectedBar = "#00000000";
 
 let prev_opacity;
 
-function create_barcode(bars)
-{
+/**
+ * Creates the interactive barcode using the data of bars.
+ * @param bars with the stored persistent homology data
+ */
+function create_barcode(bars) {
     y = d3.scaleBand()
         .range([bar_height, 0])
         .padding(0.1);
@@ -56,24 +57,29 @@ function create_barcode(bars)
     svg.append("g");
 
     // format the data
-    bars.forEach(function(d) {
+    bars.forEach(function (d) {
         d.death = +d.death;
     });
-    bars.sort(function(a, b) {
-        if(a.death !== b.death) {
+    bars.sort(function (a, b) {
+        if (a.death !== b.death) {
             return b.death - a.death;
-        }
-        else {
+        } else {
             return b.ratio - a.ratio;
         }
     });
 
     // Scale the range of the data in the domains
-    x.domain([0, d3.max(bars, function(d){ return d.death; }) + 1])
-    y.domain(bars.map(function(d) { return d.id; }));
+    x.domain([0, d3.max(bars, function (d) {
+        return d.death;
+    }) + 1])
+    y.domain(bars.map(function (d) {
+        return d.id;
+    }));
 
     // set the slider accordingly
-    document.getElementById("slider").max = d3.max(bars, function(d){ return d.death;}) + 1;
+    document.getElementById("slider").max = d3.max(bars, function (d) {
+        return d.death;
+    }) + 1;
     document.getElementById("slider").value = 0;
     document.getElementById("slider").step = document.getElementById("slider").max / x(document.getElementById("slider").max);
 
@@ -82,8 +88,12 @@ function create_barcode(bars)
         .data(bars)
         .enter().append("rect")
         .attr("class", "bar")
-        .attr("width", function(d) {return x(d.death * d.ratio);} )
-        .attr("y", function(d) { return y(d.id); })
+        .attr("width", function (d) {
+            return x(d.death * d.ratio);
+        })
+        .attr("y", function (d) {
+            return y(d.id);
+        })
         .attr("fill", smallBar)
         .attr("height", y.bandwidth())
 
@@ -93,9 +103,15 @@ function create_barcode(bars)
         .exit().data(bars)
         .enter().append("rect")
         .attr("class", "bar")
-        .attr("x", function(d) {return x(d.death * d.ratio);} )
-        .attr("width", function(d) {return x(d.death * (1-d.ratio));} )
-        .attr("y", function(d) { return y(d.id); })
+        .attr("x", function (d) {
+            return x(d.death * d.ratio);
+        })
+        .attr("width", function (d) {
+            return x(d.death * (1 - d.ratio));
+        })
+        .attr("y", function (d) {
+            return y(d.id);
+        })
         .attr("fill", largeBar)
         .attr("height", y.bandwidth())
 
@@ -105,25 +121,28 @@ function create_barcode(bars)
         .exit().data(bars)
         .enter().append("rect")
         .attr("class", "bar")
-        .attr("x", function(d) {return 0;} )
-        .attr("width", function(d) {return x(d.death);} )
-        .attr("y", function(d) { return y(d.id); })
+        .attr("x", function (d) {
+            return 0;
+        })
+        .attr("width", function (d) {
+            return x(d.death);
+        })
+        .attr("y", function (d) {
+            return y(d.id);
+        })
         .attr("height", y.bandwidth())
         .attr("fill", deselectedBar)
         .attr("opacity", 1)
         .on("click", function select_deselect(d) {
-            if(d.selected)
-            {
+            if (d.selected) {
                 d3.select(this).attr("stroke", null).attr("stroke-width", null);
-            }
-            else
-            {
+            } else {
                 d3.select(this).attr("stroke", selectedBar).attr("stroke-width", 2.0);
             }
             d.selected = !d.selected;
             update_repulsion(d);
         })
-        .on("mouseover", function(d) {
+        .on("mouseover", function (d) {
             let colorA;
             let colorB;
 
@@ -156,8 +175,7 @@ function create_barcode(bars)
                 .style("opacity", 1.0)
                 .style("stroke-width", 4);
         })
-        .on("mouseout", function(d)
-        {
+        .on("mouseout", function (d) {
             nodes
                 .selectAll("circle")
                 .attr("fill", function (g) {
@@ -165,11 +183,11 @@ function create_barcode(bars)
                 });
 
             links
-                .filter(function(n)
-                {
-                     return d.edge.index === n.index;
+                .filter(function (n) {
+                    return d.edge.index === n.index;
                 })
-                .style("opacity", prev_opacity);
+                .style("opacity", prev_opacity)
+                .style("stroke-width", 1);
         });
 
     // adding the line associated with the slider => shows repulsion threshold
@@ -183,6 +201,16 @@ function create_barcode(bars)
         .attr("stroke", "#4281fc")
         .attr("stroke-width", 2.0)
         .style("opacity", 1.0);
+}
+
+/***
+ *  Function updates the blue bar following the slider.
+ *  @param value of the slider position
+ * */
+function update_slider(value) {
+    d3.select("#barcode").select("line")
+        .attr("x1", x(value)) // we map the slider value to the x axis
+        .attr("x2", x(value))
 }
 
 /**
@@ -200,87 +228,85 @@ function get_ph_features(nodes, links) {
     let components = []; // contains all "living" components
 
     // for all nodes
-    for(let i = 0; i < nodes.length; i++)
-    {
+    for (let i = 0; i < nodes.length; i++) {
         bars[i] = new Bar(i); // initialise bar with death of 1
         components[i] = new Component(nodes[i], i);         // initialise component with the node
     }
 
     // sort the links
-    links.sort(function(a, b)
-    {// persistence = 1/w -> increasing = a - b
-        return 1/a.value - 1/b.value;
+    links.sort(function (a, b) {// persistence = 1/w -> increasing = a - b
+        return 1 / a.value - 1 / b.value;
     });
 
     // loop through all edges
-    for(let i = 0; i < links.length; i++)
-    {
+    for (let i = 0; i < links.length; i++) {
         // find the component of the source node u that is not in a "dead" component
-        let c_u = components.find(function(component)
-        {
+        let c_u = components.find(function (component) {
             return component.contains(links[i].source);
         });
 
         // find the component of the target node v
-        let c_v = components.find(function(component)
-        {
+        let c_v = components.find(function (component) {
             return component.contains(links[i].target);
         });
 
-        if(c_v.id !== c_u.id) // if C_u and C_v not in
+        if (c_v.id !== c_u.id) // if C_u and C_v not in
         {
             bars[c_u.id].death = links[i].value; // update death time (w instead of 1/w see paper)
             bars[c_u.id].edge = links[i];
-            for(let j = 0; j < c_u.nodes.length; j++) // merge C_u and C_v into C_v
+            for (let j = 0; j < c_u.nodes.length; j++) // merge C_u and C_v into C_v
             {
                 c_v.nodes.push(c_u.nodes[j]);
             }
             // remove c_u from the list so we don't think it exists separately
-            components = components.filter(function(current_val) { return current_val.id !== c_u.id; });
+            components = components.filter(function (current_val) {
+                return current_val.id !== c_u.id;
+            });
             mst.push(links[i]); // add edge to MST
         }
     }
     // remove last component
-    bars = bars.filter(function(element) { return element.death !== Number.POSITIVE_INFINITY });
+    bars = bars.filter(function (element) {
+        return element.death !== Number.POSITIVE_INFINITY
+    });
 
     // for each bar now the ratio needs to be computed (see paper) i.e. for the edge e(u,v) that caused
     // the death of the bar
     // count nodes on left sie u = n
     // count nodes on right side v = m
     // ratio = n:m or ratio = n / (n + m) => count n then divide by all nodes
-    for(let i = 0; i < bars.length; i++)
-    {
+    for (let i = 0; i < bars.length; i++) {
         // for all nodes
-        for(let i = 0; i < nodes.length; i++)
-        {
+        for (let i = 0; i < nodes.length; i++) {
             components[i] = new Component(nodes[i], i);  // initialise component with the node
         }
 
         // remove the edge that caused the death of this bar
-        let mst_removed = mst.filter(function(element){ return element !== bars[i].edge; });
+        let mst_removed = mst.filter(function (element) {
+            return element !== bars[i].edge;
+        });
 
         // loop through the remaining edges
-        for(let i = 0; i < mst_removed.length; i++)
-        {
+        for (let i = 0; i < mst_removed.length; i++) {
             // find the component of the source node u that is not in a "dead" component
-            let c_u = components.find(function(component)
-            {
+            let c_u = components.find(function (component) {
                 return component.contains(mst_removed[i].source);
             });
 
             // find the component of the target node v
-            let c_v = components.find(function(component)
-            {
+            let c_v = components.find(function (component) {
                 return component.contains(mst_removed[i].target);
             });
 
-            if(c_v.id !== c_u.id) // if C_u and C_v not in
+            if (c_v.id !== c_u.id) // if C_u and C_v not in
             {
-                for(let j = 0; j < c_u.nodes.length; j++) // merge C_u and C_v into C_v
+                for (let j = 0; j < c_u.nodes.length; j++) // merge C_u and C_v into C_v
                 {
                     c_v.nodes.push(c_u.nodes[j]);
                 }
-                components = components.filter(function(current_val) { return current_val.id !== c_u.id; });
+                components = components.filter(function (current_val) {
+                    return current_val.id !== c_u.id;
+                });
             }
         }
 
