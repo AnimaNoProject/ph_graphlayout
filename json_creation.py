@@ -15,12 +15,70 @@ from itertools import permutations
 # "source": "Mme.Magloire", "target": "Mlle.Baptistine", "value": 6
 # source: smaller_product_id, target: larger_product_id, value: link_count
 
+#edit following lines for options
 category = 'furniture.living_room.sofa' #keep consistent with other files
+attraction_strength = 0.7
+attraction_strength_weak = 0.01
+repulsion_strength = -300
+repulsion_strength_weak = -30
+link_opacity = 0.1
+node_radius = 5
+#end of options
+
+# graph class for CC
+class Graph:
+    def __init__(self, nodes):
+        self.nodes = nodes
+        self.V = len(self.nodes)
+        self.adj = {}
+        for node in nodes:
+            self.adj[node] = []
+
+    def addEdge(self, v, w): 
+        self.adj[v].append(w) 
+        self.adj[w].append(v)
+    
+    def DFSUtil(self, temp, v, visited): 
+        # Mark the current vertex as visited 
+        visited[v] = True
+  
+        # Store the vertex to list 
+        temp.append(v) 
+  
+        # Repeat for all vertices adjacent 
+        # to this vertex v 
+        for i in self.adj[v]:
+            if visited[i] == False: 
+                  
+                # to reach all nodes indirectly connected to initial one
+                temp = self.DFSUtil(temp, i, visited) 
+        return temp 
+
+    def connectedComponents(self): 
+        visited = dict()
+        for node in self.nodes:
+            visited[node] = False
+        cc = [] 
+        for n in self.nodes: 
+            if visited[n] == False: 
+                temp = [] 
+                cc.append(self.DFSUtil(temp, n, visited)) 
+        return cc
+
+    def get_max_cc(self):
+        ccs = self.connectedComponents()
+        max_nodes = []
+        for nodes in ccs:
+            if len(nodes) > len(max_nodes):
+                    max_nodes = nodes
+        return max_nodes
+# end of graph class
 
 tmpstring = ''
 data = dict()
 data['nodes'] = []
 data['links'] = []
+data['settings'] = []
 product_count = dict()
 product_brand = dict()
 link_count = dict() #contains links in the format 'smaller_product_id-larger_product_id' i.e. 123-456
@@ -53,15 +111,20 @@ with open(os.path.join(dir, '..','2019-Oct', input_file_name), 'r') as inputfile
 
     print('finished csv read')
 
+    # create graph to get max CC and only add max CC to json
+    graph = Graph(product_count.keys())   #works, since for each product (=node) there is an entry
+
+    '''
     for product in product_count: #can also be 'in product_brand' since both have the same keys 
         data['nodes'].append({'id': product, 'group': product_brand[product]})
         #'size': product_count[product]
 
     print('finished data[node] creation')
+    '''
 
     for user in user_to_product:
         for ids in permutations(user_to_product[user], 2):
-            # create ids into link-string
+            # make ids into link-string
             if (ids[0] < ids[1]):
                 tmpstring = '-'.join(ids)
             elif (ids[0] > ids[1]):
@@ -74,31 +137,28 @@ with open(os.path.join(dir, '..','2019-Oct', input_file_name), 'r') as inputfile
                 link_count[tmpstring] = link_count[tmpstring] + 1
             else:
                 link_count[tmpstring] = 1
+                #add edge to graph
+                graph.addEdge(ids[0], ids[1])
+    print('finished link_count / graph generation')
 
-    print('finished link_count')
-
-    #link_count = dict(sorted(link_count.items()))
-    #for link in link_count:
-    #    print(link, ': ', link_count[link])
-    #print(len(link_count))
+    # create json file
+    max_cc = graph.get_max_cc()
+    for node in max_cc:
+        data['nodes'].append({'id': node, 'group': product_brand[node]})
+    print('finished data[nodes] creation')
 
     for link in link_count:
-        data['links'].append({'source': link.split('-')[0], 'target': link.split('-')[1], 'value': link_count[link]})
-    
+        if link.split('-')[0] in max_cc:
+            data['links'].append({'source': link.split('-')[0], 'target': link.split('-')[1], 'value': link_count[link]})
     print('finished data[links] creation')
 
-    json.dump(data, outputfile)
+    data['settings'] = ({'attraction_strength': attraction_strength, 'attraction_strength_weak': attraction_strength_weak, 'repulsion_strength': repulsion_strength, 
+    'repulsion_strength_weak': repulsion_strength_weak, 'link_opacity': link_opacity, 'node_radius': node_radius})
+    
+    print('finished data[settings] creation')
+
+    json.dump(data, outputfile, indent=2)
 
 print('finished')
 print('number of nodes: ', len(data['nodes']))
 print('number of links: ', len(data['links']))
-
-'''
-for user in user_to_product:
-    print(user)
-    for product in user_to_product[user]:
-        print(product)
-'''
-
-for product in product_count:
-    print(product, ": ", product_count[product])
