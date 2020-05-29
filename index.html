@@ -38,12 +38,12 @@
     <div class="graph-container h-100 w-100">
         <svg id="graph"></svg>
     </div>
-    <div id="group-labels" class="group-label d-flex flex-column m-3"></div>
+    <div id="group-labels" class="group-label d-flex flex-column align-content-end align-items-end m-3"></div>
     <div class="barcode-container position-absolute p-3 h-100 overflow-auto">
         <div class="d-flex flex-column p-3 h-100 rounded" style="background-color: rgba(224,224,224,0.83)">
             <label>
                 Dataset:
-                <select class="custom-select m-0 w-100 " onchange="init(this.value)">
+                <select class="custom-select m-0 w-100" onchange="init(this.value)">
                     <option>miserables</option>
                     <option>airport</option>
                     <option>train</option>
@@ -60,10 +60,15 @@
                     <option>dynamic</option>
                 </select>
             </label>
-            <div class="custom-control custom-checkbox">
-                <input checked onchange="changeAnimate(this.checked);" type="checkbox" class="custom-control-input"
-                       id="defaultUnchecked">
-                <label class="custom-control-label" for="defaultUnchecked">Animate?</label>
+            <div class="d-flex flex-row w-100 mb-2 justify-content-between">
+                <div class="custom-control custom-checkbox  align-self-center">
+                    <input checked onchange="changeAnimate(this.checked);" type="checkbox" class="custom-control-input"
+                           id="defaultUnchecked">
+                    <label class="custom-control-label" for="defaultUnchecked">Animate?</label>
+                </div>
+                <button type="button" class="btn btn-primary disabled p-1 m-0" id="btn_bundle_edges"
+                        onclick="bundle_Edges()">Bundle Edges
+                </button>
             </div>
             <input class="slider mb-1 w-100" type="range" min="0" max="25" step="1" value="0" id="slider"
                    onchange="update_attraction(this.value)" oninput="update_slider(this.value)">
@@ -84,6 +89,7 @@
     const loadingText = $("#loadingText");
     const deselect_button = $("#deselect_button");
     const group_div = $("#group-labels");
+    const btn_bundle_edges = $("#btn_bundle_edges");
 
     document.body.onload = function () {
         init("miserables");

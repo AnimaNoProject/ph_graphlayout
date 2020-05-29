@@ -12,6 +12,7 @@ let repulsion_strength_weak = -30;
 let node_radius = 5;
 let link_opacity = 0.4;
 let active_clicked = null;
+let paths_loaded = false;
 
 /**
  * Resizes the graph according to the window size.
@@ -50,7 +51,7 @@ function deselect_nodes() {
     d3.selectAll("circle")
         .style("opacity", 1.0);
     links
-        .style("opacity", link_opacity);
+        .style("opacity", (paths_loaded) ? 0.0 : link_opacity);
 }
 
 /**
@@ -108,87 +109,17 @@ function create_graph(data) {
 
             if (active_clicked === d.id) {
                 deselect_button.removeClass('fadeInDown').addClass('fadeOutUp');
-
                 active_clicked = null;
-
                 d3.selectAll("text")
                     .remove();
                 d3.selectAll("circle")
                     .style("opacity", 1.0);
                 links
-                    .style("opacity", link_opacity);
+                    .style("opacity", (paths_loaded) ? 0.0 : link_opacity);
                 return;
             }
 
-            d3.selectAll("text")
-                .remove();
-            d3.selectAll("circle")
-                .style("opacity", 1.0);
-
-            links
-                .style("opacity", link_opacity);
-
-            deselect_button.removeClass('fadeOutUp').addClass('fadeInDown');
-            deselect_button.css("visibility", "visible");
-
-            d3.selectAll("circle")
-                .style("opacity", 0.7);
-
-            d3.select(this).select("circle")
-                .style("opacity", 1.0);
-
-            let adj_nodes = [];
-            adj_nodes.push(d.id);
-
-            active_clicked = d.id;
-
-            links
-                .style("opacity", function (l) {
-                    if (l.target.id === d.id || l.source.id === d.id) {
-                        adj_nodes.push(l.target.id);
-                        adj_nodes.push(l.source.id);
-                        return link_opacity;
-                    }
-                    return link_opacity * 0.05;
-                });
-
-            d3.selectAll("circle")
-                .style("opacity", function (n) {
-                    if (adj_nodes.find(function (element) {
-                        return element === n.id;
-                    })) {
-                        return 1.0;
-                    }
-                    return 0.3;
-                });
-
-            nodes.filter(
-                function (t) {
-                    return adj_nodes.find(function (element) {
-                        return t.id === element;
-                    });
-                })
-                .append("text")
-                .text(function (d) {
-                    return d.id;
-                })
-                .attr("x", 6)
-                .attr("y", 3)
-                .style("background-color", "#FFFFFF")
-                .style("font-size", "8px")
-                .style("font-weight", "bold")
-                .style("position", "absolute")
-                .style("z-index", 2)
-                .style("opacity", 0.4)
-                .on("mouseover", function () {
-                    d3.select(this.parentNode).each(function () {
-                        this.parentNode.appendChild(this);
-                    });
-                    d3.select(this).style("opacity", 1.0);
-                })
-                .on("mouseout", function () {
-                    d3.select(this).style("opacity", 0.4);
-                });
+            brushLinks(d.id);
         });
 
     simulation
@@ -220,32 +151,8 @@ function create_graph(data) {
     }
 
     simulation.on("end",
-        function()
-        {
-            let fbundling = d3.ForceEdgeBundling()
-                .step_size(0.5)
-                .compatibility_threshold(0.4)
-                .nodes(simulation.nodes())
-                .edges(loaded_data.links);
-            let results = fbundling();
-
-            let d3line = d3.line()
-                .x(function(d){ return d.x; })
-                .y(function(d){ return d.y; });
-
-            results.forEach(function(edge_subpoint_data){
-                // for each of the arrays in the results
-                // draw a line between the subdivions points for that edge
-                paths
-                    .append("path")
-                    .attr("d", d3line(edge_subpoint_data))
-                    .style("stroke-width", 1)
-                    .style("stroke", "#222222")
-                    .style("fill", "none")
-                    .style('stroke-opacity', link_opacity); //use opacity as blending
-            });
-
-            links.style("opacity", 0.0);
+        function () {
+            btn_bundle_edges.removeClass("disabled");
         })
 
     simulation.force("link").strength(attraction_strength_weak).distance(function (d) {
@@ -258,6 +165,115 @@ function create_graph(data) {
 
     simulation.force("link")
         .links(data.links);
+}
+
+/**
+ * Updates the link opacities.
+ * @param d id of the selected node
+ */
+function brushLinks(d) {
+    d3.selectAll("text")
+        .remove();
+    d3.selectAll("circle")
+        .style("opacity", 1.0);
+
+    links
+        .style("opacity", (paths_loaded) ? 0.0 : link_opacity);
+
+    deselect_button.removeClass('fadeOutUp').addClass('fadeInDown');
+    deselect_button.css("visibility", "visible");
+
+    let adj_nodes = [];
+    adj_nodes.push(d);
+
+    active_clicked = d;
+
+    links
+        .style("opacity", function (l) {
+            if (l.target.id === d || l.source.id === d) {
+                adj_nodes.push(l.target.id);
+                adj_nodes.push(l.source.id);
+                return 0.8;
+            }
+            return (paths_loaded) ? 0.0 :  link_opacity * 0.5;
+        });
+
+    d3.selectAll("circle")
+        .style("opacity", function (n) {
+            if (adj_nodes.find(function (element) {
+                return element === n.id;
+            })) {
+                return 1.0;
+            }
+            return 0.3;
+        });
+
+    nodes.filter(
+        function (t) {
+            return adj_nodes.find(function (element) {
+                return t.id === element;
+            });
+        })
+        .append("text")
+        .text(function (n) {
+            return n.id;
+        })
+        .attr("x", 6)
+        .attr("y", 3)
+        .style("background-color", "#FFFFFF")
+        .style("font-size", "8px")
+        .style("font-weight", "bold")
+        .style("position", "absolute")
+        .style("z-index", 2)
+        .style("opacity", 0.4)
+        .on("mouseover", function () {
+            d3.select(this.parentNode).each(function () {
+                this.parentNode.appendChild(this);
+            });
+            d3.select(this).style("opacity", 1.0);
+        })
+        .on("mouseout", function () {
+            d3.select(this).style("opacity", 0.4);
+        });
+
+}
+
+function bundle_Edges() {
+    disablePaths();
+
+    let bundling = d3.ForceEdgeBundling()
+        .step_size(0.1)
+        .compatibility_threshold(0.4)
+        .nodes(simulation.nodes())
+        .edges(loaded_data.links);
+    let results = bundling();
+
+    let d3line = d3.line()
+        .x(function (d) {
+            return d.x;
+        })
+        .y(function (d) {
+            return d.y;
+        });
+
+    results.forEach(function (sub_points) {
+        // for each of the arrays in the results
+        // draw a line between the sub-divisions points for that edge
+        paths
+            .append("path")
+            .attr("d", d3line(sub_points))
+            .attr("source", sub_points[0].id)
+            .attr("target", sub_points[sub_points.length-1].id)
+            .style("stroke-width", 1)
+            .style("stroke", "#222222")
+            .style("fill", "none")
+            .style('stroke-opacity', link_opacity * 0.4); //use opacity as blending
+    });
+
+    paths_loaded = true;
+    links.style("opacity", 0.0);
+
+    brushLinks(active_clicked);
 }
 
 /**
@@ -285,7 +301,6 @@ function addGroupLabel(name, number) {
         .addClass("btn")
         .addClass("btn-sm")
         .addClass("disabled")
-        .addClass("float-right")
         .addClass("font-weight-bold")
         .css("color", "#FFFFFF")
         .css("opacity", 1.0)
@@ -326,7 +341,11 @@ function noAnimation() {
  * Updates the position of nodes and links.
  */
 function updateNodesAndLinks() {
-    d3.selectAll("path").remove();
+    if(paths_loaded)
+    {
+        paths_loaded = false;
+        d3.selectAll("path").remove();
+    }
 
     links
         .attr("x1", function (d) {
@@ -393,6 +412,11 @@ function updateNodeSize(value) {
  * @param value Value of the slider
  * */
 function update_attraction(value) {
+    disablePaths();
+    if(active_clicked != null)
+    {
+        brushLinks(active_clicked);
+    }
 
     // we update all links
     simulation.force("link").strength(function (link) {
@@ -420,6 +444,12 @@ function update_attraction(value) {
  * Function that updates the repulsion based on the selected bars.
  * */
 function update_repulsion() {
+    disablePaths();
+    if(active_clicked != null)
+    {
+        brushLinks(active_clicked);
+    }
+
     // maybe it is necessary to set all forces again. this could definitely
     // be optimised so that two nested for loops are not necessary, but it works for now
     for (let i = 0; i < loaded_data.nodes.length - 1; i++) {
@@ -444,4 +474,11 @@ function update_repulsion() {
         }
     }
     simulation.alpha(1).alphaDecay(0.01).restart();
+}
+
+function disablePaths()
+{
+    d3.selectAll("path").remove();
+    paths_loaded = false;
+    btn_bundle_edges.addClass("disabled");
 }
