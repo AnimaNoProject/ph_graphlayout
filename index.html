@@ -26,7 +26,6 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript"
             src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/js/mdb.min.js"></script>
-    <link rel="stylesheet" href="font-awesome-animation.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 </header>
 
@@ -35,7 +34,7 @@
 <div class="btn-group dropright m-3" style="position: absolute; z-index: 101;">
     <button type="button" class="btn shadow-none"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i id="help_icon" class="fa fa-info-circle fa-2x faa-vertical animated faa-slow" onmouseover="$('#help_icon').removeClass('animated');"></i>
+        <i id="help_icon" class="fa fa-info-circle fa-2x animated wobble infinite slower" onmouseover="$('#help_icon').removeClass('animated').removeClass('faa-vertical').removeClass('faa-slow');"></i>
     </button>
     <div class="dropdown-menu m-0 p-3 border-0" style="width: 300px; background-color: rgba(255, 255, 255, 0.8)">
         <p>
@@ -140,7 +139,6 @@
     const deselect_button = $("#deselect_button");
     const group_div = $("#group-labels");
     const btn_bundle_edges = $("#btn_bundle_edges");
-    const info_div = $("#info");
 
     $(document).ready(function(){
         $(".dropright, .btn-group").hover(function(){
@@ -204,18 +202,6 @@
         loadingText.css("display", "none");
         loader.css("display", "none");
         content.css("display", "block");
-    }
-
-    function showHelp() {
-        info_div.addClass("animated");
-        info_div.removeClass("fadeOut");
-        info_div.addClass("fadeIn");
-        info_div.css("visibility", "visible");
-    }
-
-    function hideHelp() {
-        info_div.removeClass("fadeIn");
-        info_div.addClass("fadeOut");
     }
 </script>
 </html>
