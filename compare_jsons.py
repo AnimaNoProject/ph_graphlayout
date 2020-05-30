@@ -34,11 +34,10 @@ with open(os.path.join(dir, '..','2019-Oct', 'furniture-living_room-sofa.json'),
     for link in ref_data['links']:
         linktext = link['source'] + '-' + link['target']
         if linktext in linklist:
-            linklist.remove(linktext)
+            if link_to_value[linktext] == link['value']:
+                linklist.remove(linktext)
+            else:
+                print("linktext: \t ref/created \t " + str(link['value']) + "/" + str(link_to_value[linktext]))
         else:
             print('link not in list')
-
-        if link_to_value[linktext] == link['value']:
-            error_string = 'values: ' + str(link_to_value[linktext]) + ' vs ' + str(link['value'])
-            print(error_string)
     print("linklist size: ", len(linklist))

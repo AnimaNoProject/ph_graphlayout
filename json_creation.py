@@ -108,19 +108,10 @@ with open(os.path.join(dir, '..','2019-Oct', input_file_name), 'r') as inputfile
             #else:
             product_brand[row[2]] = row[5]
         
-
     print('finished csv read')
 
     # create graph to get max CC and only add max CC to json
     graph = Graph(product_count.keys())   #works, since for each product (=node) there is an entry
-
-    '''
-    for product in product_count: #can also be 'in product_brand' since both have the same keys 
-        data['nodes'].append({'id': product, 'group': product_brand[product]})
-        #'size': product_count[product]
-
-    print('finished data[node] creation')
-    '''
 
     for user in user_to_product:
         for ids in permutations(user_to_product[user], 2):
@@ -162,3 +153,4 @@ with open(os.path.join(dir, '..','2019-Oct', input_file_name), 'r') as inputfile
 print('finished')
 print('number of nodes: ', len(data['nodes']))
 print('number of links: ', len(data['links']))
+print(link_count)
