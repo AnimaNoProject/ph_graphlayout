@@ -115,7 +115,6 @@ function create_graph(data) {
             return color(d.group);
         })
         .on("click", function (d) {
-
             if (active_clicked === d.id) {
                 deselect_button.removeClass('fadeInDown').addClass('fadeOutUp');
                 active_clicked = null;
@@ -125,6 +124,10 @@ function create_graph(data) {
                     .style("opacity", 1.0);
                 links
                     .style("opacity", (paths_loaded) ? 0.0 : link_opacity);
+                
+                if (paths_loaded) {
+                    paths.selectAll("path").style("stroke-opacity", link_opacity * 0.4);
+                }
                 return;
             }
 
