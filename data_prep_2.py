@@ -6,9 +6,9 @@ import json
 
 #adjust following 3 parameters
 min_occurences = 2
-max_occurences = 5
+max_occurences = 10
 category = 'furniture.living_room.sofa' #keep consistent with other files
-max_customers = 10000
+max_customers = 50000
 
 counts = dict()
 customer_list = []
