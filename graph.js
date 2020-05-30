@@ -142,7 +142,7 @@ function create_graph(data) {
 
     let group_map = new Map();
 
-    for (let i = 0; i < data.nodes.length - 1; i++) {
+    for (let i = 0; i < data.nodes.length; i++) {
         if (group_map.get(data.nodes[i].group) === undefined) {
             group_map.set(data.nodes[i].group, 1);
         } else {
