@@ -17,6 +17,7 @@ from itertools import permutations
 
 #edit following lines for options
 category = 'furniture.living_room.sofa' #keep consistent with other files
+use_jaccard = True
 attraction_strength = 0.7
 attraction_strength_weak = 0.01
 repulsion_strength = -300
@@ -72,7 +73,22 @@ class Graph:
             if len(nodes) > len(max_nodes):
                     max_nodes = nodes
         return max_nodes
+    
+    # jaccard for edge weights (1 hop, since all graphs are rather dense):
+    def get_jaccard(self, node1, node2):
+        node1_nodes = len(self.adj[node1]) -1 # -1 for node2
+        node2_nodes = len(self.adj[node2]) -1 # -1 for node1
+        shared_nodes = 0
+        for node in self.adj[node1]:
+            if node in self.adj[node2]:
+                shared_nodes += 1
+        jaccard = (shared_nodes / (node1_nodes + node2_nodes)) * 100
+        return jaccard
+
 # end of graph class
+
+
+    
 
 tmpstring = ''
 data = dict()
@@ -140,7 +156,10 @@ with open(os.path.join(dir, '..','2019-Oct', input_file_name), 'r') as inputfile
 
     for link in link_count:
         if link.split('-')[0] in max_cc:
-            data['links'].append({'source': link.split('-')[0], 'target': link.split('-')[1], 'value': link_count[link]})
+            if use_jaccard:
+                data['links'].append({'source': link.split('-')[0], 'target': link.split('-')[1], 'value': graph.get_jaccard(link.split('-')[0], link.split('-')[1])}) 
+            else:
+                data['links'].append({'source': link.split('-')[0], 'target': link.split('-')[1], 'value': link_count[link]}) 
     print('finished data[links] creation')
 
     data['settings'] = ({'attraction_strength': attraction_strength, 'attraction_strength_weak': attraction_strength_weak, 'repulsion_strength': repulsion_strength, 

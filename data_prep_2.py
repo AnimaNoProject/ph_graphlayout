@@ -5,9 +5,10 @@ import json
 #creates a 13 MB csv file that contains only entries from customers with >= min_occurences in electronics.smartphone
 
 #adjust following 3 parameters
-min_occurences = 1
-max_occurences = 100
+min_occurences = 2
+max_occurences = 5
 category = 'furniture.living_room.sofa' #keep consistent with other files
+max_customers = 10000
 
 counts = dict()
 customer_list = []
@@ -27,13 +28,17 @@ with open(os.path.join(dir, '..','2019-Oct', input_file_name), 'r') as inputfile
             counts[row[7]] = 1
     print("finished part 1")
 
-    # sort by number of entries and only add ones with >= min_occurences
-    for w in sorted(counts, key=counts.get, reverse=True):
-        if(min_occurences <= counts[w] and counts[w] <= max_occurences):
+    # sort by number of entries and only add ones with >= min_occurences and <= max_occurences
+    num_users = 0
+    for w in sorted(counts, key=counts.get, reverse=False):
+        if num_users >= max_customers or counts[w] >= max_occurences:
             break
-        customer_list.append(w)
+        if min_occurences <= counts[w]:
+            customer_list.append(w)
+            num_users += 1
+            print(str(w) + ": " + str(counts[w]))
     print(len(customer_list))
-    print("finished part 2")
+    print('start writing csv file ...')
 
     # only write rows into new csv that contain one of the customers in customer_list
     inputfile.seek(0)
