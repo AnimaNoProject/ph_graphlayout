@@ -16,7 +16,7 @@ from itertools import permutations
 # source: smaller_product_id, target: larger_product_id, value: link_count
 
 #edit following lines for options
-category = 'furniture.living_room.sofa' #keep consistent with other files
+category = 'electronics' #keep consistent with other files
 use_jaccard = True
 attraction_strength = 0.7
 attraction_strength_weak = 0.01

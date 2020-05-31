@@ -5,10 +5,10 @@ import json
 #creates a 13 MB csv file that contains only entries from customers with >= min_occurences in electronics.smartphone
 
 #adjust following 3 parameters
-min_occurences = 2
+min_occurences = 5
 max_occurences = 10
-category = 'furniture.living_room.sofa' #keep consistent with other files
-max_customers = 50000
+category = 'electronics' #keep consistent with other files
+max_customers = 250
 
 counts = dict()
 customer_list = []

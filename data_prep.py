@@ -5,7 +5,7 @@ import os
 #creates a csv in current_directory/../2019-Oct/ with only entries containing electronics.smartphone as category
 #csv input file path: current_directory/../2019-Oct/2019-Oct.csv
 
-category = 'furniture.living_room.sofa' #keep consistent with other files
+category = 'electronics' #keep consistent with other files
 dir = os.path.dirname(__file__)
 i = 0
 j = 0
