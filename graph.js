@@ -48,6 +48,9 @@ function deselect_nodes() {
 
     d3.selectAll("text")
         .remove();
+    nodes.selectAll("rect")
+        .remove();
+
     d3.selectAll("circle")
         .style("opacity", 1.0);
 
@@ -186,6 +189,9 @@ function create_graph(data) {
 function brushLinks(d) {
     d3.selectAll("text")
         .remove();
+    nodes.selectAll("rect")
+        .remove();
+
     d3.selectAll("circle")
         .style("opacity", 1.0);
 
@@ -239,12 +245,21 @@ function brushLinks(d) {
             return 0.3;
         });
 
-    nodes.filter(
+    let connected_nodes = nodes.filter(
         function (t) {
             return adj_nodes.find(function (element) {
                 return t.id === element;
             });
-        })
+        });
+
+    connected_nodes
+        .append("rect")
+        .style("fill", "#FFFFFF")
+        .style("opacity", 0.0)
+        .style("rx", 3)
+        .style("ry", 3);
+
+    connected_nodes
         .append("text")
         .text(function (n) {
             return n.id;
@@ -262,9 +277,22 @@ function brushLinks(d) {
                 this.parentNode.appendChild(this);
             });
             d3.select(this).style("opacity", 1.0);
+
+
+
+            let bbox = d3.select(this).node().getBBox();
+            console.log(d3.select(this).attr("width"));
+            console.log(d3.select(this).attr("height"));
+
+            d3.select(this.parentNode).select("rect").style("opacity", 1.0)
+                .attr("width", bbox.width + 4)
+                .attr("x", d3.select(this).attr("x") - 2)
+                .attr("y", -d3.select(this).attr("y") - 2)
+                .attr("height", bbox.height + 0.5);
         })
         .on("mouseout", function () {
             d3.select(this).style("opacity", 0.4);
+            d3.select(this.parentNode).select("rect").style("opacity", 0.0);
         });
 }
 
