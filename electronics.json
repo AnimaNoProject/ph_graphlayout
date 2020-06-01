@@ -5,6 +5,10 @@
       "group": "samsung"
     },
     {
+      "id": "1004887",
+      "group": "oppo"
+    },
+    {
       "id": "5100705",
       "group": "garmin"
     },
@@ -13,76 +17,28 @@
       "group": "garmin"
     },
     {
-      "id": "1004887",
+      "id": "5100776",
+      "group": "garmin"
+    },
+    {
+      "id": "5100448",
+      "group": "garmin"
+    },
+    {
+      "id": "5100530",
+      "group": "garmin"
+    },
+    {
+      "id": "5100702",
+      "group": "garmin"
+    },
+    {
+      "id": "1800930",
+      "group": "sony"
+    },
+    {
+      "id": "1005235",
       "group": "oppo"
-    },
-    {
-      "id": "1004886",
-      "group": "oppo"
-    },
-    {
-      "id": "1004781",
-      "group": "huawei"
-    },
-    {
-      "id": "1004785",
-      "group": "huawei"
-    },
-    {
-      "id": "1004956",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1004565",
-      "group": "huawei"
-    },
-    {
-      "id": "1004856",
-      "group": "samsung"
-    },
-    {
-      "id": "1004767",
-      "group": "samsung"
-    },
-    {
-      "id": "1004857",
-      "group": "samsung"
-    },
-    {
-      "id": "1005100",
-      "group": "samsung"
-    },
-    {
-      "id": "1004659",
-      "group": "samsung"
-    },
-    {
-      "id": "1004254",
-      "group": "apple"
-    },
-    {
-      "id": "1004252",
-      "group": "apple"
-    },
-    {
-      "id": "1004655",
-      "group": "samsung"
-    },
-    {
-      "id": "1005115",
-      "group": "apple"
-    },
-    {
-      "id": "1005014",
-      "group": "samsung"
-    },
-    {
-      "id": "1004246",
-      "group": "apple"
-    },
-    {
-      "id": "1003316",
-      "group": "apple"
     },
     {
       "id": "1004249",
@@ -105,92 +61,48 @@
       "group": "apple"
     },
     {
-      "id": "1002544",
-      "group": "apple"
-    },
-    {
-      "id": "1004957",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1002974",
-      "group": "huawei"
-    },
-    {
-      "id": "1004792",
-      "group": "xiaomi"
-    },
-    {
-      "id": "4801969",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1004449",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1004867",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1004833",
+      "id": "1004659",
       "group": "samsung"
     },
     {
-      "id": "1003571",
-      "group": "xiaomi"
+      "id": "1004252",
+      "group": "apple"
     },
     {
-      "id": "1004528",
+      "id": "1004655",
       "group": "samsung"
     },
     {
-      "id": "1003892",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1004777",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1003982",
-      "group": "huawei"
-    },
-    {
-      "id": "1004739",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1004741",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1004708",
-      "group": "huawei"
-    },
-    {
-      "id": "1004793",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1003274",
-      "group": "gionee"
-    },
-    {
-      "id": "1004709",
-      "group": "huawei"
-    },
-    {
-      "id": "1003907",
-      "group": "huawei"
-    },
-    {
-      "id": "1005104",
+      "id": "1004254",
       "group": "apple"
     },
     {
-      "id": "1004237",
+      "id": "1005115",
       "group": "apple"
+    },
+    {
+      "id": "1003316",
+      "group": "apple"
+    },
+    {
+      "id": "1005014",
+      "group": "samsung"
+    },
+    {
+      "id": "1004246",
+      "group": "apple"
+    },
+    {
+      "id": "1003879",
+      "group": "huawei"
+    },
+    {
+      "id": "1004255",
+      "group": "apple"
+    },
+    {
+      "id": "1004875",
+      "group": "samsung"
     },
     {
       "id": "1002524",
@@ -209,39 +121,83 @@
       "group": "artel"
     },
     {
-      "id": "1002532",
+      "id": "1004237",
       "group": "apple"
     },
     {
-      "id": "1002528",
+      "id": "1002544",
       "group": "apple"
     },
     {
-      "id": "1002535",
+      "id": "1004957",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1004792",
+      "group": "xiaomi"
+    },
+    {
+      "id": "4801969",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1004449",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1002974",
+      "group": "huawei"
+    },
+    {
+      "id": "1004867",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1004833",
+      "group": "samsung"
+    },
+    {
+      "id": "1004528",
+      "group": "samsung"
+    },
+    {
+      "id": "1003571",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1004767",
+      "group": "samsung"
+    },
+    {
+      "id": "1004857",
+      "group": "samsung"
+    },
+    {
+      "id": "1005100",
+      "group": "samsung"
+    },
+    {
+      "id": "1004863",
+      "group": "samsung"
+    },
+    {
+      "id": "1004888",
+      "group": "samsung"
+    },
+    {
+      "id": "1004856",
+      "group": "samsung"
+    },
+    {
+      "id": "1004433",
+      "group": "samsung"
+    },
+    {
+      "id": "1002633",
       "group": "apple"
     },
     {
-      "id": "1003363",
-      "group": "apple"
-    },
-    {
-      "id": "4804055",
-      "group": "apple"
-    },
-    {
-      "id": "1005129",
-      "group": "apple"
-    },
-    {
-      "id": "1003310",
-      "group": "apple"
-    },
-    {
-      "id": "1003312",
-      "group": "apple"
-    },
-    {
-      "id": "1004250",
+      "id": "1005135",
       "group": "apple"
     },
     {
@@ -249,12 +205,16 @@
       "group": "apple"
     },
     {
+      "id": "1004839",
+      "group": "oppo"
+    },
+    {
       "id": "1005130",
       "group": "apple"
     },
     {
-      "id": "1004839",
-      "group": "oppo"
+      "id": "1003318",
+      "group": "apple"
     },
     {
       "id": "1005132",
@@ -269,11 +229,11 @@
       "group": "apple"
     },
     {
-      "id": "1003318",
-      "group": "apple"
+      "id": "1005168",
+      "group": "samsung"
     },
     {
-      "id": "1005168",
+      "id": "1004434",
       "group": "samsung"
     },
     {
@@ -281,32 +241,64 @@
       "group": "apple"
     },
     {
-      "id": "1004434",
-      "group": "samsung"
-    },
-    {
-      "id": "1005135",
+      "id": "1005104",
       "group": "apple"
     },
     {
-      "id": "1005136",
+      "id": "1004741",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1004739",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1004740",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1004934",
+      "group": "vivo"
+    },
+    {
+      "id": "1004932",
+      "group": "vivo"
+    },
+    {
+      "id": "1005050",
+      "group": "oneplus"
+    },
+    {
+      "id": "1005084",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1004805",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1004775",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1004794",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1004795",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1004777",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1005112",
       "group": "apple"
     },
     {
-      "id": "1005124",
-      "group": "apple"
-    },
-    {
-      "id": "1003857",
-      "group": "samsung"
-    },
-    {
-      "id": "1003852",
-      "group": "samsung"
-    },
-    {
-      "id": "1004238",
-      "group": "apple"
+      "id": "1003982",
+      "group": "huawei"
     },
     {
       "id": "1003317",
@@ -325,10 +317,6 @@
       "group": "xiaomi"
     },
     {
-      "id": "1004496",
-      "group": "meizu"
-    },
-    {
       "id": "4804190",
       "group": "olmio"
     },
@@ -337,11 +325,11 @@
       "group": "tp-link"
     },
     {
-      "id": "5100376",
-      "group": "xiaomi"
+      "id": "1004496",
+      "group": "meizu"
     },
     {
-      "id": "5100675",
+      "id": "5100376",
       "group": "xiaomi"
     },
     {
@@ -349,19 +337,23 @@
       "group": "garmin"
     },
     {
-      "id": "5100378",
+      "id": "5100675",
       "group": "xiaomi"
     },
     {
-      "id": "1004751",
+      "id": "1004836",
       "group": "samsung"
     },
     {
-      "id": "1003114",
-      "group": "sony"
+      "id": "1004872",
+      "group": "samsung"
     },
     {
-      "id": "1004750",
+      "id": "1004768",
+      "group": "samsung"
+    },
+    {
+      "id": "1004751",
       "group": "samsung"
     },
     {
@@ -369,15 +361,15 @@
       "group": "samsung"
     },
     {
-      "id": "1004834",
+      "id": "1004750",
       "group": "samsung"
+    },
+    {
+      "id": "1003114",
+      "group": "sony"
     },
     {
       "id": "1004858",
-      "group": "samsung"
-    },
-    {
-      "id": "5100718",
       "group": "samsung"
     },
     {
@@ -385,7 +377,35 @@
       "group": "samsung"
     },
     {
+      "id": "5100718",
+      "group": "samsung"
+    },
+    {
+      "id": "5100696",
+      "group": "mykronoz"
+    },
+    {
+      "id": "5100694",
+      "group": "mykronoz"
+    },
+    {
+      "id": "5100644",
+      "group": "garmin"
+    },
+    {
+      "id": "5100595",
+      "group": "apple"
+    },
+    {
+      "id": "5100650",
+      "group": "garmin"
+    },
+    {
       "id": "5100562",
+      "group": "apple"
+    },
+    {
+      "id": "1005139",
       "group": "apple"
     },
     {
@@ -401,12 +421,16 @@
       "group": "xiaomi"
     },
     {
+      "id": "4803977",
+      "group": "samsung"
+    },
+    {
       "id": "4803585",
       "group": "huawei"
     },
     {
-      "id": "4803977",
-      "group": "samsung"
+      "id": "4804102",
+      "group": "huawei"
     },
     {
       "id": "4804056",
@@ -417,44 +441,28 @@
       "group": "xiaomi"
     },
     {
-      "id": "1005239",
-      "group": "xiaomi"
-    },
-    {
       "id": "1005159",
       "group": "xiaomi"
     },
     {
-      "id": "1004838",
-      "group": "oppo"
-    },
-    {
-      "id": "1004904",
-      "group": "huawei"
-    },
-    {
-      "id": "1004133",
+      "id": "1005239",
       "group": "xiaomi"
     },
     {
-      "id": "1004723",
-      "group": "huawei"
+      "id": "1003527",
+      "group": "xiaomi"
     },
     {
-      "id": "1004530",
+      "id": "1002099",
       "group": "samsung"
     },
     {
-      "id": "1004140",
-      "group": "xiaomi"
+      "id": "1003281",
+      "group": "samsung"
     },
     {
-      "id": "1004402",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1004156",
-      "group": "xiaomi"
+      "id": "1004820",
+      "group": "honor"
     },
     {
       "id": "5100337",
@@ -465,7 +473,71 @@
       "group": "apple"
     },
     {
-      "id": "1005121",
+      "id": "1004838",
+      "group": "oppo"
+    },
+    {
+      "id": "1004565",
+      "group": "huawei"
+    },
+    {
+      "id": "1004956",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1004785",
+      "group": "huawei"
+    },
+    {
+      "id": "1004886",
+      "group": "oppo"
+    },
+    {
+      "id": "1004781",
+      "group": "huawei"
+    },
+    {
+      "id": "1004897",
+      "group": "huawei"
+    },
+    {
+      "id": "1004849",
+      "group": "huawei"
+    },
+    {
+      "id": "1003525",
+      "group": "oneplus"
+    },
+    {
+      "id": "1005136",
+      "group": "apple"
+    },
+    {
+      "id": "1005124",
+      "group": "apple"
+    },
+    {
+      "id": "1003852",
+      "group": "samsung"
+    },
+    {
+      "id": "1003857",
+      "group": "samsung"
+    },
+    {
+      "id": "1004238",
+      "group": "apple"
+    },
+    {
+      "id": "5100852",
+      "group": "apple"
+    },
+    {
+      "id": "1004225",
+      "group": "apple"
+    },
+    {
+      "id": "5100856",
       "group": "apple"
     },
     {
@@ -477,68 +549,92 @@
       "group": "apple"
     },
     {
-      "id": "5100856",
-      "group": "apple"
-    },
-    {
-      "id": "1005144",
-      "group": "apple"
-    },
-    {
-      "id": "1003527",
+      "id": "1004743",
       "group": "xiaomi"
     },
     {
-      "id": "1002099",
+      "id": "1004495",
+      "group": "meizu"
+    },
+    {
+      "id": "1004903",
+      "group": "huawei"
+    },
+    {
+      "id": "1005019",
+      "group": "nokia"
+    },
+    {
+      "id": "1005008",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1004988",
+      "group": "nokia"
+    },
+    {
+      "id": "1005006",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1003712",
       "group": "samsung"
     },
     {
-      "id": "1004768",
+      "id": "1201233",
+      "group": "huawei"
+    },
+    {
+      "id": "1005007",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1004211",
       "group": "samsung"
     },
     {
-      "id": "1004872",
-      "group": "samsung"
+      "id": "4804055",
+      "group": "apple"
     },
     {
-      "id": "1004836",
-      "group": "samsung"
+      "id": "1003310",
+      "group": "apple"
     },
     {
-      "id": "1003549",
-      "group": "samsung"
+      "id": "1003312",
+      "group": "apple"
     },
     {
-      "id": "1004874",
-      "group": "samsung"
+      "id": "1005129",
+      "group": "apple"
     },
     {
-      "id": "1003535",
-      "group": "samsung"
+      "id": "1004250",
+      "group": "apple"
     },
     {
-      "id": "1003965",
-      "group": "samsung"
+      "id": "1002528",
+      "group": "apple"
     },
     {
-      "id": "1003285",
-      "group": "samsung"
+      "id": "1002532",
+      "group": "apple"
     },
     {
-      "id": "1004573",
-      "group": "samsung"
+      "id": "1002535",
+      "group": "apple"
     },
     {
-      "id": "1003532",
-      "group": "samsung"
+      "id": "1003363",
+      "group": "apple"
     },
     {
-      "id": "1004973",
-      "group": "samsung"
+      "id": "4804428",
+      "group": "usams"
     },
     {
-      "id": "5100563",
-      "group": "samsung"
+      "id": "4802888",
+      "group": "apple"
     },
     {
       "id": "4802036",
@@ -549,8 +645,8 @@
       "group": "apple"
     },
     {
-      "id": "4802888",
-      "group": "apple"
+      "id": "5100563",
+      "group": "samsung"
     },
     {
       "id": "5100577",
@@ -581,8 +677,16 @@
       "group": "samsung"
     },
     {
+      "id": "1801900",
+      "group": "samsung"
+    },
+    {
       "id": "1801881",
       "group": "samsung"
+    },
+    {
+      "id": "1802020",
+      "group": "xiaomi"
     },
     {
       "id": "1801897",
@@ -593,7 +697,7 @@
       "group": "sony"
     },
     {
-      "id": "1802020",
+      "id": "1004855",
       "group": "xiaomi"
     },
     {
@@ -601,24 +705,12 @@
       "group": "meizu"
     },
     {
-      "id": "1004855",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1005103",
-      "group": "xiaomi"
-    },
-    {
       "id": "1003768",
       "group": "huawei"
     },
     {
-      "id": "1005007",
+      "id": "1005103",
       "group": "xiaomi"
-    },
-    {
-      "id": "1004211",
-      "group": "samsung"
     },
     {
       "id": "1004209",
@@ -637,136 +729,28 @@
       "group": "samsung"
     },
     {
-      "id": "1002633",
-      "group": "apple"
-    },
-    {
-      "id": "1004433",
-      "group": "samsung"
-    },
-    {
-      "id": "1004457",
-      "group": "meizu"
-    },
-    {
-      "id": "8800028",
-      "group": "texet"
-    },
-    {
-      "id": "1003309",
-      "group": "apple"
-    },
-    {
-      "id": "1004816",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1002538",
-      "group": "apple"
-    },
-    {
-      "id": "1002547",
-      "group": "apple"
-    },
-    {
-      "id": "1801745",
-      "group": "lg"
-    },
-    {
-      "id": "1002629",
-      "group": "apple"
-    },
-    {
-      "id": "1002634",
-      "group": "apple"
-    },
-    {
-      "id": "1002540",
-      "group": "apple"
-    },
-    {
       "id": "1004227",
       "group": "apple"
-    },
-    {
-      "id": "1004877",
-      "group": "xiaomi"
     },
     {
       "id": "1004891",
       "group": "zte"
     },
     {
-      "id": "1201233",
-      "group": "huawei"
-    },
-    {
-      "id": "1005008",
+      "id": "1004877",
       "group": "xiaomi"
-    },
-    {
-      "id": "1005019",
-      "group": "nokia"
-    },
-    {
-      "id": "1004988",
-      "group": "nokia"
-    },
-    {
-      "id": "1004903",
-      "group": "huawei"
-    },
-    {
-      "id": "1004320",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1004139",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1005161",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1004776",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1004497",
-      "group": "nokia"
-    },
-    {
-      "id": "1003645",
-      "group": "nokia"
-    },
-    {
-      "id": "1003712",
-      "group": "samsung"
-    },
-    {
-      "id": "1005006",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1004779",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1801900",
-      "group": "samsung"
     },
     {
       "id": "1800944",
       "group": "sony"
     },
     {
-      "id": "1801562",
-      "group": "sony"
-    },
-    {
       "id": "18200072",
       "group": "samsung"
+    },
+    {
+      "id": "1801562",
+      "group": "sony"
     },
     {
       "id": "11700140",
@@ -797,24 +781,56 @@
       "group": "samsung"
     },
     {
+      "id": "2300294",
+      "group": "gopro"
+    },
+    {
       "id": "5100564",
       "group": "samsung"
     },
     {
-      "id": "2300294",
-      "group": "gopro"
+      "id": "1004973",
+      "group": "samsung"
+    },
+    {
+      "id": "1003965",
+      "group": "samsung"
+    },
+    {
+      "id": "1003535",
+      "group": "samsung"
+    },
+    {
+      "id": "1003285",
+      "group": "samsung"
+    },
+    {
+      "id": "1004573",
+      "group": "samsung"
+    },
+    {
+      "id": "1003532",
+      "group": "samsung"
+    },
+    {
+      "id": "1004874",
+      "group": "samsung"
+    },
+    {
+      "id": "1003549",
+      "group": "samsung"
     },
     {
       "id": "1004835",
       "group": "samsung"
     },
     {
-      "id": "1005021",
-      "group": "oppo"
-    },
-    {
       "id": "1004653",
       "group": "samsung"
+    },
+    {
+      "id": "1005021",
+      "group": "oppo"
     },
     {
       "id": "1004975",
@@ -829,24 +845,96 @@
       "group": "samsung"
     },
     {
-      "id": "1004875",
-      "group": "samsung"
-    },
-    {
-      "id": "1005106",
+      "id": "4804572",
       "group": "apple"
     },
     {
-      "id": "1005143",
+      "id": "4804551",
       "group": "apple"
     },
     {
-      "id": "1003281",
+      "id": "4803395",
+      "group": "jbl"
+    },
+    {
+      "id": "4803449",
+      "group": "sony"
+    },
+    {
+      "id": "1004779",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1004497",
+      "group": "nokia"
+    },
+    {
+      "id": "1003645",
+      "group": "nokia"
+    },
+    {
+      "id": "1004139",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1004320",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1005161",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1004776",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1003770",
+      "group": "huawei"
+    },
+    {
+      "id": "1005003",
+      "group": "huawei"
+    },
+    {
+      "id": "4803186",
+      "group": "harper"
+    },
+    {
+      "id": "1004133",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1004904",
+      "group": "huawei"
+    },
+    {
+      "id": "1004530",
       "group": "samsung"
     },
     {
-      "id": "1004820",
-      "group": "honor"
+      "id": "1004723",
+      "group": "huawei"
+    },
+    {
+      "id": "1004140",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1004402",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1004156",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1005121",
+      "group": "apple"
+    },
+    {
+      "id": "1005144",
+      "group": "apple"
     },
     {
       "id": "4803943",
@@ -861,15 +949,7 @@
       "group": "harper"
     },
     {
-      "id": "4804102",
-      "group": "huawei"
-    },
-    {
-      "id": "4804428",
-      "group": "usams"
-    },
-    {
-      "id": "5100441",
+      "id": "5100750",
       "group": "garmin"
     },
     {
@@ -877,24 +957,16 @@
       "group": "garmin"
     },
     {
-      "id": "5100750",
-      "group": "garmin"
-    },
-    {
       "id": "5100350",
       "group": "garmin"
     },
     {
-      "id": "4803186",
-      "group": "harper"
+      "id": "5100441",
+      "group": "garmin"
     },
     {
       "id": "5100719",
       "group": "samsung"
-    },
-    {
-      "id": "1005139",
-      "group": "apple"
     },
     {
       "id": "1004253",
@@ -905,24 +977,8 @@
       "group": "wonlex"
     },
     {
-      "id": "5100696",
-      "group": "mykronoz"
-    },
-    {
-      "id": "5100650",
-      "group": "garmin"
-    },
-    {
-      "id": "5100694",
-      "group": "mykronoz"
-    },
-    {
-      "id": "5100644",
-      "group": "garmin"
-    },
-    {
-      "id": "5100595",
-      "group": "apple"
+      "id": "1004834",
+      "group": "samsung"
     },
     {
       "id": "5100712",
@@ -930,10 +986,6 @@
     },
     {
       "id": "1003319",
-      "group": "apple"
-    },
-    {
-      "id": "1005107",
       "group": "apple"
     },
     {
@@ -945,11 +997,15 @@
       "group": "huawei"
     },
     {
-      "id": "1005113",
+      "id": "1005107",
       "group": "apple"
     },
     {
       "id": "1005109",
+      "group": "apple"
+    },
+    {
+      "id": "1005113",
       "group": "apple"
     },
     {
@@ -959,6 +1015,14 @@
     {
       "id": "1005142",
       "group": "apple"
+    },
+    {
+      "id": "5100378",
+      "group": "xiaomi"
+    },
+    {
+      "id": "8800028",
+      "group": "texet"
     },
     {
       "id": "1004578",
@@ -977,120 +1041,88 @@
       "group": "huawei"
     },
     {
-      "id": "4802068",
-      "group": "plantronics"
-    },
-    {
       "id": "4800358",
       "group": "plantronics"
     },
     {
-      "id": "1005112",
-      "group": "apple"
+      "id": "4802068",
+      "group": "plantronics"
     },
     {
       "id": "5100268",
       "group": "wonlex"
     },
     {
-      "id": "5100852",
+      "id": "1002629",
       "group": "apple"
     },
     {
-      "id": "1004225",
-      "group": "apple"
-    },
-    {
-      "id": "1004897",
-      "group": "huawei"
-    },
-    {
-      "id": "1004849",
-      "group": "huawei"
-    },
-    {
-      "id": "1003525",
-      "group": "oneplus"
-    },
-    {
-      "id": "1004743",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1004495",
-      "group": "meizu"
-    },
-    {
-      "id": "5100594",
-      "group": "apple"
-    },
-    {
-      "id": "5100855",
-      "group": "apple"
-    },
-    {
-      "id": "1801690",
-      "group": "samsung"
-    },
-    {
-      "id": "1801712",
+      "id": "1801745",
       "group": "lg"
     },
     {
-      "id": "1801400",
-      "group": "haier"
+      "id": "1002547",
+      "group": "apple"
     },
     {
-      "id": "1801766",
-      "group": "artel"
+      "id": "1002538",
+      "group": "apple"
     },
     {
-      "id": "1801699",
-      "group": "haier"
+      "id": "1002540",
+      "group": "apple"
     },
     {
-      "id": "1801631",
-      "group": "artel"
+      "id": "1002634",
+      "group": "apple"
     },
     {
-      "id": "1801805",
-      "group": "artel"
+      "id": "1003892",
+      "group": "xiaomi"
     },
     {
-      "id": "1800930",
-      "group": "sony"
+      "id": "1004806",
+      "group": "xiaomi"
     },
     {
-      "id": "5100530",
-      "group": "garmin"
+      "id": "1004708",
+      "group": "huawei"
     },
     {
-      "id": "5100776",
-      "group": "garmin"
+      "id": "1004793",
+      "group": "xiaomi"
     },
     {
-      "id": "5100448",
-      "group": "garmin"
+      "id": "1003274",
+      "group": "gionee"
     },
     {
-      "id": "5100702",
-      "group": "garmin"
+      "id": "1003907",
+      "group": "huawei"
     },
     {
-      "id": "1005258",
-      "group": "umi"
+      "id": "1004709",
+      "group": "huawei"
     },
     {
-      "id": "1005235",
-      "group": "oppo"
+      "id": "1004784",
+      "group": "meizu"
     },
     {
-      "id": "1200947",
-      "group": "samsung"
+      "id": "1004788",
+      "group": "xiaomi"
     },
     {
-      "id": "1201504",
-      "group": "samsung"
+      "id": "1002995",
+      "group": "apple"
+    },
+    {
+      "id": "1005106",
+      "group": "apple"
+    },
+    {
+      "id": "1005143",
+      "group": "apple"
     },
     {
       "id": "5100553",
@@ -1109,71 +1141,83 @@
       "group": "samsung"
     },
     {
-      "id": "4804551",
+      "id": "5100855",
       "group": "apple"
     },
     {
-      "id": "4803449",
-      "group": "sony"
-    },
-    {
-      "id": "4803395",
-      "group": "jbl"
-    },
-    {
-      "id": "4804572",
+      "id": "5100594",
       "group": "apple"
     },
     {
-      "id": "1002995",
+      "id": "1801690",
+      "group": "samsung"
+    },
+    {
+      "id": "1801699",
+      "group": "haier"
+    },
+    {
+      "id": "1801766",
+      "group": "artel"
+    },
+    {
+      "id": "1801712",
+      "group": "lg"
+    },
+    {
+      "id": "1801400",
+      "group": "haier"
+    },
+    {
+      "id": "1801805",
+      "group": "artel"
+    },
+    {
+      "id": "1801631",
+      "group": "artel"
+    },
+    {
+      "id": "1200947",
+      "group": "samsung"
+    },
+    {
+      "id": "1201504",
+      "group": "samsung"
+    },
+    {
+      "id": "1004816",
+      "group": "xiaomi"
+    },
+    {
+      "id": "1003309",
       "group": "apple"
     },
     {
-      "id": "1004740",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1004934",
-      "group": "vivo"
-    },
-    {
-      "id": "1004932",
-      "group": "vivo"
-    },
-    {
-      "id": "1005050",
-      "group": "oneplus"
-    },
-    {
-      "id": "1005084",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1004805",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1004794",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1004795",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1004775",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1004806",
-      "group": "xiaomi"
-    },
-    {
-      "id": "1004784",
+      "id": "1004457",
       "group": "meizu"
     },
     {
-      "id": "1004788",
+      "id": "1005015",
+      "group": "samsung"
+    },
+    {
+      "id": "5800645",
+      "group": "kicx"
+    },
+    {
+      "id": "1005098",
+      "group": "samsung"
+    },
+    {
+      "id": "1005258",
+      "group": "umi"
+    },
+    {
+      "id": "1004226",
+      "group": "apple"
+    },
+    {
+      "id": "1005101",
       "group": "xiaomi"
     },
     {
@@ -1185,81 +1229,32 @@
       "group": "xiaomi"
     },
     {
-      "id": "1005101",
-      "group": "xiaomi"
-    },
-    {
       "id": "1003901",
       "group": "xiaomi"
-    },
-    {
-      "id": "1004226",
-      "group": "apple"
-    },
-    {
-      "id": "1801561",
-      "group": "lg"
-    },
-    {
-      "id": "1802023",
-      "group": "lg"
-    },
-    {
-      "id": "1004255",
-      "group": "apple"
-    },
-    {
-      "id": "1003879",
-      "group": "huawei"
-    },
-    {
-      "id": "1005015",
-      "group": "samsung"
-    },
-    {
-      "id": "5800645",
-      "group": "kicx"
     },
     {
       "id": "1004657",
       "group": "samsung"
     },
     {
-      "id": "1004863",
-      "group": "samsung"
+      "id": "1802023",
+      "group": "lg"
     },
     {
-      "id": "1004888",
-      "group": "samsung"
-    },
-    {
-      "id": "1005098",
-      "group": "samsung"
-    },
-    {
-      "id": "1005003",
-      "group": "huawei"
-    },
-    {
-      "id": "1003770",
-      "group": "huawei"
+      "id": "1801561",
+      "group": "lg"
     }
   ],
   "links": [
     {
+      "source": "1004887",
+      "target": "5100239",
+      "value": 40.0
+    },
+    {
       "source": "5100239",
       "target": "5100705",
       "value": 50.0
-    },
-    {
-      "source": "5100561",
-      "target": "5100705",
-      "value": 25.0
-    },
-    {
-      "source": "1004887",
-      "target": "5100705",
-      "value": 40.0
     },
     {
       "source": "5100239",
@@ -1268,7 +1263,7 @@
     },
     {
       "source": "1004887",
-      "target": "5100239",
+      "target": "5100705",
       "value": 40.0
     },
     {
@@ -1277,9 +1272,14 @@
       "value": 22.22222222222222
     },
     {
+      "source": "5100561",
+      "target": "5100705",
+      "value": 25.0
+    },
+    {
       "source": "1004794",
       "target": "1004795",
-      "value": 0.0
+      "value": 1.0
     },
     {
       "source": "1004739",
@@ -1288,17 +1288,12 @@
     },
     {
       "source": "1004252",
-      "target": "1004254",
-      "value": 40.0
-    },
-    {
-      "source": "1004254",
-      "target": "1004659",
-      "value": 21.428571428571427
-    },
-    {
-      "source": "1004254",
       "target": "1004655",
+      "value": 50.0
+    },
+    {
+      "source": "1004252",
+      "target": "1004254",
       "value": 40.0
     },
     {
@@ -1307,9 +1302,9 @@
       "value": 15.384615384615385
     },
     {
-      "source": "1004252",
+      "source": "1004254",
       "target": "1004655",
-      "value": 50.0
+      "value": 40.0
     },
     {
       "source": "1004655",
@@ -1317,14 +1312,9 @@
       "value": 15.384615384615385
     },
     {
-      "source": "1005105",
-      "target": "1005130",
-      "value": 5.714285714285714
-    },
-    {
-      "source": "1004839",
-      "target": "1005130",
-      "value": 16.666666666666664
+      "source": "1004254",
+      "target": "1004659",
+      "value": 21.428571428571427
     },
     {
       "source": "1004839",
@@ -1332,9 +1322,19 @@
       "value": 3.225806451612903
     },
     {
+      "source": "1004839",
+      "target": "1005130",
+      "value": 16.666666666666664
+    },
+    {
+      "source": "1005105",
+      "target": "1005130",
+      "value": 5.714285714285714
+    },
+    {
       "source": "1003571",
-      "target": "1004833",
-      "value": 8.333333333333332
+      "target": "1004528",
+      "value": 20.0
     },
     {
       "source": "1004528",
@@ -1343,8 +1343,8 @@
     },
     {
       "source": "1003571",
-      "target": "1004528",
-      "value": 20.0
+      "target": "1004833",
+      "value": 8.333333333333332
     },
     {
       "source": "4803878",
@@ -1387,19 +1387,14 @@
       "value": 9.523809523809524
     },
     {
-      "source": "1005239",
-      "target": "4804056",
-      "value": 8.695652173913043
-    },
-    {
       "source": "1005159",
       "target": "4804056",
       "value": 10.344827586206897
     },
     {
-      "source": "1004505",
-      "target": "1005239",
-      "value": 33.33333333333333
+      "source": "1005239",
+      "target": "4804056",
+      "value": 8.695652173913043
     },
     {
       "source": "1004505",
@@ -1407,14 +1402,14 @@
       "value": 16.666666666666664
     },
     {
+      "source": "1004505",
+      "target": "1005239",
+      "value": 33.33333333333333
+    },
+    {
       "source": "1005159",
       "target": "1005239",
       "value": 14.285714285714285
-    },
-    {
-      "source": "1005129",
-      "target": "4804055",
-      "value": 6.896551724137931
     },
     {
       "source": "1003310",
@@ -1427,6 +1422,16 @@
       "value": 7.142857142857142
     },
     {
+      "source": "1005129",
+      "target": "4804055",
+      "value": 6.896551724137931
+    },
+    {
+      "source": "1003310",
+      "target": "1003312",
+      "value": 28.57142857142857
+    },
+    {
       "source": "1003310",
       "target": "1005129",
       "value": 25.0
@@ -1437,14 +1442,24 @@
       "value": 40.0
     },
     {
-      "source": "1003310",
-      "target": "1003312",
-      "value": 28.57142857142857
-    },
-    {
       "source": "1004250",
       "target": "1005105",
-      "value": 0.0
+      "value": 1.0
+    },
+    {
+      "source": "1003316",
+      "target": "1005014",
+      "value": 6.666666666666667
+    },
+    {
+      "source": "1003316",
+      "target": "1004246",
+      "value": 10.526315789473683
+    },
+    {
+      "source": "1003316",
+      "target": "1005115",
+      "value": 14.0625
     },
     {
       "source": "1004246",
@@ -1457,24 +1472,9 @@
       "value": 9.375
     },
     {
-      "source": "1003316",
-      "target": "1005014",
-      "value": 6.666666666666667
-    },
-    {
       "source": "1004246",
       "target": "1005115",
       "value": 3.7735849056603774
-    },
-    {
-      "source": "1003316",
-      "target": "1004246",
-      "value": 10.526315789473683
-    },
-    {
-      "source": "1003316",
-      "target": "1005115",
-      "value": 14.0625
     },
     {
       "source": "1005115",
@@ -1492,24 +1492,14 @@
       "value": 21.518987341772153
     },
     {
+      "source": "1005115",
+      "target": "5100571",
+      "value": 5.769230769230769
+    },
+    {
       "source": "1004833",
       "target": "5100571",
       "value": 13.043478260869565
-    },
-    {
-      "source": "1004833",
-      "target": "1004870",
-      "value": 17.94871794871795
-    },
-    {
-      "source": "1003317",
-      "target": "1004833",
-      "value": 10.526315789473683
-    },
-    {
-      "source": "1004833",
-      "target": "1005115",
-      "value": 11.594202898550725
     },
     {
       "source": "1004870",
@@ -1522,14 +1512,9 @@
       "value": 14.285714285714285
     },
     {
-      "source": "1005115",
-      "target": "5100571",
-      "value": 5.769230769230769
-    },
-    {
-      "source": "1003317",
-      "target": "1004870",
-      "value": 13.513513513513514
+      "source": "1004833",
+      "target": "1005115",
+      "value": 11.594202898550725
     },
     {
       "source": "1004870",
@@ -1542,9 +1527,24 @@
       "value": 16.417910447761194
     },
     {
-      "source": "1003319",
-      "target": "1005107",
-      "value": 21.428571428571427
+      "source": "1004833",
+      "target": "1004870",
+      "value": 17.94871794871795
+    },
+    {
+      "source": "1003317",
+      "target": "1004833",
+      "value": 10.526315789473683
+    },
+    {
+      "source": "1003317",
+      "target": "1004870",
+      "value": 13.513513513513514
+    },
+    {
+      "source": "1003709",
+      "target": "1004840",
+      "value": 50.0
     },
     {
       "source": "1003709",
@@ -1552,9 +1552,34 @@
       "value": 30.0
     },
     {
+      "source": "1003319",
+      "target": "1003709",
+      "value": 30.0
+    },
+    {
+      "source": "1003709",
+      "target": "1005115",
+      "value": 5.769230769230769
+    },
+    {
       "source": "1004840",
       "target": "1005107",
       "value": 30.0
+    },
+    {
+      "source": "1003319",
+      "target": "1004840",
+      "value": 30.0
+    },
+    {
+      "source": "1004840",
+      "target": "1005115",
+      "value": 5.769230769230769
+    },
+    {
+      "source": "1003319",
+      "target": "1005107",
+      "value": 21.428571428571427
     },
     {
       "source": "1005107",
@@ -1563,43 +1588,8 @@
     },
     {
       "source": "1003319",
-      "target": "1003709",
-      "value": 30.0
-    },
-    {
-      "source": "1003319",
-      "target": "1004840",
-      "value": 30.0
-    },
-    {
-      "source": "1003319",
       "target": "1005115",
       "value": 10.714285714285714
-    },
-    {
-      "source": "1003709",
-      "target": "1004840",
-      "value": 50.0
-    },
-    {
-      "source": "1003709",
-      "target": "1005115",
-      "value": 5.769230769230769
-    },
-    {
-      "source": "1004840",
-      "target": "1005115",
-      "value": 5.769230769230769
-    },
-    {
-      "source": "1801881",
-      "target": "1801897",
-      "value": 14.285714285714285
-    },
-    {
-      "source": "1800931",
-      "target": "1801897",
-      "value": 50.0
     },
     {
       "source": "1801897",
@@ -1608,8 +1598,8 @@
     },
     {
       "source": "1800931",
-      "target": "1801881",
-      "value": 14.285714285714285
+      "target": "1802020",
+      "value": 33.33333333333333
     },
     {
       "source": "1801881",
@@ -1618,22 +1608,22 @@
     },
     {
       "source": "1800931",
-      "target": "1802020",
-      "value": 33.33333333333333
-    },
-    {
-      "source": "1004496",
-      "target": "1005217",
-      "value": 40.0
-    },
-    {
-      "source": "1004496",
-      "target": "4804190",
+      "target": "1801897",
       "value": 50.0
     },
     {
-      "source": "1004496",
-      "target": "1005088",
+      "source": "1801881",
+      "target": "1801897",
+      "value": 14.285714285714285
+    },
+    {
+      "source": "1800931",
+      "target": "1801881",
+      "value": 14.285714285714285
+    },
+    {
+      "source": "1005088",
+      "target": "4804190",
       "value": 50.0
     },
     {
@@ -1642,14 +1632,24 @@
       "value": 40.0
     },
     {
+      "source": "1004496",
+      "target": "4804190",
+      "value": 50.0
+    },
+    {
       "source": "1005088",
       "target": "1005217",
       "value": 40.0
     },
     {
-      "source": "1005088",
-      "target": "4804190",
+      "source": "1004496",
+      "target": "1005088",
       "value": 50.0
+    },
+    {
+      "source": "1004496",
+      "target": "1005217",
+      "value": 40.0
     },
     {
       "source": "1004767",
@@ -1668,8 +1668,8 @@
     },
     {
       "source": "4803585",
-      "target": "4804434",
-      "value": 25.0
+      "target": "4803977",
+      "value": 16.666666666666664
     },
     {
       "source": "4803977",
@@ -1678,13 +1678,8 @@
     },
     {
       "source": "4803585",
-      "target": "4803977",
-      "value": 16.666666666666664
-    },
-    {
-      "source": "5100376",
-      "target": "5100675",
-      "value": 9.090909090909092
+      "target": "4804434",
+      "value": 25.0
     },
     {
       "source": "5100376",
@@ -1695,6 +1690,16 @@
       "source": "5100435",
       "target": "5100675",
       "value": 50.0
+    },
+    {
+      "source": "5100376",
+      "target": "5100675",
+      "value": 9.090909090909092
+    },
+    {
+      "source": "1003306",
+      "target": "5100738",
+      "value": 10.0
     },
     {
       "source": "1005115",
@@ -1708,16 +1713,6 @@
     },
     {
       "source": "1003306",
-      "target": "5100738",
-      "value": 10.0
-    },
-    {
-      "source": "1005115",
-      "target": "5100577",
-      "value": 8.47457627118644
-    },
-    {
-      "source": "1003306",
       "target": "1005115",
       "value": 12.5
     },
@@ -1727,9 +1722,9 @@
       "value": 16.0
     },
     {
-      "source": "1004433",
-      "target": "1004856",
-      "value": 2.564102564102564
+      "source": "1005115",
+      "target": "5100577",
+      "value": 8.47457627118644
     },
     {
       "source": "1004433",
@@ -1737,19 +1732,19 @@
       "value": 5.714285714285714
     },
     {
+      "source": "1004433",
+      "target": "1004856",
+      "value": 2.564102564102564
+    },
+    {
       "source": "1002544",
       "target": "1004957",
-      "value": 0.0
+      "value": 1.0
     },
     {
-      "source": "4804295",
-      "target": "5100719",
-      "value": 18.181818181818183
-    },
-    {
-      "source": "4804295",
+      "source": "1005139",
       "target": "5100562",
-      "value": 13.333333333333334
+      "value": 18.181818181818183
     },
     {
       "source": "1005139",
@@ -1757,29 +1752,29 @@
       "value": 14.285714285714285
     },
     {
-      "source": "5100562",
-      "target": "5100719",
-      "value": 25.0
-    },
-    {
       "source": "1005139",
       "target": "5100719",
       "value": 28.57142857142857
     },
     {
-      "source": "1005139",
+      "source": "4804295",
       "target": "5100562",
+      "value": 13.333333333333334
+    },
+    {
+      "source": "5100562",
+      "target": "5100719",
+      "value": 25.0
+    },
+    {
+      "source": "4804295",
+      "target": "5100719",
       "value": 18.181818181818183
     },
     {
       "source": "1003306",
       "target": "4801876",
-      "value": 0.0
-    },
-    {
-      "source": "1004659",
-      "target": "1004873",
-      "value": 13.636363636363635
+      "value": 1.0
     },
     {
       "source": "1004258",
@@ -1792,6 +1787,16 @@
       "value": 8.695652173913043
     },
     {
+      "source": "1004659",
+      "target": "1004873",
+      "value": 13.636363636363635
+    },
+    {
+      "source": "1003304",
+      "target": "1004258",
+      "value": 13.793103448275861
+    },
+    {
       "source": "1004258",
       "target": "1004659",
       "value": 14.285714285714285
@@ -1802,29 +1807,9 @@
       "value": 8.695652173913043
     },
     {
-      "source": "1003304",
-      "target": "1004258",
-      "value": 13.793103448275861
-    },
-    {
-      "source": "1004708",
-      "target": "1004793",
-      "value": 28.57142857142857
-    },
-    {
-      "source": "1004708",
-      "target": "1004856",
-      "value": 5.263157894736842
-    },
-    {
       "source": "1004708",
       "target": "1004741",
       "value": 8.0
-    },
-    {
-      "source": "1004793",
-      "target": "1004856",
-      "value": 5.714285714285714
     },
     {
       "source": "1004741",
@@ -1837,39 +1822,34 @@
       "value": 9.433962264150944
     },
     {
-      "source": "1004241",
-      "target": "1005132",
-      "value": 17.647058823529413
+      "source": "1004708",
+      "target": "1004793",
+      "value": 28.57142857142857
     },
     {
-      "source": "1004229",
+      "source": "1004708",
+      "target": "1004856",
+      "value": 5.263157894736842
+    },
+    {
+      "source": "1004793",
+      "target": "1004856",
+      "value": 5.714285714285714
+    },
+    {
+      "source": "1003318",
       "target": "1005132",
       "value": 17.647058823529413
     },
     {
       "source": "1003318",
-      "target": "1005132",
-      "value": 17.647058823529413
-    },
-    {
-      "source": "1005130",
-      "target": "1005132",
-      "value": 21.052631578947366
-    },
-    {
-      "source": "1004229",
-      "target": "1004241",
-      "value": 50.0
-    },
-    {
-      "source": "1003318",
-      "target": "1004241",
-      "value": 50.0
-    },
-    {
-      "source": "1004241",
       "target": "1005130",
       "value": 37.5
+    },
+    {
+      "source": "1003318",
+      "target": "1004241",
+      "value": 50.0
     },
     {
       "source": "1003318",
@@ -1877,14 +1857,34 @@
       "value": 50.0
     },
     {
+      "source": "1005130",
+      "target": "1005132",
+      "value": 21.052631578947366
+    },
+    {
+      "source": "1004241",
+      "target": "1005132",
+      "value": 17.647058823529413
+    },
+    {
+      "source": "1004229",
+      "target": "1005132",
+      "value": 17.647058823529413
+    },
+    {
+      "source": "1004241",
+      "target": "1005130",
+      "value": 37.5
+    },
+    {
       "source": "1004229",
       "target": "1005130",
       "value": 37.5
     },
     {
-      "source": "1003318",
-      "target": "1005130",
-      "value": 37.5
+      "source": "1004229",
+      "target": "1004241",
+      "value": 50.0
     },
     {
       "source": "1004247",
@@ -1907,19 +1907,14 @@
       "value": 16.0
     },
     {
+      "source": "1004741",
+      "target": "1005115",
+      "value": 5.797101449275362
+    },
+    {
       "source": "1005104",
       "target": "1005115",
       "value": 18.461538461538463
-    },
-    {
-      "source": "1004739",
-      "target": "1005104",
-      "value": 7.5
-    },
-    {
-      "source": "1004741",
-      "target": "1005104",
-      "value": 5.555555555555555
     },
     {
       "source": "1004739",
@@ -1928,28 +1923,13 @@
     },
     {
       "source": "1004741",
-      "target": "1005115",
-      "value": 5.797101449275362
+      "target": "1005104",
+      "value": 5.555555555555555
     },
     {
-      "source": "1002544",
-      "target": "1004258",
-      "value": 16.216216216216218
-    },
-    {
-      "source": "1002544",
-      "target": "1004934",
-      "value": 10.714285714285714
-    },
-    {
-      "source": "1002544",
-      "target": "1004932",
-      "value": 13.043478260869565
-    },
-    {
-      "source": "1002544",
-      "target": "1005050",
-      "value": 13.043478260869565
+      "source": "1004739",
+      "target": "1005104",
+      "value": 7.5
     },
     {
       "source": "1004258",
@@ -1957,19 +1937,14 @@
       "value": 12.0
     },
     {
-      "source": "1004258",
-      "target": "1004932",
-      "value": 15.0
-    },
-    {
-      "source": "1004258",
-      "target": "1005050",
-      "value": 15.0
-    },
-    {
       "source": "1004932",
       "target": "1004934",
       "value": 27.27272727272727
+    },
+    {
+      "source": "1002544",
+      "target": "1004934",
+      "value": 10.714285714285714
     },
     {
       "source": "1004934",
@@ -1977,9 +1952,34 @@
       "value": 27.27272727272727
     },
     {
+      "source": "1004258",
+      "target": "1004932",
+      "value": 15.0
+    },
+    {
+      "source": "1002544",
+      "target": "1004258",
+      "value": 16.216216216216218
+    },
+    {
+      "source": "1004258",
+      "target": "1005050",
+      "value": 15.0
+    },
+    {
+      "source": "1002544",
+      "target": "1004932",
+      "value": 13.043478260869565
+    },
+    {
       "source": "1004932",
       "target": "1005050",
       "value": 50.0
+    },
+    {
+      "source": "1002544",
+      "target": "1005050",
+      "value": 13.043478260869565
     },
     {
       "source": "1004767",
@@ -1999,42 +1999,7 @@
     {
       "source": "5100337",
       "target": "5100576",
-      "value": 0.0
-    },
-    {
-      "source": "1004781",
-      "target": "1004886",
-      "value": 18.75
-    },
-    {
-      "source": "1004785",
-      "target": "1004886",
-      "value": 27.27272727272727
-    },
-    {
-      "source": "1004886",
-      "target": "1004956",
-      "value": 42.857142857142854
-    },
-    {
-      "source": "1004565",
-      "target": "1004886",
-      "value": 20.0
-    },
-    {
-      "source": "1004781",
-      "target": "1004785",
-      "value": 21.052631578947366
-    },
-    {
-      "source": "1004781",
-      "target": "1004956",
-      "value": 20.0
-    },
-    {
-      "source": "1004565",
-      "target": "1004781",
-      "value": 17.391304347826086
+      "value": 1.0
     },
     {
       "source": "1004785",
@@ -2043,32 +2008,57 @@
     },
     {
       "source": "1004565",
-      "target": "1004785",
-      "value": 22.22222222222222
-    },
-    {
-      "source": "1004565",
       "target": "1004956",
       "value": 21.428571428571427
     },
     {
+      "source": "1004886",
+      "target": "1004956",
+      "value": 42.857142857142854
+    },
+    {
+      "source": "1004781",
+      "target": "1004956",
+      "value": 20.0
+    },
+    {
+      "source": "1004565",
+      "target": "1004785",
+      "value": 22.22222222222222
+    },
+    {
+      "source": "1004785",
+      "target": "1004886",
+      "value": 27.27272727272727
+    },
+    {
+      "source": "1004781",
+      "target": "1004785",
+      "value": 21.052631578947366
+    },
+    {
+      "source": "1004565",
+      "target": "1004886",
+      "value": 20.0
+    },
+    {
+      "source": "1004565",
+      "target": "1004781",
+      "value": 17.391304347826086
+    },
+    {
+      "source": "1004781",
+      "target": "1004886",
+      "value": 18.75
+    },
+    {
       "source": "4803943",
       "target": "4804056",
-      "value": 0.0
+      "value": 1.0
     },
     {
       "source": "1002524",
       "target": "1801940",
-      "value": 6.666666666666667
-    },
-    {
-      "source": "1002524",
-      "target": "1801084",
-      "value": 6.666666666666667
-    },
-    {
-      "source": "1002524",
-      "target": "1801998",
       "value": 6.666666666666667
     },
     {
@@ -2082,9 +2072,24 @@
       "value": 50.0
     },
     {
+      "source": "1002524",
+      "target": "1801084",
+      "value": 6.666666666666667
+    },
+    {
+      "source": "1002524",
+      "target": "1801998",
+      "value": 6.666666666666667
+    },
+    {
       "source": "1801084",
       "target": "1801998",
       "value": 50.0
+    },
+    {
+      "source": "1004903",
+      "target": "1005019",
+      "value": 18.181818181818183
     },
     {
       "source": "1005008",
@@ -2098,16 +2103,6 @@
     },
     {
       "source": "1004903",
-      "target": "1005019",
-      "value": 18.181818181818183
-    },
-    {
-      "source": "1004988",
-      "target": "1005008",
-      "value": 18.181818181818183
-    },
-    {
-      "source": "1004903",
       "target": "1005008",
       "value": 12.5
     },
@@ -2115,6 +2110,16 @@
       "source": "1004903",
       "target": "1004988",
       "value": 22.22222222222222
+    },
+    {
+      "source": "1004988",
+      "target": "1005008",
+      "value": 18.181818181818183
+    },
+    {
+      "source": "1004858",
+      "target": "1005074",
+      "value": 9.090909090909092
     },
     {
       "source": "1005074",
@@ -2127,18 +2132,13 @@
       "value": 5.263157894736842
     },
     {
-      "source": "1004858",
-      "target": "1005074",
-      "value": 9.090909090909092
-    },
-    {
       "source": "1004249",
-      "target": "1801561",
+      "target": "1802023",
       "value": 3.0303030303030303
     },
     {
       "source": "1004249",
-      "target": "1802023",
+      "target": "1801561",
       "value": 3.0303030303030303
     },
     {
@@ -2147,19 +2147,9 @@
       "value": 50.0
     },
     {
-      "source": "1004237",
-      "target": "1005104",
-      "value": 20.0
-    },
-    {
-      "source": "1002544",
-      "target": "1005104",
-      "value": 19.444444444444446
-    },
-    {
       "source": "1002524",
-      "target": "1005104",
-      "value": 11.363636363636363
+      "target": "1004237",
+      "value": 10.81081081081081
     },
     {
       "source": "1002544",
@@ -2167,9 +2157,9 @@
       "value": 17.24137931034483
     },
     {
-      "source": "1002524",
-      "target": "1004237",
-      "value": 10.81081081081081
+      "source": "1004237",
+      "target": "1005104",
+      "value": 20.0
     },
     {
       "source": "1004237",
@@ -2182,14 +2172,34 @@
       "value": 16.666666666666664
     },
     {
-      "source": "1002544",
-      "target": "1005115",
-      "value": 15.942028985507244
+      "source": "1002524",
+      "target": "1005104",
+      "value": 11.363636363636363
     },
     {
       "source": "1002524",
       "target": "1005115",
       "value": 12.987012987012985
+    },
+    {
+      "source": "1002544",
+      "target": "1005104",
+      "value": 19.444444444444446
+    },
+    {
+      "source": "1002544",
+      "target": "1005115",
+      "value": 15.942028985507244
+    },
+    {
+      "source": "1003306",
+      "target": "1005105",
+      "value": 8.88888888888889
+    },
+    {
+      "source": "1002542",
+      "target": "1003306",
+      "value": 11.76470588235294
     },
     {
       "source": "1002542",
@@ -2202,14 +2212,9 @@
       "value": 6.25
     },
     {
-      "source": "1002542",
-      "target": "1003306",
-      "value": 11.76470588235294
-    },
-    {
-      "source": "1003306",
-      "target": "1005105",
-      "value": 8.88888888888889
+      "source": "1004857",
+      "target": "1004863",
+      "value": 21.428571428571427
     },
     {
       "source": "1004857",
@@ -2222,16 +2227,6 @@
       "value": 9.090909090909092
     },
     {
-      "source": "1004857",
-      "target": "1004863",
-      "value": 21.428571428571427
-    },
-    {
-      "source": "1004856",
-      "target": "1004888",
-      "value": 5.714285714285714
-    },
-    {
       "source": "1004863",
       "target": "1004888",
       "value": 40.0
@@ -2240,6 +2235,11 @@
       "source": "1004856",
       "target": "1004863",
       "value": 5.555555555555555
+    },
+    {
+      "source": "1004856",
+      "target": "1004888",
+      "value": 5.714285714285714
     },
     {
       "source": "1004836",
@@ -2263,6 +2263,11 @@
     },
     {
       "source": "1004740",
+      "target": "1004741",
+      "value": 13.043478260869565
+    },
+    {
+      "source": "1004740",
       "target": "1005084",
       "value": 50.0
     },
@@ -2272,9 +2277,9 @@
       "value": 11.11111111111111
     },
     {
-      "source": "1004740",
-      "target": "1004741",
-      "value": 13.043478260869565
+      "source": "1004741",
+      "target": "1004934",
+      "value": 10.714285714285714
     },
     {
       "source": "1004934",
@@ -2288,8 +2293,8 @@
     },
     {
       "source": "1004741",
-      "target": "1004934",
-      "value": 10.714285714285714
+      "target": "1005084",
+      "value": 13.043478260869565
     },
     {
       "source": "1004739",
@@ -2297,14 +2302,14 @@
       "value": 11.11111111111111
     },
     {
-      "source": "1004741",
-      "target": "1005084",
-      "value": 13.043478260869565
+      "source": "1004792",
+      "target": "4801969",
+      "value": 27.27272727272727
     },
     {
-      "source": "1002974",
-      "target": "1004957",
-      "value": 42.857142857142854
+      "source": "1004449",
+      "target": "1004792",
+      "value": 27.27272727272727
     },
     {
       "source": "1004792",
@@ -2312,9 +2317,24 @@
       "value": 25.0
     },
     {
+      "source": "1002974",
+      "target": "1004792",
+      "value": 27.27272727272727
+    },
+    {
+      "source": "1004449",
+      "target": "4801969",
+      "value": 50.0
+    },
+    {
       "source": "1004957",
       "target": "4801969",
       "value": 42.857142857142854
+    },
+    {
+      "source": "1002974",
+      "target": "4801969",
+      "value": 50.0
     },
     {
       "source": "1004449",
@@ -2323,43 +2343,23 @@
     },
     {
       "source": "1002974",
-      "target": "1004792",
-      "value": 27.27272727272727
-    },
-    {
-      "source": "1002974",
-      "target": "4801969",
-      "value": 50.0
-    },
-    {
-      "source": "1002974",
       "target": "1004449",
       "value": 50.0
     },
     {
-      "source": "1004792",
-      "target": "4801969",
-      "value": 27.27272727272727
-    },
-    {
-      "source": "1004449",
-      "target": "1004792",
-      "value": 27.27272727272727
-    },
-    {
-      "source": "1004449",
-      "target": "4801969",
-      "value": 50.0
-    },
-    {
-      "source": "4804295",
-      "target": "4804434",
-      "value": 8.333333333333332
+      "source": "1002974",
+      "target": "1004957",
+      "value": 42.857142857142854
     },
     {
       "source": "4803878",
       "target": "4804434",
       "value": 11.11111111111111
+    },
+    {
+      "source": "4804295",
+      "target": "4804434",
+      "value": 8.333333333333332
     },
     {
       "source": "1002524",
@@ -2369,15 +2369,10 @@
     {
       "source": "1004856",
       "target": "1005015",
-      "value": 0.0
+      "value": 1.0
     },
     {
-      "source": "1003114",
-      "target": "1004751",
-      "value": 18.181818181818183
-    },
-    {
-      "source": "1003114",
+      "source": "1004446",
       "target": "1004750",
       "value": 16.666666666666664
     },
@@ -2387,19 +2382,24 @@
       "value": 50.0
     },
     {
-      "source": "1004750",
-      "target": "1004751",
-      "value": 10.526315789473683
-    },
-    {
       "source": "1004446",
       "target": "1004751",
       "value": 18.181818181818183
     },
     {
-      "source": "1004446",
+      "source": "1003114",
       "target": "1004750",
       "value": 16.666666666666664
+    },
+    {
+      "source": "1004750",
+      "target": "1004751",
+      "value": 10.526315789473683
+    },
+    {
+      "source": "1003114",
+      "target": "1004751",
+      "value": 18.181818181818183
     },
     {
       "source": "1004739",
@@ -2407,8 +2407,8 @@
       "value": 11.11111111111111
     },
     {
-      "source": "1004246",
-      "target": "1004255",
+      "source": "1003879",
+      "target": "1004246",
       "value": 20.0
     },
     {
@@ -2417,14 +2417,14 @@
       "value": 50.0
     },
     {
-      "source": "1003879",
-      "target": "1004246",
+      "source": "1004246",
+      "target": "1004255",
       "value": 20.0
     },
     {
       "source": "1004870",
       "target": "1005217",
-      "value": 0.0
+      "value": 1.0
     },
     {
       "source": "1004258",
@@ -2433,13 +2433,13 @@
     },
     {
       "source": "1003285",
-      "target": "1003965",
-      "value": 18.181818181818183
+      "target": "1003535",
+      "value": 23.076923076923077
     },
     {
-      "source": "1003965",
+      "source": "1003535",
       "target": "1004573",
-      "value": 25.0
+      "value": 20.0
     },
     {
       "source": "1003535",
@@ -2453,23 +2453,13 @@
     },
     {
       "source": "1003285",
-      "target": "1003535",
-      "value": 23.076923076923077
+      "target": "1003965",
+      "value": 18.181818181818183
     },
     {
-      "source": "1003535",
+      "source": "1003965",
       "target": "1004573",
-      "value": 20.0
-    },
-    {
-      "source": "1004751",
-      "target": "1004768",
-      "value": 12.5
-    },
-    {
-      "source": "1004768",
-      "target": "1004872",
-      "value": 16.666666666666664
+      "value": 25.0
     },
     {
       "source": "1004767",
@@ -2477,14 +2467,14 @@
       "value": 8.333333333333332
     },
     {
-      "source": "1004751",
+      "source": "1004768",
       "target": "1004872",
-      "value": 21.428571428571427
+      "value": 16.666666666666664
     },
     {
       "source": "1004751",
-      "target": "1004767",
-      "value": 10.526315789473683
+      "target": "1004768",
+      "value": 12.5
     },
     {
       "source": "1004767",
@@ -2492,24 +2482,14 @@
       "value": 14.705882352941178
     },
     {
-      "source": "1003274",
-      "target": "1004708",
-      "value": 28.57142857142857
+      "source": "1004751",
+      "target": "1004767",
+      "value": 10.526315789473683
     },
     {
-      "source": "1004708",
-      "target": "1004709",
-      "value": 28.57142857142857
-    },
-    {
-      "source": "1003907",
-      "target": "1004708",
-      "value": 28.57142857142857
-    },
-    {
-      "source": "1003274",
-      "target": "1004709",
-      "value": 50.0
+      "source": "1004751",
+      "target": "1004872",
+      "value": 21.428571428571427
     },
     {
       "source": "1003274",
@@ -2517,19 +2497,54 @@
       "value": 50.0
     },
     {
+      "source": "1003274",
+      "target": "1004708",
+      "value": 28.57142857142857
+    },
+    {
+      "source": "1003274",
+      "target": "1004709",
+      "value": 50.0
+    },
+    {
+      "source": "1003907",
+      "target": "1004708",
+      "value": 28.57142857142857
+    },
+    {
       "source": "1003907",
       "target": "1004709",
       "value": 50.0
     },
     {
+      "source": "1004708",
+      "target": "1004709",
+      "value": 28.57142857142857
+    },
+    {
+      "source": "1801699",
+      "target": "1801766",
+      "value": 37.5
+    },
+    {
       "source": "1801690",
+      "target": "1801699",
+      "value": 33.33333333333333
+    },
+    {
+      "source": "1801699",
       "target": "1801712",
-      "value": 27.27272727272727
+      "value": 37.5
     },
     {
       "source": "1801400",
-      "target": "1801712",
-      "value": 37.5
+      "target": "1801699",
+      "value": 50.0
+    },
+    {
+      "source": "1801690",
+      "target": "1801766",
+      "value": 27.27272727272727
     },
     {
       "source": "1801712",
@@ -2537,9 +2552,14 @@
       "value": 40.0
     },
     {
-      "source": "1801699",
-      "target": "1801712",
+      "source": "1801400",
+      "target": "1801766",
       "value": 37.5
+    },
+    {
+      "source": "1801690",
+      "target": "1801712",
+      "value": 27.27272727272727
     },
     {
       "source": "1801400",
@@ -2547,48 +2567,18 @@
       "value": 33.33333333333333
     },
     {
-      "source": "1801690",
-      "target": "1801766",
-      "value": 27.27272727272727
-    },
-    {
-      "source": "1801690",
-      "target": "1801699",
-      "value": 33.33333333333333
-    },
-    {
       "source": "1801400",
-      "target": "1801766",
-      "value": 37.5
-    },
-    {
-      "source": "1801400",
-      "target": "1801699",
-      "value": 50.0
-    },
-    {
-      "source": "1801699",
-      "target": "1801766",
+      "target": "1801712",
       "value": 37.5
     },
     {
       "source": "1004886",
       "target": "1004887",
-      "value": 0.0
+      "value": 1.0
     },
     {
       "source": "1005124",
-      "target": "1005136",
-      "value": 12.5
-    },
-    {
-      "source": "1005105",
-      "target": "1005136",
-      "value": 9.090909090909092
-    },
-    {
-      "source": "1005135",
-      "target": "1005136",
+      "target": "1005135",
       "value": 8.333333333333332
     },
     {
@@ -2598,13 +2588,18 @@
     },
     {
       "source": "1005124",
-      "target": "1005135",
+      "target": "1005136",
+      "value": 12.5
+    },
+    {
+      "source": "1005135",
+      "target": "1005136",
       "value": 8.333333333333332
     },
     {
-      "source": "1002633",
-      "target": "1004433",
-      "value": 11.538461538461538
+      "source": "1005105",
+      "target": "1005136",
+      "value": 9.090909090909092
     },
     {
       "source": "1002633",
@@ -2613,8 +2608,8 @@
     },
     {
       "source": "1002633",
-      "target": "1004436",
-      "value": 11.11111111111111
+      "target": "1004433",
+      "value": 11.538461538461538
     },
     {
       "source": "1002633",
@@ -2622,19 +2617,19 @@
       "value": 11.904761904761903
     },
     {
+      "source": "1002633",
+      "target": "1004436",
+      "value": 11.11111111111111
+    },
+    {
       "source": "1004258",
       "target": "1004433",
       "value": 17.391304347826086
     },
     {
-      "source": "1004433",
-      "target": "1004436",
-      "value": 23.076923076923077
-    },
-    {
-      "source": "1004433",
+      "source": "1004258",
       "target": "1005135",
-      "value": 10.714285714285714
+      "value": 12.82051282051282
     },
     {
       "source": "1004258",
@@ -2642,9 +2637,14 @@
       "value": 12.5
     },
     {
-      "source": "1004258",
+      "source": "1004433",
       "target": "1005135",
-      "value": 12.82051282051282
+      "value": 10.714285714285714
+    },
+    {
+      "source": "1004433",
+      "target": "1004436",
+      "value": 23.076923076923077
     },
     {
       "source": "1004436",
@@ -2659,7 +2659,12 @@
     {
       "source": "1002633",
       "target": "8800028",
-      "value": 0.0
+      "value": 1.0
+    },
+    {
+      "source": "1004781",
+      "target": "1004897",
+      "value": 10.526315789473683
     },
     {
       "source": "1004781",
@@ -2668,8 +2673,8 @@
     },
     {
       "source": "1003525",
-      "target": "1004849",
-      "value": 50.0
+      "target": "1004781",
+      "value": 14.285714285714285
     },
     {
       "source": "1004849",
@@ -2678,18 +2683,13 @@
     },
     {
       "source": "1003525",
-      "target": "1004781",
-      "value": 14.285714285714285
-    },
-    {
-      "source": "1004781",
       "target": "1004897",
-      "value": 10.526315789473683
+      "value": 22.22222222222222
     },
     {
       "source": "1003525",
-      "target": "1004897",
-      "value": 22.22222222222222
+      "target": "1004849",
+      "value": 50.0
     },
     {
       "source": "1004767",
@@ -2697,19 +2697,24 @@
       "value": 16.666666666666664
     },
     {
+      "source": "1801712",
+      "target": "1801805",
+      "value": 16.666666666666664
+    },
+    {
+      "source": "1801631",
+      "target": "1801805",
+      "value": 25.0
+    },
+    {
       "source": "1801631",
       "target": "1801712",
       "value": 25.0
     },
     {
-      "source": "1801631",
-      "target": "1801805",
-      "value": 25.0
-    },
-    {
-      "source": "1801712",
-      "target": "1801805",
-      "value": 16.666666666666664
+      "source": "1004662",
+      "target": "1004670",
+      "value": 30.0
     },
     {
       "source": "1004670",
@@ -2717,9 +2722,34 @@
       "value": 18.51851851851852
     },
     {
+      "source": "1004209",
+      "target": "1004670",
+      "value": 18.75
+    },
+    {
+      "source": "1004436",
+      "target": "1004670",
+      "value": 21.428571428571427
+    },
+    {
       "source": "1004662",
       "target": "1004833",
       "value": 13.043478260869565
+    },
+    {
+      "source": "1004209",
+      "target": "1004662",
+      "value": 25.0
+    },
+    {
+      "source": "1004436",
+      "target": "1004662",
+      "value": 30.0
+    },
+    {
+      "source": "1004209",
+      "target": "1004833",
+      "value": 10.344827586206897
     },
     {
       "source": "1004436",
@@ -2728,58 +2758,8 @@
     },
     {
       "source": "1004209",
-      "target": "1004833",
-      "value": 10.344827586206897
-    },
-    {
-      "source": "1004662",
-      "target": "1004670",
-      "value": 30.0
-    },
-    {
-      "source": "1004436",
-      "target": "1004670",
-      "value": 21.428571428571427
-    },
-    {
-      "source": "1004209",
-      "target": "1004670",
-      "value": 18.75
-    },
-    {
-      "source": "1004436",
-      "target": "1004662",
-      "value": 30.0
-    },
-    {
-      "source": "1004209",
-      "target": "1004662",
-      "value": 25.0
-    },
-    {
-      "source": "1004209",
       "target": "1004436",
       "value": 18.75
-    },
-    {
-      "source": "1003857",
-      "target": "1005136",
-      "value": 12.5
-    },
-    {
-      "source": "1004856",
-      "target": "1005136",
-      "value": 6.382978723404255
-    },
-    {
-      "source": "1003852",
-      "target": "1005136",
-      "value": 12.5
-    },
-    {
-      "source": "1003857",
-      "target": "1004856",
-      "value": 5.714285714285714
     },
     {
       "source": "1003852",
@@ -2792,14 +2772,29 @@
       "value": 5.714285714285714
     },
     {
-      "source": "1004565",
+      "source": "1003852",
+      "target": "1005136",
+      "value": 12.5
+    },
+    {
+      "source": "1003857",
       "target": "1004856",
-      "value": 2.272727272727273
+      "value": 5.714285714285714
+    },
+    {
+      "source": "1003857",
+      "target": "1005136",
+      "value": 12.5
+    },
+    {
+      "source": "1004856",
+      "target": "1005136",
+      "value": 6.382978723404255
     },
     {
       "source": "1004565",
-      "target": "1004838",
-      "value": 5.0
+      "target": "1004856",
+      "value": 2.272727272727273
     },
     {
       "source": "1004838",
@@ -2807,9 +2802,14 @@
       "value": 2.380952380952381
     },
     {
-      "source": "1003549",
+      "source": "1004565",
+      "target": "1004838",
+      "value": 5.0
+    },
+    {
+      "source": "1003535",
       "target": "1004874",
-      "value": 8.333333333333332
+      "value": 11.11111111111111
     },
     {
       "source": "1003535",
@@ -2817,8 +2817,13 @@
       "value": 5.263157894736842
     },
     {
-      "source": "1003535",
+      "source": "1003549",
       "target": "1004874",
+      "value": 8.333333333333332
+    },
+    {
+      "source": "1004835",
+      "target": "1004836",
       "value": 11.11111111111111
     },
     {
@@ -2832,39 +2837,9 @@
       "value": 8.333333333333332
     },
     {
-      "source": "1004835",
-      "target": "1004836",
-      "value": 11.11111111111111
-    },
-    {
-      "source": "4804055",
-      "target": "4804056",
-      "value": 13.333333333333334
-    },
-    {
-      "source": "4804055",
-      "target": "4804102",
-      "value": 10.344827586206897
-    },
-    {
-      "source": "4804055",
-      "target": "4804428",
-      "value": 10.344827586206897
-    },
-    {
       "source": "4803977",
-      "target": "4804055",
-      "value": 9.67741935483871
-    },
-    {
-      "source": "4804056",
       "target": "4804102",
-      "value": 13.636363636363635
-    },
-    {
-      "source": "4804056",
-      "target": "4804428",
-      "value": 13.636363636363635
+      "value": 37.5
     },
     {
       "source": "4803977",
@@ -2872,19 +2847,49 @@
       "value": 12.5
     },
     {
+      "source": "4803977",
+      "target": "4804055",
+      "value": 9.67741935483871
+    },
+    {
+      "source": "4803977",
+      "target": "4804428",
+      "value": 37.5
+    },
+    {
+      "source": "4804056",
+      "target": "4804102",
+      "value": 13.636363636363635
+    },
+    {
+      "source": "4804055",
+      "target": "4804102",
+      "value": 10.344827586206897
+    },
+    {
       "source": "4804102",
       "target": "4804428",
       "value": 50.0
     },
     {
-      "source": "4803977",
-      "target": "4804102",
-      "value": 37.5
+      "source": "4804055",
+      "target": "4804056",
+      "value": 13.333333333333334
     },
     {
-      "source": "4803977",
+      "source": "4804056",
       "target": "4804428",
-      "value": 37.5
+      "value": 13.636363636363635
+    },
+    {
+      "source": "4804055",
+      "target": "4804428",
+      "value": 10.344827586206897
+    },
+    {
+      "source": "1004855",
+      "target": "1802020",
+      "value": 8.333333333333332
     },
     {
       "source": "1002482",
@@ -2897,14 +2902,34 @@
       "value": 11.11111111111111
     },
     {
-      "source": "1004855",
-      "target": "1802020",
-      "value": 8.333333333333332
+      "source": "1005112",
+      "target": "1005115",
+      "value": 12.5
     },
     {
       "source": "1003982",
-      "target": "1004777",
-      "value": 15.789473684210526
+      "target": "1005112",
+      "value": 30.0
+    },
+    {
+      "source": "1004739",
+      "target": "1005112",
+      "value": 12.903225806451612
+    },
+    {
+      "source": "1004777",
+      "target": "1005112",
+      "value": 13.043478260869565
+    },
+    {
+      "source": "1003982",
+      "target": "1005115",
+      "value": 5.769230769230769
+    },
+    {
+      "source": "1004777",
+      "target": "1005115",
+      "value": 7.6923076923076925
     },
     {
       "source": "1003982",
@@ -2913,13 +2938,8 @@
     },
     {
       "source": "1003982",
-      "target": "1005112",
-      "value": 30.0
-    },
-    {
-      "source": "1003982",
-      "target": "1005115",
-      "value": 5.769230769230769
+      "target": "1004777",
+      "value": 15.789473684210526
     },
     {
       "source": "1004739",
@@ -2927,29 +2947,9 @@
       "value": 30.0
     },
     {
-      "source": "1004777",
-      "target": "1005112",
-      "value": 13.043478260869565
-    },
-    {
-      "source": "1004777",
-      "target": "1005115",
-      "value": 7.6923076923076925
-    },
-    {
-      "source": "1004739",
-      "target": "1005112",
-      "value": 12.903225806451612
-    },
-    {
-      "source": "1005112",
-      "target": "1005115",
-      "value": 12.5
-    },
-    {
-      "source": "1004856",
+      "source": "1005115",
       "target": "1201496",
-      "value": 8.333333333333332
+      "value": 5.769230769230769
     },
     {
       "source": "1005105",
@@ -2957,13 +2957,23 @@
       "value": 9.090909090909092
     },
     {
+      "source": "1004856",
+      "target": "1201496",
+      "value": 8.333333333333332
+    },
+    {
       "source": "1201465",
       "target": "1201496",
       "value": 50.0
     },
     {
+      "source": "1004856",
+      "target": "1005115",
+      "value": 9.75609756097561
+    },
+    {
       "source": "1005115",
-      "target": "1201496",
+      "target": "1201465",
       "value": 5.769230769230769
     },
     {
@@ -2972,24 +2982,14 @@
       "value": 11.11111111111111
     },
     {
-      "source": "1004856",
-      "target": "1201465",
-      "value": 8.333333333333332
-    },
-    {
-      "source": "1004856",
-      "target": "1005115",
-      "value": 9.75609756097561
-    },
-    {
       "source": "1005105",
       "target": "1201465",
       "value": 9.090909090909092
     },
     {
-      "source": "1005115",
+      "source": "1004856",
       "target": "1201465",
-      "value": 5.769230769230769
+      "value": 8.333333333333332
     },
     {
       "source": "1004249",
@@ -3018,27 +3018,12 @@
     },
     {
       "source": "1004133",
-      "target": "1004904",
-      "value": 33.33333333333333
-    },
-    {
-      "source": "1004723",
-      "target": "1004904",
-      "value": 50.0
-    },
-    {
-      "source": "1004530",
-      "target": "1004904",
-      "value": 50.0
-    },
-    {
-      "source": "1004838",
-      "target": "1004904",
-      "value": 25.0
+      "target": "1004838",
+      "value": 20.0
     },
     {
       "source": "1004133",
-      "target": "1004723",
+      "target": "1004904",
       "value": 33.33333333333333
     },
     {
@@ -3048,13 +3033,18 @@
     },
     {
       "source": "1004133",
-      "target": "1004838",
-      "value": 20.0
+      "target": "1004723",
+      "value": 33.33333333333333
+    },
+    {
+      "source": "1004838",
+      "target": "1004904",
+      "value": 25.0
     },
     {
       "source": "1004530",
-      "target": "1004723",
-      "value": 50.0
+      "target": "1004838",
+      "value": 25.0
     },
     {
       "source": "1004723",
@@ -3063,28 +3053,18 @@
     },
     {
       "source": "1004530",
-      "target": "1004838",
-      "value": 25.0
+      "target": "1004904",
+      "value": 50.0
     },
     {
-      "source": "1004834",
-      "target": "1004858",
-      "value": 21.428571428571427
+      "source": "1004723",
+      "target": "1004904",
+      "value": 50.0
     },
     {
-      "source": "1004739",
-      "target": "1004834",
-      "value": 7.142857142857142
-    },
-    {
-      "source": "1004750",
-      "target": "1004834",
-      "value": 14.285714285714285
-    },
-    {
-      "source": "1004739",
-      "target": "1004858",
-      "value": 14.705882352941178
+      "source": "1004530",
+      "target": "1004723",
+      "value": 50.0
     },
     {
       "source": "1004750",
@@ -3097,14 +3077,29 @@
       "value": 5.88235294117647
     },
     {
+      "source": "1004750",
+      "target": "1004834",
+      "value": 14.285714285714285
+    },
+    {
+      "source": "1004739",
+      "target": "1004858",
+      "value": 14.705882352941178
+    },
+    {
+      "source": "1004834",
+      "target": "1004858",
+      "value": 21.428571428571427
+    },
+    {
+      "source": "1004739",
+      "target": "1004834",
+      "value": 7.142857142857142
+    },
+    {
       "source": "1002633",
       "target": "1004857",
       "value": 6.451612903225806
-    },
-    {
-      "source": "1003309",
-      "target": "1004857",
-      "value": 15.384615384615385
     },
     {
       "source": "1004816",
@@ -3112,13 +3107,18 @@
       "value": 15.384615384615385
     },
     {
-      "source": "1002633",
-      "target": "1003309",
-      "value": 9.090909090909092
+      "source": "1003309",
+      "target": "1004857",
+      "value": 15.384615384615385
     },
     {
       "source": "1002633",
       "target": "1004816",
+      "value": 9.090909090909092
+    },
+    {
+      "source": "1002633",
+      "target": "1003309",
       "value": 9.090909090909092
     },
     {
@@ -3127,14 +3127,9 @@
       "value": 50.0
     },
     {
-      "source": "1002524",
+      "source": "1002547",
       "target": "1002633",
-      "value": 10.416666666666668
-    },
-    {
-      "source": "1002524",
-      "target": "1002538",
-      "value": 6.25
+      "value": 23.076923076923077
     },
     {
       "source": "1002524",
@@ -3143,18 +3138,23 @@
     },
     {
       "source": "1002538",
+      "target": "1002547",
+      "value": 20.0
+    },
+    {
+      "source": "1002524",
+      "target": "1002633",
+      "value": 10.416666666666668
+    },
+    {
+      "source": "1002538",
       "target": "1002633",
       "value": 8.333333333333332
     },
     {
-      "source": "1002547",
-      "target": "1002633",
-      "value": 23.076923076923077
-    },
-    {
-      "source": "1002538",
-      "target": "1002547",
-      "value": 20.0
+      "source": "1002524",
+      "target": "1002538",
+      "value": 6.25
     },
     {
       "source": "1002524",
@@ -3162,23 +3162,28 @@
       "value": 9.25925925925926
     },
     {
-      "source": "1002524",
-      "target": "1003363",
-      "value": 12.5
-    },
-    {
       "source": "1003363",
       "target": "4804055",
       "value": 3.3333333333333335
     },
     {
+      "source": "1002524",
+      "target": "1003363",
+      "value": 12.5
+    },
+    {
       "source": "4804056",
-      "target": "5100441",
+      "target": "5100750",
       "value": 13.636363636363635
     },
     {
       "source": "5100407",
-      "target": "5100441",
+      "target": "5100750",
+      "value": 50.0
+    },
+    {
+      "source": "5100350",
+      "target": "5100750",
       "value": 50.0
     },
     {
@@ -3187,18 +3192,8 @@
       "value": 50.0
     },
     {
-      "source": "5100350",
-      "target": "5100441",
-      "value": 50.0
-    },
-    {
       "source": "4804056",
       "target": "5100407",
-      "value": 13.636363636363635
-    },
-    {
-      "source": "4804056",
-      "target": "5100750",
       "value": 13.636363636363635
     },
     {
@@ -3207,9 +3202,9 @@
       "value": 13.636363636363635
     },
     {
-      "source": "5100407",
-      "target": "5100750",
-      "value": 50.0
+      "source": "4804056",
+      "target": "5100441",
+      "value": 13.636363636363635
     },
     {
       "source": "5100350",
@@ -3217,24 +3212,24 @@
       "value": 50.0
     },
     {
-      "source": "5100350",
-      "target": "5100750",
+      "source": "5100407",
+      "target": "5100441",
       "value": 50.0
+    },
+    {
+      "source": "5100350",
+      "target": "5100441",
+      "value": 50.0
+    },
+    {
+      "source": "1003571",
+      "target": "1004767",
+      "value": 9.090909090909092
     },
     {
       "source": "1003892",
       "target": "1004767",
       "value": 6.451612903225806
-    },
-    {
-      "source": "1003892",
-      "target": "1004777",
-      "value": 11.11111111111111
-    },
-    {
-      "source": "1003571",
-      "target": "1003892",
-      "value": 33.33333333333333
     },
     {
       "source": "1004767",
@@ -3243,8 +3238,8 @@
     },
     {
       "source": "1003571",
-      "target": "1004767",
-      "value": 9.090909090909092
+      "target": "1003892",
+      "value": 33.33333333333333
     },
     {
       "source": "1003571",
@@ -3252,18 +3247,28 @@
       "value": 10.0
     },
     {
-      "source": "1002528",
-      "target": "1002535",
-      "value": 40.0
+      "source": "1003892",
+      "target": "1004777",
+      "value": 11.11111111111111
     },
     {
-      "source": "1002528",
-      "target": "1003363",
-      "value": 30.0
+      "source": "1002532",
+      "target": "1002535",
+      "value": 50.0
     },
     {
       "source": "1002528",
       "target": "1002532",
+      "value": 40.0
+    },
+    {
+      "source": "1002532",
+      "target": "1003363",
+      "value": 37.5
+    },
+    {
+      "source": "1002528",
+      "target": "1002535",
       "value": 40.0
     },
     {
@@ -3272,24 +3277,9 @@
       "value": 37.5
     },
     {
-      "source": "1002532",
-      "target": "1002535",
-      "value": 50.0
-    },
-    {
-      "source": "1002532",
+      "source": "1002528",
       "target": "1003363",
-      "value": 37.5
-    },
-    {
-      "source": "1003712",
-      "target": "1005006",
-      "value": 50.0
-    },
-    {
-      "source": "1003712",
-      "target": "1005008",
-      "value": 10.0
+      "value": 30.0
     },
     {
       "source": "1005006",
@@ -3297,34 +3287,44 @@
       "value": 10.0
     },
     {
-      "source": "1002544",
-      "target": "1002633",
-      "value": 15.0
-    },
-    {
-      "source": "1002633",
-      "target": "1004750",
-      "value": 6.666666666666667
-    },
-    {
-      "source": "1002633",
-      "target": "1005105",
+      "source": "1003712",
+      "target": "1005008",
       "value": 10.0
     },
     {
-      "source": "1002544",
-      "target": "1004750",
-      "value": 6.666666666666667
-    },
-    {
-      "source": "1002544",
-      "target": "1005105",
-      "value": 10.0
+      "source": "1003712",
+      "target": "1005006",
+      "value": 50.0
     },
     {
       "source": "1004750",
       "target": "1005105",
       "value": 5.0
+    },
+    {
+      "source": "1002633",
+      "target": "1005105",
+      "value": 10.0
+    },
+    {
+      "source": "1002544",
+      "target": "1005105",
+      "value": 10.0
+    },
+    {
+      "source": "1002633",
+      "target": "1004750",
+      "value": 6.666666666666667
+    },
+    {
+      "source": "1002544",
+      "target": "1004750",
+      "value": 6.666666666666667
+    },
+    {
+      "source": "1002544",
+      "target": "1002633",
+      "value": 15.0
     },
     {
       "source": "1002633",
@@ -3352,19 +3352,9 @@
       "value": 16.666666666666664
     },
     {
-      "source": "1002524",
-      "target": "1005103",
-      "value": 6.666666666666667
-    },
-    {
-      "source": "1002524",
-      "target": "1003768",
-      "value": 6.451612903225806
-    },
-    {
-      "source": "1002524",
+      "source": "1003768",
       "target": "1004855",
-      "value": 11.11111111111111
+      "value": 18.181818181818183
     },
     {
       "source": "1003768",
@@ -3372,19 +3362,24 @@
       "value": 40.0
     },
     {
+      "source": "1002524",
+      "target": "1003768",
+      "value": 6.451612903225806
+    },
+    {
       "source": "1004855",
       "target": "1005103",
       "value": 20.0
     },
     {
-      "source": "1003768",
+      "source": "1002524",
       "target": "1004855",
-      "value": 18.181818181818183
+      "value": 11.11111111111111
     },
     {
-      "source": "1005106",
-      "target": "1005143",
-      "value": 12.5
+      "source": "1002524",
+      "target": "1005103",
+      "value": 6.666666666666667
     },
     {
       "source": "1005106",
@@ -3397,24 +3392,14 @@
       "value": 4.3478260869565215
     },
     {
-      "source": "1005132",
-      "target": "1005168",
-      "value": 17.647058823529413
-    },
-    {
-      "source": "1005118",
-      "target": "1005132",
-      "value": 17.391304347826086
+      "source": "1005106",
+      "target": "1005143",
+      "value": 12.5
     },
     {
       "source": "1004434",
-      "target": "1005132",
-      "value": 20.0
-    },
-    {
-      "source": "1005132",
-      "target": "1005135",
-      "value": 11.11111111111111
+      "target": "1005168",
+      "value": 33.33333333333333
     },
     {
       "source": "1005118",
@@ -3422,9 +3407,9 @@
       "value": 25.0
     },
     {
-      "source": "1004434",
+      "source": "1005132",
       "target": "1005168",
-      "value": 33.33333333333333
+      "value": 17.647058823529413
     },
     {
       "source": "1005135",
@@ -3437,14 +3422,34 @@
       "value": 20.0
     },
     {
-      "source": "1005118",
-      "target": "1005135",
-      "value": 16.129032258064516
+      "source": "1004434",
+      "target": "1005132",
+      "value": 20.0
     },
     {
       "source": "1004434",
       "target": "1005135",
       "value": 10.714285714285714
+    },
+    {
+      "source": "1005118",
+      "target": "1005132",
+      "value": 17.391304347826086
+    },
+    {
+      "source": "1005118",
+      "target": "1005135",
+      "value": 16.129032258064516
+    },
+    {
+      "source": "1005132",
+      "target": "1005135",
+      "value": 11.11111111111111
+    },
+    {
+      "source": "1004139",
+      "target": "1004903",
+      "value": 12.5
     },
     {
       "source": "1004320",
@@ -3457,34 +3462,19 @@
       "value": 16.666666666666664
     },
     {
-      "source": "1004139",
-      "target": "1004903",
-      "value": 12.5
-    },
-    {
       "source": "1004863",
       "target": "1005100",
       "value": 8.333333333333332
     },
     {
-      "source": "1004777",
-      "target": "1004794",
-      "value": 15.0
+      "source": "1004741",
+      "target": "1004775",
+      "value": 13.043478260869565
     },
     {
       "source": "1004775",
       "target": "1004794",
       "value": 42.857142857142854
-    },
-    {
-      "source": "1004739",
-      "target": "1004794",
-      "value": 10.714285714285714
-    },
-    {
-      "source": "1004741",
-      "target": "1004794",
-      "value": 12.5
     },
     {
       "source": "1004775",
@@ -3493,18 +3483,23 @@
     },
     {
       "source": "1004741",
+      "target": "1004794",
+      "value": 12.5
+    },
+    {
+      "source": "1004741",
       "target": "1004777",
       "value": 16.666666666666664
     },
     {
-      "source": "1004741",
-      "target": "1004775",
-      "value": 13.043478260869565
+      "source": "1004739",
+      "target": "1004794",
+      "value": 10.714285714285714
     },
     {
-      "source": "4800179",
-      "target": "4804055",
-      "value": 7.142857142857142
+      "source": "1004777",
+      "target": "1004794",
+      "value": 15.0
     },
     {
       "source": "4802888",
@@ -3513,8 +3508,8 @@
     },
     {
       "source": "4802036",
-      "target": "4804055",
-      "value": 15.625
+      "target": "4802888",
+      "value": 25.0
     },
     {
       "source": "4800179",
@@ -3522,29 +3517,24 @@
       "value": 50.0
     },
     {
-      "source": "4800179",
-      "target": "4802036",
-      "value": 25.0
+      "source": "4802036",
+      "target": "4804055",
+      "value": 15.625
     },
     {
-      "source": "4802036",
-      "target": "4802888",
+      "source": "4800179",
+      "target": "4804055",
+      "value": 7.142857142857142
+    },
+    {
+      "source": "4800179",
+      "target": "4802036",
       "value": 25.0
     },
     {
       "source": "1004875",
       "target": "1005014",
       "value": 15.0
-    },
-    {
-      "source": "1002524",
-      "target": "1005014",
-      "value": 6.976744186046512
-    },
-    {
-      "source": "1005014",
-      "target": "1005106",
-      "value": 9.090909090909092
     },
     {
       "source": "1002524",
@@ -3558,18 +3548,18 @@
     },
     {
       "source": "1002524",
+      "target": "1005014",
+      "value": 6.976744186046512
+    },
+    {
+      "source": "1005014",
+      "target": "1005106",
+      "value": 9.090909090909092
+    },
+    {
+      "source": "1002524",
       "target": "1005106",
       "value": 8.571428571428571
-    },
-    {
-      "source": "1005105",
-      "target": "4804056",
-      "value": 10.204081632653061
-    },
-    {
-      "source": "4804056",
-      "target": "5100563",
-      "value": 14.814814814814813
     },
     {
       "source": "1005115",
@@ -3577,9 +3567,24 @@
       "value": 8.823529411764707
     },
     {
-      "source": "1005105",
+      "source": "4804056",
       "target": "5100563",
-      "value": 7.894736842105263
+      "value": 14.814814814814813
+    },
+    {
+      "source": "1005105",
+      "target": "4804056",
+      "value": 10.204081632653061
+    },
+    {
+      "source": "1005115",
+      "target": "4802036",
+      "value": 7.2727272727272725
+    },
+    {
+      "source": "4802036",
+      "target": "5100563",
+      "value": 21.428571428571427
     },
     {
       "source": "1005105",
@@ -3592,24 +3597,19 @@
       "value": 12.280701754385964
     },
     {
-      "source": "4802036",
+      "source": "1005105",
       "target": "5100563",
-      "value": 21.428571428571427
-    },
-    {
-      "source": "1005115",
-      "target": "4802036",
-      "value": 7.2727272727272725
-    },
-    {
-      "source": "1004781",
-      "target": "1004903",
-      "value": 10.526315789473683
+      "value": 7.894736842105263
     },
     {
       "source": "1004565",
       "target": "1004903",
       "value": 11.11111111111111
+    },
+    {
+      "source": "1004781",
+      "target": "1004903",
+      "value": 10.526315789473683
     },
     {
       "source": "1004785",
@@ -3623,13 +3623,23 @@
     },
     {
       "source": "1003645",
+      "target": "1005019",
+      "value": 20.0
+    },
+    {
+      "source": "1003645",
       "target": "1004497",
       "value": 50.0
     },
     {
-      "source": "1003645",
-      "target": "1005019",
-      "value": 20.0
+      "source": "1004767",
+      "target": "8800028",
+      "value": 6.25
+    },
+    {
+      "source": "1004870",
+      "target": "1004873",
+      "value": 23.333333333333332
     },
     {
       "source": "1004873",
@@ -3638,53 +3648,13 @@
     },
     {
       "source": "1004870",
-      "target": "1004873",
-      "value": 23.333333333333332
-    },
-    {
-      "source": "1004870",
       "target": "8800028",
       "value": 9.090909090909092
-    },
-    {
-      "source": "1004767",
-      "target": "8800028",
-      "value": 6.25
-    },
-    {
-      "source": "1005007",
-      "target": "4804055",
-      "value": 12.5
     },
     {
       "source": "1004211",
       "target": "4804055",
       "value": 10.344827586206897
-    },
-    {
-      "source": "1004855",
-      "target": "4804055",
-      "value": 11.76470588235294
-    },
-    {
-      "source": "1004209",
-      "target": "4804055",
-      "value": 8.571428571428571
-    },
-    {
-      "source": "1004211",
-      "target": "1005007",
-      "value": 33.33333333333333
-    },
-    {
-      "source": "1004855",
-      "target": "1005007",
-      "value": 28.57142857142857
-    },
-    {
-      "source": "1004209",
-      "target": "1005007",
-      "value": 20.0
     },
     {
       "source": "1004211",
@@ -3697,19 +3667,49 @@
       "value": 25.0
     },
     {
+      "source": "1004211",
+      "target": "1005007",
+      "value": 33.33333333333333
+    },
+    {
+      "source": "1004855",
+      "target": "4804055",
+      "value": 11.76470588235294
+    },
+    {
+      "source": "1004209",
+      "target": "4804055",
+      "value": 8.571428571428571
+    },
+    {
+      "source": "1005007",
+      "target": "4804055",
+      "value": 12.5
+    },
+    {
       "source": "1004209",
       "target": "1004855",
       "value": 17.647058823529413
     },
     {
-      "source": "1005014",
-      "target": "1005159",
+      "source": "1004855",
+      "target": "1005007",
+      "value": 28.57142857142857
+    },
+    {
+      "source": "1004209",
+      "target": "1005007",
       "value": 20.0
     },
     {
       "source": "1004838",
-      "target": "1005159",
-      "value": 15.789473684210526
+      "target": "5100337",
+      "value": 15.0
+    },
+    {
+      "source": "1005014",
+      "target": "5100337",
+      "value": 15.384615384615385
     },
     {
       "source": "1005159",
@@ -3718,8 +3718,8 @@
     },
     {
       "source": "1005121",
-      "target": "1005159",
-      "value": 23.076923076923077
+      "target": "5100337",
+      "value": 21.428571428571427
     },
     {
       "source": "1004838",
@@ -3727,19 +3727,9 @@
       "value": 12.5
     },
     {
-      "source": "1005014",
-      "target": "5100337",
-      "value": 15.384615384615385
-    },
-    {
-      "source": "1005014",
-      "target": "1005121",
-      "value": 16.666666666666664
-    },
-    {
       "source": "1004838",
-      "target": "5100337",
-      "value": 15.0
+      "target": "1005159",
+      "value": 15.789473684210526
     },
     {
       "source": "1004838",
@@ -3747,9 +3737,29 @@
       "value": 25.0
     },
     {
+      "source": "1005014",
+      "target": "1005159",
+      "value": 20.0
+    },
+    {
+      "source": "1005014",
+      "target": "1005121",
+      "value": 16.666666666666664
+    },
+    {
       "source": "1005121",
-      "target": "5100337",
-      "value": 21.428571428571427
+      "target": "1005159",
+      "value": 23.076923076923077
+    },
+    {
+      "source": "1002540",
+      "target": "1002547",
+      "value": 25.0
+    },
+    {
+      "source": "1002547",
+      "target": "1005115",
+      "value": 5.454545454545454
     },
     {
       "source": "1002540",
@@ -3767,16 +3777,6 @@
       "value": 3.9215686274509802
     },
     {
-      "source": "1002540",
-      "target": "1002547",
-      "value": 25.0
-    },
-    {
-      "source": "1002547",
-      "target": "1005115",
-      "value": 5.454545454545454
-    },
-    {
       "source": "1004857",
       "target": "1004858",
       "value": 4.761904761904762
@@ -3788,13 +3788,23 @@
     },
     {
       "source": "1002524",
-      "target": "1002528",
-      "value": 17.647058823529413
+      "target": "1003310",
+      "value": 9.090909090909092
+    },
+    {
+      "source": "1002528",
+      "target": "1003310",
+      "value": 18.181818181818183
+    },
+    {
+      "source": "1003304",
+      "target": "1003310",
+      "value": 11.76470588235294
     },
     {
       "source": "1002524",
-      "target": "1003310",
-      "value": 9.090909090909092
+      "target": "1002528",
+      "value": 17.647058823529413
     },
     {
       "source": "1002524",
@@ -3803,28 +3813,13 @@
     },
     {
       "source": "1002528",
-      "target": "1003310",
-      "value": 18.181818181818183
-    },
-    {
-      "source": "1002528",
       "target": "1003304",
       "value": 11.11111111111111
     },
     {
-      "source": "1003304",
-      "target": "1003310",
-      "value": 11.76470588235294
-    },
-    {
-      "source": "4804055",
-      "target": "5100394",
-      "value": 10.344827586206897
-    },
-    {
-      "source": "4804055",
-      "target": "5100737",
-      "value": 10.344827586206897
+      "source": "5100394",
+      "target": "5100738",
+      "value": 37.5
     },
     {
       "source": "4804055",
@@ -3832,9 +3827,14 @@
       "value": 12.903225806451612
     },
     {
+      "source": "5100737",
+      "target": "5100738",
+      "value": 37.5
+    },
+    {
       "source": "4804055",
-      "target": "5100577",
-      "value": 11.11111111111111
+      "target": "5100394",
+      "value": 10.344827586206897
     },
     {
       "source": "5100394",
@@ -3843,18 +3843,18 @@
     },
     {
       "source": "5100394",
-      "target": "5100738",
-      "value": 37.5
-    },
-    {
-      "source": "5100394",
       "target": "5100577",
       "value": 23.076923076923077
     },
     {
-      "source": "5100737",
-      "target": "5100738",
-      "value": 37.5
+      "source": "4804055",
+      "target": "5100737",
+      "value": 10.344827586206897
+    },
+    {
+      "source": "4804055",
+      "target": "5100577",
+      "value": 11.11111111111111
     },
     {
       "source": "5100577",
@@ -3867,19 +3867,19 @@
       "value": 50.0
     },
     {
-      "source": "5100564",
-      "target": "5100577",
-      "value": 9.090909090909092
-    },
-    {
       "source": "2300294",
       "target": "5100577",
       "value": 9.090909090909092
     },
     {
-      "source": "1003549",
-      "target": "1005021",
-      "value": 15.384615384615385
+      "source": "5100564",
+      "target": "5100577",
+      "value": 9.090909090909092
+    },
+    {
+      "source": "1004653",
+      "target": "1004785",
+      "value": 22.22222222222222
     },
     {
       "source": "1003549",
@@ -3887,14 +3887,14 @@
       "value": 15.384615384615385
     },
     {
-      "source": "1003549",
-      "target": "1004785",
-      "value": 11.11111111111111
-    },
-    {
       "source": "1004653",
       "target": "1005021",
       "value": 50.0
+    },
+    {
+      "source": "1003549",
+      "target": "1004785",
+      "value": 11.11111111111111
     },
     {
       "source": "1004785",
@@ -3902,9 +3902,9 @@
       "value": 22.22222222222222
     },
     {
-      "source": "1004653",
-      "target": "1004785",
-      "value": 22.22222222222222
+      "source": "1003549",
+      "target": "1005021",
+      "value": 15.384615384615385
     },
     {
       "source": "1002995",
@@ -3912,14 +3912,19 @@
       "value": 11.11111111111111
     },
     {
+      "source": "1002995",
+      "target": "1005115",
+      "value": 3.9215686274509802
+    },
+    {
       "source": "1002544",
       "target": "1002995",
       "value": 9.090909090909092
     },
     {
-      "source": "1002995",
-      "target": "1005115",
-      "value": 3.9215686274509802
+      "source": "1002099",
+      "target": "1003527",
+      "value": 12.5
     },
     {
       "source": "1003527",
@@ -3928,18 +3933,8 @@
     },
     {
       "source": "1002099",
-      "target": "1003527",
-      "value": 12.5
-    },
-    {
-      "source": "1002099",
       "target": "1005239",
       "value": 9.090909090909092
-    },
-    {
-      "source": "1004249",
-      "target": "1005104",
-      "value": 16.666666666666664
     },
     {
       "source": "1003316",
@@ -3952,14 +3947,29 @@
       "value": 10.256410256410255
     },
     {
+      "source": "1004249",
+      "target": "1005104",
+      "value": 16.666666666666664
+    },
+    {
       "source": "1003317",
       "target": "1004249",
       "value": 20.0
     },
     {
       "source": "1003316",
+      "target": "1005112",
+      "value": 18.181818181818183
+    },
+    {
+      "source": "1003316",
       "target": "1005104",
       "value": 12.903225806451612
+    },
+    {
+      "source": "1003316",
+      "target": "1003317",
+      "value": 18.181818181818183
     },
     {
       "source": "1005104",
@@ -3968,23 +3978,18 @@
     },
     {
       "source": "1003317",
+      "target": "1005112",
+      "value": 16.0
+    },
+    {
+      "source": "1003317",
       "target": "1005104",
       "value": 17.647058823529413
     },
     {
-      "source": "1003316",
-      "target": "1005112",
-      "value": 18.181818181818183
-    },
-    {
-      "source": "1003316",
-      "target": "1003317",
-      "value": 18.181818181818183
-    },
-    {
-      "source": "1003317",
-      "target": "1005112",
-      "value": 16.0
+      "source": "1002099",
+      "target": "1004768",
+      "value": 7.142857142857142
     },
     {
       "source": "1003317",
@@ -3993,18 +3998,8 @@
     },
     {
       "source": "1002099",
-      "target": "1004768",
-      "value": 7.142857142857142
-    },
-    {
-      "source": "1002099",
       "target": "1003317",
       "value": 4.0
-    },
-    {
-      "source": "1002544",
-      "target": "1003317",
-      "value": 13.157894736842104
     },
     {
       "source": "1002544",
@@ -4017,6 +4012,16 @@
       "value": 5.263157894736842
     },
     {
+      "source": "1002544",
+      "target": "1003317",
+      "value": 13.157894736842104
+    },
+    {
+      "source": "1801900",
+      "target": "1801929",
+      "value": 25.0
+    },
+    {
       "source": "1801881",
       "target": "1801929",
       "value": 6.666666666666667
@@ -4027,19 +4032,9 @@
       "value": 7.6923076923076925
     },
     {
-      "source": "1801900",
-      "target": "1801929",
-      "value": 25.0
-    },
-    {
       "source": "1004249",
       "target": "5100376",
       "value": 2.380952380952381
-    },
-    {
-      "source": "1005104",
-      "target": "1005106",
-      "value": 13.043478260869565
     },
     {
       "source": "1005104",
@@ -4047,9 +4042,9 @@
       "value": 20.0
     },
     {
-      "source": "1005104",
-      "target": "1005105",
-      "value": 10.869565217391305
+      "source": "1005105",
+      "target": "1005118",
+      "value": 10.256410256410255
     },
     {
       "source": "1005106",
@@ -4057,14 +4052,19 @@
       "value": 18.75
     },
     {
-      "source": "1005105",
+      "source": "1005104",
+      "target": "1005105",
+      "value": 10.869565217391305
+    },
+    {
+      "source": "1005104",
       "target": "1005106",
-      "value": 10.81081081081081
+      "value": 13.043478260869565
     },
     {
       "source": "1005105",
-      "target": "1005118",
-      "value": 10.256410256410255
+      "target": "1005106",
+      "value": 10.81081081081081
     },
     {
       "source": "1004870",
@@ -4072,24 +4072,9 @@
       "value": 4.166666666666666
     },
     {
-      "source": "1004777",
+      "source": "1004858",
       "target": "5100712",
-      "value": 15.789473684210526
-    },
-    {
-      "source": "1004777",
-      "target": "1004858",
-      "value": 11.538461538461538
-    },
-    {
-      "source": "1004739",
-      "target": "5100712",
-      "value": 11.11111111111111
-    },
-    {
-      "source": "1004741",
-      "target": "5100712",
-      "value": 13.043478260869565
+      "value": 23.076923076923077
     },
     {
       "source": "1004741",
@@ -4097,14 +4082,24 @@
       "value": 13.333333333333334
     },
     {
-      "source": "1004858",
-      "target": "5100712",
-      "value": 23.076923076923077
+      "source": "1004777",
+      "target": "1004858",
+      "value": 11.538461538461538
     },
     {
-      "source": "1002538",
-      "target": "1004739",
-      "value": 3.571428571428571
+      "source": "1004741",
+      "target": "5100712",
+      "value": 13.043478260869565
+    },
+    {
+      "source": "1004739",
+      "target": "5100712",
+      "value": 11.11111111111111
+    },
+    {
+      "source": "1004777",
+      "target": "5100712",
+      "value": 15.789473684210526
     },
     {
       "source": "1002538",
@@ -4112,9 +4107,14 @@
       "value": 4.166666666666666
     },
     {
+      "source": "1002538",
+      "target": "1004739",
+      "value": 3.571428571428571
+    },
+    {
       "source": "1004792",
       "target": "1004867",
-      "value": 0.0
+      "value": 1.0
     },
     {
       "source": "1004788",
@@ -4124,6 +4124,11 @@
     {
       "source": "1002532",
       "target": "1002544",
+      "value": 12.5
+    },
+    {
+      "source": "1002524",
+      "target": "1002535",
       "value": 12.5
     },
     {
@@ -4137,34 +4142,9 @@
       "value": 11.538461538461538
     },
     {
-      "source": "1002524",
-      "target": "1002535",
-      "value": 12.5
-    },
-    {
       "source": "1004253",
       "target": "1005139",
-      "value": 0.0
-    },
-    {
-      "source": "5100650",
-      "target": "5100694",
-      "value": 50.0
-    },
-    {
-      "source": "5100644",
-      "target": "5100650",
-      "value": 50.0
-    },
-    {
-      "source": "5100650",
-      "target": "5100696",
-      "value": 30.0
-    },
-    {
-      "source": "5100595",
-      "target": "5100650",
-      "value": 50.0
+      "value": 1.0
     },
     {
       "source": "5100644",
@@ -4182,6 +4162,11 @@
       "value": 50.0
     },
     {
+      "source": "5100650",
+      "target": "5100694",
+      "value": 50.0
+    },
+    {
       "source": "5100644",
       "target": "5100696",
       "value": 30.0
@@ -4192,9 +4177,24 @@
       "value": 50.0
     },
     {
+      "source": "5100644",
+      "target": "5100650",
+      "value": 50.0
+    },
+    {
       "source": "5100595",
       "target": "5100696",
       "value": 30.0
+    },
+    {
+      "source": "5100650",
+      "target": "5100696",
+      "value": 30.0
+    },
+    {
+      "source": "5100595",
+      "target": "5100650",
+      "value": 50.0
     },
     {
       "source": "1003319",
@@ -4207,9 +4207,24 @@
       "value": 5.88235294117647
     },
     {
-      "source": "1003281",
+      "source": "1002099",
+      "target": "1003281",
+      "value": 30.0
+    },
+    {
+      "source": "1002099",
+      "target": "1004820",
+      "value": 30.0
+    },
+    {
+      "source": "1002099",
+      "target": "1004739",
+      "value": 9.67741935483871
+    },
+    {
+      "source": "1002099",
       "target": "1004777",
-      "value": 15.789473684210526
+      "value": 13.043478260869565
     },
     {
       "source": "1003281",
@@ -4217,13 +4232,18 @@
       "value": 50.0
     },
     {
-      "source": "1002099",
-      "target": "1003281",
-      "value": 30.0
+      "source": "1003281",
+      "target": "1004739",
+      "value": 11.11111111111111
     },
     {
       "source": "1003281",
-      "target": "1004739",
+      "target": "1004777",
+      "value": 15.789473684210526
+    },
+    {
+      "source": "1004739",
+      "target": "1004820",
       "value": 11.11111111111111
     },
     {
@@ -4232,34 +4252,14 @@
       "value": 15.789473684210526
     },
     {
-      "source": "1002099",
-      "target": "1004777",
-      "value": 13.043478260869565
-    },
-    {
-      "source": "1002099",
-      "target": "1004820",
-      "value": 30.0
-    },
-    {
-      "source": "1004739",
-      "target": "1004820",
-      "value": 11.11111111111111
-    },
-    {
-      "source": "1002099",
-      "target": "1004739",
-      "value": 9.67741935483871
+      "source": "1004249",
+      "target": "1004670",
+      "value": 10.256410256410255
     },
     {
       "source": "1002544",
       "target": "1004249",
       "value": 19.230769230769234
-    },
-    {
-      "source": "1004249",
-      "target": "1004670",
-      "value": 10.256410256410255
     },
     {
       "source": "1004227",
@@ -4272,9 +4272,9 @@
       "value": 11.11111111111111
     },
     {
-      "source": "1002544",
-      "target": "1004227",
-      "value": 13.043478260869565
+      "source": "1004670",
+      "target": "1005115",
+      "value": 7.142857142857142
     },
     {
       "source": "1004227",
@@ -4282,14 +4282,19 @@
       "value": 30.0
     },
     {
-      "source": "1004670",
-      "target": "1005115",
-      "value": 7.142857142857142
+      "source": "1002544",
+      "target": "1004227",
+      "value": 13.043478260869565
     },
     {
       "source": "1004227",
       "target": "1005115",
       "value": 5.769230769230769
+    },
+    {
+      "source": "1005115",
+      "target": "4804055",
+      "value": 9.333333333333334
     },
     {
       "source": "4804055",
@@ -4298,33 +4303,8 @@
     },
     {
       "source": "1005115",
-      "target": "4804055",
-      "value": 9.333333333333334
-    },
-    {
-      "source": "1005115",
       "target": "4804572",
       "value": 2.0
-    },
-    {
-      "source": "1003304",
-      "target": "1003306",
-      "value": 22.22222222222222
-    },
-    {
-      "source": "1003306",
-      "target": "1003316",
-      "value": 16.666666666666664
-    },
-    {
-      "source": "1003306",
-      "target": "1005135",
-      "value": 16.216216216216218
-    },
-    {
-      "source": "1003306",
-      "target": "1801761",
-      "value": 16.666666666666664
     },
     {
       "source": "1003304",
@@ -4342,6 +4322,11 @@
       "value": 20.0
     },
     {
+      "source": "1003304",
+      "target": "1003306",
+      "value": 22.22222222222222
+    },
+    {
       "source": "1003316",
       "target": "1005135",
       "value": 13.513513513513514
@@ -4352,9 +4337,24 @@
       "value": 16.666666666666664
     },
     {
+      "source": "1003306",
+      "target": "1003316",
+      "value": 16.666666666666664
+    },
+    {
       "source": "1005135",
       "target": "1801761",
       "value": 12.0
+    },
+    {
+      "source": "1003306",
+      "target": "1005135",
+      "value": 16.216216216216218
+    },
+    {
+      "source": "1003306",
+      "target": "1801761",
+      "value": 16.666666666666664
     },
     {
       "source": "1002629",
@@ -4363,18 +4363,13 @@
     },
     {
       "source": "1002629",
-      "target": "1003317",
-      "value": 8.333333333333332
-    },
-    {
-      "source": "1002629",
       "target": "1003316",
       "value": 9.523809523809524
     },
     {
-      "source": "1004140",
-      "target": "1004402",
-      "value": 50.0
+      "source": "1002629",
+      "target": "1003317",
+      "value": 8.333333333333332
     },
     {
       "source": "1004133",
@@ -4382,14 +4377,24 @@
       "value": 25.0
     },
     {
-      "source": "1004140",
-      "target": "1004156",
-      "value": 50.0
-    },
-    {
       "source": "1004133",
       "target": "1004402",
       "value": 25.0
+    },
+    {
+      "source": "1004133",
+      "target": "1004156",
+      "value": 25.0
+    },
+    {
+      "source": "1004140",
+      "target": "1004402",
+      "value": 50.0
+    },
+    {
+      "source": "1004140",
+      "target": "1004156",
+      "value": 50.0
     },
     {
       "source": "1004156",
@@ -4397,39 +4402,9 @@
       "value": 50.0
     },
     {
-      "source": "1004133",
-      "target": "1004156",
-      "value": 25.0
-    },
-    {
       "source": "1003549",
       "target": "4804055",
-      "value": 0.0
-    },
-    {
-      "source": "1004249",
-      "target": "5100562",
-      "value": 7.894736842105263
-    },
-    {
-      "source": "5100562",
-      "target": "5100718",
-      "value": 20.0
-    },
-    {
-      "source": "1004258",
-      "target": "5100562",
-      "value": 13.043478260869565
-    },
-    {
-      "source": "5100562",
-      "target": "5100696",
-      "value": 23.076923076923077
-    },
-    {
-      "source": "1004249",
-      "target": "5100718",
-      "value": 9.75609756097561
+      "value": 1.0
     },
     {
       "source": "1004249",
@@ -4438,8 +4413,18 @@
     },
     {
       "source": "1004249",
+      "target": "5100718",
+      "value": 9.75609756097561
+    },
+    {
+      "source": "1004249",
       "target": "5100696",
       "value": 7.6923076923076925
+    },
+    {
+      "source": "1004249",
+      "target": "5100562",
+      "value": 7.894736842105263
     },
     {
       "source": "1004258",
@@ -4447,14 +4432,29 @@
       "value": 11.538461538461538
     },
     {
+      "source": "1004258",
+      "target": "5100696",
+      "value": 12.5
+    },
+    {
+      "source": "1004258",
+      "target": "5100562",
+      "value": 13.043478260869565
+    },
+    {
       "source": "5100696",
       "target": "5100718",
       "value": 18.75
     },
     {
-      "source": "1004258",
+      "source": "5100562",
+      "target": "5100718",
+      "value": 20.0
+    },
+    {
+      "source": "5100562",
       "target": "5100696",
-      "value": 12.5
+      "value": 23.076923076923077
     },
     {
       "source": "1003304",
@@ -4477,24 +4477,14 @@
       "value": 2.4390243902439024
     },
     {
-      "source": "1004739",
-      "target": "1004806",
-      "value": 4.0
-    },
-    {
       "source": "1004741",
       "target": "1004806",
       "value": 4.761904761904762
     },
     {
-      "source": "1004565",
-      "target": "1005003",
-      "value": 8.333333333333332
-    },
-    {
-      "source": "1003770",
-      "target": "1004565",
-      "value": 8.333333333333332
+      "source": "1004739",
+      "target": "1004806",
+      "value": 4.0
     },
     {
       "source": "1003770",
@@ -4502,29 +4492,14 @@
       "value": 50.0
     },
     {
-      "source": "1005104",
-      "target": "1005107",
-      "value": 17.391304347826086
+      "source": "1003770",
+      "target": "1004565",
+      "value": 8.333333333333332
     },
     {
-      "source": "1005104",
-      "target": "1005113",
-      "value": 14.285714285714285
-    },
-    {
-      "source": "1005104",
-      "target": "1005109",
-      "value": 15.789473684210526
-    },
-    {
-      "source": "1005107",
-      "target": "1005113",
-      "value": 25.0
-    },
-    {
-      "source": "1005107",
-      "target": "1005109",
-      "value": 30.0
+      "source": "1004565",
+      "target": "1005003",
+      "value": 8.333333333333332
     },
     {
       "source": "1005107",
@@ -4533,8 +4508,8 @@
     },
     {
       "source": "1005109",
-      "target": "1005113",
-      "value": 37.5
+      "target": "1005118",
+      "value": 25.0
     },
     {
       "source": "1005113",
@@ -4542,9 +4517,34 @@
       "value": 21.428571428571427
     },
     {
-      "source": "1005109",
-      "target": "1005118",
+      "source": "1005107",
+      "target": "1005109",
+      "value": 30.0
+    },
+    {
+      "source": "1005104",
+      "target": "1005107",
+      "value": 17.391304347826086
+    },
+    {
+      "source": "1005107",
+      "target": "1005113",
       "value": 25.0
+    },
+    {
+      "source": "1005104",
+      "target": "1005109",
+      "value": 15.789473684210526
+    },
+    {
+      "source": "1005109",
+      "target": "1005113",
+      "value": 37.5
+    },
+    {
+      "source": "1005104",
+      "target": "1005113",
+      "value": 14.285714285714285
     },
     {
       "source": "1003549",
@@ -4552,14 +4552,19 @@
       "value": 4.761904761904762
     },
     {
+      "source": "1004750",
+      "target": "1004975",
+      "value": 9.090909090909092
+    },
+    {
       "source": "1003549",
       "target": "1004975",
       "value": 8.333333333333332
     },
     {
-      "source": "1004750",
-      "target": "1004975",
-      "value": 9.090909090909092
+      "source": "1004209",
+      "target": "1004891",
+      "value": 10.0
     },
     {
       "source": "1004877",
@@ -4572,9 +4577,9 @@
       "value": 10.0
     },
     {
-      "source": "1004209",
-      "target": "1004891",
-      "value": 10.0
+      "source": "1004249",
+      "target": "5100337",
+      "value": 4.651162790697675
     },
     {
       "source": "1004249",
@@ -4582,14 +4587,14 @@
       "value": 9.615384615384617
     },
     {
-      "source": "1004249",
-      "target": "5100337",
-      "value": 4.651162790697675
-    },
-    {
       "source": "1004833",
       "target": "5100337",
       "value": 6.451612903225806
+    },
+    {
+      "source": "1800944",
+      "target": "18200072",
+      "value": 30.0
     },
     {
       "source": "1800944",
@@ -4602,28 +4607,13 @@
       "value": 15.789473684210526
     },
     {
-      "source": "1800944",
-      "target": "18200072",
-      "value": 30.0
-    },
-    {
       "source": "11700140",
       "target": "1800944",
       "value": 30.0
     },
     {
       "source": "1801562",
-      "target": "1801881",
-      "value": 20.0
-    },
-    {
-      "source": "1801562",
       "target": "18200072",
-      "value": 50.0
-    },
-    {
-      "source": "11700140",
-      "target": "1801562",
       "value": 50.0
     },
     {
@@ -4633,18 +4623,33 @@
     },
     {
       "source": "11700140",
+      "target": "18200072",
+      "value": 50.0
+    },
+    {
+      "source": "1801562",
       "target": "1801881",
       "value": 20.0
     },
     {
       "source": "11700140",
-      "target": "18200072",
+      "target": "1801562",
       "value": 50.0
+    },
+    {
+      "source": "11700140",
+      "target": "1801881",
+      "value": 20.0
     },
     {
       "source": "1004250",
       "target": "1005129",
-      "value": 0.0
+      "value": 1.0
+    },
+    {
+      "source": "1004238",
+      "target": "1004249",
+      "value": 8.108108108108109
     },
     {
       "source": "1004237",
@@ -4657,24 +4662,9 @@
       "value": 10.869565217391305
     },
     {
-      "source": "1004238",
-      "target": "1004249",
-      "value": 8.108108108108109
-    },
-    {
-      "source": "1004237",
-      "target": "1005136",
-      "value": 13.043478260869565
-    },
-    {
       "source": "1004237",
       "target": "1004238",
       "value": 35.714285714285715
-    },
-    {
-      "source": "1003317",
-      "target": "1004237",
-      "value": 22.22222222222222
     },
     {
       "source": "1004238",
@@ -4683,13 +4673,23 @@
     },
     {
       "source": "1003317",
+      "target": "1004238",
+      "value": 13.043478260869565
+    },
+    {
+      "source": "1004237",
       "target": "1005136",
-      "value": 9.375
+      "value": 13.043478260869565
     },
     {
       "source": "1003317",
-      "target": "1004238",
-      "value": 13.043478260869565
+      "target": "1004237",
+      "value": 22.22222222222222
+    },
+    {
+      "source": "1003317",
+      "target": "1005136",
+      "value": 9.375
     },
     {
       "source": "1005014",
@@ -4697,44 +4697,19 @@
       "value": 5.88235294117647
     },
     {
-      "source": "1005014",
-      "target": "5800645",
-      "value": 6.25
-    },
-    {
       "source": "1005015",
       "target": "5800645",
       "value": 33.33333333333333
     },
     {
+      "source": "1005014",
+      "target": "5800645",
+      "value": 6.25
+    },
+    {
       "source": "1004805",
       "target": "1004934",
-      "value": 0.0
-    },
-    {
-      "source": "1004781",
-      "target": "1005159",
-      "value": 13.636363636363635
-    },
-    {
-      "source": "1004767",
-      "target": "1004781",
-      "value": 7.317073170731707
-    },
-    {
-      "source": "1004781",
-      "target": "1004873",
-      "value": 13.043478260869565
-    },
-    {
-      "source": "1004781",
-      "target": "1004870",
-      "value": 9.67741935483871
-    },
-    {
-      "source": "1004767",
-      "target": "1005159",
-      "value": 10.256410256410255
+      "value": 1.0
     },
     {
       "source": "1004873",
@@ -4742,14 +4717,34 @@
       "value": 19.047619047619047
     },
     {
+      "source": "1004781",
+      "target": "1004873",
+      "value": 13.043478260869565
+    },
+    {
+      "source": "1004767",
+      "target": "1005159",
+      "value": 10.256410256410255
+    },
+    {
+      "source": "1004767",
+      "target": "1004781",
+      "value": 7.317073170731707
+    },
+    {
       "source": "1004870",
       "target": "1005159",
       "value": 13.793103448275861
     },
     {
-      "source": "1200947",
-      "target": "1801690",
-      "value": 14.285714285714285
+      "source": "1004781",
+      "target": "1005159",
+      "value": 13.636363636363635
+    },
+    {
+      "source": "1004781",
+      "target": "1004870",
+      "value": 9.67741935483871
     },
     {
       "source": "1200947",
@@ -4757,8 +4752,18 @@
       "value": 50.0
     },
     {
+      "source": "1200947",
+      "target": "1801690",
+      "value": 14.285714285714285
+    },
+    {
       "source": "1201504",
       "target": "1801690",
+      "value": 14.285714285714285
+    },
+    {
+      "source": "1002629",
+      "target": "1002634",
       "value": 14.285714285714285
     },
     {
@@ -4767,9 +4772,9 @@
       "value": 4.761904761904762
     },
     {
-      "source": "1002629",
-      "target": "1002634",
-      "value": 14.285714285714285
+      "source": "1004434",
+      "target": "5100553",
+      "value": 25.0
     },
     {
       "source": "1004434",
@@ -4778,28 +4783,23 @@
     },
     {
       "source": "1004434",
-      "target": "5100553",
-      "value": 25.0
-    },
-    {
-      "source": "1004434",
       "target": "5100862",
       "value": 25.0
     },
     {
       "source": "1004856",
       "target": "5100553",
-      "value": 5.714285714285714
-    },
-    {
-      "source": "1004856",
-      "target": "5100862",
       "value": 5.714285714285714
     },
     {
       "source": "5100553",
       "target": "5100862",
       "value": 50.0
+    },
+    {
+      "source": "1004856",
+      "target": "5100862",
+      "value": 5.714285714285714
     },
     {
       "source": "1004784",
@@ -4817,6 +4817,11 @@
       "value": 9.090909090909092
     },
     {
+      "source": "1004792",
+      "target": "1005101",
+      "value": 27.27272727272727
+    },
+    {
       "source": "1004575",
       "target": "1004792",
       "value": 27.27272727272727
@@ -4827,28 +4832,13 @@
       "value": 27.27272727272727
     },
     {
-      "source": "1004792",
-      "target": "1005101",
-      "value": 27.27272727272727
-    },
-    {
       "source": "1003901",
       "target": "1004792",
       "value": 27.27272727272727
     },
     {
       "source": "1004575",
-      "target": "1005102",
-      "value": 50.0
-    },
-    {
-      "source": "1004575",
       "target": "1005101",
-      "value": 50.0
-    },
-    {
-      "source": "1003901",
-      "target": "1004575",
       "value": 50.0
     },
     {
@@ -4858,17 +4848,27 @@
     },
     {
       "source": "1003901",
+      "target": "1005101",
+      "value": 50.0
+    },
+    {
+      "source": "1004575",
       "target": "1005102",
       "value": 50.0
     },
     {
       "source": "1003901",
-      "target": "1005101",
+      "target": "1004575",
+      "value": 50.0
+    },
+    {
+      "source": "1003901",
+      "target": "1005102",
       "value": 50.0
     },
     {
       "source": "1005135",
-      "target": "5100594",
+      "target": "5100855",
       "value": 4.3478260869565215
     },
     {
@@ -4878,7 +4878,7 @@
     },
     {
       "source": "1005135",
-      "target": "5100855",
+      "target": "5100594",
       "value": 4.3478260869565215
     },
     {
@@ -4887,14 +4887,9 @@
       "value": 18.181818181818183
     },
     {
-      "source": "1002524",
-      "target": "1201233",
-      "value": 6.666666666666667
-    },
-    {
       "source": "1005007",
-      "target": "1201233",
-      "value": 25.0
+      "target": "1005008",
+      "value": 13.333333333333334
     },
     {
       "source": "1002524",
@@ -4903,8 +4898,13 @@
     },
     {
       "source": "1005007",
-      "target": "1005008",
-      "value": 13.333333333333334
+      "target": "1201233",
+      "value": 25.0
+    },
+    {
+      "source": "1002524",
+      "target": "1201233",
+      "value": 6.666666666666667
     },
     {
       "source": "1002524",
@@ -4914,7 +4914,12 @@
     {
       "source": "1005135",
       "target": "1801690",
-      "value": 0.0
+      "value": 1.0
+    },
+    {
+      "source": "1801841",
+      "target": "4803878",
+      "value": 33.33333333333333
     },
     {
       "source": "1801841",
@@ -4925,11 +4930,6 @@
       "source": "1801841",
       "target": "4804295",
       "value": 25.0
-    },
-    {
-      "source": "1801841",
-      "target": "4803878",
-      "value": 33.33333333333333
     },
     {
       "source": "1801792",
@@ -4938,13 +4938,18 @@
     },
     {
       "source": "1801881",
-      "target": "4804295",
-      "value": 14.285714285714285
+      "target": "4803878",
+      "value": 16.666666666666664
+    },
+    {
+      "source": "1801792",
+      "target": "4803878",
+      "value": 33.33333333333333
     },
     {
       "source": "1801881",
-      "target": "4803878",
-      "value": 16.666666666666664
+      "target": "4804295",
+      "value": 14.285714285714285
     },
     {
       "source": "1801792",
@@ -4955,26 +4960,6 @@
       "source": "1801792",
       "target": "4804295",
       "value": 25.0
-    },
-    {
-      "source": "1801792",
-      "target": "4803878",
-      "value": 33.33333333333333
-    },
-    {
-      "source": "1002524",
-      "target": "1004249",
-      "value": 13.333333333333334
-    },
-    {
-      "source": "1002524",
-      "target": "1005100",
-      "value": 5.405405405405405
-    },
-    {
-      "source": "1002524",
-      "target": "1003306",
-      "value": 9.30232558139535
     },
     {
       "source": "1004249",
@@ -4987,14 +4972,24 @@
       "value": 14.893617021276595
     },
     {
+      "source": "1002524",
+      "target": "1004249",
+      "value": 13.333333333333334
+    },
+    {
       "source": "1003306",
       "target": "1005100",
       "value": 8.333333333333332
     },
     {
-      "source": "1005122",
-      "target": "1005142",
-      "value": 50.0
+      "source": "1002524",
+      "target": "1005100",
+      "value": 5.405405405405405
+    },
+    {
+      "source": "1002524",
+      "target": "1003306",
+      "value": 9.30232558139535
     },
     {
       "source": "1005113",
@@ -5007,49 +5002,29 @@
       "value": 16.666666666666664
     },
     {
+      "source": "1005122",
+      "target": "1005142",
+      "value": 50.0
+    },
+    {
       "source": "1004833",
       "target": "1004867",
-      "value": 0.0
+      "value": 1.0
     },
     {
       "source": "1003768",
       "target": "1004781",
-      "value": 0.0
+      "value": 1.0
     },
     {
       "source": "1004657",
       "target": "1004659",
-      "value": 0.0
-    },
-    {
-      "source": "1800944",
-      "target": "4804056",
-      "value": 11.538461538461538
-    },
-    {
-      "source": "1004856",
-      "target": "1800944",
-      "value": 7.5
-    },
-    {
-      "source": "1004767",
-      "target": "1800944",
-      "value": 8.333333333333332
+      "value": 1.0
     },
     {
       "source": "1003859",
       "target": "1800944",
       "value": 30.0
-    },
-    {
-      "source": "1004856",
-      "target": "4804056",
-      "value": 9.615384615384617
-    },
-    {
-      "source": "1004767",
-      "target": "4804056",
-      "value": 12.5
     },
     {
       "source": "1003859",
@@ -5058,13 +5033,43 @@
     },
     {
       "source": "1003859",
+      "target": "1004767",
+      "value": 9.375
+    },
+    {
+      "source": "1003859",
       "target": "1004856",
       "value": 8.333333333333332
     },
     {
-      "source": "1003859",
-      "target": "1004767",
-      "value": 9.375
+      "source": "1800944",
+      "target": "4804056",
+      "value": 11.538461538461538
+    },
+    {
+      "source": "1004767",
+      "target": "1800944",
+      "value": 8.333333333333332
+    },
+    {
+      "source": "1004856",
+      "target": "1800944",
+      "value": 7.5
+    },
+    {
+      "source": "1004767",
+      "target": "4804056",
+      "value": 12.5
+    },
+    {
+      "source": "1004856",
+      "target": "4804056",
+      "value": 9.615384615384617
+    },
+    {
+      "source": "5100448",
+      "target": "5100776",
+      "value": 50.0
     },
     {
       "source": "5100530",
@@ -5077,13 +5082,23 @@
       "value": 33.33333333333333
     },
     {
-      "source": "5100448",
+      "source": "5100702",
       "target": "5100776",
       "value": 50.0
     },
     {
-      "source": "5100702",
-      "target": "5100776",
+      "source": "5100448",
+      "target": "5100530",
+      "value": 42.857142857142854
+    },
+    {
+      "source": "5100448",
+      "target": "5100561",
+      "value": 33.33333333333333
+    },
+    {
+      "source": "5100448",
+      "target": "5100702",
       "value": 50.0
     },
     {
@@ -5092,29 +5107,14 @@
       "value": 30.0
     },
     {
-      "source": "5100448",
-      "target": "5100530",
-      "value": 42.857142857142854
-    },
-    {
       "source": "5100530",
       "target": "5100702",
       "value": 42.857142857142854
     },
     {
-      "source": "5100448",
-      "target": "5100561",
-      "value": 33.33333333333333
-    },
-    {
       "source": "5100561",
       "target": "5100702",
       "value": 33.33333333333333
-    },
-    {
-      "source": "5100448",
-      "target": "5100702",
-      "value": 50.0
     },
     {
       "source": "1004897",
@@ -5127,24 +5127,24 @@
       "value": 6.896551724137931
     },
     {
-      "source": "1003317",
-      "target": "1003319",
-      "value": 8.0
-    },
-    {
       "source": "1003316",
       "target": "1003319",
       "value": 9.090909090909092
     },
     {
-      "source": "1004578",
-      "target": "1004870",
-      "value": 5.0
+      "source": "1003317",
+      "target": "1003319",
+      "value": 8.0
     },
     {
       "source": "1004578",
       "target": "4803771",
       "value": 50.0
+    },
+    {
+      "source": "1004578",
+      "target": "1004870",
+      "value": 5.0
     },
     {
       "source": "1004870",
@@ -5153,8 +5153,8 @@
     },
     {
       "source": "5100563",
-      "target": "5100718",
-      "value": 5.88235294117647
+      "target": "5100577",
+      "value": 11.11111111111111
     },
     {
       "source": "5100577",
@@ -5163,18 +5163,18 @@
     },
     {
       "source": "5100563",
-      "target": "5100577",
-      "value": 11.11111111111111
-    },
-    {
-      "source": "1002633",
-      "target": "1004247",
-      "value": 4.545454545454546
+      "target": "5100718",
+      "value": 5.88235294117647
     },
     {
       "source": "1002633",
       "target": "1004249",
       "value": 13.461538461538462
+    },
+    {
+      "source": "1002633",
+      "target": "1004247",
+      "value": 4.545454545454546
     },
     {
       "source": "1004767",
@@ -5184,22 +5184,12 @@
     {
       "source": "1800930",
       "target": "5100530",
-      "value": 0.0
+      "value": 1.0
     },
     {
-      "source": "5100567",
-      "target": "5100853",
-      "value": 50.0
-    },
-    {
-      "source": "1005136",
-      "target": "5100567",
-      "value": 17.647058823529413
-    },
-    {
-      "source": "5100567",
+      "source": "5100337",
       "target": "5100856",
-      "value": 50.0
+      "value": 21.428571428571427
     },
     {
       "source": "5100337",
@@ -5207,24 +5197,9 @@
       "value": 21.428571428571427
     },
     {
-      "source": "1005136",
-      "target": "5100853",
-      "value": 17.647058823529413
-    },
-    {
-      "source": "5100853",
-      "target": "5100856",
-      "value": 50.0
-    },
-    {
       "source": "5100337",
       "target": "5100853",
       "value": 21.428571428571427
-    },
-    {
-      "source": "1005136",
-      "target": "5100856",
-      "value": 17.647058823529413
     },
     {
       "source": "1005136",
@@ -5232,9 +5207,39 @@
       "value": 16.0
     },
     {
-      "source": "5100337",
+      "source": "5100567",
       "target": "5100856",
-      "value": 21.428571428571427
+      "value": 50.0
+    },
+    {
+      "source": "5100853",
+      "target": "5100856",
+      "value": 50.0
+    },
+    {
+      "source": "1005136",
+      "target": "5100856",
+      "value": 17.647058823529413
+    },
+    {
+      "source": "5100567",
+      "target": "5100853",
+      "value": 50.0
+    },
+    {
+      "source": "1005136",
+      "target": "5100567",
+      "value": 17.647058823529413
+    },
+    {
+      "source": "1005136",
+      "target": "5100853",
+      "value": 17.647058823529413
+    },
+    {
+      "source": "1003711",
+      "target": "1003713",
+      "value": 50.0
     },
     {
       "source": "1003549",
@@ -5247,11 +5252,6 @@
       "value": 8.333333333333332
     },
     {
-      "source": "1003711",
-      "target": "1003713",
-      "value": 50.0
-    },
-    {
       "source": "1004833",
       "target": "1004834",
       "value": 4.166666666666666
@@ -5262,29 +5262,9 @@
       "value": 33.33333333333333
     },
     {
-      "source": "1003965",
-      "target": "1004767",
-      "value": 8.571428571428571
-    },
-    {
-      "source": "1003965",
-      "target": "5100563",
-      "value": 21.428571428571427
-    },
-    {
-      "source": "1003965",
-      "target": "1005115",
-      "value": 5.454545454545454
-    },
-    {
       "source": "1004767",
       "target": "1004973",
       "value": 9.375
-    },
-    {
-      "source": "1004973",
-      "target": "5100563",
-      "value": 27.27272727272727
     },
     {
       "source": "1004973",
@@ -5292,9 +5272,24 @@
       "value": 5.769230769230769
     },
     {
-      "source": "1004767",
+      "source": "1004973",
       "target": "5100563",
-      "value": 10.81081081081081
+      "value": 27.27272727272727
+    },
+    {
+      "source": "1003965",
+      "target": "1004767",
+      "value": 8.571428571428571
+    },
+    {
+      "source": "1003965",
+      "target": "1005115",
+      "value": 5.454545454545454
+    },
+    {
+      "source": "1003965",
+      "target": "5100563",
+      "value": 21.428571428571427
     },
     {
       "source": "1004767",
@@ -5302,9 +5297,9 @@
       "value": 17.94871794871795
     },
     {
-      "source": "1004495",
-      "target": "1004743",
-      "value": 50.0
+      "source": "1004767",
+      "target": "5100563",
+      "value": 10.81081081081081
     },
     {
       "source": "1003316",
@@ -5317,6 +5312,16 @@
       "value": 22.22222222222222
     },
     {
+      "source": "1004495",
+      "target": "1004743",
+      "value": 50.0
+    },
+    {
+      "source": "1003316",
+      "target": "1004897",
+      "value": 13.636363636363635
+    },
+    {
       "source": "1003316",
       "target": "1004495",
       "value": 11.76470588235294
@@ -5327,24 +5332,9 @@
       "value": 22.22222222222222
     },
     {
-      "source": "1003316",
-      "target": "1004897",
-      "value": 13.636363636363635
-    },
-    {
       "source": "1004238",
       "target": "5100852",
       "value": 28.57142857142857
-    },
-    {
-      "source": "1004225",
-      "target": "1004238",
-      "value": 28.57142857142857
-    },
-    {
-      "source": "1004225",
-      "target": "5100852",
-      "value": 50.0
     },
     {
       "source": "1004237",
@@ -5353,13 +5343,18 @@
     },
     {
       "source": "1004225",
-      "target": "1004237",
-      "value": 18.181818181818183
+      "target": "5100852",
+      "value": 50.0
     },
     {
-      "source": "1004777",
-      "target": "1005008",
-      "value": 4.0
+      "source": "1004225",
+      "target": "1004238",
+      "value": 28.57142857142857
+    },
+    {
+      "source": "1004225",
+      "target": "1004237",
+      "value": 18.181818181818183
     },
     {
       "source": "1004779",
@@ -5368,38 +5363,18 @@
     },
     {
       "source": "1004777",
+      "target": "1005008",
+      "value": 4.0
+    },
+    {
+      "source": "1004777",
       "target": "1004779",
       "value": 5.88235294117647
-    },
-    {
-      "source": "1004833",
-      "target": "1005014",
-      "value": 14.285714285714285
-    },
-    {
-      "source": "1004833",
-      "target": "1004873",
-      "value": 12.903225806451612
-    },
-    {
-      "source": "1003535",
-      "target": "1004833",
-      "value": 14.285714285714285
-    },
-    {
-      "source": "1004873",
-      "target": "1005014",
-      "value": 15.384615384615385
     },
     {
       "source": "1003535",
       "target": "1005014",
       "value": 13.043478260869565
-    },
-    {
-      "source": "1004870",
-      "target": "1005014",
-      "value": 14.705882352941178
     },
     {
       "source": "1003535",
@@ -5408,8 +5383,33 @@
     },
     {
       "source": "1003535",
+      "target": "1004833",
+      "value": 14.285714285714285
+    },
+    {
+      "source": "1003535",
       "target": "1004870",
       "value": 11.11111111111111
+    },
+    {
+      "source": "1004873",
+      "target": "1005014",
+      "value": 15.384615384615385
+    },
+    {
+      "source": "1004833",
+      "target": "1005014",
+      "value": 14.285714285714285
+    },
+    {
+      "source": "1004870",
+      "target": "1005014",
+      "value": 14.705882352941178
+    },
+    {
+      "source": "1004833",
+      "target": "1004873",
+      "value": 12.903225806451612
     },
     {
       "source": "1004834",
@@ -5419,12 +5419,17 @@
     {
       "source": "1004856",
       "target": "1005098",
-      "value": 0.0
+      "value": 1.0
     },
     {
       "source": "1004433",
       "target": "1004457",
-      "value": 0.0
+      "value": 1.0
+    },
+    {
+      "source": "1005105",
+      "target": "1005144",
+      "value": 6.0606060606060606
     },
     {
       "source": "1005132",
@@ -5437,23 +5442,33 @@
       "value": 5.555555555555555
     },
     {
-      "source": "1005105",
-      "target": "1005144",
-      "value": 6.0606060606060606
-    },
-    {
       "source": "1004856",
       "target": "1005132",
       "value": 6.382978723404255
     },
     {
       "source": "1004249",
-      "target": "1005258",
+      "target": "1005235",
       "value": 8.571428571428571
     },
     {
-      "source": "1004249",
+      "source": "1005235",
+      "target": "1005258",
+      "value": 50.0
+    },
+    {
+      "source": "1005235",
+      "target": "1800930",
+      "value": 33.33333333333333
+    },
+    {
+      "source": "1005100",
       "target": "1005235",
+      "value": 25.0
+    },
+    {
+      "source": "1004249",
+      "target": "1005258",
       "value": 8.571428571428571
     },
     {
@@ -5462,13 +5477,13 @@
       "value": 7.894736842105263
     },
     {
-      "source": "1005100",
-      "target": "1005258",
-      "value": 25.0
+      "source": "1005258",
+      "target": "1800930",
+      "value": 33.33333333333333
     },
     {
       "source": "1005100",
-      "target": "1005235",
+      "target": "1005258",
       "value": 25.0
     },
     {
@@ -5477,34 +5492,9 @@
       "value": 20.0
     },
     {
-      "source": "1005235",
-      "target": "1005258",
-      "value": 50.0
-    },
-    {
-      "source": "1005258",
-      "target": "1800930",
-      "value": 33.33333333333333
-    },
-    {
-      "source": "1005235",
-      "target": "1800930",
-      "value": 33.33333333333333
-    },
-    {
       "source": "1003285",
       "target": "1004833",
       "value": 12.0
-    },
-    {
-      "source": "1003285",
-      "target": "1004856",
-      "value": 5.263157894736842
-    },
-    {
-      "source": "1003285",
-      "target": "1003532",
-      "value": 28.57142857142857
     },
     {
       "source": "1003532",
@@ -5512,19 +5502,19 @@
       "value": 9.090909090909092
     },
     {
+      "source": "1003285",
+      "target": "1003532",
+      "value": 28.57142857142857
+    },
+    {
+      "source": "1003285",
+      "target": "1004856",
+      "value": 5.263157894736842
+    },
+    {
       "source": "1003532",
       "target": "1004856",
       "value": 5.714285714285714
-    },
-    {
-      "source": "1003317",
-      "target": "1004321",
-      "value": 10.0
-    },
-    {
-      "source": "1004321",
-      "target": "1004870",
-      "value": 9.523809523809524
     },
     {
       "source": "1003769",
@@ -5532,14 +5522,24 @@
       "value": 50.0
     },
     {
+      "source": "1004321",
+      "target": "1004870",
+      "value": 9.523809523809524
+    },
+    {
       "source": "1003317",
-      "target": "1003769",
+      "target": "1004321",
       "value": 10.0
     },
     {
       "source": "1003769",
       "target": "1004870",
       "value": 9.523809523809524
+    },
+    {
+      "source": "1003317",
+      "target": "1003769",
+      "value": 10.0
     },
     {
       "source": "1004254",
@@ -5552,16 +5552,6 @@
       "value": 16.666666666666664
     },
     {
-      "source": "1004768",
-      "target": "1005115",
-      "value": 7.142857142857142
-    },
-    {
-      "source": "1004768",
-      "target": "1005105",
-      "value": 5.405405405405405
-    },
-    {
       "source": "1004875",
       "target": "1005115",
       "value": 7.4074074074074066
@@ -5572,9 +5562,14 @@
       "value": 8.571428571428571
     },
     {
-      "source": "1004320",
-      "target": "1004741",
-      "value": 12.0
+      "source": "1004768",
+      "target": "1005115",
+      "value": 7.142857142857142
+    },
+    {
+      "source": "1004768",
+      "target": "1005105",
+      "value": 5.405405405405405
     },
     {
       "source": "1004741",
@@ -5582,29 +5577,9 @@
       "value": 13.043478260869565
     },
     {
-      "source": "1004741",
-      "target": "1004776",
-      "value": 13.043478260869565
-    },
-    {
       "source": "1004320",
       "target": "1005161",
       "value": 37.5
-    },
-    {
-      "source": "1004320",
-      "target": "1004739",
-      "value": 10.344827586206897
-    },
-    {
-      "source": "1004320",
-      "target": "1004776",
-      "value": 37.5
-    },
-    {
-      "source": "1004739",
-      "target": "1005161",
-      "value": 11.11111111111111
     },
     {
       "source": "1004776",
@@ -5613,13 +5588,33 @@
     },
     {
       "source": "1004739",
-      "target": "1004776",
+      "target": "1005161",
       "value": 11.11111111111111
     },
     {
-      "source": "1005105",
-      "target": "4804055",
-      "value": 10.714285714285714
+      "source": "1004320",
+      "target": "1004741",
+      "value": 12.0
+    },
+    {
+      "source": "1004741",
+      "target": "1004776",
+      "value": 13.043478260869565
+    },
+    {
+      "source": "1004320",
+      "target": "1004776",
+      "value": 37.5
+    },
+    {
+      "source": "1004320",
+      "target": "1004739",
+      "value": 10.344827586206897
+    },
+    {
+      "source": "1004739",
+      "target": "1004776",
+      "value": 11.11111111111111
     },
     {
       "source": "4804055",
@@ -5627,9 +5622,19 @@
       "value": 10.344827586206897
     },
     {
+      "source": "4803395",
+      "target": "4804551",
+      "value": 50.0
+    },
+    {
+      "source": "1005105",
+      "target": "4804551",
+      "value": 9.090909090909092
+    },
+    {
       "source": "4803449",
-      "target": "4804055",
-      "value": 10.344827586206897
+      "target": "4804551",
+      "value": 50.0
     },
     {
       "source": "4803395",
@@ -5638,13 +5643,13 @@
     },
     {
       "source": "1005105",
-      "target": "4804551",
-      "value": 9.090909090909092
+      "target": "4804055",
+      "value": 10.714285714285714
     },
     {
-      "source": "1005105",
-      "target": "4803449",
-      "value": 9.090909090909092
+      "source": "4803449",
+      "target": "4804055",
+      "value": 10.344827586206897
     },
     {
       "source": "1005105",
@@ -5652,24 +5657,14 @@
       "value": 9.090909090909092
     },
     {
-      "source": "4803449",
-      "target": "4804551",
-      "value": 50.0
-    },
-    {
-      "source": "4803395",
-      "target": "4804551",
-      "value": 50.0
-    },
-    {
       "source": "4803395",
       "target": "4803449",
       "value": 50.0
     },
     {
-      "source": "1004226",
-      "target": "1004249",
-      "value": 8.571428571428571
+      "source": "1005105",
+      "target": "4803449",
+      "value": 9.090909090909092
     },
     {
       "source": "1004249",
@@ -5678,13 +5673,18 @@
     },
     {
       "source": "1004226",
-      "target": "1004258",
-      "value": 15.0
+      "target": "1004249",
+      "value": 8.571428571428571
     },
     {
       "source": "1004258",
       "target": "1004767",
       "value": 13.043478260869565
+    },
+    {
+      "source": "1004226",
+      "target": "1004258",
+      "value": 15.0
     },
     {
       "source": "1004226",
@@ -5697,9 +5697,14 @@
       "value": 5.769230769230769
     },
     {
+      "source": "4803186",
+      "target": "4803878",
+      "value": 25.0
+    },
+    {
       "source": "1004565",
-      "target": "4804295",
-      "value": 10.0
+      "target": "4803878",
+      "value": 11.76470588235294
     },
     {
       "source": "4803186",
@@ -5708,23 +5713,13 @@
     },
     {
       "source": "1004565",
-      "target": "4803878",
-      "value": 11.76470588235294
+      "target": "4804295",
+      "value": 10.0
     },
     {
       "source": "1004565",
       "target": "4803186",
       "value": 15.384615384615385
-    },
-    {
-      "source": "4803186",
-      "target": "4803878",
-      "value": 25.0
-    },
-    {
-      "source": "1801631",
-      "target": "1801766",
-      "value": 25.0
     },
     {
       "source": "1800930",
@@ -5737,8 +5732,13 @@
       "value": 9.090909090909092
     },
     {
+      "source": "1801631",
+      "target": "1801766",
+      "value": 25.0
+    },
+    {
       "source": "1004870",
-      "target": "4802068",
+      "target": "4800358",
       "value": 5.0
     },
     {
@@ -5748,18 +5748,13 @@
     },
     {
       "source": "1004870",
-      "target": "4800358",
+      "target": "4802068",
       "value": 5.0
     },
     {
-      "source": "1005132",
+      "source": "1004836",
       "target": "5100378",
-      "value": 17.647058823529413
-    },
-    {
-      "source": "1004751",
-      "target": "1005132",
-      "value": 13.043478260869565
+      "value": 27.27272727272727
     },
     {
       "source": "1004836",
@@ -5767,19 +5762,19 @@
       "value": 13.636363636363635
     },
     {
-      "source": "1005132",
+      "source": "1004836",
       "target": "5100376",
-      "value": 12.5
+      "value": 22.22222222222222
     },
     {
       "source": "1004751",
-      "target": "5100378",
-      "value": 25.0
+      "target": "1004836",
+      "value": 29.411764705882355
     },
     {
-      "source": "1004836",
+      "source": "1005132",
       "target": "5100378",
-      "value": 27.27272727272727
+      "value": 17.647058823529413
     },
     {
       "source": "5100376",
@@ -5788,18 +5783,23 @@
     },
     {
       "source": "1004751",
-      "target": "1004836",
-      "value": 29.411764705882355
+      "target": "5100378",
+      "value": 25.0
+    },
+    {
+      "source": "1005132",
+      "target": "5100376",
+      "value": 12.5
+    },
+    {
+      "source": "1004751",
+      "target": "1005132",
+      "value": 13.043478260869565
     },
     {
       "source": "1004751",
       "target": "5100376",
       "value": 21.052631578947366
-    },
-    {
-      "source": "1004836",
-      "target": "5100376",
-      "value": 22.22222222222222
     },
     {
       "source": "1005139",
@@ -5818,8 +5818,8 @@
     },
     {
       "source": "1003306",
-      "target": "5100718",
-      "value": 12.5
+      "target": "5100566",
+      "value": 6.25
     },
     {
       "source": "5100566",
@@ -5828,23 +5828,23 @@
     },
     {
       "source": "1003306",
-      "target": "5100566",
-      "value": 6.25
+      "target": "5100718",
+      "value": 12.5
     },
     {
       "source": "1005144",
       "target": "5100337",
-      "value": 0.0
-    },
-    {
-      "source": "4803640",
-      "target": "4803651",
-      "value": 50.0
+      "value": 1.0
     },
     {
       "source": "4803651",
       "target": "4803943",
       "value": 33.33333333333333
+    },
+    {
+      "source": "4803640",
+      "target": "4803651",
+      "value": 50.0
     },
     {
       "source": "4803640",

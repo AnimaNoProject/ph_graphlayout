@@ -16,7 +16,7 @@ from itertools import permutations
 # source: smaller_product_id, target: larger_product_id, value: link_count
 
 #edit following lines for options
-category = 'electronics.audio.headphone' #keep consistent with other files
+category = 'furniture.living_room.sofa' #keep consistent with other files
 use_jaccard = True
 attraction_strength = 0.7
 attraction_strength_weak = 0.01
@@ -83,7 +83,7 @@ class Graph:
             if node in self.adj[node2]:
                 shared_nodes += 1
         jaccard = (shared_nodes / (node1_nodes + node2_nodes)) * 100
-        return jaccard
+        return 1.0 if jaccard < 1 else jaccard
 
 # end of graph class
 
@@ -172,4 +172,4 @@ with open(os.path.join(dir, '..','2019-Oct', input_file_name), 'r') as inputfile
 print('finished')
 print('number of nodes: ', len(data['nodes']))
 print('number of links: ', len(data['links']))
-print(link_count)
+#print(link_count)
