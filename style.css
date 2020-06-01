@@ -133,3 +133,42 @@ html, body
 {
     display: none;
 }
+
+.scrollbar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    position: absolute;}
+
+.scrollbar::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #0075FF;
+
+}
+
+.scrollbar {
+    scrollbar-color: #0075FF;
+    border-radius: 10px;
+}
+.bordered-black::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+    border: 1px solid #0075FF; }
+
+.bordered-black::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: none; }
+
+.square::-webkit-scrollbar-track {
+    border-radius: 0 !important; }
+
+.square::-webkit-scrollbar-thumb {
+    border-radius: 0 !important; }
+
+.thin::-webkit-scrollbar {
+    width: 6px; }
