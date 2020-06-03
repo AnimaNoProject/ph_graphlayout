@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <header>
-    <title></title>
+    <title>PH Guided Force-Directed Graph Layout</title>
     <meta charset="utf-8">
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="js/barcode.js"></script>
@@ -151,6 +151,9 @@
     const group_div = $("#group-labels");
     const btn_bundle_edges = $("#btn_bundle_edges");
 
+    /**
+     * Toggles the help menu.
+     * */
     $(document).ready(function(){
         $(".dropright, .btn-group").hover(function(){
             let dropdownMenu = $(this).children(".dropdown-menu");
@@ -158,6 +161,9 @@
         });
     });
 
+    /**
+     * When the body is loaded init with the default dataset.
+     * */
     document.body.onload = function () {
         init("miserables");
     }

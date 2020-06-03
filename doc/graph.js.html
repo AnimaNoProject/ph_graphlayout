@@ -1,4 +1,32 @@
-let simulation;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: graph.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: graph.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>let simulation;
 
 let links;
 let nodes;
@@ -145,14 +173,14 @@ function create_graph(data) {
 
     let group_map = new Map();
 
-    for (let i = 0; i < data.nodes.length; i++) {
+    for (let i = 0; i &lt; data.nodes.length; i++) {
         if (group_map.get(data.nodes[i].group) === undefined) {
             group_map.set(data.nodes[i].group, 1);
         } else {
             group_map.set(data.nodes[i].group, group_map.get(data.nodes[i].group) + 1);
         }
 
-        for (let j = i + 1; j < data.nodes.length; j++) {
+        for (let j = i + 1; j &lt; data.nodes.length; j++) {
             simulation.force(data.nodes[i].id.concat(data.nodes[j].id), isolate(d3.forceManyBody().strength(-30), data.nodes[i], data.nodes[j]));
         }
     }
@@ -360,7 +388,7 @@ function isolate(force, nodeA, nodeB) {
  * @param number of elements in the group
  */
 function addGroupLabel(name, number) {
-    let btn = $("<button></button>").text(name)
+    let btn = $("&lt;button>&lt;/button>").text(name)
         .addClass("btn")
         .addClass("btn-sm")
         .addClass("disabled")
@@ -369,7 +397,7 @@ function addGroupLabel(name, number) {
         .css("opacity", 1.0)
         .css("background-color", color(name));
 
-    let span = $("<span></span>").text(number)
+    let span = $("&lt;span>&lt;/span>").text(number)
         .addClass("badge")
         .attr("style", "color: #220 !important")
         .css("background-color", "#FFFFFF")
@@ -393,7 +421,7 @@ function animation() {
  * Lets the simulation tick 500 times and then updates nodes and link positions.
  */
 function noAnimation() {
-    for (let i = 0; i < 500; i++) {
+    for (let i = 0; i &lt; 500; i++) {
         simulation.tick();
     }
     updateNodesAndLinks();
@@ -479,7 +507,7 @@ function update_attraction(value) {
 
     // we update all links
     simulation.force("link").strength(function (link) {
-        for (let i = 0; i < bars.length; i++) {
+        for (let i = 0; i &lt; bars.length; i++) {
             // if the bar is longer than the slider value it should not be considered
             if (bars[i].death > value) {
                 continue;
@@ -508,22 +536,22 @@ function update_repulsion() {
 
     // maybe it is necessary to set all forces again. this could definitely
     // be optimised so that two nested for loops are not necessary, but it works for now
-    for (let i = 0; i < loaded_data.nodes.length - 1; i++) {
-        for (let j = i + 1; j < loaded_data.nodes.length; j++) {
+    for (let i = 0; i &lt; loaded_data.nodes.length - 1; i++) {
+        for (let j = i + 1; j &lt; loaded_data.nodes.length; j++) {
             simulation.force(loaded_data.nodes[i].id.concat(loaded_data.nodes[j].id)).strength(repulsion_strength_weak);
         }
     }
 
     // go through all possible forces and check if that bar is selected
     // if so add strong repulsion between these two nodes
-    for (let i = 0; i < loaded_data.nodes.length - 1; i++) {
-        for (let j = i + 1; j < loaded_data.nodes.length; j++) {
-            for (let k = 0; k < bars.length; k++) {
+    for (let i = 0; i &lt; loaded_data.nodes.length - 1; i++) {
+        for (let j = i + 1; j &lt; loaded_data.nodes.length; j++) {
+            for (let k = 0; k &lt; bars.length; k++) {
                 if (!bars[k].selected) {
                     continue;
                 }
 
-                if (bars[k].componentA.contains(loaded_data.nodes[i].id) && bars[k].componentB.contains(loaded_data.nodes[j].id)) {
+                if (bars[k].componentA.contains(loaded_data.nodes[i].id) &amp;&amp; bars[k].componentB.contains(loaded_data.nodes[j].id)) {
                     simulation.force(loaded_data.nodes[i].id.concat(loaded_data.nodes[j].id)).strength(repulsion_strength);
                 }
             }
@@ -539,4 +567,26 @@ function disablePaths() {
     d3.selectAll("path").remove();
     paths_loaded = false;
     btn_bundle_edges.addClass("disabled");
-}
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Bar.html">Bar</a></li><li><a href="Component.html">Component</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addGroupLabel">addGroupLabel</a></li><li><a href="global.html#animation">animation</a></li><li><a href="global.html#brushLinks">brushLinks</a></li><li><a href="global.html#bundle_Edges">bundle_Edges</a></li><li><a href="global.html#changeAnimate">changeAnimate</a></li><li><a href="global.html#configure_graph">configure_graph</a></li><li><a href="global.html#create_barcode">create_barcode</a></li><li><a href="global.html#create_graph">create_graph</a></li><li><a href="global.html#deselect_nodes">deselect_nodes</a></li><li><a href="global.html#disablePaths">disablePaths</a></li><li><a href="global.html#get_ph_features">get_ph_features</a></li><li><a href="global.html#isolate">isolate</a></li><li><a href="global.html#noAnimation">noAnimation</a></li><li><a href="global.html#resize_graph">resize_graph</a></li><li><a href="global.html#update_attraction">update_attraction</a></li><li><a href="global.html#update_repulsion">update_repulsion</a></li><li><a href="global.html#updateNodesAndLinks">updateNodesAndLinks</a></li><li><a href="global.html#updateNodeSize">updateNodeSize</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Thu Jun 04 2020 00:10:20 GMT+0200 (Central European Summer Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

@@ -1,4 +1,32 @@
-/**
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: barcode.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: barcode.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
  * Holds information about a connected component.
  */
 class Component {
@@ -165,7 +193,7 @@ function create_barcode(bars) {
             let colorA;
             let colorB;
 
-            if (d.componentA.nodes.length < d.componentB.nodes.length) {
+            if (d.componentA.nodes.length &lt; d.componentB.nodes.length) {
                 colorA = smallBar;
                 colorB = largeBar;
             } else {
@@ -247,7 +275,7 @@ function get_ph_features(nodes, links) {
     let components = []; // contains all "living" components
 
     // for all nodes
-    for (let i = 0; i < nodes.length; i++) {
+    for (let i = 0; i &lt; nodes.length; i++) {
         bars[i] = new Bar(i); // initialise bar with death of 1
         components[i] = new Component(nodes[i], i);         // initialise component with the node
     }
@@ -258,7 +286,7 @@ function get_ph_features(nodes, links) {
     });
 
     // loop through all edges
-    for (let i = 0; i < links.length; i++) {
+    for (let i = 0; i &lt; links.length; i++) {
         // find the component of the source node u that is not in a "dead" component
         let c_u = components.find(function (component) {
             return component.contains(links[i].source);
@@ -273,7 +301,7 @@ function get_ph_features(nodes, links) {
         {
             bars[c_u.id].death = links[i].value; // update death time (w instead of 1/w see paper)
             bars[c_u.id].edge = links[i];
-            for (let j = 0; j < c_u.nodes.length; j++) // merge C_u and C_v into C_v
+            for (let j = 0; j &lt; c_u.nodes.length; j++) // merge C_u and C_v into C_v
             {
                 c_v.nodes.push(c_u.nodes[j]);
             }
@@ -294,9 +322,9 @@ function get_ph_features(nodes, links) {
     // count nodes on left sie u = n
     // count nodes on right side v = m
     // ratio = n:m or ratio = n / (n + m) => count n then divide by all nodes
-    for (let i = 0; i < bars.length; i++) {
+    for (let i = 0; i &lt; bars.length; i++) {
         // for all nodes
-        for (let i = 0; i < nodes.length; i++) {
+        for (let i = 0; i &lt; nodes.length; i++) {
             components[i] = new Component(nodes[i], i);  // initialise component with the node
         }
 
@@ -306,7 +334,7 @@ function get_ph_features(nodes, links) {
         });
 
         // loop through the remaining edges
-        for (let i = 0; i < mst_removed.length; i++) {
+        for (let i = 0; i &lt; mst_removed.length; i++) {
             // find the component of the source node u that is not in a "dead" component
             let c_u = components.find(function (component) {
                 return component.contains(mst_removed[i].source);
@@ -319,7 +347,7 @@ function get_ph_features(nodes, links) {
 
             if (c_v.id !== c_u.id) // if C_u and C_v not in
             {
-                for (let j = 0; j < c_u.nodes.length; j++) // merge C_u and C_v into C_v
+                for (let j = 0; j &lt; c_u.nodes.length; j++) // merge C_u and C_v into C_v
                 {
                     c_v.nodes.push(c_u.nodes[j]);
                 }
@@ -341,3 +369,26 @@ function get_ph_features(nodes, links) {
 
     return bars;
 }
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Bar.html">Bar</a></li><li><a href="Component.html">Component</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addGroupLabel">addGroupLabel</a></li><li><a href="global.html#animation">animation</a></li><li><a href="global.html#brushLinks">brushLinks</a></li><li><a href="global.html#bundle_Edges">bundle_Edges</a></li><li><a href="global.html#changeAnimate">changeAnimate</a></li><li><a href="global.html#configure_graph">configure_graph</a></li><li><a href="global.html#create_barcode">create_barcode</a></li><li><a href="global.html#create_graph">create_graph</a></li><li><a href="global.html#deselect_nodes">deselect_nodes</a></li><li><a href="global.html#disablePaths">disablePaths</a></li><li><a href="global.html#get_ph_features">get_ph_features</a></li><li><a href="global.html#isolate">isolate</a></li><li><a href="global.html#noAnimation">noAnimation</a></li><li><a href="global.html#resize_graph">resize_graph</a></li><li><a href="global.html#update_attraction">update_attraction</a></li><li><a href="global.html#update_repulsion">update_repulsion</a></li><li><a href="global.html#updateNodesAndLinks">updateNodesAndLinks</a></li><li><a href="global.html#updateNodeSize">updateNodeSize</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Thu Jun 04 2020 00:10:20 GMT+0200 (Central European Summer Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
