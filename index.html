@@ -4,9 +4,9 @@
     <title></title>
     <meta charset="utf-8">
     <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="barcode.js"></script>
-    <script src="graph.js"></script>
-    <script src="d3-ForceEdgeBundling.js"></script>
+    <script src="js/barcode.js"></script>
+    <script src="js/graph.js"></script>
+    <script src="js/d3-ForceEdgeBundling.js"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Google Fonts -->
@@ -102,6 +102,8 @@
                     <option>furniture-living_room-sofa</option>
                     <option>electronics</option>
                     <option>electronics-audio-headphone</option>
+                    <option>lobster</option>
+                    <option>barbell</option>
                 </select>
             </label>
             <label>
@@ -169,8 +171,7 @@
 
         bars = null;
         loaded_data = null;
-
-        d3.json(filename.concat(".json"), function (data) {
+        d3.json("json/".concat(filename, ".json"), function (data) {
                 simulation = null;
                 loaded_data = data;
                 loadingText.text("Extracting PH Features");
