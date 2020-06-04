@@ -113,7 +113,7 @@ function deselect_nodes() {
 
 
     if (paths_loaded) {
-        paths.selectAll("path").style("stroke-opacity", link_opacity * 0.4);
+        paths.selectAll("path").style("stroke-opacity", link_opacity);
     }
     else
     {
@@ -186,7 +186,7 @@ function create_graph(data) {
                     .style("opacity", (paths_loaded) ? 0.0 : link_opacity);
                 
                 if (paths_loaded) {
-                    paths.selectAll("path").style("stroke-opacity", link_opacity * 0.4);
+                    paths.selectAll("path").style("stroke-opacity", link_opacity);
                 }
                 return;
             }
@@ -256,7 +256,7 @@ function brushLinks(d) {
         .style("opacity", (paths_loaded) ? 0.0 : link_opacity);
 
     if (paths_loaded) {
-        paths.selectAll("path").style("stroke-opacity", link_opacity * 0.4);
+        paths.selectAll("path").style("stroke-opacity", link_opacity);
     }
 
     let adj_nodes = [];
@@ -278,7 +278,7 @@ function brushLinks(d) {
                 adj_nodes.push(d3.select(this).attr("target"));
                 return 1.0;
             }
-            return link_opacity * 0.4;
+            return link_opacity;
         });
     } else {
         links
@@ -288,7 +288,7 @@ function brushLinks(d) {
                     adj_nodes.push(l.source.id);
                     return 0.8;
                 }
-                return (paths_loaded) ? 0.0 : link_opacity * 0.5;
+                return (paths_loaded) ? 0.0 : link_opacity;
             });
     }
 
@@ -385,7 +385,7 @@ function bundle_Edges() {
             .style("stroke-width", 1)
             .style("stroke", "#222222")
             .style("fill", "none")
-            .style('stroke-opacity', link_opacity * 0.4); //use opacity as blending
+            .style('stroke-opacity', link_opacity); //use opacity as blending
     });
 
     paths_loaded = true;

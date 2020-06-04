@@ -567,7 +567,7 @@
     "attraction_strength_weak": 0.01,
     "repulsion_strength": -300,
     "repulsion_strength_weak": -30,
-    "link_opacity": 0.1,
-    "node_radius": 5
+    "link_opacity": 0.5,
+    "node_radius": 10
   }
 }

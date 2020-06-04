@@ -463,52 +463,6 @@
       "group": "Friends of the ABC"
     }
   ],
-  "groups": [
-    {
-      "id": 0,
-      "label": "The Convent"
-    },
-    {
-      "id": 1,
-      "label": "Circle with Myriel"
-    },
-    {
-      "id": 2,
-      "label": "Circle with Valjean"
-    },
-    {
-      "id": 3,
-      "label": "Factory Workers"
-    },
-    {
-      "id": 4,
-      "label": "Antagonists"
-    },
-    {
-      "id": 5,
-      "label": "Circle with Gillenormand"
-    },
-    {
-      "id": 6,
-      "label": "Seeking Buried Treasure"
-    },
-    {
-      "id": 7,
-      "label": "Jondrette Family"
-    },
-    {
-      "id": 8,
-      "label": "Friends of the ABC"
-    },
-    {
-      "id": 9,
-      "label": "Servent of Mabeuf"
-    },
-    {
-      "id": 10,
-      "label": "Children"
-    }
-  ],
   "links": [
     {
       "source": "Napoleon",
