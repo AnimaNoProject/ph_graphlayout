@@ -1,45 +1,166 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>JSDoc: Source: graph.js</title>
 
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+      graph.js - Documentation
+  </title>
+
+  <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+  <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+  
+
+  
+
+  <!-- start Mixpanel -->
+  <script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+  0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+  for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+  mixpanel.init("1919205b2da72e4da3b9b6639b444d59");</script>
+  <!-- end Mixpanel -->
 </head>
 
 <body>
+  <svg style="display: none;">
+    <defs>
+      <symbol id="linkIcon" fill="#706d77" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
+      </symbol>
+    </defs>
+  </svg>
 
-<div id="main">
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <label for="nav-trigger" class="navicon-button x">
+    <div class="navicon"></div>
+  </label>
 
-    <h1 class="page-title">Source: graph.js</h1>
+  <label for="nav-trigger" class="overlay"></label>
+
+  <div class="top-nav-wrapper">
+    <ul>
+      <li >
+        <a href="index.html">
+          
+            <svg fill="#6D6D6D" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+          
+          
+        </a>
+      </li>
+
+      
+
+    </ul>
+  </div>
+
+  <nav>
+    <h3 class="reference-title">
+      PH Guided Force-Directed Graph Layout
+    </h3>
 
     
 
+    <h3>Classes</h3><ul><li id="Bar-nav"><a href="Bar.html">Bar</a></li><li id="Component-nav"><a href="Component.html">Component</a><ul class='methods'><li data-type="method" id="Component-contains-nav"><a href="Component.html#contains">contains</a></li></ul></li></ul><h3 id="global-nav">Global</h3><ul><li><a href="global.html#active_clicked">active_clicked</a></li><li><a href="global.html#addGroupLabel">addGroupLabel</a></li><li><a href="global.html#animation">animation</a></li><li><a href="global.html#attraction_strength">attraction_strength</a></li><li><a href="global.html#attraction_strength_weak">attraction_strength_weak</a></li><li><a href="global.html#bar_height">bar_height</a></li><li><a href="global.html#bar_width">bar_width</a></li><li><a href="global.html#bars">bars</a></li><li><a href="global.html#brushLinks">brushLinks</a></li><li><a href="global.html#bundle_Edges">bundle_Edges</a></li><li><a href="global.html#changeAnimate">changeAnimate</a></li><li><a href="global.html#configure_graph">configure_graph</a></li><li><a href="global.html#create_barcode">create_barcode</a></li><li><a href="global.html#create_graph">create_graph</a></li><li><a href="global.html#deselect_nodes">deselect_nodes</a></li><li><a href="global.html#deselectedBar">deselectedBar</a></li><li><a href="global.html#disablePaths">disablePaths</a></li><li><a href="global.html#get_ph_features">get_ph_features</a></li><li><a href="global.html#isolate">isolate</a></li><li><a href="global.html#largeBar">largeBar</a></li><li><a href="global.html#link_opacity">link_opacity</a></li><li><a href="global.html#links">links</a></li><li><a href="global.html#loaded_data">loaded_data</a></li><li><a href="global.html#noAnimation">noAnimation</a></li><li><a href="global.html#node_radius">node_radius</a></li><li><a href="global.html#nodes">nodes</a></li><li><a href="global.html#paths">paths</a></li><li><a href="global.html#paths_loaded">paths_loaded</a></li><li><a href="global.html#prev_opacity">prev_opacity</a></li><li><a href="global.html#repulsion_strength">repulsion_strength</a></li><li><a href="global.html#repulsion_strength_weak">repulsion_strength_weak</a></li><li><a href="global.html#resize_graph">resize_graph</a></li><li><a href="global.html#simulation">simulation</a></li><li><a href="global.html#smallBar">smallBar</a></li><li><a href="global.html#update_attraction">update_attraction</a></li><li><a href="global.html#update_repulsion">update_repulsion</a></li><li><a href="global.html#updateNodesAndLinks">updateNodesAndLinks</a></li><li><a href="global.html#updateNodeSize">updateNodeSize</a></li><li><a href="global.html#x">x</a></li><li><a href="global.html#y">y</a></li></ul>
+  </nav>
 
+  <div id="main">
+    
+      <h1 class="page-title">
+        graph.js
+      </h1>
+    
 
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>let simulation;
+      
 
+<section>
+  <article>
+    <pre class="prettyprint source linenums"><code>/**
+ * Handle to the force simulation.
+ */
+let simulation;
+
+/**
+ * SVG group for links.
+ */
 let links;
+
+/**
+ * SVG group for nodes.
+ */
 let nodes;
+
+/**
+ * SVG group for bundle edges.
+ */
 let paths;
+
+/**
+ * Loaded data.
+ */
 let loaded_data;
 
+/**
+ * Default strong attraction strength. Between 0 and 1.
+ * @type {number}
+ */
 let attraction_strength = 0.8;
+
+/**
+ * Default weak attraction strength for edges. Between 0 and 1.
+ * @type {number}
+ */
 let attraction_strength_weak = 0.1;
+
+/**
+ * Default strong repulsion strength between two nodes.
+ * @type {number}
+ */
 let repulsion_strength = -300;
+
+/**
+ * Default weak repulsion strength between two nodes.
+ * @type {number}
+ */
 let repulsion_strength_weak = -30;
+
+/**
+ * Default size of the circle representing a node.
+ * @type {number}
+ */
 let node_radius = 8;
+
+/**
+ * Default link opacity.
+ * @type {number}
+ */
 let link_opacity = 0.4;
+
+/**
+ * Contains the node that currently is selected for additional information.
+ * @type {null}
+ */
 let active_clicked = null;
+
+/**
+ * True if edges are bundled.
+ * @type {boolean}
+ */
 let paths_loaded = false;
 
 /**
@@ -568,25 +689,24 @@ function disablePaths() {
     paths_loaded = false;
     btn_bundle_edges.addClass("disabled");
 }</code></pre>
-        </article>
-    </section>
+  </article>
+</section>
+
+    
 
 
+  </div>
 
+  <br class="clear">
 
-</div>
+  <footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a>
+  </footer>
 
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Bar.html">Bar</a></li><li><a href="Component.html">Component</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addGroupLabel">addGroupLabel</a></li><li><a href="global.html#animation">animation</a></li><li><a href="global.html#brushLinks">brushLinks</a></li><li><a href="global.html#bundle_Edges">bundle_Edges</a></li><li><a href="global.html#changeAnimate">changeAnimate</a></li><li><a href="global.html#configure_graph">configure_graph</a></li><li><a href="global.html#create_barcode">create_barcode</a></li><li><a href="global.html#create_graph">create_graph</a></li><li><a href="global.html#deselect_nodes">deselect_nodes</a></li><li><a href="global.html#disablePaths">disablePaths</a></li><li><a href="global.html#get_ph_features">get_ph_features</a></li><li><a href="global.html#isolate">isolate</a></li><li><a href="global.html#noAnimation">noAnimation</a></li><li><a href="global.html#resize_graph">resize_graph</a></li><li><a href="global.html#update_attraction">update_attraction</a></li><li><a href="global.html#update_repulsion">update_repulsion</a></li><li><a href="global.html#updateNodesAndLinks">updateNodesAndLinks</a></li><li><a href="global.html#updateNodeSize">updateNodeSize</a></li></ul>
-</nav>
+  <script src="scripts/linenumber.js"></script>
+  <script src="scripts/pagelocation.js"></script>
 
-<br class="clear">
+  
 
-<footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Thu Jun 04 2020 00:10:20 GMT+0200 (Central European Summer Time)
-</footer>
-
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
 </body>
 </html>

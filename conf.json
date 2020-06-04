@@ -6,25 +6,26 @@
   "source": {
     "include": ["./"],
     "includePattern": ".+\\.js$",
-    "excludePattern": "(docs)"
+    "excludePattern": "(doc)"
   },
   "plugins": [],
   "templates": {
+    "referenceTitle": "PH Guided Force-Directed Graph Layout",
     "cleverLinks": false,
     "monospaceLinks": true,
     "systemName": "PH Guided Force-Directed Graph Layout",
-    "footer": "Thorsten Korpitsch",
+    "footer": "Thorsten Korpitsch, Oliver Pilizar",
     "copyright": "2020",
-    "navType": "vertical",
+    "navType": "horizontal",
     "theme": "spacelab",
     "linenums": true,
     "collapseSymbols": true,
     "inverseNav": false
   },
   "opts": {
+    "template": "C:\\Users\\thors\\AppData\\Roaming\\npm\\node_modules\\jsdoc\\templates\\jsdoc-template-master",
     "encoding": "utf8",
     "destination": "doc/",
-    "recurse": true,
-    "private": true
+    "recurse": true
   }
 }

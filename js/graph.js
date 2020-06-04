@@ -1,17 +1,74 @@
+/**
+ * Handle to the force simulation.
+ */
 let simulation;
 
+/**
+ * SVG group for links.
+ */
 let links;
+
+/**
+ * SVG group for nodes.
+ */
 let nodes;
+
+/**
+ * SVG group for bundle edges.
+ */
 let paths;
+
+/**
+ * Loaded data.
+ */
 let loaded_data;
 
+/**
+ * Default strong attraction strength. Between 0 and 1.
+ * @type {number}
+ */
 let attraction_strength = 0.8;
+
+/**
+ * Default weak attraction strength for edges. Between 0 and 1.
+ * @type {number}
+ */
 let attraction_strength_weak = 0.1;
+
+/**
+ * Default strong repulsion strength between two nodes.
+ * @type {number}
+ */
 let repulsion_strength = -300;
+
+/**
+ * Default weak repulsion strength between two nodes.
+ * @type {number}
+ */
 let repulsion_strength_weak = -30;
+
+/**
+ * Default size of the circle representing a node.
+ * @type {number}
+ */
 let node_radius = 8;
+
+/**
+ * Default link opacity.
+ * @type {number}
+ */
 let link_opacity = 0.4;
+
+/**
+ * Contains the node that currently is selected for additional information.
+ * @type {null}
+ */
 let active_clicked = null;
+
+/**
+ * True if edges are bundled.
+ * @type {boolean}
+ */
 let paths_loaded = false;
 
 /**

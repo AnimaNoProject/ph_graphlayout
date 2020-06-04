@@ -3,6 +3,15 @@
  */
 class Component {
     /**
+     * Id of the bar.
+     */
+    id;
+    /**
+     * Nodes contained in this component.
+     */
+    nodes;
+
+    /**
      * Default constructor, assigns the given id and adds the node to this component.
      * @param node in this component.
      * @param id of this component.
@@ -30,8 +39,41 @@ class Component {
  */
 class Bar {
     /**
+     * Time of death.
+     */
+    death;
+    /**
+     * Id of the bar.
+     */
+    id;
+    /**
+     * Edge associated with this bar.
+     */
+    edge;
+
+    /**
+     * Ratio of the spanning 2 components of the spanning tree separated by the associated edge.
+     */
+    ratio;
+
+    /**
+     * True if the bar is selected and repulsion is added.
+     */
+    selected;
+
+    /**
+     * List of nodes contained on one set created by removing the associated edge from the mst.
+     */
+    componentA;
+
+    /**
+     * Disjoint set with componentA.
+     */
+    componentB;
+
+    /**
      * Default constructor for a bar, initialises with default values.
-     * @param id id of the associated edge.
+     * @param id of the bar.
      */
     constructor(id) {
         this.death = Number.POSITIVE_INFINITY;  // 1/w
@@ -44,20 +86,51 @@ class Bar {
     }
 }
 
+/**
+ * Bars of the barchart.
+ */
 let bars;
 
-// set the dimensions and margins of the graph
+/**
+ * Width of the barchart.
+ */
 let bar_width;
+
+/**
+ * Height of the barchart.
+ */
 let bar_height;
 
-// set the ranges for the barcode
+
+/**
+ * y scale for the barcodes.
+ */
 let y;
+
+/**
+ * x scale for the barcodes.
+ */
 let x;
 
+/**
+ * Default colour for the larger bar.
+ * @type {string}
+ */
 const largeBar = "#E39410";
+/**
+ * Default colour for the smaller bar.
+ * @type {string}
+ */
 const smallBar = "#167EE6";
+/**
+ * Default colour for the bar enclosing the small and larger bar.
+ * @type {string}
+ */
 const deselectedBar = "#FFFFFF";
 
+/**
+ * Contains the opacity of the selected nodes incident links.
+ */
 let prev_opacity;
 
 /**
